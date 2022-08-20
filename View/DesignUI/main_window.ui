@@ -18,14 +18,14 @@
 	background-color: rgb(30, 30, 30);
 }</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
+  <widget class="QWidget" name="central_widget">
    <property name="styleSheet">
     <string notr="true">QWidget {
 	background-color: rgb(30, 30, 30);
 }</string>
    </property>
   </widget>
-  <widget class="QMenuBar" name="menubar">
+  <widget class="QMenuBar" name="menu_bar">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -34,21 +34,21 @@
      <height>18</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menu">
+   <widget class="QMenu" name="file_menu">
     <property name="title">
      <string>Файл</string>
     </property>
-    <addaction name="action"/>
-    <addaction name="action_2"/>
+    <addaction name="action_program_info"/>
+    <addaction name="action_help"/>
    </widget>
-   <addaction name="menu"/>
+   <addaction name="file_menu"/>
   </widget>
-  <action name="action">
+  <action name="action_program_info">
    <property name="text">
     <string>О программе</string>
    </property>
   </action>
-  <action name="action_2">
+  <action name="action_help">
    <property name="text">
     <string>Справка</string>
    </property>

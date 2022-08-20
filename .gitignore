@@ -154,3 +154,5 @@ cython_debug/
 .idea/
 
 .Builds/Windows/
+
+.qt_for_python/

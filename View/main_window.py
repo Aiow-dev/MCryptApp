@@ -18,25 +18,25 @@ class Ui_main_window(object):
         main_window.setStyleSheet("QMainWindow {\n"
 "    background-color: rgb(30, 30, 30);\n"
 "}")
-        self.centralwidget = QtWidgets.QWidget(main_window)
-        self.centralwidget.setStyleSheet("QWidget {\n"
+        self.central_widget = QtWidgets.QWidget(main_window)
+        self.central_widget.setStyleSheet("QWidget {\n"
 "    background-color: rgb(30, 30, 30);\n"
 "}")
-        self.centralwidget.setObjectName("centralwidget")
-        main_window.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(main_window)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 649, 18))
-        self.menubar.setObjectName("menubar")
-        self.menu = QtWidgets.QMenu(self.menubar)
-        self.menu.setObjectName("menu")
-        main_window.setMenuBar(self.menubar)
-        self.action = QtWidgets.QAction(main_window)
-        self.action.setObjectName("action")
-        self.action_2 = QtWidgets.QAction(main_window)
-        self.action_2.setObjectName("action_2")
-        self.menu.addAction(self.action)
-        self.menu.addAction(self.action_2)
-        self.menubar.addAction(self.menu.menuAction())
+        self.central_widget.setObjectName("central_widget")
+        main_window.setCentralWidget(self.central_widget)
+        self.menu_bar = QtWidgets.QMenuBar(main_window)
+        self.menu_bar.setGeometry(QtCore.QRect(0, 0, 649, 18))
+        self.menu_bar.setObjectName("menu_bar")
+        self.file_menu = QtWidgets.QMenu(self.menu_bar)
+        self.file_menu.setObjectName("file_menu")
+        main_window.setMenuBar(self.menu_bar)
+        self.action_program_info = QtWidgets.QAction(main_window)
+        self.action_program_info.setObjectName("action_program_info")
+        self.action_help = QtWidgets.QAction(main_window)
+        self.action_help.setObjectName("action_help")
+        self.file_menu.addAction(self.action_program_info)
+        self.file_menu.addAction(self.action_help)
+        self.menu_bar.addAction(self.file_menu.menuAction())
 
         self.retranslateUi(main_window)
         QtCore.QMetaObject.connectSlotsByName(main_window)
@@ -44,9 +44,9 @@ class Ui_main_window(object):
     def retranslateUi(self, main_window):
         _translate = QtCore.QCoreApplication.translate
         main_window.setWindowTitle(_translate("main_window", "MCrypt"))
-        self.menu.setTitle(_translate("main_window", "Файл"))
-        self.action.setText(_translate("main_window", "О программе"))
-        self.action_2.setText(_translate("main_window", "Справка"))
+        self.file_menu.setTitle(_translate("main_window", "Файл"))
+        self.action_program_info.setText(_translate("main_window", "О программе"))
+        self.action_help.setText(_translate("main_window", "Справка"))
 
 
 if __name__ == "__main__":
