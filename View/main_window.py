@@ -41,13 +41,11 @@ class Ui_main_window(object):
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.types_tab = QtWidgets.QTabWidget(self.page_smp)
-        self.types_tab.setStyleSheet("QTabWidget::pane\n"
-"{\n"
+        self.types_tab.setStyleSheet("QTabWidget::pane {\n"
 "    background: rgb(46, 44, 44);\n"
 "}\n"
 "\n"
-"QTabBar::tab\n"
-"{\n"
+"QTabBar::tab {\n"
 "    height: 25px;\n"
 "    border: 1px solid rgb(77, 77, 77);\n"
 "    padding: 10 120px;\n"
@@ -78,7 +76,7 @@ class Ui_main_window(object):
 "    border: 1px solid rgb(77, 77, 77);\n"
 "}")
         self.enc_smp.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.enc_smp.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.enc_smp.setFrameShadow(QtWidgets.QFrame.Plain)
         self.enc_smp.setObjectName("enc_smp")
         self.horizontalLayout_4.addWidget(self.enc_smp)
         self.types_tab.addTab(self.enc_tab_smp, "")

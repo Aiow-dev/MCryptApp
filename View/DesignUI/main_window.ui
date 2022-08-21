@@ -77,13 +77,11 @@
            <item>
             <widget class="QTabWidget" name="types_tab">
              <property name="styleSheet">
-              <string notr="true">QTabWidget::pane
-{
+              <string notr="true">QTabWidget::pane {
 	background: rgb(46, 44, 44);
 }
 
-QTabBar::tab
-{
+QTabBar::tab {
 	height: 25px;
 	border: 1px solid rgb(77, 77, 77);
 	padding: 10 120px;
@@ -130,7 +128,7 @@ QTabBar::tab:hover {
                   <enum>QFrame::StyledPanel</enum>
                  </property>
                  <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
+                  <enum>QFrame::Plain</enum>
                  </property>
                 </widget>
                </item>
