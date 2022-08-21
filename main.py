@@ -10,6 +10,7 @@ from Core.Helpers.HelpersUI import widgets
 
 from Core.Controllers import controllers_wrapper
 from Core.Controllers import event_controllers_wrapper
+from Core.Controllers import controllers_utilities
 
 
 def styles_binding(ui):
@@ -20,15 +21,20 @@ def controller_binding(ui, controllers_wrapper_obj):
     ui.enc_smp_btn.clicked.connect(controllers_wrapper_obj.simple_permutation_encryption_handler)
     ui.dec_smp_btn.clicked.connect(controllers_wrapper_obj.un_simple_permutation_encryption_handler)
 
+    ui.enc_combo_box.activated.connect(
+        lambda: controllers_utilities.page_combo_box(ui.enc_combo_box, ui.enc_widget)
+    )
+
 
 def event_controller_binding(ui, event_controllers_wrapper_obj):
-    ui.enc_smp_row_txt.textChanged.connect(lambda: event_controllers_wrapper_obj.number_text_handler(ui.enc_smp_row_txt))
-    ui.enc_smp_clm_txt.textChanged.connect(lambda: event_controllers_wrapper_obj.number_text_handler(ui.enc_smp_clm_txt))
+    text_obj_list = [
+        ui.enc_smp_row_txt, ui.enc_smp_clm_txt,
+        ui.dec_smp_row_txt, ui.dec_smp_clm_txt,
+    ]
 
-    ui.dec_smp_row_txt.textChanged.connect(
-        lambda: event_controllers_wrapper_obj.number_text_handler(ui.dec_smp_row_txt))
-    ui.dec_smp_clm_txt.textChanged.connect(
-        lambda: event_controllers_wrapper_obj.number_text_handler(ui.dec_smp_clm_txt))
+    controllers_utilities.number_text_handler_multi_connect(
+        text_obj_list, event_controllers_wrapper_obj
+    )
 
 
 if __name__ == '__main__':

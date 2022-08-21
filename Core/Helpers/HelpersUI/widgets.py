@@ -12,7 +12,7 @@ class Window(QMainWindow):
 
         self.ui = ui
 
-        self.resized.connect(lambda: utilities.get_equal_tab_padding(self.ui.types_tab, self.width()))
+        self.resized.connect(lambda: utilities.get_equal_tab_padding(self.ui.smp_types_tab, self.width()))
     
     def resizeEvent(self, event):
         self.resized.emit()
