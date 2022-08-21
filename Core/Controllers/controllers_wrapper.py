@@ -24,9 +24,9 @@ class ControllersWrapper:
 
     def un_simple_permutation_encryption_handler(self):
         table_permutation_generic. \
-            table_permutation_generic_handler(self.ui.un_message_text_smp, self.ui.un_row_text_smp,
-                                              self.ui.un_column_text_smp, self.ui.un_encrypt_message_text_smp,
-                                              self.ui.un_encryption_table_text_smp,
+            table_permutation_generic_handler(self.ui.dec_smp_msg_txt, self.ui.dec_smp_row_txt,
+                                              self.ui.dec_smp_clm_txt, self.ui.dec_smp_oc_txt,
+                                              self.ui.dec_smp_ot_txt,
                                               UnSimplePermutation.UnSimplePermutation)
 
     def key_permutation_encryption_handler(self):

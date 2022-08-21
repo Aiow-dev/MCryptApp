@@ -18,10 +18,17 @@ def styles_binding(ui):
 
 def controller_binding(ui, controllers_wrapper_obj):
     ui.enc_smp_btn.clicked.connect(controllers_wrapper_obj.simple_permutation_encryption_handler)
+    ui.dec_smp_btn.clicked.connect(controllers_wrapper_obj.un_simple_permutation_encryption_handler)
 
 
 def event_controller_binding(ui, event_controllers_wrapper_obj):
     ui.enc_smp_row_txt.textChanged.connect(lambda: event_controllers_wrapper_obj.number_text_handler(ui.enc_smp_row_txt))
+    ui.enc_smp_clm_txt.textChanged.connect(lambda: event_controllers_wrapper_obj.number_text_handler(ui.enc_smp_clm_txt))
+
+    ui.dec_smp_row_txt.textChanged.connect(
+        lambda: event_controllers_wrapper_obj.number_text_handler(ui.dec_smp_row_txt))
+    ui.dec_smp_clm_txt.textChanged.connect(
+        lambda: event_controllers_wrapper_obj.number_text_handler(ui.dec_smp_clm_txt))
 
 
 if __name__ == '__main__':
