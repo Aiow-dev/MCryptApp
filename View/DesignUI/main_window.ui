@@ -469,6 +469,9 @@ QLineEdit:focus {
                            <enum>QFrame::Raised</enum>
                           </property>
                           <layout class="QHBoxLayout" name="horizontalLayout_9">
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
                            <property name="topMargin">
                             <number>0</number>
                            </property>
@@ -482,8 +485,14 @@ QLineEdit:focus {
                             <widget class="QLabel" name="enc_smp_ot_lbl">
                              <property name="minimumSize">
                               <size>
-                               <width>80</width>
+                               <width>75</width>
                                <height>45</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>75</width>
+                               <height>16777215</height>
                               </size>
                              </property>
                              <property name="styleSheet">
@@ -492,7 +501,10 @@ QLineEdit:focus {
 }</string>
                              </property>
                              <property name="text">
-                              <string>Шифрующая таблица</string>
+                              <string>Шифр-таблица</string>
+                             </property>
+                             <property name="wordWrap">
+                              <bool>true</bool>
                              </property>
                             </widget>
                            </item>
@@ -502,7 +514,6 @@ QLineEdit:focus {
                               <string notr="true">QTextEdit {
 	border: 1px solid rgb(48, 47, 47);
 	border-radius: 3px;
-	margin: 0 0 0 18px;
 	padding: 0 3px;
 	color: rgb(255, 255, 255);
 }
@@ -629,7 +640,7 @@ QLineEdit:focus {
                            <string>Текст зашифрованного сообщения</string>
                           </property>
                           <property name="clearButtonEnabled">
-                           <bool>true</bool>
+                           <bool>false</bool>
                           </property>
                          </widget>
                         </item>
@@ -654,7 +665,7 @@ QLineEdit:focus {
                     </property>
                     <layout class="QHBoxLayout" name="horizontalLayout_11">
                      <item>
-                      <widget class="QPushButton" name="pushButton">
+                      <widget class="QPushButton" name="enc_smp_btn">
                        <property name="minimumSize">
                         <size>
                          <width>130</width>

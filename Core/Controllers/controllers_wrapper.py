@@ -18,8 +18,8 @@ class ControllersWrapper:
 
     def simple_permutation_encryption_handler(self):
         table_permutation_generic. \
-            table_permutation_generic_handler(self.ui.message_text_smp, self.ui.row_text_smp, self.ui.column_text_smp,
-                                              self.ui.encrypt_message_text_smp, self.ui.encryption_table_text_smp,
+            table_permutation_generic_handler(self.ui.enc_smp_msg_txt, self.ui.enc_smp_row_txt, self.ui.enc_smp_clm_txt,
+                                              self.ui.enc_smp_oc_txt, self.ui.enc_smp_ot_txt,
                                               SimplePermutation.SimplePermutation)
 
     def un_simple_permutation_encryption_handler(self):

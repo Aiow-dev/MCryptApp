@@ -226,20 +226,21 @@ class Ui_main_window(object):
         self.enc_smp_ot_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.enc_smp_ot_frame.setObjectName("enc_smp_ot_frame")
         self.horizontalLayout_9 = QtWidgets.QHBoxLayout(self.enc_smp_ot_frame)
-        self.horizontalLayout_9.setContentsMargins(-1, 0, 0, 0)
+        self.horizontalLayout_9.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
         self.enc_smp_ot_lbl = QtWidgets.QLabel(self.enc_smp_ot_frame)
-        self.enc_smp_ot_lbl.setMinimumSize(QtCore.QSize(80, 45))
+        self.enc_smp_ot_lbl.setMinimumSize(QtCore.QSize(75, 45))
+        self.enc_smp_ot_lbl.setMaximumSize(QtCore.QSize(75, 16777215))
         self.enc_smp_ot_lbl.setStyleSheet("QLabel {\n"
 "    color: rgb(255, 255, 255);\n"
 "}")
+        self.enc_smp_ot_lbl.setWordWrap(True)
         self.enc_smp_ot_lbl.setObjectName("enc_smp_ot_lbl")
         self.horizontalLayout_9.addWidget(self.enc_smp_ot_lbl, 0, QtCore.Qt.AlignTop)
         self.enc_smp_ot_txt = QtWidgets.QTextEdit(self.enc_smp_ot_frame)
         self.enc_smp_ot_txt.setStyleSheet("QTextEdit {\n"
 "    border: 1px solid rgb(48, 47, 47);\n"
 "    border-radius: 3px;\n"
-"    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
@@ -296,7 +297,7 @@ class Ui_main_window(object):
 "    border: 1px solid rgb(77, 77, 77);\n"
 "}")
         self.enc_smp_oc_txt.setReadOnly(True)
-        self.enc_smp_oc_txt.setClearButtonEnabled(True)
+        self.enc_smp_oc_txt.setClearButtonEnabled(False)
         self.enc_smp_oc_txt.setObjectName("enc_smp_oc_txt")
         self.horizontalLayout_10.addWidget(self.enc_smp_oc_txt)
         self.verticalLayout_6.addWidget(self.enc_smp_oc_frame)
@@ -310,10 +311,10 @@ class Ui_main_window(object):
         self.enc_smp_button_frame.setObjectName("enc_smp_button_frame")
         self.horizontalLayout_11 = QtWidgets.QHBoxLayout(self.enc_smp_button_frame)
         self.horizontalLayout_11.setObjectName("horizontalLayout_11")
-        self.pushButton = QtWidgets.QPushButton(self.enc_smp_button_frame)
-        self.pushButton.setMinimumSize(QtCore.QSize(130, 45))
-        self.pushButton.setMaximumSize(QtCore.QSize(200, 16777215))
-        self.pushButton.setStyleSheet("QPushButton {\n"
+        self.enc_smp_btn = QtWidgets.QPushButton(self.enc_smp_button_frame)
+        self.enc_smp_btn.setMinimumSize(QtCore.QSize(130, 45))
+        self.enc_smp_btn.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.enc_smp_btn.setStyleSheet("QPushButton {\n"
 "    border: 1px solid rgb(77, 77, 77);\n"
 "    border-radius: 3px;\n"
 "    background-color: rgb(48, 47, 47);\n"
@@ -323,8 +324,8 @@ class Ui_main_window(object):
 "QPushButton:hover {\n"
 "    background-color: rgb(77, 77, 77);\n"
 "}")
-        self.pushButton.setObjectName("pushButton")
-        self.horizontalLayout_11.addWidget(self.pushButton)
+        self.enc_smp_btn.setObjectName("enc_smp_btn")
+        self.horizontalLayout_11.addWidget(self.enc_smp_btn)
         self.verticalLayout_2.addWidget(self.enc_smp_button_frame)
         self.horizontalLayout_4.addWidget(self.enc_smp)
         self.types_tab.addTab(self.enc_tab_smp, "")
@@ -399,11 +400,11 @@ class Ui_main_window(object):
         self.enc_smp_row_txt.setPlaceholderText(_translate("main_window", "Количество строк"))
         self.enc_smp_clm_lbl.setText(_translate("main_window", "Столбцы"))
         self.enc_smp_clm_txt.setPlaceholderText(_translate("main_window", "Количество столбцов"))
-        self.enc_smp_ot_lbl.setText(_translate("main_window", "Шифрующая таблица"))
+        self.enc_smp_ot_lbl.setText(_translate("main_window", "Шифр-таблица"))
         self.enc_smp_ot_txt.setPlaceholderText(_translate("main_window", "Текст шифрующей таблицы"))
         self.enc_smp_oc_lbl.setText(_translate("main_window", "Результат"))
         self.enc_smp_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
-        self.pushButton.setText(_translate("main_window", "Выполнить"))
+        self.enc_smp_btn.setText(_translate("main_window", "Выполнить"))
         self.types_tab.setTabText(self.types_tab.indexOf(self.enc_tab_smp), _translate("main_window", "Шифрование"))
         self.types_tab.setTabText(self.types_tab.indexOf(self.dec_tab), _translate("main_window", "Дешифрование"))
         self.enc_combo_box.setItemText(0, _translate("main_window", "Простая перестановка"))

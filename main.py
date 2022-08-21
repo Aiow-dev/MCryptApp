@@ -9,14 +9,19 @@ from Core.Helpers.HelpersUI import styles
 from Core.Helpers.HelpersUI import widgets
 
 from Core.Controllers import controllers_wrapper
+from Core.Controllers import event_controllers_wrapper
 
 
-def styles_binding(ui, main_window):
+def styles_binding(ui):
     style_helpers.set_menu_bar_background(ui.menu_bar, styles.Color.dark_charcoal)
 
 
-def controller_binding(controllers_wrapper_obj):
-    pass
+def controller_binding(ui, controllers_wrapper_obj):
+    ui.enc_smp_btn.clicked.connect(controllers_wrapper_obj.simple_permutation_encryption_handler)
+
+
+def event_controller_binding(ui, event_controllers_wrapper_obj):
+    ui.enc_smp_row_txt.textChanged.connect(lambda: event_controllers_wrapper_obj.number_text_handler(ui.enc_smp_row_txt))
 
 
 if __name__ == '__main__':
@@ -26,10 +31,16 @@ if __name__ == '__main__':
     ui.setupUi(MainWindow)
     MainWindow.show()
 
-    styles_binding(ui, MainWindow)
+    styles_binding(ui)
 
     controllers_wrapper_obj = controllers_wrapper.ControllersWrapper(ui)
 
-    controller_binding(controllers_wrapper_obj)
+    controller_binding(ui, controllers_wrapper_obj)
+
+    colors = {'default': styles.Color.dark_charcoal, 'error': styles.Color.orange_red}
+
+    event_controllers_wrapper_obj = event_controllers_wrapper.EventControllersWrapper(colors)
+
+    event_controller_binding(ui, event_controllers_wrapper_obj)
 
     sys.exit(app.exec_())
