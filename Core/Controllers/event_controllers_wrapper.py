@@ -1,4 +1,6 @@
-from typing import Dict
+from typing import Dict, List
+
+from PyQt5.QtWidgets import QLineEdit
 
 from View import main_window
 
@@ -24,8 +26,21 @@ class EventControllersWrapper:
         style_helpers.set_line_edit_border_color(ui_obj, color)
         ui_obj.setToolTip(tool_tip_text)
 
+    def text_handler(self, ui_obj):
+        color: styles.Color = self.colors['default']
+        tool_tip_text: str = ''
+
+        ui_obj_text = ui_obj.text()
+
+        if ui_obj_text.isspace() or ui_obj_text == '':
+            color = self.colors['error']
+            tool_tip_text = 'Поле не может быть пустым или содержать только пробельные символы'
+
+        style_helpers.set_line_edit_border_color(ui_obj, color)
+        ui_obj.setToolTip(tool_tip_text)
+
     def event_controller_binding(self) -> None:
-        text_obj_list = [
+        number_text_obj_list: List[QLineEdit] = [
             self.ui.enc_smp_row_txt, self.ui.enc_smp_clm_txt,
             self.ui.dec_smp_row_txt, self.ui.dec_smp_clm_txt,
             self.ui.enc_kpm_row_txt, self.ui.enc_kpm_clm_txt,
@@ -37,5 +52,20 @@ class EventControllersWrapper:
         ]
 
         controllers_utilities.number_text_handler_multi_connect(
+            number_text_obj_list, self
+        )
+
+        text_obj_list: List[QLineEdit] = [
+            self.ui.enc_smp_msg_txt, self.ui.dec_smp_msg_txt,
+            self.ui.enc_kpm_msg_txt, self.ui.enc_kpm_key_txt,
+            self.ui.dec_kpm_msg_txt, self.ui.dec_kpm_key_txt,
+            self.ui.enc_cs_msg_txt, self.ui.enc_cs_key_txt,
+            self.ui.dec_cs_msg_txt, self.ui.dec_cs_key_txt,
+            self.ui.enc_acs_msg_txt, self.ui.dec_acs_msg_txt,
+            self.ui.enc_kcs_msg_txt, self.ui.enc_kcs_key_txt,
+            self.ui.dec_kcs_msg_txt, self.ui.dec_kcs_key_txt,
+        ]
+
+        controllers_utilities.text_handler_multi_connect(
             text_obj_list, self
         )
