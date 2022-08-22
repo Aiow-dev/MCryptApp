@@ -38,6 +38,7 @@ def event_controller_binding(ui: main_window.Ui_main_window,
         ui.dec_smp_row_txt, ui.dec_smp_clm_txt,
         ui.enc_kpm_row_txt, ui.enc_kpm_clm_txt,
         ui.dec_kpm_row_txt, ui.dec_kpm_clm_txt,
+        ui.enc_cs_key_txt
     ]
 
     controllers_utilities.number_text_handler_multi_connect(
