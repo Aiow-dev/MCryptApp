@@ -4,6 +4,7 @@ from Scripts.TablePermutationScripts import SimplePermutation
 from Scripts.TablePermutationScripts import UnSimplePermutation
 from Scripts.TablePermutationScripts import KeyPermutation
 from Scripts.TablePermutationScripts import UnKeyPermutation
+
 from Scripts.CaesarScripts import Caesar_Classic
 from Scripts.CaesarScripts import UnCaesar_Classic
 from Scripts.CaesarScripts import Caesar_Afin
@@ -12,6 +13,7 @@ from Scripts.CaesarScripts import Caesar_with_key
 
 from Core.Controllers import table_permutation_generic
 from Core.Controllers import caesar_generic
+from Core.Controllers import controllers_utilities
 
 
 class ControllersWrapper:
@@ -45,16 +47,14 @@ class ControllersWrapper:
 
     def caesar_classic_encryption_handler(self):
         caesar_generic. \
-            caesar_classic_generic_handler(self.ui.message_text_sc, self.ui.key_text_sc,
-                                           self.ui.encrypt_message_text_sc,
-                                           self.ui.encryption_table_text_sc,
+            caesar_classic_generic_handler(self.ui.enc_cs_msg_txt, self.ui.enc_cs_key_txt,
+                                           self.ui.enc_cs_oc_txt, self.ui.enc_cs_ot_txt,
                                            Caesar_Classic.Caesar_Classic)
 
     def un_caesar_classic_encryption_handler(self):
         caesar_generic. \
-            caesar_classic_generic_handler(self.ui.un_message_text_sc, self.ui.un_key_text_sc,
-                                           self.ui.un_encrypt_message_text_sc,
-                                           self.ui.un_encryption_table_text_sc,
+            caesar_classic_generic_handler(self.ui.dec_cs_msg_txt, self.ui.dec_cs_key_txt,
+                                           self.ui.dec_cs_oc_txt, self.ui.dec_cs_ot_txt,
                                            UnCaesar_Classic.UnCaesar_Classic)
 
     def caesar_affine_encryption_handler(self):
@@ -79,7 +79,21 @@ class ControllersWrapper:
 
     def caesar_key_encryption_handler(self):
         caesar_generic.caesar_key_generic_handler(self.ui.message_text_sck, self.ui.key_word_text_sck,
-                                                          self.ui.key_k_text_sck, self.ui.encrypt_message_text_sck,
-                                                          self.ui.encryption_table_text_sck,
-                                                          self.ui.encryption_table_sck,
-                                                          Caesar_with_key.Caesar_with_key)
+                                                  self.ui.key_k_text_sck, self.ui.encrypt_message_text_sck,
+                                                  self.ui.encryption_table_text_sck,
+                                                  self.ui.encryption_table_sck,
+                                                  Caesar_with_key.Caesar_with_key)
+
+    def controller_binding(self) -> None:
+        self.ui.enc_combo_box.activated.connect(
+            lambda: controllers_utilities.page_combo_box(self.ui.enc_combo_box, self.ui.enc_widget)
+        )
+
+        self.ui.enc_smp_btn.clicked.connect(self.simple_permutation_encryption_handler)
+        self.ui.dec_smp_btn.clicked.connect(self.un_simple_permutation_encryption_handler)
+
+        self.ui.enc_kpm_btn.clicked.connect(self.key_permutation_encryption_handler)
+        self.ui.dec_kpm_btn.clicked.connect(self.un_key_permutation_encryption_handler)
+
+        self.ui.enc_cs_btn.clicked.connect(self.caesar_classic_encryption_handler)
+        self.ui.dec_cs_btn.clicked.connect(self.un_caesar_classic_encryption_handler)
