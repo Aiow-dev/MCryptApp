@@ -31,6 +31,7 @@ class EventControllersWrapper:
             self.ui.enc_kpm_row_txt, self.ui.enc_kpm_clm_txt,
             self.ui.dec_kpm_row_txt, self.ui.dec_kpm_clm_txt,
             self.ui.enc_cs_key_txt, self.ui.dec_cs_key_txt,
+            self.ui.enc_acs_key_a_txt, self.ui.enc_acs_key_b_txt,
         ]
 
         controllers_utilities.number_text_handler_multi_connect(
