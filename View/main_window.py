@@ -2356,6 +2356,638 @@ class Ui_main_window(object):
         self.acs_types_tab.addTab(self.dec_acs_tab, "")
         self.horizontalLayout_67.addWidget(self.acs_types_tab)
         self.enc_widget.addWidget(self.acs_page)
+        self.kcs_page = QtWidgets.QWidget()
+        self.kcs_page.setObjectName("kcs_page")
+        self.horizontalLayout_91 = QtWidgets.QHBoxLayout(self.kcs_page)
+        self.horizontalLayout_91.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_91.setObjectName("horizontalLayout_91")
+        self.kcs_types_tab = QtWidgets.QTabWidget(self.kcs_page)
+        self.kcs_types_tab.setStyleSheet("QTabWidget::pane {\n"
+"    background: rgb(46, 44, 44);\n"
+"}\n"
+"\n"
+"QTabBar::tab {\n"
+"    height: 25px;\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    padding: 10 120px;\n"
+"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QTabBar::tab:selected {\n"
+"    border: 1px solid rgb(30, 30, 30);\n"
+"    background-color: rgb(30, 30, 30);\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QTabBar::tab:hover {\n"
+"    background-color: rgb(67, 67, 67);\n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.kcs_types_tab.setElideMode(QtCore.Qt.ElideNone)
+        self.kcs_types_tab.setDocumentMode(False)
+        self.kcs_types_tab.setMovable(True)
+        self.kcs_types_tab.setObjectName("kcs_types_tab")
+        self.enc_kcs_tab = QtWidgets.QWidget()
+        self.enc_kcs_tab.setObjectName("enc_kcs_tab")
+        self.horizontalLayout_73 = QtWidgets.QHBoxLayout(self.enc_kcs_tab)
+        self.horizontalLayout_73.setObjectName("horizontalLayout_73")
+        self.enc_kcs = QtWidgets.QFrame(self.enc_kcs_tab)
+        self.enc_kcs.setStyleSheet("QFrame {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"}")
+        self.enc_kcs.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.enc_kcs.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.enc_kcs.setObjectName("enc_kcs")
+        self.verticalLayout_33 = QtWidgets.QVBoxLayout(self.enc_kcs)
+        self.verticalLayout_33.setObjectName("verticalLayout_33")
+        self.enc_kcs_r_frame = QtWidgets.QFrame(self.enc_kcs)
+        self.enc_kcs_r_frame.setMaximumSize(QtCore.QSize(16777215, 200))
+        self.enc_kcs_r_frame.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.enc_kcs_r_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.enc_kcs_r_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.enc_kcs_r_frame.setObjectName("enc_kcs_r_frame")
+        self.horizontalLayout_74 = QtWidgets.QHBoxLayout(self.enc_kcs_r_frame)
+        self.horizontalLayout_74.setContentsMargins(-1, 0, 0, 0)
+        self.horizontalLayout_74.setObjectName("horizontalLayout_74")
+        self.enc_kcs_in_frame = QtWidgets.QFrame(self.enc_kcs_r_frame)
+        self.enc_kcs_in_frame.setMaximumSize(QtCore.QSize(16777215, 170))
+        self.enc_kcs_in_frame.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.enc_kcs_in_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.enc_kcs_in_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.enc_kcs_in_frame.setObjectName("enc_kcs_in_frame")
+        self.verticalLayout_34 = QtWidgets.QVBoxLayout(self.enc_kcs_in_frame)
+        self.verticalLayout_34.setContentsMargins(-1, 0, 0, -1)
+        self.verticalLayout_34.setObjectName("verticalLayout_34")
+        self.enc_kcs_msg_frame = QtWidgets.QFrame(self.enc_kcs_in_frame)
+        self.enc_kcs_msg_frame.setMaximumSize(QtCore.QSize(16777215, 45))
+        self.enc_kcs_msg_frame.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.enc_kcs_msg_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.enc_kcs_msg_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.enc_kcs_msg_frame.setObjectName("enc_kcs_msg_frame")
+        self.horizontalLayout_75 = QtWidgets.QHBoxLayout(self.enc_kcs_msg_frame)
+        self.horizontalLayout_75.setContentsMargins(-1, 0, 0, 0)
+        self.horizontalLayout_75.setObjectName("horizontalLayout_75")
+        self.enc_kcs_msg_lbl = QtWidgets.QLabel(self.enc_kcs_msg_frame)
+        self.enc_kcs_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
+        self.enc_kcs_msg_lbl.setStyleSheet("QLabel {\n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.enc_kcs_msg_lbl.setObjectName("enc_kcs_msg_lbl")
+        self.horizontalLayout_75.addWidget(self.enc_kcs_msg_lbl)
+        self.enc_kcs_msg_txt = QtWidgets.QLineEdit(self.enc_kcs_msg_frame)
+        self.enc_kcs_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
+        self.enc_kcs_msg_txt.setStyleSheet("QLineEdit {\n"
+"    border: 1px solid rgb(48, 47, 47);\n"
+"    border-radius: 3px;\n"
+"    margin: 0 0 0 18px;\n"
+"    padding: 0 3px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"}")
+        self.enc_kcs_msg_txt.setClearButtonEnabled(True)
+        self.enc_kcs_msg_txt.setObjectName("enc_kcs_msg_txt")
+        self.horizontalLayout_75.addWidget(self.enc_kcs_msg_txt)
+        self.verticalLayout_34.addWidget(self.enc_kcs_msg_frame)
+        self.enc_kcs_key_frame = QtWidgets.QFrame(self.enc_kcs_in_frame)
+        self.enc_kcs_key_frame.setMaximumSize(QtCore.QSize(16777215, 45))
+        self.enc_kcs_key_frame.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.enc_kcs_key_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.enc_kcs_key_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.enc_kcs_key_frame.setObjectName("enc_kcs_key_frame")
+        self.horizontalLayout_76 = QtWidgets.QHBoxLayout(self.enc_kcs_key_frame)
+        self.horizontalLayout_76.setContentsMargins(-1, 0, 0, 0)
+        self.horizontalLayout_76.setObjectName("horizontalLayout_76")
+        self.enc_kcs_key_lbl = QtWidgets.QLabel(self.enc_kcs_key_frame)
+        self.enc_kcs_key_lbl.setMinimumSize(QtCore.QSize(80, 45))
+        self.enc_kcs_key_lbl.setStyleSheet("QLabel {\n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.enc_kcs_key_lbl.setObjectName("enc_kcs_key_lbl")
+        self.horizontalLayout_76.addWidget(self.enc_kcs_key_lbl)
+        self.enc_kcs_key_txt = QtWidgets.QLineEdit(self.enc_kcs_key_frame)
+        self.enc_kcs_key_txt.setMinimumSize(QtCore.QSize(0, 45))
+        self.enc_kcs_key_txt.setStyleSheet("QLineEdit {\n"
+"    border: 1px solid rgb(48, 47, 47);\n"
+"    border-radius: 3px;\n"
+"    margin: 0 0 0 18px;\n"
+"    padding: 0 3px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"}")
+        self.enc_kcs_key_txt.setClearButtonEnabled(True)
+        self.enc_kcs_key_txt.setObjectName("enc_kcs_key_txt")
+        self.horizontalLayout_76.addWidget(self.enc_kcs_key_txt)
+        self.verticalLayout_34.addWidget(self.enc_kcs_key_frame)
+        self.enc_kcs_key_k_frame = QtWidgets.QFrame(self.enc_kcs_in_frame)
+        self.enc_kcs_key_k_frame.setMaximumSize(QtCore.QSize(16777215, 45))
+        self.enc_kcs_key_k_frame.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.enc_kcs_key_k_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.enc_kcs_key_k_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.enc_kcs_key_k_frame.setObjectName("enc_kcs_key_k_frame")
+        self.horizontalLayout_77 = QtWidgets.QHBoxLayout(self.enc_kcs_key_k_frame)
+        self.horizontalLayout_77.setContentsMargins(-1, 0, 0, 0)
+        self.horizontalLayout_77.setObjectName("horizontalLayout_77")
+        self.enc_kcs_key_k_lbl = QtWidgets.QLabel(self.enc_kcs_key_k_frame)
+        self.enc_kcs_key_k_lbl.setMinimumSize(QtCore.QSize(80, 45))
+        self.enc_kcs_key_k_lbl.setStyleSheet("QLabel {\n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.enc_kcs_key_k_lbl.setObjectName("enc_kcs_key_k_lbl")
+        self.horizontalLayout_77.addWidget(self.enc_kcs_key_k_lbl)
+        self.enc_kcs_key_k_txt = QtWidgets.QLineEdit(self.enc_kcs_key_k_frame)
+        self.enc_kcs_key_k_txt.setMinimumSize(QtCore.QSize(0, 45))
+        self.enc_kcs_key_k_txt.setStyleSheet("QLineEdit {\n"
+"    border: 1px solid rgb(48, 47, 47);\n"
+"    border-radius: 3px;\n"
+"    margin: 0 0 0 18px;\n"
+"    padding: 0 3px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"}")
+        self.enc_kcs_key_k_txt.setClearButtonEnabled(True)
+        self.enc_kcs_key_k_txt.setObjectName("enc_kcs_key_k_txt")
+        self.horizontalLayout_77.addWidget(self.enc_kcs_key_k_txt)
+        self.verticalLayout_34.addWidget(self.enc_kcs_key_k_frame)
+        self.horizontalLayout_74.addWidget(self.enc_kcs_in_frame, 0, QtCore.Qt.AlignTop)
+        self.enc_kcs_chr_frame = QtWidgets.QFrame(self.enc_kcs_r_frame)
+        self.enc_kcs_chr_frame.setMaximumSize(QtCore.QSize(580, 65))
+        self.enc_kcs_chr_frame.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.enc_kcs_chr_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.enc_kcs_chr_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.enc_kcs_chr_frame.setObjectName("enc_kcs_chr_frame")
+        self.verticalLayout_37 = QtWidgets.QVBoxLayout(self.enc_kcs_chr_frame)
+        self.verticalLayout_37.setContentsMargins(-1, 0, 0, 0)
+        self.verticalLayout_37.setObjectName("verticalLayout_37")
+        self.enc_kcs_oc_frame = QtWidgets.QFrame(self.enc_kcs_chr_frame)
+        self.enc_kcs_oc_frame.setMinimumSize(QtCore.QSize(0, 45))
+        self.enc_kcs_oc_frame.setMaximumSize(QtCore.QSize(580, 16777215))
+        self.enc_kcs_oc_frame.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.enc_kcs_oc_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.enc_kcs_oc_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.enc_kcs_oc_frame.setObjectName("enc_kcs_oc_frame")
+        self.horizontalLayout_78 = QtWidgets.QHBoxLayout(self.enc_kcs_oc_frame)
+        self.horizontalLayout_78.setObjectName("horizontalLayout_78")
+        self.enc_kcs_oc_lbl = QtWidgets.QLabel(self.enc_kcs_oc_frame)
+        self.enc_kcs_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
+        self.enc_kcs_oc_lbl.setStyleSheet("QLabel {\n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.enc_kcs_oc_lbl.setObjectName("enc_kcs_oc_lbl")
+        self.horizontalLayout_78.addWidget(self.enc_kcs_oc_lbl)
+        self.enc_kcs_oc_txt = QtWidgets.QLineEdit(self.enc_kcs_oc_frame)
+        self.enc_kcs_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
+        self.enc_kcs_oc_txt.setStyleSheet("QLineEdit {\n"
+"    border: 1px solid rgb(48, 47, 47);\n"
+"    border-radius: 3px;\n"
+"    margin: 0 0 0 18px;\n"
+"    padding: 0 3px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"}")
+        self.enc_kcs_oc_txt.setReadOnly(True)
+        self.enc_kcs_oc_txt.setClearButtonEnabled(False)
+        self.enc_kcs_oc_txt.setObjectName("enc_kcs_oc_txt")
+        self.horizontalLayout_78.addWidget(self.enc_kcs_oc_txt)
+        self.verticalLayout_37.addWidget(self.enc_kcs_oc_frame)
+        self.horizontalLayout_74.addWidget(self.enc_kcs_chr_frame)
+        self.verticalLayout_33.addWidget(self.enc_kcs_r_frame, 0, QtCore.Qt.AlignTop)
+        self.enc_kcs_table_frame = QtWidgets.QFrame(self.enc_kcs)
+        self.enc_kcs_table_frame.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.enc_kcs_table_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.enc_kcs_table_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.enc_kcs_table_frame.setObjectName("enc_kcs_table_frame")
+        self.horizontalLayout_79 = QtWidgets.QHBoxLayout(self.enc_kcs_table_frame)
+        self.horizontalLayout_79.setContentsMargins(-1, 0, 0, 0)
+        self.horizontalLayout_79.setObjectName("horizontalLayout_79")
+        self.enc_kcs_ot_frame = QtWidgets.QFrame(self.enc_kcs_table_frame)
+        self.enc_kcs_ot_frame.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.enc_kcs_ot_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.enc_kcs_ot_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.enc_kcs_ot_frame.setObjectName("enc_kcs_ot_frame")
+        self.horizontalLayout_80 = QtWidgets.QHBoxLayout(self.enc_kcs_ot_frame)
+        self.horizontalLayout_80.setContentsMargins(-1, 6, -1, -1)
+        self.horizontalLayout_80.setObjectName("horizontalLayout_80")
+        self.enc_kcs_wsb_frame = QtWidgets.QFrame(self.enc_kcs_ot_frame)
+        self.enc_kcs_wsb_frame.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.enc_kcs_wsb_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.enc_kcs_wsb_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.enc_kcs_wsb_frame.setObjectName("enc_kcs_wsb_frame")
+        self.verticalLayout_40 = QtWidgets.QVBoxLayout(self.enc_kcs_wsb_frame)
+        self.verticalLayout_40.setContentsMargins(-1, 0, 0, 0)
+        self.verticalLayout_40.setObjectName("verticalLayout_40")
+        self.enc_kcs_wsb_table = QtWidgets.QTextEdit(self.enc_kcs_wsb_frame)
+        self.enc_kcs_wsb_table.setStyleSheet("QTextEdit {\n"
+"    border: 1px solid rgb(48, 47, 47);\n"
+"    border-radius: 3px;\n"
+"    padding: 0 3px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QTextEdit:focus {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"}")
+        self.enc_kcs_wsb_table.setReadOnly(True)
+        self.enc_kcs_wsb_table.setObjectName("enc_kcs_wsb_table")
+        self.verticalLayout_40.addWidget(self.enc_kcs_wsb_table)
+        self.horizontalLayout_80.addWidget(self.enc_kcs_wsb_frame)
+        self.enc_kcs_tsb_frame = QtWidgets.QFrame(self.enc_kcs_ot_frame)
+        self.enc_kcs_tsb_frame.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.enc_kcs_tsb_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.enc_kcs_tsb_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.enc_kcs_tsb_frame.setObjectName("enc_kcs_tsb_frame")
+        self.verticalLayout_41 = QtWidgets.QVBoxLayout(self.enc_kcs_tsb_frame)
+        self.verticalLayout_41.setContentsMargins(6, 0, 0, 0)
+        self.verticalLayout_41.setObjectName("verticalLayout_41")
+        self.enc_kcs_tsb_text = QtWidgets.QTableWidget(self.enc_kcs_tsb_frame)
+        self.enc_kcs_tsb_text.setStyleSheet("QTableWidget {\n"
+"    gridline-color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QTableCornerButton::section {\n"
+"    background-color: rgb(48, 47, 47);\n"
+"}")
+        self.enc_kcs_tsb_text.setAutoScroll(True)
+        self.enc_kcs_tsb_text.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.enc_kcs_tsb_text.setRowCount(11)
+        self.enc_kcs_tsb_text.setColumnCount(6)
+        self.enc_kcs_tsb_text.setObjectName("enc_kcs_tsb_text")
+        self.enc_kcs_tsb_text.horizontalHeader().setDefaultSectionSize(80)
+        self.verticalLayout_41.addWidget(self.enc_kcs_tsb_text)
+        self.horizontalLayout_80.addWidget(self.enc_kcs_tsb_frame)
+        self.horizontalLayout_79.addWidget(self.enc_kcs_ot_frame)
+        self.verticalLayout_33.addWidget(self.enc_kcs_table_frame)
+        self.enc_kcs_button_frame = QtWidgets.QFrame(self.enc_kcs)
+        self.enc_kcs_button_frame.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.enc_kcs_button_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.enc_kcs_button_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.enc_kcs_button_frame.setObjectName("enc_kcs_button_frame")
+        self.horizontalLayout_81 = QtWidgets.QHBoxLayout(self.enc_kcs_button_frame)
+        self.horizontalLayout_81.setContentsMargins(-1, 0, 0, 0)
+        self.horizontalLayout_81.setObjectName("horizontalLayout_81")
+        self.enc_kcs_btn = QtWidgets.QPushButton(self.enc_kcs_button_frame)
+        self.enc_kcs_btn.setMinimumSize(QtCore.QSize(130, 45))
+        self.enc_kcs_btn.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.enc_kcs_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(77, 77, 77);\n"
+"}")
+        self.enc_kcs_btn.setObjectName("enc_kcs_btn")
+        self.horizontalLayout_81.addWidget(self.enc_kcs_btn)
+        self.verticalLayout_33.addWidget(self.enc_kcs_button_frame)
+        self.horizontalLayout_73.addWidget(self.enc_kcs)
+        self.kcs_types_tab.addTab(self.enc_kcs_tab, "")
+        self.dec_acs_tab_2 = QtWidgets.QWidget()
+        self.dec_acs_tab_2.setObjectName("dec_acs_tab_2")
+        self.horizontalLayout_82 = QtWidgets.QHBoxLayout(self.dec_acs_tab_2)
+        self.horizontalLayout_82.setObjectName("horizontalLayout_82")
+        self.dec_acs_2 = QtWidgets.QFrame(self.dec_acs_tab_2)
+        self.dec_acs_2.setStyleSheet("QFrame {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"}")
+        self.dec_acs_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.dec_acs_2.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.dec_acs_2.setObjectName("dec_acs_2")
+        self.verticalLayout_42 = QtWidgets.QVBoxLayout(self.dec_acs_2)
+        self.verticalLayout_42.setObjectName("verticalLayout_42")
+        self.dec_acs_r_frame_2 = QtWidgets.QFrame(self.dec_acs_2)
+        self.dec_acs_r_frame_2.setMaximumSize(QtCore.QSize(16777215, 200))
+        self.dec_acs_r_frame_2.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.dec_acs_r_frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.dec_acs_r_frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.dec_acs_r_frame_2.setObjectName("dec_acs_r_frame_2")
+        self.horizontalLayout_83 = QtWidgets.QHBoxLayout(self.dec_acs_r_frame_2)
+        self.horizontalLayout_83.setContentsMargins(-1, 0, 0, 0)
+        self.horizontalLayout_83.setObjectName("horizontalLayout_83")
+        self.dec_acs_in_frame_2 = QtWidgets.QFrame(self.dec_acs_r_frame_2)
+        self.dec_acs_in_frame_2.setMaximumSize(QtCore.QSize(16777215, 170))
+        self.dec_acs_in_frame_2.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.dec_acs_in_frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.dec_acs_in_frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.dec_acs_in_frame_2.setObjectName("dec_acs_in_frame_2")
+        self.verticalLayout_43 = QtWidgets.QVBoxLayout(self.dec_acs_in_frame_2)
+        self.verticalLayout_43.setContentsMargins(-1, 0, 0, -1)
+        self.verticalLayout_43.setObjectName("verticalLayout_43")
+        self.dec_acs_msg_frame_2 = QtWidgets.QFrame(self.dec_acs_in_frame_2)
+        self.dec_acs_msg_frame_2.setMaximumSize(QtCore.QSize(16777215, 45))
+        self.dec_acs_msg_frame_2.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.dec_acs_msg_frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.dec_acs_msg_frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.dec_acs_msg_frame_2.setObjectName("dec_acs_msg_frame_2")
+        self.horizontalLayout_84 = QtWidgets.QHBoxLayout(self.dec_acs_msg_frame_2)
+        self.horizontalLayout_84.setContentsMargins(-1, 0, 0, 0)
+        self.horizontalLayout_84.setObjectName("horizontalLayout_84")
+        self.dec_acs_msg_lbl_2 = QtWidgets.QLabel(self.dec_acs_msg_frame_2)
+        self.dec_acs_msg_lbl_2.setMinimumSize(QtCore.QSize(80, 45))
+        self.dec_acs_msg_lbl_2.setStyleSheet("QLabel {\n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.dec_acs_msg_lbl_2.setObjectName("dec_acs_msg_lbl_2")
+        self.horizontalLayout_84.addWidget(self.dec_acs_msg_lbl_2)
+        self.dec_acs_msg_txt_2 = QtWidgets.QLineEdit(self.dec_acs_msg_frame_2)
+        self.dec_acs_msg_txt_2.setMinimumSize(QtCore.QSize(0, 45))
+        self.dec_acs_msg_txt_2.setStyleSheet("QLineEdit {\n"
+"    border: 1px solid rgb(48, 47, 47);\n"
+"    border-radius: 3px;\n"
+"    margin: 0 0 0 18px;\n"
+"    padding: 0 3px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"}")
+        self.dec_acs_msg_txt_2.setClearButtonEnabled(True)
+        self.dec_acs_msg_txt_2.setObjectName("dec_acs_msg_txt_2")
+        self.horizontalLayout_84.addWidget(self.dec_acs_msg_txt_2)
+        self.verticalLayout_43.addWidget(self.dec_acs_msg_frame_2)
+        self.dec_acs_key_a_frame_2 = QtWidgets.QFrame(self.dec_acs_in_frame_2)
+        self.dec_acs_key_a_frame_2.setMaximumSize(QtCore.QSize(16777215, 45))
+        self.dec_acs_key_a_frame_2.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.dec_acs_key_a_frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.dec_acs_key_a_frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.dec_acs_key_a_frame_2.setObjectName("dec_acs_key_a_frame_2")
+        self.horizontalLayout_85 = QtWidgets.QHBoxLayout(self.dec_acs_key_a_frame_2)
+        self.horizontalLayout_85.setContentsMargins(-1, 0, 0, 0)
+        self.horizontalLayout_85.setObjectName("horizontalLayout_85")
+        self.dec_acs_key_a_lbl_2 = QtWidgets.QLabel(self.dec_acs_key_a_frame_2)
+        self.dec_acs_key_a_lbl_2.setMinimumSize(QtCore.QSize(80, 45))
+        self.dec_acs_key_a_lbl_2.setStyleSheet("QLabel {\n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.dec_acs_key_a_lbl_2.setObjectName("dec_acs_key_a_lbl_2")
+        self.horizontalLayout_85.addWidget(self.dec_acs_key_a_lbl_2)
+        self.dec_acs_key_a_txt_2 = QtWidgets.QLineEdit(self.dec_acs_key_a_frame_2)
+        self.dec_acs_key_a_txt_2.setMinimumSize(QtCore.QSize(0, 45))
+        self.dec_acs_key_a_txt_2.setStyleSheet("QLineEdit {\n"
+"    border: 1px solid rgb(48, 47, 47);\n"
+"    border-radius: 3px;\n"
+"    margin: 0 0 0 18px;\n"
+"    padding: 0 3px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"}")
+        self.dec_acs_key_a_txt_2.setClearButtonEnabled(True)
+        self.dec_acs_key_a_txt_2.setObjectName("dec_acs_key_a_txt_2")
+        self.horizontalLayout_85.addWidget(self.dec_acs_key_a_txt_2)
+        self.verticalLayout_43.addWidget(self.dec_acs_key_a_frame_2)
+        self.dec_acs_key_b_frame_2 = QtWidgets.QFrame(self.dec_acs_in_frame_2)
+        self.dec_acs_key_b_frame_2.setMaximumSize(QtCore.QSize(16777215, 45))
+        self.dec_acs_key_b_frame_2.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.dec_acs_key_b_frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.dec_acs_key_b_frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.dec_acs_key_b_frame_2.setObjectName("dec_acs_key_b_frame_2")
+        self.horizontalLayout_86 = QtWidgets.QHBoxLayout(self.dec_acs_key_b_frame_2)
+        self.horizontalLayout_86.setContentsMargins(-1, 0, 0, 0)
+        self.horizontalLayout_86.setObjectName("horizontalLayout_86")
+        self.dec_acs_key_b_lbl_2 = QtWidgets.QLabel(self.dec_acs_key_b_frame_2)
+        self.dec_acs_key_b_lbl_2.setMinimumSize(QtCore.QSize(80, 45))
+        self.dec_acs_key_b_lbl_2.setStyleSheet("QLabel {\n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.dec_acs_key_b_lbl_2.setObjectName("dec_acs_key_b_lbl_2")
+        self.horizontalLayout_86.addWidget(self.dec_acs_key_b_lbl_2)
+        self.dec_acs_key_b_txt_2 = QtWidgets.QLineEdit(self.dec_acs_key_b_frame_2)
+        self.dec_acs_key_b_txt_2.setMinimumSize(QtCore.QSize(0, 45))
+        self.dec_acs_key_b_txt_2.setStyleSheet("QLineEdit {\n"
+"    border: 1px solid rgb(48, 47, 47);\n"
+"    border-radius: 3px;\n"
+"    margin: 0 0 0 18px;\n"
+"    padding: 0 3px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"}")
+        self.dec_acs_key_b_txt_2.setClearButtonEnabled(True)
+        self.dec_acs_key_b_txt_2.setObjectName("dec_acs_key_b_txt_2")
+        self.horizontalLayout_86.addWidget(self.dec_acs_key_b_txt_2)
+        self.verticalLayout_43.addWidget(self.dec_acs_key_b_frame_2)
+        self.horizontalLayout_83.addWidget(self.dec_acs_in_frame_2, 0, QtCore.Qt.AlignTop)
+        self.dec_acs_chr_frame_2 = QtWidgets.QFrame(self.dec_acs_r_frame_2)
+        self.dec_acs_chr_frame_2.setMaximumSize(QtCore.QSize(580, 65))
+        self.dec_acs_chr_frame_2.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.dec_acs_chr_frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.dec_acs_chr_frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.dec_acs_chr_frame_2.setObjectName("dec_acs_chr_frame_2")
+        self.verticalLayout_44 = QtWidgets.QVBoxLayout(self.dec_acs_chr_frame_2)
+        self.verticalLayout_44.setContentsMargins(-1, 0, 0, 0)
+        self.verticalLayout_44.setObjectName("verticalLayout_44")
+        self.dec_acs_oc_frame_2 = QtWidgets.QFrame(self.dec_acs_chr_frame_2)
+        self.dec_acs_oc_frame_2.setMinimumSize(QtCore.QSize(0, 45))
+        self.dec_acs_oc_frame_2.setMaximumSize(QtCore.QSize(580, 16777215))
+        self.dec_acs_oc_frame_2.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.dec_acs_oc_frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.dec_acs_oc_frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.dec_acs_oc_frame_2.setObjectName("dec_acs_oc_frame_2")
+        self.horizontalLayout_87 = QtWidgets.QHBoxLayout(self.dec_acs_oc_frame_2)
+        self.horizontalLayout_87.setObjectName("horizontalLayout_87")
+        self.dec_acs_oc_lbl_2 = QtWidgets.QLabel(self.dec_acs_oc_frame_2)
+        self.dec_acs_oc_lbl_2.setMinimumSize(QtCore.QSize(80, 45))
+        self.dec_acs_oc_lbl_2.setStyleSheet("QLabel {\n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.dec_acs_oc_lbl_2.setObjectName("dec_acs_oc_lbl_2")
+        self.horizontalLayout_87.addWidget(self.dec_acs_oc_lbl_2)
+        self.dec_acs_oc_txt_2 = QtWidgets.QLineEdit(self.dec_acs_oc_frame_2)
+        self.dec_acs_oc_txt_2.setMinimumSize(QtCore.QSize(0, 45))
+        self.dec_acs_oc_txt_2.setStyleSheet("QLineEdit {\n"
+"    border: 1px solid rgb(48, 47, 47);\n"
+"    border-radius: 3px;\n"
+"    margin: 0 0 0 18px;\n"
+"    padding: 0 3px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"}")
+        self.dec_acs_oc_txt_2.setReadOnly(True)
+        self.dec_acs_oc_txt_2.setClearButtonEnabled(False)
+        self.dec_acs_oc_txt_2.setObjectName("dec_acs_oc_txt_2")
+        self.horizontalLayout_87.addWidget(self.dec_acs_oc_txt_2)
+        self.verticalLayout_44.addWidget(self.dec_acs_oc_frame_2)
+        self.horizontalLayout_83.addWidget(self.dec_acs_chr_frame_2)
+        self.verticalLayout_42.addWidget(self.dec_acs_r_frame_2, 0, QtCore.Qt.AlignTop)
+        self.dec_acs_table_frame_2 = QtWidgets.QFrame(self.dec_acs_2)
+        self.dec_acs_table_frame_2.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.dec_acs_table_frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.dec_acs_table_frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.dec_acs_table_frame_2.setObjectName("dec_acs_table_frame_2")
+        self.horizontalLayout_88 = QtWidgets.QHBoxLayout(self.dec_acs_table_frame_2)
+        self.horizontalLayout_88.setContentsMargins(-1, 0, 0, 0)
+        self.horizontalLayout_88.setObjectName("horizontalLayout_88")
+        self.dec_acs_ot_frame_2 = QtWidgets.QFrame(self.dec_acs_table_frame_2)
+        self.dec_acs_ot_frame_2.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.dec_acs_ot_frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.dec_acs_ot_frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.dec_acs_ot_frame_2.setObjectName("dec_acs_ot_frame_2")
+        self.horizontalLayout_89 = QtWidgets.QHBoxLayout(self.dec_acs_ot_frame_2)
+        self.horizontalLayout_89.setContentsMargins(-1, 6, -1, -1)
+        self.horizontalLayout_89.setObjectName("horizontalLayout_89")
+        self.dec_acs_twn_frame_2 = QtWidgets.QFrame(self.dec_acs_ot_frame_2)
+        self.dec_acs_twn_frame_2.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.dec_acs_twn_frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.dec_acs_twn_frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.dec_acs_twn_frame_2.setObjectName("dec_acs_twn_frame_2")
+        self.verticalLayout_45 = QtWidgets.QVBoxLayout(self.dec_acs_twn_frame_2)
+        self.verticalLayout_45.setContentsMargins(6, 0, 0, 0)
+        self.verticalLayout_45.setObjectName("verticalLayout_45")
+        self.dec_acs_twn_table_2 = QtWidgets.QTableWidget(self.dec_acs_twn_frame_2)
+        self.dec_acs_twn_table_2.setStyleSheet("QTableWidget {\n"
+"    gridline-color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QTableCornerButton::section {\n"
+"    background-color: rgb(48, 47, 47);\n"
+"}")
+        self.dec_acs_twn_table_2.setAutoScroll(True)
+        self.dec_acs_twn_table_2.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.dec_acs_twn_table_2.setRowCount(11)
+        self.dec_acs_twn_table_2.setColumnCount(6)
+        self.dec_acs_twn_table_2.setObjectName("dec_acs_twn_table_2")
+        self.dec_acs_twn_table_2.horizontalHeader().setDefaultSectionSize(80)
+        self.verticalLayout_45.addWidget(self.dec_acs_twn_table_2)
+        self.horizontalLayout_89.addWidget(self.dec_acs_twn_frame_2)
+        self.dec_acs_twl_frame_2 = QtWidgets.QFrame(self.dec_acs_ot_frame_2)
+        self.dec_acs_twl_frame_2.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.dec_acs_twl_frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.dec_acs_twl_frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.dec_acs_twl_frame_2.setObjectName("dec_acs_twl_frame_2")
+        self.verticalLayout_46 = QtWidgets.QVBoxLayout(self.dec_acs_twl_frame_2)
+        self.verticalLayout_46.setContentsMargins(6, 0, 0, 0)
+        self.verticalLayout_46.setObjectName("verticalLayout_46")
+        self.dec_acs_twl_table_2 = QtWidgets.QTableWidget(self.dec_acs_twl_frame_2)
+        self.dec_acs_twl_table_2.setStyleSheet("QTableWidget {\n"
+"    gridline-color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QTableCornerButton::section {\n"
+"    background-color: rgb(48, 47, 47);\n"
+"}")
+        self.dec_acs_twl_table_2.setAutoScroll(True)
+        self.dec_acs_twl_table_2.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.dec_acs_twl_table_2.setRowCount(11)
+        self.dec_acs_twl_table_2.setColumnCount(6)
+        self.dec_acs_twl_table_2.setObjectName("dec_acs_twl_table_2")
+        self.dec_acs_twl_table_2.horizontalHeader().setDefaultSectionSize(80)
+        self.verticalLayout_46.addWidget(self.dec_acs_twl_table_2)
+        self.horizontalLayout_89.addWidget(self.dec_acs_twl_frame_2)
+        self.horizontalLayout_88.addWidget(self.dec_acs_ot_frame_2)
+        self.verticalLayout_42.addWidget(self.dec_acs_table_frame_2)
+        self.dec_acs_button_frame_2 = QtWidgets.QFrame(self.dec_acs_2)
+        self.dec_acs_button_frame_2.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.dec_acs_button_frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.dec_acs_button_frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.dec_acs_button_frame_2.setObjectName("dec_acs_button_frame_2")
+        self.horizontalLayout_90 = QtWidgets.QHBoxLayout(self.dec_acs_button_frame_2)
+        self.horizontalLayout_90.setContentsMargins(-1, 0, 0, 0)
+        self.horizontalLayout_90.setObjectName("horizontalLayout_90")
+        self.dec_acs_btn_2 = QtWidgets.QPushButton(self.dec_acs_button_frame_2)
+        self.dec_acs_btn_2.setMinimumSize(QtCore.QSize(130, 45))
+        self.dec_acs_btn_2.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.dec_acs_btn_2.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(77, 77, 77);\n"
+"}")
+        self.dec_acs_btn_2.setObjectName("dec_acs_btn_2")
+        self.horizontalLayout_90.addWidget(self.dec_acs_btn_2)
+        self.verticalLayout_42.addWidget(self.dec_acs_button_frame_2)
+        self.horizontalLayout_82.addWidget(self.dec_acs_2)
+        self.kcs_types_tab.addTab(self.dec_acs_tab_2, "")
+        self.horizontalLayout_91.addWidget(self.kcs_types_tab)
+        self.enc_widget.addWidget(self.kcs_page)
         self.verticalLayout.addWidget(self.enc_widget)
         self.status_frame = QtWidgets.QFrame(self.main_frame)
         self.status_frame.setMinimumSize(QtCore.QSize(0, 15))
@@ -2411,11 +3043,12 @@ class Ui_main_window(object):
         self.menu_bar.addAction(self.enc_menu.menuAction())
 
         self.retranslateUi(main_window)
-        self.enc_widget.setCurrentIndex(4)
+        self.enc_widget.setCurrentIndex(5)
         self.smp_types_tab.setCurrentIndex(0)
         self.kpm_types_tab.setCurrentIndex(1)
         self.cs_types_tab.setCurrentIndex(1)
-        self.acs_types_tab.setCurrentIndex(1)
+        self.acs_types_tab.setCurrentIndex(0)
+        self.kcs_types_tab.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(main_window)
 
     def retranslateUi(self, main_window):
@@ -2513,6 +3146,27 @@ class Ui_main_window(object):
         self.dec_acs_oc_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
         self.dec_acs_btn.setText(_translate("main_window", "Выполнить"))
         self.acs_types_tab.setTabText(self.acs_types_tab.indexOf(self.dec_acs_tab), _translate("main_window", "Дешифрование"))
+        self.enc_kcs_msg_lbl.setText(_translate("main_window", "Сообщение"))
+        self.enc_kcs_msg_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
+        self.enc_kcs_key_lbl.setText(_translate("main_window", "Ключ"))
+        self.enc_kcs_key_txt.setPlaceholderText(_translate("main_window", "Текст ключа шифрования"))
+        self.enc_kcs_key_k_lbl.setText(_translate("main_window", "Ключ k"))
+        self.enc_kcs_key_k_txt.setPlaceholderText(_translate("main_window", "Ключ шифрования k"))
+        self.enc_kcs_oc_lbl.setText(_translate("main_window", "Результат"))
+        self.enc_kcs_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
+        self.enc_kcs_wsb_table.setPlaceholderText(_translate("main_window", "Текст шифрующей таблицы"))
+        self.enc_kcs_btn.setText(_translate("main_window", "Выполнить"))
+        self.kcs_types_tab.setTabText(self.kcs_types_tab.indexOf(self.enc_kcs_tab), _translate("main_window", "Шифрование"))
+        self.dec_acs_msg_lbl_2.setText(_translate("main_window", "Сообщение"))
+        self.dec_acs_msg_txt_2.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
+        self.dec_acs_key_a_lbl_2.setText(_translate("main_window", "Ключ a"))
+        self.dec_acs_key_a_txt_2.setPlaceholderText(_translate("main_window", "Ключ шифрования a"))
+        self.dec_acs_key_b_lbl_2.setText(_translate("main_window", "Ключ b"))
+        self.dec_acs_key_b_txt_2.setPlaceholderText(_translate("main_window", "Ключ шифрования b"))
+        self.dec_acs_oc_lbl_2.setText(_translate("main_window", "Результат"))
+        self.dec_acs_oc_txt_2.setPlaceholderText(_translate("main_window", "Текст сообщения"))
+        self.dec_acs_btn_2.setText(_translate("main_window", "Выполнить"))
+        self.kcs_types_tab.setTabText(self.kcs_types_tab.indexOf(self.dec_acs_tab_2), _translate("main_window", "Дешифрование"))
         self.enc_combo_box.setItemText(0, _translate("main_window", "Простая перестановка"))
         self.enc_combo_box.setItemText(1, _translate("main_window", "Перестановка по ключу"))
         self.enc_combo_box.setItemText(2, _translate("main_window", "Двойная перестановка"))
