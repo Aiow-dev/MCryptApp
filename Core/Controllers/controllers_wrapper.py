@@ -10,6 +10,7 @@ from Scripts.CaesarScripts import UnCaesar_Classic
 from Scripts.CaesarScripts import Caesar_Afin
 from Scripts.CaesarScripts import UnCaesar_Afin
 from Scripts.CaesarScripts import Caesar_with_key
+from Scripts.CaesarScripts import UnCaesar_with_key
 
 from Core.Controllers import table_permutation_generic
 from Core.Controllers import caesar_generic
@@ -72,11 +73,18 @@ class ControllersWrapper:
                                           UnCaesar_Afin.UnCaesar_Afin)
 
     def caesar_key_encryption_handler(self):
-        caesar_generic.caesar_key_generic_handler(self.ui.message_text_sck, self.ui.key_word_text_sck,
-                                                  self.ui.key_k_text_sck, self.ui.encrypt_message_text_sck,
-                                                  self.ui.encryption_table_text_sck,
-                                                  self.ui.encryption_table_sck,
+        caesar_generic.caesar_key_generic_handler(self.ui.enc_kcs_msg_txt, self.ui.enc_kcs_key_txt,
+                                                  self.ui.enc_kcs_key_k_txt, self.ui.enc_kcs_oc_txt,
+                                                  self.ui.enc_kcs_tsb_text,
+                                                  self.ui.enc_kcs_wsb_table,
                                                   Caesar_with_key.Caesar_with_key)
+
+    def un_caesar_key_encryption_handler(self):
+        caesar_generic.caesar_key_generic_handler(self.ui.dec_kcs_msg_txt, self.ui.dec_kcs_key_txt,
+                                                  self.ui.dec_kcs_key_k_txt, self.ui.dec_kcs_oc_txt,
+                                                  self.ui.dec_kcs_tsb_text,
+                                                  self.ui.dec_kcs_wsb_table,
+                                                  UnCaesar_with_key.UnCaesar_with_key)
 
     def controller_binding(self) -> None:
         self.ui.enc_combo_box.activated.connect(
@@ -94,3 +102,6 @@ class ControllersWrapper:
 
         self.ui.enc_acs_btn.clicked.connect(self.caesar_affine_encryption_handler)
         self.ui.dec_acs_btn.clicked.connect(self.un_caesar_affine_encryption_handler)
+
+        self.ui.enc_kcs_btn.clicked.connect(self.caesar_key_encryption_handler)
+        self.ui.dec_kcs_btn.clicked.connect(self.un_caesar_key_encryption_handler)

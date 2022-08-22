@@ -12,7 +12,7 @@ def UnCaesar_with_key(shifr, key_num, key_word):  # "зитдркыщ оыэки
             message += i
         else:
             message += table[shifr_table.find(i)]
-    return message
+    return message, shifr_table
 
 
 def sum(string, table):
