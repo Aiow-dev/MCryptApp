@@ -1,8 +1,10 @@
+from typing import List, Tuple, Dict
+
 from PyQt5.QtGui import QBrush, QColor
 from PyQt5.QtWidgets import QTableWidgetItem
 
 
-def table_to_str(encrypt_message_table):
+def table_to_str(encrypt_message_table: List[List[str]]) -> str:
     return ''.join('\t'.join(row) + '\n' for row in encrypt_message_table)
 
 
@@ -16,13 +18,13 @@ def ColumnToRow(mas, row, column):
     return newMas
 
 
-def table_dict_to_str(table_dict):
+def table_dict_to_str(table_dict: Dict[str, str]) -> str:
     return ''.join(key + '\t->\t' + value + '\n-------------------------------------\n'
                    for key, value in table_dict.items())
 
 
-def tables_to_str(message_table, encrypt_message_table):
-    table_dict = {
+def tables_to_str(message_table: str, encrypt_message_table: str) -> str:
+    table_dict: Dict[str, str] = {
         message_table[index]: encrypt_message_table[index]
         for index in range(len(message_table))
     }
@@ -72,18 +74,22 @@ def construct_table(columns_values: tuple, table_header: str = None, columns_hea
     return table
 
 
-def generate_affine_table_number_column(key_a_text, key_b_text, start_t, end_t):
+def generate_affine_table_number_column(key_a_text: int, key_b_text: int,
+                                        start_t: int, end_t: int) -> List[str]:
     return [str((key_a_text * t + key_b_text) % 33) for t in range(start_t, end_t)]
 
 
-def generate_affine_table_column_headers(key_a_text, key_b_text):
+def generate_affine_table_column_headers(key_a_text: int, key_b_text: int) -> Tuple[str, str, str, str, str, str]:
     key_text = f'{key_a_text}t+{key_b_text}'
 
     return 't', key_text, 't', key_text, 't', key_text
 
 
-def construct_affine_table_number_text(key_a_text, key_b_text):
-    column_values = (
+def construct_affine_table_number_text(
+        key_a_text: int,
+        key_b_text: int
+) -> Tuple[Tuple[List[str], List[str], List[str], List[str], List[str], List[str]], str]:
+    column_values: Tuple[List[str], List[str], List[str], List[str], List[str], List[str]] = (
         [str(i) for i in range(11)], generate_affine_table_number_column(key_a_text, key_b_text, 0, 11),
         [str(i) for i in range(11, 22)], generate_affine_table_number_column(key_a_text, key_b_text, 11, 22),
         [str(i) for i in range(22, 33)], generate_affine_table_number_column(key_a_text, key_b_text, 22, 33)
@@ -94,13 +100,13 @@ def construct_affine_table_number_text(key_a_text, key_b_text):
     ))
 
 
-def generate_affine_table_letter_column(number_column_value):
-    letters_text = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+def generate_affine_table_letter_column(number_column_value) -> List[str]:
+    letters_text: str = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 
     return [letters_text[int(number_value)] for number_value in number_column_value]
 
 
-def construct_affine_table_letter_text(key_a_text, key_b_text, number_column_values):
+def construct_affine_table_letter_text(key_a_text: int, key_b_text: int, number_column_values):
     column_values = (
         generate_affine_table_letter_column(number_column_values[0]),
         generate_affine_table_letter_column(number_column_values[1]),

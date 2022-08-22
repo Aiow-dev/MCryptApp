@@ -1,7 +1,7 @@
 from Core.Helpers.HelpersUI import style_helpers
 
 
-def get_equal_tab_padding(tab_widget_obj, main_window_width):
+def get_equal_tab_padding(tab_widget_obj, main_window_width: int) -> None:
     number_tabs = tab_widget_obj.count()
 
     tab_text_size = 108

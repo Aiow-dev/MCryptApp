@@ -1,3 +1,5 @@
+from View import main_window
+
 from Scripts.TablePermutationScripts import SimplePermutation
 from Scripts.TablePermutationScripts import UnSimplePermutation
 from Scripts.TablePermutationScripts import KeyPermutation
@@ -13,7 +15,7 @@ from Core.Controllers import caesar_generic
 
 
 class ControllersWrapper:
-    def __init__(self, ui):
+    def __init__(self, ui: main_window.Ui_main_window):
         self.ui = ui
 
     def simple_permutation_encryption_handler(self):
@@ -31,16 +33,15 @@ class ControllersWrapper:
 
     def key_permutation_encryption_handler(self):
         table_permutation_generic. \
-            table_key_permutation_generic_handler(self.ui.message_text_kmp, self.ui.row_text_kmp,
-                                                  self.ui.column_text_kmp, self.ui.key_text_kmp,
-                                                  self.ui.encrypt_message_text_kmp, KeyPermutation.KeyPermutation)
+            table_key_permutation_generic_handler(self.ui.enc_kpm_msg_txt, self.ui.enc_kpm_row_txt,
+                                                  self.ui.enc_kpm_clm_txt, self.ui.enc_kpm_key_txt,
+                                                  self.ui.enc_kpm_oc_txt, KeyPermutation.KeyPermutation)
 
     def un_key_permutation_encryption_handler(self):
         table_permutation_generic. \
-            table_key_permutation_generic_handler(self.ui.un_message_text_kmp, self.ui.un_row_text_kmp,
-                                                  self.ui.un_column_text_kmp, self.ui.un_key_text_kmp,
-                                                  self.ui.un_encrypt_message_text_kmp,
-                                                  UnKeyPermutation.UnKeyPermutation)
+            table_key_permutation_generic_handler(self.ui.dec_kpm_msg_txt, self.ui.dec_kpm_row_txt,
+                                                  self.ui.dec_kpm_clm_txt, self.ui.dec_kpm_key_txt,
+                                                  self.ui.dec_kpm_oc_txt, UnKeyPermutation.UnKeyPermutation)
 
     def caesar_classic_encryption_handler(self):
         caesar_generic. \
