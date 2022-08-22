@@ -22,7 +22,6 @@ def caesar_classic_generic_handler(message_obj, key_obj, encrypt_message_obj,
 
 
 def caesar_affine_generic_handler(message_obj, key_a_obj, key_b_obj, encrypt_message_obj,
-                                  encryption_message_table_number_text_obj, encryption_message_table_letter_text_obj,
                                   encryption_message_table_number_obj, encryption_message_table_letter_obj,
                                   function_caesar_obj):
     try:
@@ -37,12 +36,10 @@ def caesar_affine_generic_handler(message_obj, key_a_obj, key_b_obj, encrypt_mes
         number_column_values, affine_table_number = table_helpers.construct_affine_table_number_text(
             key_a_text, key_b_text
         )
-        encryption_message_table_number_text_obj.setText(affine_table_number)
 
         letter_column_values, affine_table_letter = table_helpers.construct_affine_table_letter_text(
             key_a_text, key_b_text, number_column_values
         )
-        encryption_message_table_letter_text_obj.setText(affine_table_letter)
 
         table_helpers.construct_affine_table(
             key_a_text, key_b_text, number_column_values, encryption_message_table_number_obj
@@ -55,12 +52,6 @@ def caesar_affine_generic_handler(message_obj, key_a_obj, key_b_obj, encrypt_mes
         print(value_error)
 
         encrypt_message_obj.setText('Ошибка. Проверьте корректность введенных данных!')
-        encryption_message_table_number_text_obj.setText(
-            'Ошибка. Невозможно построить таблицу. Проверьте корректность введенных данных!'
-        )
-        encryption_message_table_letter_text_obj.setText(
-            'Ошибка. Невозможно построить таблицу. Проверьте корректность введенных данных!'
-        )
     except AttributeError as attribute_error:
         print(attribute_error)
 

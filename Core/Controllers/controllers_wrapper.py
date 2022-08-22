@@ -59,22 +59,16 @@ class ControllersWrapper:
 
     def caesar_affine_encryption_handler(self):
         caesar_generic. \
-            caesar_affine_generic_handler(self.ui.message_text_sca, self.ui.key_a_text_sca,
-                                          self.ui.key_b_text_sca, self.ui.encrypt_message_text_sca,
-                                          self.ui.encryption_table_number_text_sca,
-                                          self.ui.encryption_table_letter_text_sca,
-                                          self.ui.encryption_table_number_sca,
-                                          self.ui.encryption_table_letter_sca,
+            caesar_affine_generic_handler(self.ui.enc_acs_msg_txt, self.ui.enc_acs_key_a_txt,
+                                          self.ui.enc_acs_key_b_txt, self.ui.enc_acs_oc_txt,
+                                          self.ui.enc_acs_twn_table, self.ui.enc_acs_twl_table,
                                           Caesar_Afin.Caesar_Afin)
 
     def un_caesar_affine_encryption_handler(self):
         caesar_generic. \
-            caesar_affine_generic_handler(self.ui.un_message_text_sca, self.ui.un_key_a_text_sca,
-                                          self.ui.un_key_b_text_sca, self.ui.un_encrypt_message_text_sca,
-                                          self.ui.un_encryption_table_number_text_sca,
-                                          self.ui.un_encryption_table_letter_text_sca,
-                                          self.ui.un_encryption_table_number_sca,
-                                          self.ui.un_encryption_table_letter_sca,
+            caesar_affine_generic_handler(self.ui.dec_acs_msg_txt, self.ui.dec_acs_key_a_txt,
+                                          self.ui.dec_acs_key_b_txt, self.ui.dec_acs_oc_txt,
+                                          self.ui.dec_acs_twn_table, self.ui.dec_acs_twl_table,
                                           UnCaesar_Afin.UnCaesar_Afin)
 
     def caesar_key_encryption_handler(self):
@@ -97,3 +91,6 @@ class ControllersWrapper:
 
         self.ui.enc_cs_btn.clicked.connect(self.caesar_classic_encryption_handler)
         self.ui.dec_cs_btn.clicked.connect(self.un_caesar_classic_encryption_handler)
+
+        self.ui.enc_acs_btn.clicked.connect(self.caesar_affine_encryption_handler)
+        self.ui.dec_acs_btn.clicked.connect(self.un_caesar_affine_encryption_handler)
