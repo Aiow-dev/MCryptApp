@@ -76,7 +76,9 @@ def construct_table(columns_values: tuple, table_header: str = None, columns_hea
 
 def generate_affine_table_number_column(key_a_text: int, key_b_text: int,
                                         start_t: int, end_t: int) -> List[str]:
-    return [str((key_a_text * t + key_b_text) % 33) for t in range(start_t, end_t)]
+    number_letter: int = 33
+
+    return [str((key_a_text * t + key_b_text) % number_letter) for t in range(start_t, end_t)]
 
 
 def generate_affine_table_column_headers(key_a_text: int, key_b_text: int) -> Tuple[str, str, str, str, str, str]:

@@ -39,7 +39,7 @@ class EventControllersWrapper:
         style_helpers.set_line_edit_border_color(ui_obj, color)
         ui_obj.setToolTip(tool_tip_text)
 
-    def event_controller_binding(self) -> None:
+    def event_number_text_binding(self) -> None:
         number_text_obj_list: List[QLineEdit] = [
             self.ui.enc_smp_row_txt, self.ui.enc_smp_clm_txt,
             self.ui.dec_smp_row_txt, self.ui.dec_smp_clm_txt,
@@ -55,6 +55,7 @@ class EventControllersWrapper:
             number_text_obj_list, self
         )
 
+    def event_text_binding(self) -> None:
         text_obj_list: List[QLineEdit] = [
             self.ui.enc_smp_msg_txt, self.ui.dec_smp_msg_txt,
             self.ui.enc_kpm_msg_txt, self.ui.enc_kpm_key_txt,
@@ -69,3 +70,8 @@ class EventControllersWrapper:
         controllers_utilities.text_handler_multi_connect(
             text_obj_list, self
         )
+
+    def event_controller_binding(self) -> None:
+        self.event_number_text_binding()
+
+        self.event_text_binding()
