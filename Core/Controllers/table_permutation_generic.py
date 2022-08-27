@@ -13,24 +13,29 @@ def table_permutation_generic_handler(message_obj, row_obj, column_obj, encrypt_
         number_row: int = int(row_obj.text())
         number_column: int = int(column_obj.text())
 
-        error_status: bool = True
-
-        if number_row * number_column == len(message_text.replace(' ', '')):
-            error_status = False
-
-            encrypt_message, encrypt_message_table = function_permutation_obj(message_text, number_row,
-                                                                              number_column)
-            encrypt_message_obj.setText(encrypt_message)
-            encryption_message_table_obj.setText(table_helpers.table_to_str(encrypt_message_table))
+        check_ui_obj_list = [message_obj, row_obj, column_obj]
 
         colors: Dict[str, styles.Color] = {'default': styles.Color.dark_charcoal, 'error': styles.Color.orange_red}
+
         tool_tips: Dict[str, str] = {
             'default': '',
-            'error': 'Количество букв в сообщении не соответствует произведению количества строк и столбцов'
+            'error': 'Количество символов сообщения не соответствует произведению количества строк и столбцов'
         }
 
+        if number_row * number_column != len(message_text.replace(' ', '')):
+            controllers_utilities.multi_set_status_handler(
+                check_ui_obj_list, colors, tool_tips, True
+            )
+
+            return
+
+        encrypt_message, encrypt_message_table = function_permutation_obj(message_text, number_row,
+                                                                          number_column)
+        encrypt_message_obj.setText(encrypt_message)
+        encryption_message_table_obj.setText(table_helpers.table_to_str(encrypt_message_table))
+
         controllers_utilities.multi_set_status_handler(
-            [message_obj, row_obj, column_obj], colors, tool_tips, error_status
+            check_ui_obj_list, colors, tool_tips, False
         )
     except ValueError as value_error:
         print(value_error)
