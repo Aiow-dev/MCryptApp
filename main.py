@@ -14,7 +14,7 @@ from Core.Controllers import event_controllers_wrapper
 
 
 def styles_binding(ui: main_window.Ui_main_window) -> None:
-    style_helpers.set_menu_bar_background(ui.menu_bar, styles.Color.dark_charcoal)
+    style_helpers.set_menu_bar_dark_style(ui.menu_bar)
 
 
 if __name__ == '__main__':

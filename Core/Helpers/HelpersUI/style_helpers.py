@@ -11,8 +11,25 @@ def add_style(ui_obj, ui_stylesheet: str) -> None:
     set_style(ui_obj, f'{default_stylesheet}{ui_stylesheet}')
 
 
-def set_menu_bar_background(menu_bar_obj, color: styles.Color) -> None:
-    menu_bar_stylesheet = f'background-color: {color.value};'
+def set_menu_bar_dark_style(menu_bar_obj) -> None:
+    menu_bar_stylesheet = f'''
+    QMenuBar {{
+    background-color: {styles.Color.dark_charcoal.value};
+    color: {styles.Color.white.value};
+    }}
+    
+    QMenuBar::item:selected {{
+    background-color: {styles.Color.dark_liver.value};
+    }}
+    
+    QMenu {{
+    background-color: {styles.Color.dark_charcoal.value};
+    color: {styles.Color.white.value};
+    }}
+    
+    QMenu::item:selected {{
+    background-color: {styles.Color.dark_liver.value};
+    }}'''
 
     set_style(menu_bar_obj, menu_bar_stylesheet)
 

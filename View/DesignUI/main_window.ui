@@ -6762,6 +6762,24 @@ QComboBox QAbstractItemView {
     <property name="title">
      <string>Шифрование</string>
     </property>
+    <widget class="QMenu" name="enc_tpm_menu">
+     <property name="title">
+      <string>Таблицы перестановок</string>
+     </property>
+     <addaction name="action_smp"/>
+     <addaction name="action_kpm"/>
+     <addaction name="action_5"/>
+    </widget>
+    <widget class="QMenu" name="enc_cs_menu">
+     <property name="title">
+      <string>Система Цезаря</string>
+     </property>
+     <addaction name="action_cs"/>
+     <addaction name="action_acs"/>
+     <addaction name="action_kcs"/>
+    </widget>
+    <addaction name="enc_tpm_menu"/>
+    <addaction name="enc_cs_menu"/>
    </widget>
    <addaction name="file_menu"/>
    <addaction name="enc_menu"/>
@@ -6774,6 +6792,36 @@ QComboBox QAbstractItemView {
   <action name="action_help">
    <property name="text">
     <string>Справка</string>
+   </property>
+  </action>
+  <action name="action_smp">
+   <property name="text">
+    <string>Простая перестановка</string>
+   </property>
+  </action>
+  <action name="action_kpm">
+   <property name="text">
+    <string>Перестановка по ключу</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>Двойная перестановка</string>
+   </property>
+  </action>
+  <action name="action_cs">
+   <property name="text">
+    <string>Система Цезаря</string>
+   </property>
+  </action>
+  <action name="action_acs">
+   <property name="text">
+    <string>Афинная система Цезаря</string>
+   </property>
+  </action>
+  <action name="action_kcs">
+   <property name="text">
+    <string>Система Цезаря с ключевым словом</string>
    </property>
   </action>
  </widget>
