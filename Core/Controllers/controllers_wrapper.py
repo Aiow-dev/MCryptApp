@@ -87,7 +87,7 @@ class ControllersWrapper:
                                                   UnCaesar_with_key.UnCaesar_with_key)
 
     def controller_binding(self) -> None:
-        self.ui.enc_combo_box.activated.connect(
+        self.ui.enc_combo_box.currentIndexChanged.connect(
             lambda: controllers_utilities.page_combo_box(self.ui.enc_combo_box, self.ui.enc_widget)
         )
 

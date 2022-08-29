@@ -11,6 +11,7 @@ from Core.Helpers.HelpersUI import widgets
 
 from Core.Controllers import controllers_wrapper
 from Core.Controllers import event_controllers_wrapper
+from Core.Controllers import menu_controllers_wrapper
 
 
 def styles_binding(ui: main_window.Ui_main_window) -> None:
@@ -37,5 +38,10 @@ if __name__ == '__main__':
         = event_controllers_wrapper.EventControllersWrapper(ui, colors)
 
     event_controllers_wrapper_obj.event_controller_binding()
+
+    menu_controllers_wrapper_obj: menu_controllers_wrapper.MenuControllersWrapper \
+        = menu_controllers_wrapper.MenuControllersWrapper(ui)
+
+    menu_controllers_wrapper_obj.menu_controller_binding()
 
     sys.exit(app.exec_())
