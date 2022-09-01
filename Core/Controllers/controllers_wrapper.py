@@ -12,8 +12,12 @@ from Scripts.CaesarScripts import UnCaesar_Afin
 from Scripts.CaesarScripts import Caesar_with_key
 from Scripts.CaesarScripts import UnCaesar_with_key
 
+from Scripts.TrisemusScripts import Trisemus
+from Scripts.TrisemusScripts import UnTrisemus
+
 from Core.Controllers import table_permutation_generic
 from Core.Controllers import caesar_generic
+from Core.Controllers import trisemus_generic
 from Core.Controllers import controllers_utilities
 
 
@@ -75,16 +79,26 @@ class ControllersWrapper:
     def caesar_key_encryption_handler(self):
         caesar_generic.caesar_key_generic_handler(self.ui.enc_kcs_msg_txt, self.ui.enc_kcs_key_txt,
                                                   self.ui.enc_kcs_key_k_txt, self.ui.enc_kcs_oc_txt,
-                                                  self.ui.enc_kcs_tsb_text,
-                                                  self.ui.enc_kcs_wsb_table,
+                                                  self.ui.enc_kcs_tsb_text, self.ui.enc_kcs_wsb_table,
                                                   Caesar_with_key.Caesar_with_key)
 
     def un_caesar_key_encryption_handler(self):
         caesar_generic.caesar_key_generic_handler(self.ui.dec_kcs_msg_txt, self.ui.dec_kcs_key_txt,
                                                   self.ui.dec_kcs_key_k_txt, self.ui.dec_kcs_oc_txt,
-                                                  self.ui.dec_kcs_tsb_text,
-                                                  self.ui.dec_kcs_wsb_table,
+                                                  self.ui.dec_kcs_tsb_text, self.ui.dec_kcs_wsb_table,
                                                   UnCaesar_with_key.UnCaesar_with_key)
+
+    def trisemus_enc_handler(self):
+        trisemus_generic.trisemus_generic_handler(self.ui.enc_ts_msg_txt, self.ui.enc_ts_row_txt,
+                                                  self.ui.enc_ts_clm_txt, self.ui.enc_ts_key_txt,
+                                                  self.ui.enc_ts_oc_txt, self.ui.enc_ts_ot_txt,
+                                                  Trisemus.Trisemus)
+
+    def un_trisemus_enc_handler(self):
+        trisemus_generic.trisemus_generic_handler(self.ui.dec_ts_msg_txt, self.ui.dec_ts_row_txt,
+                                                  self.ui.dec_ts_clm_txt, self.ui.dec_ts_key_txt,
+                                                  self.ui.dec_ts_oc_txt, self.ui.dec_ts_ot_txt,
+                                                  UnTrisemus.UnTrisemus)
 
     def controller_binding(self) -> None:
         self.ui.enc_combo_box.currentIndexChanged.connect(
@@ -105,3 +119,6 @@ class ControllersWrapper:
 
         self.ui.enc_kcs_btn.clicked.connect(self.caesar_key_encryption_handler)
         self.ui.dec_kcs_btn.clicked.connect(self.un_caesar_key_encryption_handler)
+
+        self.ui.enc_ts_btn.clicked.connect(self.trisemus_enc_handler)
+        self.ui.dec_ts_btn.clicked.connect(self.un_trisemus_enc_handler)

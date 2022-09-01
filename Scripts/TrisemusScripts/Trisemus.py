@@ -17,7 +17,7 @@ def Trisemus(message, key_word, size_a = 4, size_b = 8):# «ПРИЛЕТАЮ З�
         else:
             first = find(table, i,size_a,size_b)
             shifr += table[(first[0] + 1) % len(table)][first[1]]
-    return shifr
+    return shifr, table
 
 
 def sum(string, table):

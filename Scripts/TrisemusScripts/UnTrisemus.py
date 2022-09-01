@@ -17,7 +17,7 @@ def UnTrisemus(shifr, key_word, size_a = 4, size_b = 8): # «ЩЕУЦНЙЖГ С
         else:
             first = find(table, i,size_a,size_b)
             message += table[(first[0] - 1)][first[1]]
-    return message
+    return message, table
 
 
 def sum(string, table):
