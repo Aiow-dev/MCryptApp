@@ -19,4 +19,4 @@ def UnVidjiner(shifr, key):    # "оыэкиы", "труд"  # вывод раб
             position = big_table[table.find(shifr_table[counter])].find(shifr[i])
             message += table[position]
             counter += 1
-    return message
+    return message, big_table

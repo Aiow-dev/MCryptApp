@@ -1,11 +1,29 @@
 from typing import List, Tuple, Dict
 
-from PyQt5.QtGui import QBrush, QColor
+from PyQt5.QtGui import QBrush
 from PyQt5.QtWidgets import QTableWidgetItem
+
+from Core.Helpers import str_utilities
+from Core.Helpers import constants
+from Core.Helpers import item_utilities
+
+from Core.Helpers.HelpersUI import styles
 
 
 def table_to_str(encrypt_message_table: List[List[str]]) -> str:
     return ''.join('\t'.join(row) + '\n' for row in encrypt_message_table)
+
+
+def table_to_str_size(encrypt_message_table: List[List[str]], size_h: int = 1, size_v: int = 1) -> str:
+    table = ''
+
+    for row in encrypt_message_table:
+        for symbol in row:
+            table += f'{f"{symbol}": <{size_h}}'
+
+        table += '\n' * size_v
+
+    return table
 
 
 def ColumnToRow(mas, row, column):
@@ -103,9 +121,7 @@ def construct_affine_table_number_text(
 
 
 def generate_affine_table_letter_column(number_column_value) -> List[str]:
-    letters_text: str = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
-
-    return [letters_text[int(number_value)] for number_value in number_column_value]
+    return [constants.RU_ALPHABET[int(number_value)] for number_value in number_column_value]
 
 
 def construct_affine_table_letter_text(key_a_text: int, key_b_text: int, number_column_values):
@@ -123,12 +139,21 @@ def construct_affine_table_letter_text(key_a_text: int, key_b_text: int, number_
     ))
 
 
+def create_table_item(item_value, color: styles.Color) -> QTableWidgetItem:
+    table_item: QTableWidgetItem = QTableWidgetItem(item_value)
+    table_item.setForeground(QBrush(color.value))
+
+    return table_item
+
+
 def construct_table_column(number_column, column_value, encryption_message_table_obj):
     for number_row, value in enumerate(column_value):
-        column_item = QTableWidgetItem(value)
-        column_item.setForeground(QBrush(QColor(255, 255, 255)))
+        encryption_message_table_obj.setItem(number_row, number_column, create_table_item(value, styles.Color.q_white))
 
-        encryption_message_table_obj.setItem(number_row, number_column, column_item)
+
+def construct_table_row(number_row, row_value, encryption_message_table_obj):
+    for number_column, value in enumerate(row_value):
+        encryption_message_table_obj.setItem(number_row, number_column, create_table_item(value, styles.Color.q_white))
 
 
 def construct_affine_table(key_a_text, key_b_text, column_values, encryption_message_table_obj):
@@ -162,3 +187,31 @@ def construct_caesar_key_table(column_values, encryption_message_table_obj):
 
     for number_column, column_value in enumerate(column_values):
         construct_table_column(number_column, column_value, encryption_message_table_obj)
+
+
+def construct_vigenere_table_text(msg_txt: str, key_text: str, enc_msg_txt: str) -> str:
+    row_msg: List[str] = list(msg_txt)
+    row_key_word: List[str] = list(str_utilities.repeat_on_str(msg_txt, key_text))
+    row_index_key_word: List[str] = list(str_utilities.get_index(row_key_word, constants.RU_ALPHABET))
+    item_utilities.remove_item(' ', row_index_key_word)
+    row_enc_msg: List[str] = list(enc_msg_txt)
+
+    enc_msg_table: List[List[str], List[str], List[str], List[str]] = [
+        row_msg,
+        row_key_word,
+        row_index_key_word,
+        row_enc_msg,
+    ]
+
+    return table_to_str_size(enc_msg_table, 3, 2)
+
+
+def construct_vigenere_table(row_values, enc_msg_table_obj):
+    column_headers = list(constants.RU_ALPHABET)
+    row_headers = [str(row) for row in range(32)]
+
+    enc_msg_table_obj.setHorizontalHeaderLabels(column_headers)
+    enc_msg_table_obj.setVerticalHeaderLabels(row_headers)
+
+    for number_row, row_value in enumerate(row_values):
+        construct_table_row(number_row, row_value, enc_msg_table_obj)

@@ -15,10 +15,14 @@ from Scripts.CaesarScripts import UnCaesar_with_key
 from Scripts.TrisemusScripts import Trisemus
 from Scripts.TrisemusScripts import UnTrisemus
 
+from Scripts.VigenereScripts import Vidjiner
+from Scripts.VigenereScripts import UnVidjiner
+
 from Core.Controllers import table_permutation_generic
 from Core.Controllers import caesar_generic
 from Core.Controllers import trisemus_generic
 from Core.Controllers import controllers_utilities
+from Core.Controllers import vigenere_generic
 
 
 class ControllersWrapper:
@@ -100,6 +104,16 @@ class ControllersWrapper:
                                                   self.ui.dec_ts_oc_txt, self.ui.dec_ts_ot_txt,
                                                   UnTrisemus.UnTrisemus)
 
+    def vigenere_enc_handler(self):
+        vigenere_generic.vigenere_generic_handler(self.ui.enc_vs_msg_txt, self.ui.enc_vs_key_txt,
+                                                  self.ui.enc_vs_oc_txt, self.ui.enc_vs_tsb_text,
+                                                  self.ui.enc_vs_wsb_table, Vidjiner.Vidjiner)
+
+    def un_vigenere_enc_handler(self):
+        vigenere_generic.vigenere_generic_handler(self.ui.dec_vs_msg_txt, self.ui.dec_vs_key_txt,
+                                                  self.ui.dec_vs_oc_txt, self.ui.dec_vs_tsb_text,
+                                                  self.ui.dec_vs_wsb_table, UnVidjiner.UnVidjiner)
+
     def controller_binding(self) -> None:
         self.ui.enc_combo_box.currentIndexChanged.connect(
             lambda: controllers_utilities.page_combo_box(self.ui.enc_combo_box, self.ui.enc_widget)
@@ -122,3 +136,6 @@ class ControllersWrapper:
 
         self.ui.enc_ts_btn.clicked.connect(self.trisemus_enc_handler)
         self.ui.dec_ts_btn.clicked.connect(self.un_trisemus_enc_handler)
+
+        self.ui.enc_vs_btn.clicked.connect(self.vigenere_enc_handler)
+        self.ui.dec_vs_btn.clicked.connect(self.un_vigenere_enc_handler)

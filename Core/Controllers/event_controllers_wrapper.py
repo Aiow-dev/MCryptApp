@@ -70,6 +70,7 @@ class EventControllersWrapper:
             self.ui.enc_ts_msg_txt, self.ui.enc_ts_key_txt,
             self.ui.dec_ts_msg_txt, self.ui.dec_ts_key_txt,
             self.ui.enc_vs_msg_txt, self.ui.enc_vs_key_txt,
+            self.ui.dec_vs_msg_txt, self.ui.dec_vs_key_txt,
         ]
 
         controllers_utilities.text_handler_multi_connect(
