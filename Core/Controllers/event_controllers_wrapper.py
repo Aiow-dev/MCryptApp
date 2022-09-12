@@ -51,6 +51,7 @@ class EventControllersWrapper:
             self.ui.enc_kcs_key_k_txt, self.ui.dec_kcs_key_k_txt,
             self.ui.enc_ts_row_txt, self.ui.enc_ts_clm_txt,
             self.ui.dec_ts_row_txt, self.ui.dec_ts_clm_txt,
+            self.ui.enc_ps_row_txt, self.ui.enc_ps_clm_txt,
         ]
 
         controllers_utilities.number_text_handler_multi_connect(
@@ -71,6 +72,7 @@ class EventControllersWrapper:
             self.ui.dec_ts_msg_txt, self.ui.dec_ts_key_txt,
             self.ui.enc_vs_msg_txt, self.ui.enc_vs_key_txt,
             self.ui.dec_vs_msg_txt, self.ui.dec_vs_key_txt,
+            self.ui.enc_ps_msg_txt, self.ui.enc_ps_key_txt,
         ]
 
         controllers_utilities.text_handler_multi_connect(

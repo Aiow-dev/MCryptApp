@@ -16,3 +16,5 @@ class MenuControllersWrapper:
         self.ui.action_ts.triggered.connect(lambda: self.ui.enc_combo_box.setCurrentIndex(6))
 
         self.ui.action_vs.triggered.connect(lambda: self.ui.enc_combo_box.setCurrentIndex(7))
+
+        self.ui.action_ps.triggered.connect(lambda: self.ui.enc_combo_box.setCurrentIndex(8))

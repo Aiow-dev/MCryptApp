@@ -61,7 +61,7 @@
        <item>
         <widget class="QStackedWidget" name="enc_widget">
          <property name="currentIndex">
-          <number>7</number>
+          <number>8</number>
          </property>
          <widget class="QWidget" name="smp_page">
           <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -8047,7 +8047,7 @@ QTabBar::tab:hover {
 }</string>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>1</number>
              </property>
              <property name="elideMode">
               <enum>Qt::ElideNone</enum>
@@ -9324,6 +9324,1366 @@ QPushButton:hover {
            </item>
           </layout>
          </widget>
+         <widget class="QWidget" name="page_ps">
+          <layout class="QHBoxLayout" name="horizontalLayout_149">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QTabWidget" name="ps_types_tab">
+             <property name="styleSheet">
+              <string notr="true">QTabWidget::pane {
+	background: rgb(46, 44, 44);
+}
+
+QTabBar::tab {
+	height: 25px;
+	border: 1px solid rgb(77, 77, 77);
+	padding: 10 120px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(255, 255, 255);
+}
+
+QTabBar::tab:selected {
+	border: 1px solid rgb(30, 30, 30);
+	background-color: rgb(30, 30, 30);
+	color: rgb(255, 255, 255);
+}
+
+QTabBar::tab:hover {
+	background-color: rgb(67, 67, 67);
+	color: rgb(255, 255, 255);
+}</string>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <property name="elideMode">
+              <enum>Qt::ElideNone</enum>
+             </property>
+             <property name="documentMode">
+              <bool>false</bool>
+             </property>
+             <property name="movable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="enc_ps_tab">
+              <attribute name="title">
+               <string>Шифрование</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout_128">
+               <item>
+                <widget class="QFrame" name="enc_ps">
+                 <property name="styleSheet">
+                  <string notr="true">QFrame {
+	border: 1px solid rgb(77, 77, 77);
+}</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Plain</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_63">
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QFrame" name="enc_ps_r_frame">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>285</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QFrame {
+	border: none;
+}</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_129">
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item alignment="Qt::AlignTop">
+                      <widget class="QFrame" name="enc_ps_in_frame">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>255</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QFrame {
+	border: none;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_64">
+                        <item>
+                         <widget class="QFrame" name="enc_ps_msg_frame">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>45</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QFrame {
+	border: none;
+}</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_131">
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QLabel" name="enc_ps_msg_lbl">
+                             <property name="minimumSize">
+                              <size>
+                               <width>80</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}</string>
+                             </property>
+                             <property name="text">
+                              <string>Сообщение</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="enc_ps_msg_txt">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLineEdit {
+	border: 1px solid rgb(48, 47, 47);
+	border-radius: 3px;
+	margin: 0 0 0 18px;
+	padding: 0 3px;
+	color: rgb(255, 255, 255);
+}
+
+QLineEdit:focus {
+	border: 1px solid rgb(77, 77, 77);
+}</string>
+                             </property>
+                             <property name="placeholderText">
+                              <string>Текст сообщения</string>
+                             </property>
+                             <property name="clearButtonEnabled">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="enc_ps_row_frame">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>45</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QFrame {
+	border: none;
+}</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_132">
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QLabel" name="enc_ps_row_lbl">
+                             <property name="minimumSize">
+                              <size>
+                               <width>80</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}</string>
+                             </property>
+                             <property name="text">
+                              <string>Строки</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="enc_ps_row_txt">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLineEdit {
+	border: 1px solid rgb(48, 47, 47);
+	border-radius: 3px;
+	margin: 0 0 0 18px;
+	padding: 0 3px;
+	color: rgb(255, 255, 255);
+}
+
+QLineEdit:focus {
+	border: 1px solid rgb(77, 77, 77);
+}</string>
+                             </property>
+                             <property name="placeholderText">
+                              <string>Количество строк</string>
+                             </property>
+                             <property name="clearButtonEnabled">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="enc_ps_clm_frame">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>45</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QFrame {
+	border: none;
+}</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_133">
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QLabel" name="enc_ps_clm_lbl">
+                             <property name="minimumSize">
+                              <size>
+                               <width>80</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}</string>
+                             </property>
+                             <property name="text">
+                              <string>Столбцы</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="enc_ps_clm_txt">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLineEdit {
+	border: 1px solid rgb(48, 47, 47);
+	border-radius: 3px;
+	margin: 0 0 0 18px;
+	padding: 0 3px;
+	color: rgb(255, 255, 255);
+}
+
+QLineEdit:focus {
+	border: 1px solid rgb(77, 77, 77);
+}</string>
+                             </property>
+                             <property name="placeholderText">
+                              <string>Количество столбцов</string>
+                             </property>
+                             <property name="clearButtonEnabled">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="enc_ps_key_frame">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>45</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QFrame {
+	border: none;
+}</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_134">
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QLabel" name="enc_ps_key_lbl">
+                             <property name="minimumSize">
+                              <size>
+                               <width>80</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}</string>
+                             </property>
+                             <property name="text">
+                              <string>Ключ</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="enc_ps_key_txt">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLineEdit {
+	border: 1px solid rgb(48, 47, 47);
+	border-radius: 3px;
+	margin: 0 0 0 18px;
+	padding: 0 3px;
+	color: rgb(255, 255, 255);
+}
+
+QLineEdit:focus {
+	border: 1px solid rgb(77, 77, 77);
+}</string>
+                             </property>
+                             <property name="placeholderText">
+                              <string>Текст ключа</string>
+                             </property>
+                             <property name="clearButtonEnabled">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="enc_ps_chr_frame">
+                       <property name="maximumSize">
+                        <size>
+                         <width>580</width>
+                         <height>65</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QFrame {
+	border: none;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_65">
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <widget class="QFrame" name="enc_ps_oc_frame">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>45</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>580</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QFrame {
+	border: none;
+}</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_135">
+                           <item>
+                            <widget class="QLabel" name="enc_ps_oc_lbl">
+                             <property name="minimumSize">
+                              <size>
+                               <width>80</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}</string>
+                             </property>
+                             <property name="text">
+                              <string>Результат</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="enc_ps_oc_txt">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLineEdit {
+	border: 1px solid rgb(48, 47, 47);
+	border-radius: 3px;
+	margin: 0 0 0 18px;
+	padding: 0 3px;
+	color: rgb(255, 255, 255);
+}
+
+QLineEdit:focus {
+	border: 1px solid rgb(77, 77, 77);
+}</string>
+                             </property>
+                             <property name="readOnly">
+                              <bool>true</bool>
+                             </property>
+                             <property name="placeholderText">
+                              <string>Текст зашифрованного сообщения</string>
+                             </property>
+                             <property name="clearButtonEnabled">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="enc_ps_table_frame">
+                    <property name="styleSheet">
+                     <string notr="true">QFrame {
+	border: none;
+}</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_136">
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QFrame" name="enc_ps_ot_frame">
+                       <property name="styleSheet">
+                        <string notr="true">QFrame {
+	border: none;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_137">
+                        <item>
+                         <widget class="QLabel" name="enc_ps_ot_lbl">
+                          <property name="minimumSize">
+                           <size>
+                            <width>80</width>
+                            <height>45</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Шифр-таблица</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QTextEdit" name="enc_ps_ot_txt">
+                          <property name="styleSheet">
+                           <string notr="true">QTextEdit {
+	border: 1px solid rgb(48, 47, 47);
+	border-radius: 3px;
+	padding: 0 3px;
+	color: rgb(255, 255, 255);
+}
+
+QTextEdit:focus {
+	border: 1px solid rgb(77, 77, 77);
+}</string>
+                          </property>
+                          <property name="readOnly">
+                           <bool>true</bool>
+                          </property>
+                          <property name="placeholderText">
+                           <string>Текст шифрующей таблицы</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="enc_ps_button_frame">
+                    <property name="styleSheet">
+                     <string notr="true">QFrame {
+	border: none;
+}</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_138">
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QPushButton" name="enc_ps_btn">
+                       <property name="minimumSize">
+                        <size>
+                         <width>130</width>
+                         <height>45</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>200</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(255, 255, 255);
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Выполнить</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="dec_ts_tab_2">
+              <attribute name="title">
+               <string>Дешифрование</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout_139">
+               <item>
+                <widget class="QFrame" name="dec_ts_2">
+                 <property name="styleSheet">
+                  <string notr="true">QFrame {
+	border: 1px solid rgb(77, 77, 77);
+}</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Plain</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_66">
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QFrame" name="dec_ts_r_frame_2">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>255</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QFrame {
+	border: none;
+}</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_140">
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item alignment="Qt::AlignTop">
+                      <widget class="QFrame" name="dec_ts_in_frame_2">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>255</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>170</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QFrame {
+	border: none;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_67">
+                        <item>
+                         <widget class="QFrame" name="dec_ts_msg_frame_2">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>45</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QFrame {
+	border: none;
+}</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_141">
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QLabel" name="dec_ts_msg_lbl_2">
+                             <property name="minimumSize">
+                              <size>
+                               <width>80</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}</string>
+                             </property>
+                             <property name="text">
+                              <string>Сообщение</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="dec_ts_msg_txt_2">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLineEdit {
+	border: 1px solid rgb(48, 47, 47);
+	border-radius: 3px;
+	margin: 0 0 0 18px;
+	padding: 0 3px;
+	color: rgb(255, 255, 255);
+}
+
+QLineEdit:focus {
+	border: 1px solid rgb(77, 77, 77);
+}</string>
+                             </property>
+                             <property name="placeholderText">
+                              <string>Текст зашифрованного сообщения</string>
+                             </property>
+                             <property name="clearButtonEnabled">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="dec_ts_row_frame_2">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>45</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QFrame {
+	border: none;
+}</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_142">
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QLabel" name="dec_ts_row_lbl_2">
+                             <property name="minimumSize">
+                              <size>
+                               <width>80</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}</string>
+                             </property>
+                             <property name="text">
+                              <string>Строки</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="dec_ts_row_txt_2">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLineEdit {
+	border: 1px solid rgb(48, 47, 47);
+	border-radius: 3px;
+	margin: 0 0 0 18px;
+	padding: 0 3px;
+	color: rgb(255, 255, 255);
+}
+
+QLineEdit:focus {
+	border: 1px solid rgb(77, 77, 77);
+}</string>
+                             </property>
+                             <property name="placeholderText">
+                              <string>Количество строк</string>
+                             </property>
+                             <property name="clearButtonEnabled">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="dec_ts_clm_frame_2">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>45</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QFrame {
+	border: none;
+}</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_143">
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QLabel" name="dec_ts_clm_lbl_2">
+                             <property name="minimumSize">
+                              <size>
+                               <width>80</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}</string>
+                             </property>
+                             <property name="text">
+                              <string>Столбцы</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="dec_ts_clm_txt_2">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLineEdit {
+	border: 1px solid rgb(48, 47, 47);
+	border-radius: 3px;
+	margin: 0 0 0 18px;
+	padding: 0 3px;
+	color: rgb(255, 255, 255);
+}
+
+QLineEdit:focus {
+	border: 1px solid rgb(77, 77, 77);
+}</string>
+                             </property>
+                             <property name="placeholderText">
+                              <string>Количество столбцов</string>
+                             </property>
+                             <property name="clearButtonEnabled">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="dec_ts_key_frame_2">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>45</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QFrame {
+	border: none;
+}</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_144">
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QLabel" name="dec_ts_key_lbl_2">
+                             <property name="minimumSize">
+                              <size>
+                               <width>80</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}</string>
+                             </property>
+                             <property name="text">
+                              <string>Ключ</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="dec_ts_key_txt_2">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLineEdit {
+	border: 1px solid rgb(48, 47, 47);
+	border-radius: 3px;
+	margin: 0 0 0 18px;
+	padding: 0 3px;
+	color: rgb(255, 255, 255);
+}
+
+QLineEdit:focus {
+	border: 1px solid rgb(77, 77, 77);
+}</string>
+                             </property>
+                             <property name="placeholderText">
+                              <string>Текст ключа</string>
+                             </property>
+                             <property name="clearButtonEnabled">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="dec_ts_chr_frame_2">
+                       <property name="maximumSize">
+                        <size>
+                         <width>580</width>
+                         <height>65</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QFrame {
+	border: none;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_68">
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <widget class="QFrame" name="dec_ts_oc_frame_2">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>45</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>580</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QFrame {
+	border: none;
+}</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_145">
+                           <item>
+                            <widget class="QLabel" name="dec_ts_oc_lbl_2">
+                             <property name="minimumSize">
+                              <size>
+                               <width>80</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}</string>
+                             </property>
+                             <property name="text">
+                              <string>Результат</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="dec_ts_oc_txt_2">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLineEdit {
+	border: 1px solid rgb(48, 47, 47);
+	border-radius: 3px;
+	margin: 0 0 0 18px;
+	padding: 0 3px;
+	color: rgb(255, 255, 255);
+}
+
+QLineEdit:focus {
+	border: 1px solid rgb(77, 77, 77);
+}</string>
+                             </property>
+                             <property name="readOnly">
+                              <bool>true</bool>
+                             </property>
+                             <property name="placeholderText">
+                              <string>Текст сообщения</string>
+                             </property>
+                             <property name="clearButtonEnabled">
+                              <bool>false</bool>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="dec_ts_table_frame_2">
+                    <property name="styleSheet">
+                     <string notr="true">QFrame {
+	border: none;
+}</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_146">
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QFrame" name="dec_ts_ot_frame_2">
+                       <property name="styleSheet">
+                        <string notr="true">QFrame {
+	border: none;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_147">
+                        <item>
+                         <widget class="QLabel" name="dec_ts_ot_lbl_2">
+                          <property name="minimumSize">
+                           <size>
+                            <width>80</width>
+                            <height>45</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Шифр-таблица</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QTextEdit" name="dec_ts_ot_txt_2">
+                          <property name="styleSheet">
+                           <string notr="true">QTextEdit {
+	border: 1px solid rgb(48, 47, 47);
+	border-radius: 3px;
+	padding: 0 3px;
+	color: rgb(255, 255, 255);
+}
+
+QTextEdit:focus {
+	border: 1px solid rgb(77, 77, 77);
+}</string>
+                          </property>
+                          <property name="readOnly">
+                           <bool>true</bool>
+                          </property>
+                          <property name="placeholderText">
+                           <string>Текст шифрующей таблицы</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="dec_ts_button_frame_2">
+                    <property name="styleSheet">
+                     <string notr="true">QFrame {
+	border: none;
+}</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_148">
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QPushButton" name="dec_ts_btn_2">
+                       <property name="minimumSize">
+                        <size>
+                         <width>130</width>
+                         <height>45</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>200</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(255, 255, 255);
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Выполнить</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </widget>
        </item>
        <item>
@@ -9420,6 +10780,11 @@ QComboBox QAbstractItemView {
               <string>Система Вижинера</string>
              </property>
             </item>
+            <item>
+             <property name="text">
+              <string>Система Плейфера</string>
+             </property>
+            </item>
            </widget>
           </item>
          </layout>
@@ -9470,6 +10835,7 @@ QComboBox QAbstractItemView {
     <addaction name="enc_cs_menu"/>
     <addaction name="action_ts"/>
     <addaction name="action_vs"/>
+    <addaction name="action_ps"/>
    </widget>
    <addaction name="file_menu"/>
    <addaction name="enc_menu"/>
@@ -9522,6 +10888,11 @@ QComboBox QAbstractItemView {
   <action name="action_vs">
    <property name="text">
     <string>Система Вижинера</string>
+   </property>
+  </action>
+  <action name="action_ps">
+   <property name="text">
+    <string>Система Плейфера</string>
    </property>
   </action>
  </widget>
