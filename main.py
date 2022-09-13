@@ -1,27 +1,25 @@
 import sys
 from typing import Dict
 
-from PyQt5.QtWidgets import QApplication
+from PyQt5.QtWidgets import QApplication, QMainWindow
 
 from View import main_window
 
-from Core.Helpers.HelpersUI import style_helpers
-from Core.Helpers.HelpersUI import styles
-from Core.Helpers.HelpersUI import widgets
+from Utils.StyleUtils import style_utils
 
-from Core.Controllers import controllers_wrapper
-from Core.Controllers import event_controllers_wrapper
-from Core.Controllers import menu_controllers_wrapper
+from Assets import styles
+
+from Controllers import controllers_wrapper, event_controllers_wrapper, menu_controllers_wrapper
 
 
 def styles_binding(ui: main_window.Ui_main_window) -> None:
-    style_helpers.set_menu_bar_dark_style(ui.menu_bar)
+    style_utils.set_menu_bar_dark_style(ui.menu_bar)
 
 
 if __name__ == '__main__':
     app: QApplication = QApplication(sys.argv)
     ui: main_window.Ui_main_window = main_window.Ui_main_window()
-    MainWindow: widgets.Window = widgets.Window(ui)
+    MainWindow: QMainWindow = QMainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
 

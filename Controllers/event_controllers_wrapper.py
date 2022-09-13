@@ -4,10 +4,11 @@ from PyQt5.QtWidgets import QLineEdit
 
 from View import main_window
 
-from Core.Helpers.HelpersUI import style_helpers
-from Core.Helpers.HelpersUI import styles
+from Utils.StyleUtils import style_utils
 
-from Core.Controllers import controllers_utilities
+from Assets import styles
+
+from Utils import controllers_utils
 
 
 class EventControllersWrapper:
@@ -23,7 +24,7 @@ class EventControllersWrapper:
             color = self.colors['error']
             tool_tip_text = 'Поле должно содержать только цифры'
 
-        style_helpers.set_line_edit_border_color(ui_obj, color)
+        style_utils.set_line_edit_border_color(ui_obj, color)
         ui_obj.setToolTip(tool_tip_text)
 
     def text_handler(self, ui_obj):
@@ -36,7 +37,7 @@ class EventControllersWrapper:
             color = self.colors['error']
             tool_tip_text = 'Поле не может быть пустым или содержать только пробельные символы'
 
-        style_helpers.set_line_edit_border_color(ui_obj, color)
+        style_utils.set_line_edit_border_color(ui_obj, color)
         ui_obj.setToolTip(tool_tip_text)
 
     def event_number_text_binding(self) -> None:
@@ -54,7 +55,7 @@ class EventControllersWrapper:
             self.ui.enc_ps_row_txt, self.ui.enc_ps_clm_txt,
         ]
 
-        controllers_utilities.number_text_handler_multi_connect(
+        controllers_utils.number_text_handler_multi_connect(
             number_text_obj_list, self
         )
 
@@ -75,7 +76,7 @@ class EventControllersWrapper:
             self.ui.enc_ps_msg_txt, self.ui.enc_ps_key_txt,
         ]
 
-        controllers_utilities.text_handler_multi_connect(
+        controllers_utils.text_handler_multi_connect(
             text_obj_list, self
         )
 

@@ -1,7 +1,8 @@
-from Core.Helpers import table_helpers
-from Core.Helpers import constants
+from Assets import constants
 
-from Core.Helpers.HelpersUI import modal_dialogs
+from Utils import table_utils
+
+from Utils.StyleUtils import modal_dialogs
 
 
 def vigenere_generic_handler(msg_obj, key_obj, enc_msg_obj,
@@ -12,8 +13,8 @@ def vigenere_generic_handler(msg_obj, key_obj, enc_msg_obj,
 
         enc_msg, enc_msg_table = f_vigenere_obj(msg_txt, key_text)
         enc_msg_obj.setText(enc_msg)
-        table_txt_obj.setText(table_helpers.construct_vigenere_table_text(msg_txt, key_text, enc_msg))
-        table_helpers.construct_vigenere_table(enc_msg_table, table_obj)
+        table_txt_obj.setText(table_utils.construct_vigenere_table_text(msg_txt, key_text, enc_msg))
+        table_utils.construct_vigenere_table(enc_msg_table, table_obj)
     except ValueError as value_error:
         print(value_error)
 

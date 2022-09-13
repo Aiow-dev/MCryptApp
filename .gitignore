@@ -153,8 +153,8 @@ cython_debug/
 
 .idea/
 
-Builds/Windows/
-Builds/WindowsOneFile/Build/
-Builds/WindowsOneFile/Spec/
-
 .qt_for_python/
+
+Builds/
+
+AutomationScripts/

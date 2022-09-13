@@ -1,9 +1,8 @@
 from typing import Dict
 
-from Core.Helpers import table_helpers
-from Core.Helpers.HelpersUI import styles
+from Assets import styles, constants
 
-from Core.Controllers import controllers_utilities
+from Utils import table_utils, controllers_utils
 
 
 def table_permutation_generic_handler(message_obj, row_obj, column_obj, encrypt_message_obj,
@@ -15,7 +14,10 @@ def table_permutation_generic_handler(message_obj, row_obj, column_obj, encrypt_
 
         check_ui_obj_list = [message_obj, row_obj, column_obj]
 
-        colors: Dict[str, styles.Color] = {'default': styles.Color.dark_charcoal, 'error': styles.Color.orange_red}
+        colors: Dict[str, styles.Color] = {
+            'default': styles.Color.dark_charcoal,
+            'error': styles.Color.orange_red
+        }
 
         tool_tips: Dict[str, str] = {
             'default': '',
@@ -23,7 +25,7 @@ def table_permutation_generic_handler(message_obj, row_obj, column_obj, encrypt_
         }
 
         if number_row * number_column != len(message_text.replace(' ', '')):
-            controllers_utilities.multi_set_status_handler(
+            controllers_utils.multi_set_status_handler(
                 check_ui_obj_list, colors, tool_tips, True
             )
 
@@ -32,18 +34,16 @@ def table_permutation_generic_handler(message_obj, row_obj, column_obj, encrypt_
         encrypt_message, encrypt_message_table = function_permutation_obj(message_text, number_row,
                                                                           number_column)
         encrypt_message_obj.setText(encrypt_message)
-        encryption_message_table_obj.setText(table_helpers.table_to_str(encrypt_message_table))
+        encryption_message_table_obj.setText(table_utils.table_to_str(encrypt_message_table))
 
-        controllers_utilities.multi_set_status_handler(
+        controllers_utils.multi_set_status_handler(
             check_ui_obj_list, colors, tool_tips, False
         )
     except ValueError as value_error:
         print(value_error)
 
-        encrypt_message_obj.setText('Ошибка. Проверьте корректность введенных данных!')
-        encryption_message_table_obj.setText(
-            'Ошибка. Невозможно построить таблицу. Проверьте корректность введенных данных!'
-        )
+        encrypt_message_obj.setText(constants.ERROR_MESSAGE)
+        encryption_message_table_obj.setText(constants.ERROR_TABLE_MESSAGE)
     except AttributeError as attribute_error:
         print(attribute_error)
 
@@ -66,7 +66,7 @@ def table_key_permutation_generic_handler(message_obj, row_obj, column_obj, key_
         }
 
         if number_row * number_column != len(message_text.replace(' ', '')):
-            controllers_utilities.multi_set_status_handler(
+            controllers_utils.multi_set_status_handler(
                 [message_obj, row_obj, column_obj], colors, tool_tips, True
             )
 
@@ -75,7 +75,7 @@ def table_key_permutation_generic_handler(message_obj, row_obj, column_obj, key_
         if number_column != len(key_text.replace(' ', '')):
             tool_tips['error'] = 'Количество символов ключа не соответствует количеству столбцов'
 
-            controllers_utilities.multi_set_status_handler(
+            controllers_utils.multi_set_status_handler(
                 [column_obj, key_obj], colors, tool_tips, True
             )
 
@@ -85,7 +85,7 @@ def table_key_permutation_generic_handler(message_obj, row_obj, column_obj, key_
                                                    number_column, key_text)
         encrypt_message_obj.setText(encrypt_message)
 
-        controllers_utilities.multi_set_status_handler(
+        controllers_utils.multi_set_status_handler(
             [message_obj, row_obj, column_obj, key_obj], colors, tool_tips, False
         )
     except ValueError as value_error:

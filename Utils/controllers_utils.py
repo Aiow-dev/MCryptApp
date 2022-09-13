@@ -1,8 +1,10 @@
 from typing import Dict
 
-from Core.Controllers import event_controllers_wrapper
-from Core.Helpers.HelpersUI import styles
-from Core.Helpers.HelpersUI import style_helpers
+from Controllers import event_controllers_wrapper
+
+from Utils.StyleUtils import style_utils
+
+from Assets import styles
 
 
 def number_text_handler_connect(
@@ -57,5 +59,5 @@ def multi_set_status_handler(text_obj_list, colors: Dict[str, styles.Color],
         tool_tip = tool_tips['error']
 
     for text_obj in text_obj_list:
-        style_helpers.set_line_edit_border_color(text_obj, color)
-        style_helpers.set_tool_tip(text_obj, tool_tip)
+        style_utils.set_line_edit_border_color(text_obj, color)
+        style_utils.set_tool_tip(text_obj, tool_tip)

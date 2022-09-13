@@ -18,11 +18,9 @@ from Scripts.TrisemusScripts import UnTrisemus
 from Scripts.VigenereScripts import Vidjiner
 from Scripts.VigenereScripts import UnVidjiner
 
-from Core.Controllers import table_permutation_generic
-from Core.Controllers import caesar_generic
-from Core.Controllers import trisemus_generic
-from Core.Controllers import controllers_utilities
-from Core.Controllers import vigenere_generic
+from Controllers import trisemus_generic, table_permutation_generic, caesar_generic, vigenere_generic
+
+from Utils import controllers_utils
 
 
 class ControllersWrapper:
@@ -116,7 +114,7 @@ class ControllersWrapper:
 
     def controller_binding(self) -> None:
         self.ui.enc_combo_box.currentIndexChanged.connect(
-            lambda: controllers_utilities.page_combo_box(self.ui.enc_combo_box, self.ui.enc_widget)
+            lambda: controllers_utils.page_combo_box(self.ui.enc_combo_box, self.ui.enc_widget)
         )
 
         self.ui.enc_smp_btn.clicked.connect(self.simple_permutation_encryption_handler)

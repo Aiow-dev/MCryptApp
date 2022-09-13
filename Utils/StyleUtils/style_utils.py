@@ -1,4 +1,4 @@
-from Core.Helpers.HelpersUI import styles
+from Assets import styles
 
 
 def set_style(ui_obj, ui_stylesheet: str) -> None:

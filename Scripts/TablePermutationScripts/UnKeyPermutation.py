@@ -1,6 +1,3 @@
-from Core.Helpers import table_helpers
-
-
 def UnKeyPermutation(shifr, row, column,
                      key):  # Входные данные: "ДВПЕМСЕПРТОЕНОИАГДЬЛЛЮОЬ", row = 4, column = 6, key = "КОРОВА"
     clear_shifr = ''.join(shifr.split(' ')).upper()  # Выходные данные: "ПРИЛЕТАЮСЕДЬМОГОВПОЛДЕНЬ"
