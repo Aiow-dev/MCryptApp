@@ -16,7 +16,7 @@ class EventControllersWrapper:
         self.ui = ui
         self.colors = colors
 
-    def number_text_handler(self, ui_obj):
+    def num_text_handler(self, ui_obj):
         color: styles.Color = self.colors['default']
         tool_tip_text: str = ''
 
@@ -40,8 +40,8 @@ class EventControllersWrapper:
         style_utils.set_line_edit_border_color(ui_obj, color)
         ui_obj.setToolTip(tool_tip_text)
 
-    def event_number_text_binding(self) -> None:
-        number_text_obj_list: List[QLineEdit] = [
+    def event_num_text_binding(self) -> None:
+        num_text_obj_list: List[QLineEdit] = [
             self.ui.enc_smp_row_txt, self.ui.enc_smp_clm_txt,
             self.ui.dec_smp_row_txt, self.ui.dec_smp_clm_txt,
             self.ui.enc_kpm_row_txt, self.ui.enc_kpm_clm_txt,
@@ -55,8 +55,8 @@ class EventControllersWrapper:
             self.ui.enc_ps_row_txt, self.ui.enc_ps_clm_txt,
         ]
 
-        controllers_utils.number_text_handler_multi_connect(
-            number_text_obj_list, self
+        controllers_utils.num_text_changed_multi_connect(
+            num_text_obj_list, self
         )
 
     def event_text_binding(self) -> None:
@@ -76,11 +76,11 @@ class EventControllersWrapper:
             self.ui.enc_ps_msg_txt, self.ui.enc_ps_key_txt,
         ]
 
-        controllers_utils.text_handler_multi_connect(
+        controllers_utils.text_changed_multi_connect(
             text_obj_list, self
         )
 
     def event_controller_binding(self) -> None:
-        self.event_number_text_binding()
+        self.event_num_text_binding()
 
         self.event_text_binding()
