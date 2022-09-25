@@ -2,6 +2,8 @@ from Assets import styles
 
 from Utils.StyleUtils import style_base_utils
 
+from View import main_window
+
 
 def set_menu_bar_dark_style(menu_bar_obj) -> None:
     menu_bar_stylesheet = f'''
@@ -40,3 +42,7 @@ def set_line_edit_border_color(line_edit_obj, color: styles.Color) -> None:
 
 def set_tool_tip(ui_obj, tool_tip: str) -> None:
     ui_obj.setToolTip(tool_tip)
+
+
+def styles_binding(ui: main_window.Ui_main_window) -> None:
+    set_menu_bar_dark_style(ui.menu_bar)

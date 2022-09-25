@@ -4788,9 +4788,8 @@ class Ui_main_window(object):
         self.enc_widget.addWidget(self.page_ps)
         self.verticalLayout.addWidget(self.enc_widget)
         self.status_frame = QtWidgets.QFrame(self.main_frame)
-        self.status_frame.setMinimumSize(QtCore.QSize(0, 30))
+        self.status_frame.setMinimumSize(QtCore.QSize(0, 25))
         self.status_frame.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
 "    background-color: rgb(48, 47, 47);\n"
 "}")
         self.status_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -4800,7 +4799,7 @@ class Ui_main_window(object):
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.enc_combo_box = QtWidgets.QComboBox(self.status_frame)
-        self.enc_combo_box.setMinimumSize(QtCore.QSize(0, 30))
+        self.enc_combo_box.setMinimumSize(QtCore.QSize(0, 25))
         self.enc_combo_box.setStyleSheet("QComboBox {\n"
 "    border: none;\n"
 "    background-color: rgb(48, 47, 47);\n"
@@ -4811,6 +4810,10 @@ class Ui_main_window(object):
 "    outline: none;\n"
 "    color: rgb(255, 255, 255);\n"
 "    selection-background-color: rgb(60, 60, 60);\n"
+"}\n"
+"\n"
+"QComboBox::drop-down:button {\n"
+"    border: none;\n"
 "}")
         self.enc_combo_box.setObjectName("enc_combo_box")
         self.enc_combo_box.addItem("")

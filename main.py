@@ -1,19 +1,14 @@
 import sys
-from typing import Dict
 
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
 from View import main_window
 
-from Utils.StyleUtils import style_utils
-
 from Assets import styles
 
 from Controllers import controllers_wrapper, event_controllers_wrapper, menu_controllers_wrapper
 
-
-def styles_binding(ui: main_window.Ui_main_window) -> None:
-    style_utils.set_menu_bar_dark_style(ui.menu_bar)
+from Utils.StyleUtils import style_utils
 
 
 if __name__ == '__main__':
@@ -22,8 +17,6 @@ if __name__ == '__main__':
     MainWindow: QMainWindow = QMainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
-
-    styles_binding(ui)
 
     controllers_wrapper_obj: controllers_wrapper.ControllersWrapper \
         = controllers_wrapper.ControllersWrapper(ui)
@@ -39,5 +32,7 @@ if __name__ == '__main__':
         = menu_controllers_wrapper.MenuControllersWrapper(ui)
 
     menu_controllers_wrapper_obj.menu_controller_binding()
+
+    style_utils.styles_binding(ui)
 
     sys.exit(app.exec_())

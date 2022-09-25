@@ -10691,12 +10691,11 @@ QPushButton:hover {
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>30</height>
+           <height>25</height>
           </size>
          </property>
          <property name="styleSheet">
           <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
 	background-color: rgb(48, 47, 47);
 }</string>
          </property>
@@ -10724,7 +10723,7 @@ QPushButton:hover {
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>30</height>
+              <height>25</height>
              </size>
             </property>
             <property name="styleSheet">
@@ -10738,6 +10737,10 @@ QComboBox QAbstractItemView {
 	outline: none;
 	color: rgb(255, 255, 255);
 	selection-background-color: rgb(60, 60, 60);
+}
+
+QComboBox::drop-down:button {
+	border: none;
 }</string>
             </property>
             <item>
