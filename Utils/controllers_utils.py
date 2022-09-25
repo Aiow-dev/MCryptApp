@@ -49,6 +49,10 @@ def set_combo_box(combo_box_obj, item_index):
     combo_box_obj.setCurrentIndex(item_index)
 
 
+def switch_page(combo_box_obj, item_index):
+    return lambda: set_combo_box(combo_box_obj, item_index)
+
+
 def multi_set_status_handler(text_obj_list, colors: Dict[str, styles.Color],
                              tool_tips: Dict[str, str], error_status: bool = False) -> None:
     color: styles.Color = colors['default']

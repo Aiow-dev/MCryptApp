@@ -1,4 +1,10 @@
+from typing import List
+
+from PyQt5.QtWidgets import QAction
+
 from View import main_window
+
+from Utils import controllers_utils
 
 
 class MenuControllersWrapper:
@@ -6,15 +12,13 @@ class MenuControllersWrapper:
         self.ui = ui
 
     def menu_controller_binding(self) -> None:
-        self.ui.action_smp.triggered.connect(lambda: self.ui.enc_combo_box.setCurrentIndex(0))
-        self.ui.action_kpm.triggered.connect(lambda: self.ui.enc_combo_box.setCurrentIndex(1))
+        actions_list: List[QAction] = [
+            self.ui.action_smp, self.ui.action_kpm,
+            self.ui.action_5,
+            self.ui.action_cs, self.ui.action_acs,
+            self.ui.action_kcs, self.ui.action_ts,
+            self.ui.action_vs, self.ui.action_ps,
+        ]
 
-        self.ui.action_cs.triggered.connect(lambda: self.ui.enc_combo_box.setCurrentIndex(3))
-        self.ui.action_acs.triggered.connect(lambda: self.ui.enc_combo_box.setCurrentIndex(4))
-        self.ui.action_kcs.triggered.connect(lambda: self.ui.enc_combo_box.setCurrentIndex(5))
-
-        self.ui.action_ts.triggered.connect(lambda: self.ui.enc_combo_box.setCurrentIndex(6))
-
-        self.ui.action_vs.triggered.connect(lambda: self.ui.enc_combo_box.setCurrentIndex(7))
-
-        self.ui.action_ps.triggered.connect(lambda: self.ui.enc_combo_box.setCurrentIndex(8))
+        for action_index, action in enumerate(actions_list):
+            action.triggered.connect(controllers_utils.switch_page(self.ui.enc_combo_box, action_index))

@@ -30,10 +30,8 @@ if __name__ == '__main__':
 
     controllers_wrapper_obj.controller_binding()
 
-    colors: Dict[str, styles.Color] = {'default': styles.Color.dark_charcoal, 'error': styles.Color.orange_red}
-
     event_controllers_wrapper_obj: event_controllers_wrapper.EventControllersWrapper \
-        = event_controllers_wrapper.EventControllersWrapper(ui, colors)
+        = event_controllers_wrapper.EventControllersWrapper(ui, styles.DEFAULT_COLORS)
 
     event_controllers_wrapper_obj.event_controller_binding()
 
