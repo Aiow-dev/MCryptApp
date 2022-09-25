@@ -9,6 +9,8 @@ from Scripts import trisemus
 
 from Scripts import vigenere
 
+from Scripts import playfair
+
 from Controllers import trisemus_generic, table_permutation_generic, caesar_generic, vigenere_generic
 
 from Utils import controllers_utils
@@ -102,6 +104,18 @@ class ControllersWrapper:
         vigenere_generic.vigenere_generic_handler(self.ui.dec_vs_msg_txt, self.ui.dec_vs_key_txt,
                                                   self.ui.dec_vs_oc_txt, self.ui.dec_vs_tsb_text,
                                                   self.ui.dec_vs_wsb_table, vigenere.dec_vigenere)
+    
+    def playfair_enc_handler(self):
+        trisemus_generic.trisemus_generic_handler(self.ui.enc_ps_msg_txt, self.ui.enc_ps_row_txt,
+                                                  self.ui.enc_ps_clm_txt, self.ui.enc_ps_key_txt,
+                                                  self.ui.enc_ps_oc_txt, self.ui.enc_ps_ot_txt,
+                                                  playfair.enc_playfair)
+
+    def un_playfair_enc_handler(self):
+        trisemus_generic.trisemus_generic_handler(self.ui.dec_ps_msg_txt, self.ui.dec_ps_row_txt,
+                                                  self.ui.dec_ps_clm_txt, self.ui.dec_ps_key_txt,
+                                                  self.ui.dec_ps_oc_txt, self.ui.dec_ps_ot_txt,
+                                                  playfair.dec_playfair)
 
     def controller_binding(self) -> None:
         self.ui.enc_combo_box.currentIndexChanged.connect(
@@ -128,3 +142,6 @@ class ControllersWrapper:
 
         self.ui.enc_vs_btn.clicked.connect(self.vigenere_enc_handler)
         self.ui.dec_vs_btn.clicked.connect(self.un_vigenere_enc_handler)
+
+        self.ui.enc_ps_btn.clicked.connect(self.playfair_enc_handler)
+        self.ui.dec_ps_btn.clicked.connect(self.un_playfair_enc_handler)
