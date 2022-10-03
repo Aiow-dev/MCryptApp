@@ -6,6 +6,23 @@ from PyQt5.QtWidgets import QTableWidgetItem
 from Assets import styles, constants
 
 
+def transpose_table(table):
+    clm_len: int = len(table[0])
+    row_len: int = len(table)
+
+    result = []
+
+    for clm in range(clm_len):
+        part_row = []
+
+        for row in range(row_len):
+            part_row.append(table[row][clm])
+
+        result.append(part_row)
+
+    return result
+
+
 def table_item(item_value, color: styles.Color) -> QTableWidgetItem:
     item: QTableWidgetItem = QTableWidgetItem(item_value)
     item.setForeground(QBrush(color.value))

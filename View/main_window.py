@@ -4880,15 +4880,15 @@ class Ui_main_window(object):
         self.menu_bar.addAction(self.enc_menu.menuAction())
 
         self.retranslateUi(main_window)
-        self.enc_widget.setCurrentIndex(8)
+        self.enc_widget.setCurrentIndex(1)
         self.smp_types_tab.setCurrentIndex(0)
-        self.kpm_types_tab.setCurrentIndex(1)
+        self.kpm_types_tab.setCurrentIndex(0)
         self.cs_types_tab.setCurrentIndex(1)
-        self.acs_types_tab.setCurrentIndex(1)
+        self.acs_types_tab.setCurrentIndex(0)
         self.kcs_types_tab.setCurrentIndex(0)
         self.ts_types_tab.setCurrentIndex(0)
         self.vs_types_tab.setCurrentIndex(1)
-        self.ps_types_tab.setCurrentIndex(1)
+        self.ps_types_tab.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(main_window)
 
     def retranslateUi(self, main_window):

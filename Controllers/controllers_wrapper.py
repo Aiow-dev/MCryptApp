@@ -37,13 +37,15 @@ class ControllersWrapper:
         table_permutation_generic. \
             table_key_permutation_generic_handler(self.ui.enc_kpm_msg_txt, self.ui.enc_kpm_row_txt,
                                                   self.ui.enc_kpm_clm_txt, self.ui.enc_kpm_key_txt,
-                                                  self.ui.enc_kpm_oc_txt, key_permutation.enc_key_permutation)
+                                                  self.ui.enc_kpm_oc_txt, self.ui.enc_kpm_ot_txt,
+                                                  key_permutation.enc_key_permutation)
 
     def un_key_permutation_encryption_handler(self):
         table_permutation_generic. \
             table_key_permutation_generic_handler(self.ui.dec_kpm_msg_txt, self.ui.dec_kpm_row_txt,
                                                   self.ui.dec_kpm_clm_txt, self.ui.dec_kpm_key_txt,
-                                                  self.ui.dec_kpm_oc_txt, key_permutation.dec_key_permutation)
+                                                  self.ui.dec_kpm_oc_txt, self.ui.dec_kpm_ot_txt,
+                                                  key_permutation.dec_key_permutation)
 
     def caesar_classic_encryption_handler(self):
         caesar_generic. \

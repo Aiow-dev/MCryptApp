@@ -29,3 +29,7 @@ def get_index(txt: Iterable[str], symbols: str) -> List[str]:
             txt_index.append(letter)
 
     return txt_index
+
+
+def get_number_letter(txt: str) -> List[str]:
+    return [str(index + 1) for index in range(len(txt))]

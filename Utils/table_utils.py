@@ -87,6 +87,16 @@ def table(part_values, f_part, table_obj, h_headers=(), v_headers=()) -> None:
         f_part(part_num, part_value, table_obj)
 
 
+def key_permutation_table_text(key_table):
+    key = '\t'.join(key[0] for key in key_table).upper()
+    one_letter_keys = ''.join(key[0] for key in key_table)
+    key_indexes = '\t'.join(str_utils.get_number_letter(one_letter_keys))
+
+    part_table = table_to_str(table_base_utils.transpose_table(list(key_table.values())))
+
+    return f'{key}\n{key_indexes}\n{part_table}'
+
+
 def affine_table_num_text(
         key_a_text: int,
         key_b_text: int
