@@ -1,8 +1,8 @@
 from Assets import constants
 
-from Utils import table_utils
+from Utils.table_utils import vigenere_table, vigenere_table_text
 
-from Utils.StyleUtils import modal_dialogs
+from Utils.StyleUtils.modal_dialogs import show_error_msg
 
 
 def vigenere_generic_handler(msg_obj, key_obj, enc_msg_obj,
@@ -13,8 +13,8 @@ def vigenere_generic_handler(msg_obj, key_obj, enc_msg_obj,
 
         enc_msg, enc_msg_table = f_vigenere_obj(msg_txt, key_txt)
         enc_msg_obj.setText(enc_msg)
-        table_txt_obj.setText(table_utils.vigenere_table_text(msg_txt, key_txt, enc_msg))
-        table_utils.vigenere_table(enc_msg_table, table_obj)
+        table_txt_obj.setText(vigenere_table_text(msg_txt, key_txt, enc_msg))
+        vigenere_table(enc_msg_table, table_obj)
     except ValueError as value_error:
         print(value_error)
 
@@ -23,4 +23,4 @@ def vigenere_generic_handler(msg_obj, key_obj, enc_msg_obj,
     except AttributeError as attribute_error:
         print(attribute_error)
 
-        modal_dialogs.show_error_message('Произошла ошибка в приложении')
+        show_error_msg('Произошла ошибка в приложении')

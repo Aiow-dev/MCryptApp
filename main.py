@@ -4,8 +4,6 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 
 from View import main_window
 
-from Assets import styles
-
 from Controllers import controllers_wrapper, event_controllers_wrapper, menu_controllers_wrapper
 
 from Utils.StyleUtils import style_utils
@@ -24,7 +22,7 @@ if __name__ == '__main__':
     controllers_wrapper_obj.controller_binding()
 
     event_controllers_wrapper_obj: event_controllers_wrapper.EventControllersWrapper \
-        = event_controllers_wrapper.EventControllersWrapper(ui, styles.DEFAULT_COLORS)
+        = event_controllers_wrapper.EventControllersWrapper(ui)
 
     event_controllers_wrapper_obj.event_controller_binding()
 

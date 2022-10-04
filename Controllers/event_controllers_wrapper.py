@@ -1,4 +1,4 @@
-from typing import Dict, List
+from typing import List
 
 from PyQt5.QtWidgets import QLineEdit
 
@@ -8,13 +8,11 @@ from Utils.StyleUtils import style_utils
 
 from Assets import styles
 
-from Utils import controllers_utils
-
 
 class EventControllersWrapper:
-    def __init__(self, ui: main_window.Ui_main_window, colors: Dict[str, styles.Color]):
+    def __init__(self, ui: main_window.Ui_main_window):
         self.ui = ui
-        self.colors = colors
+        self.colors = styles.DEFAULT_COLORS
 
     def num_text_handler(self, ui_obj):
         color: styles.Color = self.colors['default']
@@ -40,6 +38,15 @@ class EventControllersWrapper:
         style_utils.set_line_edit_border_color(ui_obj, color)
         ui_obj.setToolTip(tool_tip_text)
 
+    def text_changed_connect(self, text_obj, f_event) -> None:
+        text_obj.textChanged.connect(
+            lambda: f_event(text_obj)
+        )
+
+    def text_changed_multi_connect(self, text_obj_list, f_event) -> None:
+        for text_obj in text_obj_list:
+            self.text_changed_connect(text_obj, f_event)
+
     def event_num_text_binding(self) -> None:
         num_text_obj_list: List[QLineEdit] = [
             self.ui.enc_smp_row_txt, self.ui.enc_smp_clm_txt,
@@ -56,8 +63,8 @@ class EventControllersWrapper:
             self.ui.dec_ps_row_txt, self.ui.dec_ps_clm_txt,
         ]
 
-        controllers_utils.num_text_changed_multi_connect(
-            num_text_obj_list, self
+        self.text_changed_multi_connect(
+            num_text_obj_list, self.num_text_handler
         )
 
     def event_text_binding(self) -> None:
@@ -78,8 +85,8 @@ class EventControllersWrapper:
             self.ui.dec_ps_msg_txt, self.ui.dec_ps_key_txt,
         ]
 
-        controllers_utils.text_changed_multi_connect(
-            text_obj_list, self
+        self.text_changed_multi_connect(
+            text_obj_list, self.text_handler
         )
 
     def event_controller_binding(self) -> None:

@@ -1,44 +1,8 @@
 from typing import Dict
 
-from Controllers import event_controllers_wrapper
-
 from Utils.StyleUtils import style_utils
 
 from Assets import styles
-
-
-def num_text_changed_connect(
-        text_obj,
-        event_controllers_wrapper_obj: event_controllers_wrapper.EventControllersWrapper
-) -> None:
-    text_obj.textChanged.connect(
-        lambda: event_controllers_wrapper_obj.num_text_handler(text_obj)
-    )
-
-
-def num_text_changed_multi_connect(
-        text_obj_list,
-        event_controllers_wrapper_obj: event_controllers_wrapper.EventControllersWrapper
-) -> None:
-    for text_obj in text_obj_list:
-        num_text_changed_connect(text_obj, event_controllers_wrapper_obj)
-
-
-def text_changed_connect(
-        text_obj,
-        event_controllers_wrapper_obj: event_controllers_wrapper.EventControllersWrapper
-) -> None:
-    text_obj.textChanged.connect(
-        lambda: event_controllers_wrapper_obj.text_handler(text_obj)
-    )
-
-
-def text_changed_multi_connect(
-        text_obj_list,
-        event_controllers_wrapper_obj: event_controllers_wrapper.EventControllersWrapper
-) -> None:
-    for text_obj in text_obj_list:
-        text_changed_connect(text_obj, event_controllers_wrapper_obj)
 
 
 def page_combo_box(combo_box_obj, stacked_widget_obj):
