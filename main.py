@@ -4,7 +4,9 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 
 from View import main_window
 
-from Controllers import controllers_wrapper, event_controllers_wrapper, menu_controllers_wrapper
+from Controllers.controllers_wrapper import ControllersWrapper
+from Controllers.event_controllers_wrapper import EventControllersWrapper
+from Controllers.menu_controllers_wrapper import MenuControllersWrapper
 
 from Utils.StyleUtils import style_utils
 
@@ -16,20 +18,14 @@ if __name__ == '__main__':
     ui.setupUi(MainWindow)
     MainWindow.show()
 
-    controllers_wrapper_obj: controllers_wrapper.ControllersWrapper \
-        = controllers_wrapper.ControllersWrapper(ui)
+    control: ControllersWrapper = ControllersWrapper(ui)
+    control.controller_binding()
 
-    controllers_wrapper_obj.controller_binding()
+    event_control: EventControllersWrapper = EventControllersWrapper(ui)
+    event_control.event_controller_binding()
 
-    event_controllers_wrapper_obj: event_controllers_wrapper.EventControllersWrapper \
-        = event_controllers_wrapper.EventControllersWrapper(ui)
-
-    event_controllers_wrapper_obj.event_controller_binding()
-
-    menu_controllers_wrapper_obj: menu_controllers_wrapper.MenuControllersWrapper \
-        = menu_controllers_wrapper.MenuControllersWrapper(ui)
-
-    menu_controllers_wrapper_obj.menu_controller_binding()
+    menu_control: MenuControllersWrapper = MenuControllersWrapper(ui)
+    menu_control.menu_controller_binding()
 
     style_utils.styles_binding(ui)
 

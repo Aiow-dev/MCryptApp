@@ -21,6 +21,10 @@ def enc_playfair(msg, key_word, size_a=4, size_b=8):
     for i in range(0, len(msg), 2):
         first = base_scripts.find(table, msg[i], size_a, size_b)
         second = base_scripts.find(table, msg[i + 1], size_a, size_b)
+
+        if not first or not second:
+            return 'Ошибка. Возможно, не найдена буква сообщения в таблице подстановок'
+
         if first[0] == second[0] and first[1] == second[1]:
             third = base_scripts.find(table, "ъ", size_a, size_b)
             enc_msg += base_scripts.enc_playfair_check(first, third, table)
@@ -46,5 +50,9 @@ def dec_playfair(enc_msg, key_word, size_a=4, size_b=8):
     for i in range(0, len(enc_msg), 2):
         first = base_scripts.find(table, enc_msg[i], size_a, size_b)
         second = base_scripts.find(table, enc_msg[i + 1], size_a, size_b)
+
+        if not first or not second:
+            return 'Ошибка. Возможно, не найдена буква сообщения в таблице подстановок'
+
         msg += base_scripts.dec_playfair_check(first, second, table)
     return msg, table

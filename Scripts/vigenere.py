@@ -34,6 +34,10 @@ def dec_vigenere(enc_msg, key):
     enc_msg = enc_msg.lower()
     table = constants.RU_ALPHABET
     big_table = []
+
+    if not key:
+        return 'Ключ не может быть пустым'
+
     enc_table = key * math.ceil(len(enc_msg) // len(key))
     enc_table += key
 

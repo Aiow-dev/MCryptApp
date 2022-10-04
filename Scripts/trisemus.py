@@ -19,9 +19,10 @@ def enc_trisemus(msg, key_word, size_a=4, size_b=8):
     for i in msg:
         if i not in table_alphabet:
             enc_msg += i
-        else:
-            first = base_scripts.find(table, i, size_a, size_b)
+        elif first := base_scripts.find(table, i, size_a, size_b):
             enc_msg += table[(first[0] + 1) % len(table)][first[1]]
+        else:
+            return 'Ошибка. Возможно, не найдена буква сообщения в таблице подстановок'
     return enc_msg, table
 
 
@@ -41,7 +42,8 @@ def dec_trisemus(enc_msg, key_word, size_a=4, size_b=8):
     for i in enc_msg:
         if i not in table_alphabet:
             msg += i
-        else:
-            first = base_scripts.find(table, i, size_a, size_b)
+        elif first := base_scripts.find(table, i, size_a, size_b):
             msg += table[first[0] - 1][first[1]]
+        else:
+            return 'Ошибка. Возможно, не найдена буква сообщения в таблице подстановок'
     return msg, table
