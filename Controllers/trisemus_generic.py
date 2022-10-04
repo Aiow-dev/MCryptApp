@@ -17,7 +17,7 @@ def trisemus_generic_handler(msg_obj, row_obj, clm_obj, key_obj,
     except ValueError as value_error:
         print(value_error)
 
-        msg_obj.setText(constants.ERROR_MESSAGE)
+        enc_msg_obj.setText(constants.ERROR_MESSAGE)
         table_txt_obj.setText(constants.ERROR_TABLE_MESSAGE)
     except AttributeError as attribute_error:
         print(attribute_error)

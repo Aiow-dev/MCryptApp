@@ -1,6 +1,7 @@
 from typing import List
 
 from PyQt5.QtWidgets import QLineEdit
+from PyQt5 import QtGui
 
 from View import main_window
 
@@ -14,7 +15,7 @@ class EventControllersWrapper:
         self.ui = ui
         self.colors = styles.DEFAULT_COLORS
 
-    def num_text_handler(self, ui_obj):
+    def event_num(self, ui_obj):
         color: styles.Color = self.colors['default']
         tool_tip_text: str = ''
 
@@ -25,7 +26,7 @@ class EventControllersWrapper:
         style_utils.set_line_edit_border_color(ui_obj, color)
         ui_obj.setToolTip(tool_tip_text)
 
-    def text_handler(self, ui_obj):
+    def event_text(self, ui_obj):
         color: styles.Color = self.colors['default']
         tool_tip_text: str = ''
 
@@ -43,9 +44,16 @@ class EventControllersWrapper:
             lambda: f_event(text_obj)
         )
 
+    def event_shortcut(self, ui_obj, shortcut):
+        ui_obj.setShortcut(QtGui.QKeySequence(shortcut))
+
     def text_changed_multi_connect(self, text_obj_list, f_event) -> None:
         for text_obj in text_obj_list:
             self.text_changed_connect(text_obj, f_event)
+
+    def event_shortcut_multi_connect(self, ui_obj_list, shortcut):
+        for ui_obj in ui_obj_list:
+            self.event_shortcut(ui_obj, shortcut)
 
     def event_num_text_binding(self) -> None:
         num_text_obj_list: List[QLineEdit] = [
@@ -64,7 +72,7 @@ class EventControllersWrapper:
         ]
 
         self.text_changed_multi_connect(
-            num_text_obj_list, self.num_text_handler
+            num_text_obj_list, self.event_num
         )
 
     def event_text_binding(self) -> None:
@@ -86,10 +94,26 @@ class EventControllersWrapper:
         ]
 
         self.text_changed_multi_connect(
-            text_obj_list, self.text_handler
+            text_obj_list, self.event_text
         )
+
+    def event_shortcut_binding(self) -> None:
+        ui_obj_list = [
+            self.ui.enc_smp_btn, self.ui.dec_smp_btn,
+            self.ui.enc_kpm_btn, self.ui.dec_kpm_btn,
+            self.ui.enc_cs_btn, self.ui.dec_cs_btn,
+            self.ui.enc_acs_btn, self.ui.dec_acs_btn,
+            self.ui.enc_kcs_btn, self.ui.dec_kcs_btn,
+            self.ui.enc_ts_btn, self.ui.dec_ts_btn,
+            self.ui.enc_vs_btn, self.ui.dec_vs_btn,
+            self.ui.enc_ps_btn, self.ui.dec_ps_btn
+        ]
+
+        self.event_shortcut_multi_connect(ui_obj_list, 'Return')
 
     def event_controller_binding(self) -> None:
         self.event_num_text_binding()
 
         self.event_text_binding()
+
+        self.event_shortcut_binding()
