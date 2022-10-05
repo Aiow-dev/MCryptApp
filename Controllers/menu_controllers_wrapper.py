@@ -14,7 +14,7 @@ class MenuControllersWrapper:
     def menu_controller_binding(self) -> None:
         actions_list: List[QAction] = [
             self.ui.action_smp, self.ui.action_kpm,
-            self.ui.action_5,
+            self.ui.action_5, self.ui.action_ms,
             self.ui.action_cs, self.ui.action_acs,
             self.ui.action_kcs, self.ui.action_ts,
             self.ui.action_vs, self.ui.action_ps,
