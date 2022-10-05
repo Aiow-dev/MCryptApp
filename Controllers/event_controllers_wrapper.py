@@ -47,6 +47,19 @@ class EventControllersWrapper:
     def event_shortcut(self, ui_obj, shortcut):
         ui_obj.setShortcut(QtGui.QKeySequence(shortcut))
 
+    def event_tables_rank(self, tables, text_obj):
+        try:
+            number = int(text_obj.text())
+
+            for table in tables:
+                table.setRowCount(number)
+                table.setColumnCount(number)
+        except ValueError as value_error:
+            print(value_error)
+
+    def event_tables_rank_connect(self, tables, text_obj, f_tables_size):
+        text_obj.textChanged.connect(lambda: f_tables_size(tables, text_obj))
+
     def text_changed_multi_connect(self, text_obj_list, f_event) -> None:
         for text_obj in text_obj_list:
             self.text_changed_connect(text_obj, f_event)
@@ -69,7 +82,7 @@ class EventControllersWrapper:
             self.ui.dec_ts_row_txt, self.ui.dec_ts_clm_txt,
             self.ui.enc_ps_row_txt, self.ui.enc_ps_clm_txt,
             self.ui.dec_ps_row_txt, self.ui.dec_ps_clm_txt,
-            self.ui.enc_ms_row_txt, self.ui.enc_ms_clm_txt,
+            self.ui.enc_ms_rank_txt,
         ]
 
         self.text_changed_multi_connect(
@@ -113,9 +126,19 @@ class EventControllersWrapper:
 
         self.event_shortcut_multi_connect(ui_obj_list, 'Return')
 
+    def event_table_size_binding(self) -> None:
+        table_rank_numbers = {
+            self.ui.enc_ms_rank_txt: [self.ui.enc_ms_tms_table, self.ui.enc_ms_ot_table],
+        }
+
+        for table_rank_obj, tables in table_rank_numbers.items():
+            self.event_tables_rank_connect(tables, table_rank_obj, self.event_tables_rank)
+
     def event_controller_binding(self) -> None:
         self.event_num_text_binding()
 
         self.event_text_binding()
 
         self.event_shortcut_binding()
+
+        self.event_table_size_binding()

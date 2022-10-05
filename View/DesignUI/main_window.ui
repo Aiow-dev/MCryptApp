@@ -2946,7 +2946,7 @@ QLineEdit:focus {
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QFrame" name="enc_ms_row_frame">
+                            <widget class="QFrame" name="enc_ms_rank_frame">
                              <property name="maximumSize">
                               <size>
                                <width>16777215</width>
@@ -2975,7 +2975,7 @@ QLineEdit:focus {
                                <number>0</number>
                               </property>
                               <item>
-                               <widget class="QLabel" name="enc_ms_row_lbl">
+                               <widget class="QLabel" name="enc_ms_rank_lbl">
                                 <property name="minimumSize">
                                  <size>
                                   <width>80</width>
@@ -2988,12 +2988,12 @@ QLineEdit:focus {
 }</string>
                                 </property>
                                 <property name="text">
-                                 <string>Строки</string>
+                                 <string>Строки и столбцы</string>
                                 </property>
                                </widget>
                               </item>
                               <item>
-                               <widget class="QLineEdit" name="enc_ms_row_txt">
+                               <widget class="QLineEdit" name="enc_ms_rank_txt">
                                 <property name="minimumSize">
                                  <size>
                                   <width>0</width>
@@ -3014,86 +3014,7 @@ QLineEdit:focus {
 }</string>
                                 </property>
                                 <property name="placeholderText">
-                                 <string>Количество строк</string>
-                                </property>
-                                <property name="clearButtonEnabled">
-                                 <bool>true</bool>
-                                </property>
-                               </widget>
-                              </item>
-                             </layout>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QFrame" name="enc_ms_clm_frame">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>45</height>
-                              </size>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">QFrame {
-	border: none;
-}</string>
-                             </property>
-                             <property name="frameShape">
-                              <enum>QFrame::StyledPanel</enum>
-                             </property>
-                             <property name="frameShadow">
-                              <enum>QFrame::Raised</enum>
-                             </property>
-                             <layout class="QHBoxLayout" name="horizontalLayout_153">
-                              <property name="topMargin">
-                               <number>0</number>
-                              </property>
-                              <property name="rightMargin">
-                               <number>0</number>
-                              </property>
-                              <property name="bottomMargin">
-                               <number>0</number>
-                              </property>
-                              <item>
-                               <widget class="QLabel" name="enc_ms_clm_lbl">
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>80</width>
-                                  <height>45</height>
-                                 </size>
-                                </property>
-                                <property name="styleSheet">
-                                 <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
-}</string>
-                                </property>
-                                <property name="text">
-                                 <string>Столбцы</string>
-                                </property>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QLineEdit" name="enc_ms_clm_txt">
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>0</width>
-                                  <height>45</height>
-                                 </size>
-                                </property>
-                                <property name="styleSheet">
-                                 <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
-	border-radius: 3px;
-	margin: 0 0 0 18px;
-	padding: 0 3px;
-	color: rgb(255, 255, 255);
-}
-
-QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
-}</string>
-                                </property>
-                                <property name="placeholderText">
-                                 <string>Количество столбцов</string>
+                                 <string>Количество строк и столбцов</string>
                                 </property>
                                 <property name="clearButtonEnabled">
                                  <bool>true</bool>
@@ -3264,7 +3185,7 @@ QLineEdit:focus {
                          <number>6</number>
                         </property>
                         <item>
-                         <widget class="QFrame" name="enc_ms_ot_frame">
+                         <widget class="QFrame" name="enc_ms_tms_frame">
                           <property name="styleSheet">
                            <string notr="true">QFrame {
 	border: none;
@@ -3290,7 +3211,7 @@ QLineEdit:focus {
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QTableWidget" name="enc_ms_ot_table">
+                            <widget class="QTableWidget" name="enc_ms_tms_table">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -3350,7 +3271,7 @@ QTableCornerButton::section {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QFrame" name="enc_ms_tms_frame">
+                         <widget class="QFrame" name="enc_ms_ot_frame">
                           <property name="styleSheet">
                            <string notr="true">QFrame {
 	border: none;
@@ -3376,7 +3297,7 @@ QTableCornerButton::section {
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QTableWidget" name="enc_ms_tms_table">
+                            <widget class="QTableWidget" name="enc_ms_ot_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
 	gridline-color: rgb(48, 47, 47);

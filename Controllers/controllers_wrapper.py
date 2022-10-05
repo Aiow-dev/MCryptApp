@@ -124,26 +124,24 @@ class ControllersWrapper:
             lambda: controllers_utils.page_combo_box(self.ui.enc_combo_box, self.ui.enc_widget)
         )
 
-        self.ui.enc_smp_btn.clicked.connect(self.simple_permutation_encryption_handler)
-        self.ui.dec_smp_btn.clicked.connect(self.un_simple_permutation_encryption_handler)
+        btn_functions = {
+            self.ui.enc_smp_btn: self.simple_permutation_encryption_handler,
+            self.ui.dec_smp_btn: self.un_simple_permutation_encryption_handler,
+            self.ui.enc_kpm_btn: self.key_permutation_encryption_handler,
+            self.ui.dec_kpm_btn: self.un_key_permutation_encryption_handler,
+            self.ui.enc_cs_btn: self.caesar_key_encryption_handler,
+            self.ui.dec_cs_btn: self.un_caesar_key_encryption_handler,
+            self.ui.enc_acs_btn: self.caesar_affine_encryption_handler,
+            self.ui.dec_acs_btn: self.un_caesar_affine_encryption_handler,
+            self.ui.enc_kcs_btn: self.caesar_key_encryption_handler,
+            self.ui.dec_kcs_btn: self.un_caesar_key_encryption_handler,
+            self.ui.enc_ts_btn: self.trisemus_enc_handler,
+            self.ui.dec_ts_btn: self.un_trisemus_enc_handler,
+            self.ui.enc_vs_btn: self.vigenere_enc_handler,
+            self.ui.dec_vs_btn: self.un_vigenere_enc_handler,
+            self.ui.enc_ps_btn: self.playfair_enc_handler,
+            self.ui.dec_ps_btn: self.un_playfair_enc_handler,
+        }
 
-        self.ui.enc_kpm_btn.clicked.connect(self.key_permutation_encryption_handler)
-        self.ui.dec_kpm_btn.clicked.connect(self.un_key_permutation_encryption_handler)
-
-        self.ui.enc_cs_btn.clicked.connect(self.caesar_classic_encryption_handler)
-        self.ui.dec_cs_btn.clicked.connect(self.un_caesar_classic_encryption_handler)
-
-        self.ui.enc_acs_btn.clicked.connect(self.caesar_affine_encryption_handler)
-        self.ui.dec_acs_btn.clicked.connect(self.un_caesar_affine_encryption_handler)
-
-        self.ui.enc_kcs_btn.clicked.connect(self.caesar_key_encryption_handler)
-        self.ui.dec_kcs_btn.clicked.connect(self.un_caesar_key_encryption_handler)
-
-        self.ui.enc_ts_btn.clicked.connect(self.trisemus_enc_handler)
-        self.ui.dec_ts_btn.clicked.connect(self.un_trisemus_enc_handler)
-
-        self.ui.enc_vs_btn.clicked.connect(self.vigenere_enc_handler)
-        self.ui.dec_vs_btn.clicked.connect(self.un_vigenere_enc_handler)
-
-        self.ui.enc_ps_btn.clicked.connect(self.playfair_enc_handler)
-        self.ui.dec_ps_btn.clicked.connect(self.un_playfair_enc_handler)
+        for btn, function in btn_functions.items():
+            btn.clicked.connect(function)

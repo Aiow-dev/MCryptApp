@@ -1337,27 +1337,27 @@ class Ui_main_window(object):
         self.horizontalLayout_169 = QtWidgets.QHBoxLayout(self.enc_ms_size_frame)
         self.horizontalLayout_169.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_169.setObjectName("horizontalLayout_169")
-        self.enc_ms_row_frame = QtWidgets.QFrame(self.enc_ms_size_frame)
-        self.enc_ms_row_frame.setMaximumSize(QtCore.QSize(16777215, 45))
-        self.enc_ms_row_frame.setStyleSheet("QFrame {\n"
+        self.enc_ms_rank_frame = QtWidgets.QFrame(self.enc_ms_size_frame)
+        self.enc_ms_rank_frame.setMaximumSize(QtCore.QSize(16777215, 45))
+        self.enc_ms_rank_frame.setStyleSheet("QFrame {\n"
 "    border: none;\n"
 "}")
-        self.enc_ms_row_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.enc_ms_row_frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.enc_ms_row_frame.setObjectName("enc_ms_row_frame")
-        self.horizontalLayout_154 = QtWidgets.QHBoxLayout(self.enc_ms_row_frame)
+        self.enc_ms_rank_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.enc_ms_rank_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.enc_ms_rank_frame.setObjectName("enc_ms_rank_frame")
+        self.horizontalLayout_154 = QtWidgets.QHBoxLayout(self.enc_ms_rank_frame)
         self.horizontalLayout_154.setContentsMargins(-1, 0, 0, 0)
         self.horizontalLayout_154.setObjectName("horizontalLayout_154")
-        self.enc_ms_row_lbl = QtWidgets.QLabel(self.enc_ms_row_frame)
-        self.enc_ms_row_lbl.setMinimumSize(QtCore.QSize(80, 45))
-        self.enc_ms_row_lbl.setStyleSheet("QLabel {\n"
+        self.enc_ms_rank_lbl = QtWidgets.QLabel(self.enc_ms_rank_frame)
+        self.enc_ms_rank_lbl.setMinimumSize(QtCore.QSize(80, 45))
+        self.enc_ms_rank_lbl.setStyleSheet("QLabel {\n"
 "    color: rgb(255, 255, 255);\n"
 "}")
-        self.enc_ms_row_lbl.setObjectName("enc_ms_row_lbl")
-        self.horizontalLayout_154.addWidget(self.enc_ms_row_lbl)
-        self.enc_ms_row_txt = QtWidgets.QLineEdit(self.enc_ms_row_frame)
-        self.enc_ms_row_txt.setMinimumSize(QtCore.QSize(0, 45))
-        self.enc_ms_row_txt.setStyleSheet("QLineEdit {\n"
+        self.enc_ms_rank_lbl.setObjectName("enc_ms_rank_lbl")
+        self.horizontalLayout_154.addWidget(self.enc_ms_rank_lbl)
+        self.enc_ms_rank_txt = QtWidgets.QLineEdit(self.enc_ms_rank_frame)
+        self.enc_ms_rank_txt.setMinimumSize(QtCore.QSize(0, 45))
+        self.enc_ms_rank_txt.setStyleSheet("QLineEdit {\n"
 "    border: 1px solid rgb(48, 47, 47);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
@@ -1368,45 +1368,10 @@ class Ui_main_window(object):
 "QLineEdit:focus {\n"
 "    border: 1px solid rgb(77, 77, 77);\n"
 "}")
-        self.enc_ms_row_txt.setClearButtonEnabled(True)
-        self.enc_ms_row_txt.setObjectName("enc_ms_row_txt")
-        self.horizontalLayout_154.addWidget(self.enc_ms_row_txt)
-        self.horizontalLayout_169.addWidget(self.enc_ms_row_frame)
-        self.enc_ms_clm_frame = QtWidgets.QFrame(self.enc_ms_size_frame)
-        self.enc_ms_clm_frame.setMaximumSize(QtCore.QSize(16777215, 45))
-        self.enc_ms_clm_frame.setStyleSheet("QFrame {\n"
-"    border: none;\n"
-"}")
-        self.enc_ms_clm_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.enc_ms_clm_frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.enc_ms_clm_frame.setObjectName("enc_ms_clm_frame")
-        self.horizontalLayout_153 = QtWidgets.QHBoxLayout(self.enc_ms_clm_frame)
-        self.horizontalLayout_153.setContentsMargins(-1, 0, 0, 0)
-        self.horizontalLayout_153.setObjectName("horizontalLayout_153")
-        self.enc_ms_clm_lbl = QtWidgets.QLabel(self.enc_ms_clm_frame)
-        self.enc_ms_clm_lbl.setMinimumSize(QtCore.QSize(80, 45))
-        self.enc_ms_clm_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
-"}")
-        self.enc_ms_clm_lbl.setObjectName("enc_ms_clm_lbl")
-        self.horizontalLayout_153.addWidget(self.enc_ms_clm_lbl)
-        self.enc_ms_clm_txt = QtWidgets.QLineEdit(self.enc_ms_clm_frame)
-        self.enc_ms_clm_txt.setMinimumSize(QtCore.QSize(0, 45))
-        self.enc_ms_clm_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
-"    border-radius: 3px;\n"
-"    margin: 0 0 0 18px;\n"
-"    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
-"}")
-        self.enc_ms_clm_txt.setClearButtonEnabled(True)
-        self.enc_ms_clm_txt.setObjectName("enc_ms_clm_txt")
-        self.horizontalLayout_153.addWidget(self.enc_ms_clm_txt)
-        self.horizontalLayout_169.addWidget(self.enc_ms_clm_frame)
+        self.enc_ms_rank_txt.setClearButtonEnabled(True)
+        self.enc_ms_rank_txt.setObjectName("enc_ms_rank_txt")
+        self.horizontalLayout_154.addWidget(self.enc_ms_rank_txt)
+        self.horizontalLayout_169.addWidget(self.enc_ms_rank_frame)
         self.verticalLayout_70.addWidget(self.enc_ms_size_frame)
         self.horizontalLayout_151.addWidget(self.enc_ms_in_frame, 0, QtCore.Qt.AlignTop)
         self.enc_ms_chr_frame = QtWidgets.QFrame(self.enc_ms_r_frame)
@@ -1478,42 +1443,6 @@ class Ui_main_window(object):
         self.horizontalLayout_157 = QtWidgets.QHBoxLayout(self.enc_ms_t_frame)
         self.horizontalLayout_157.setContentsMargins(-1, 6, -1, -1)
         self.horizontalLayout_157.setObjectName("horizontalLayout_157")
-        self.enc_ms_ot_frame = QtWidgets.QFrame(self.enc_ms_t_frame)
-        self.enc_ms_ot_frame.setStyleSheet("QFrame {\n"
-"    border: none;\n"
-"}")
-        self.enc_ms_ot_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.enc_ms_ot_frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.enc_ms_ot_frame.setObjectName("enc_ms_ot_frame")
-        self.verticalLayout_72 = QtWidgets.QVBoxLayout(self.enc_ms_ot_frame)
-        self.verticalLayout_72.setContentsMargins(6, 0, 0, 0)
-        self.verticalLayout_72.setObjectName("verticalLayout_72")
-        self.enc_ms_ot_table = QtWidgets.QTableWidget(self.enc_ms_ot_frame)
-        self.enc_ms_ot_table.setMinimumSize(QtCore.QSize(0, 0))
-        self.enc_ms_ot_table.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.enc_ms_ot_table.setStyleSheet("QTableWidget {\n"
-"    gridline-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QHeaderView::section {\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(48, 47, 47);\n"
-"}\n"
-"\n"
-"QTableCornerButton::section {\n"
-"    background-color: rgb(48, 47, 47);\n"
-"}")
-        self.enc_ms_ot_table.setAutoScroll(True)
-        self.enc_ms_ot_table.setEditTriggers(QtWidgets.QAbstractItemView.CurrentChanged)
-        self.enc_ms_ot_table.setRowCount(4)
-        self.enc_ms_ot_table.setColumnCount(4)
-        self.enc_ms_ot_table.setObjectName("enc_ms_ot_table")
-        self.enc_ms_ot_table.horizontalHeader().setVisible(True)
-        self.enc_ms_ot_table.horizontalHeader().setDefaultSectionSize(60)
-        self.enc_ms_ot_table.verticalHeader().setDefaultSectionSize(60)
-        self.verticalLayout_72.addWidget(self.enc_ms_ot_table)
-        self.horizontalLayout_157.addWidget(self.enc_ms_ot_frame)
         self.enc_ms_tms_frame = QtWidgets.QFrame(self.enc_ms_t_frame)
         self.enc_ms_tms_frame.setStyleSheet("QFrame {\n"
 "    border: none;\n"
@@ -1521,12 +1450,15 @@ class Ui_main_window(object):
         self.enc_ms_tms_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_ms_tms_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.enc_ms_tms_frame.setObjectName("enc_ms_tms_frame")
-        self.verticalLayout_73 = QtWidgets.QVBoxLayout(self.enc_ms_tms_frame)
-        self.verticalLayout_73.setContentsMargins(6, 0, 0, 0)
-        self.verticalLayout_73.setObjectName("verticalLayout_73")
+        self.verticalLayout_72 = QtWidgets.QVBoxLayout(self.enc_ms_tms_frame)
+        self.verticalLayout_72.setContentsMargins(6, 0, 0, 0)
+        self.verticalLayout_72.setObjectName("verticalLayout_72")
         self.enc_ms_tms_table = QtWidgets.QTableWidget(self.enc_ms_tms_frame)
+        self.enc_ms_tms_table.setMinimumSize(QtCore.QSize(0, 0))
+        self.enc_ms_tms_table.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.enc_ms_tms_table.setStyleSheet("QTableWidget {\n"
 "    gridline-color: rgb(48, 47, 47);\n"
+"    color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QHeaderView::section {\n"
@@ -1538,14 +1470,47 @@ class Ui_main_window(object):
 "    background-color: rgb(48, 47, 47);\n"
 "}")
         self.enc_ms_tms_table.setAutoScroll(True)
-        self.enc_ms_tms_table.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.enc_ms_tms_table.setEditTriggers(QtWidgets.QAbstractItemView.CurrentChanged)
         self.enc_ms_tms_table.setRowCount(4)
         self.enc_ms_tms_table.setColumnCount(4)
         self.enc_ms_tms_table.setObjectName("enc_ms_tms_table")
+        self.enc_ms_tms_table.horizontalHeader().setVisible(True)
         self.enc_ms_tms_table.horizontalHeader().setDefaultSectionSize(60)
         self.enc_ms_tms_table.verticalHeader().setDefaultSectionSize(60)
-        self.verticalLayout_73.addWidget(self.enc_ms_tms_table)
+        self.verticalLayout_72.addWidget(self.enc_ms_tms_table)
         self.horizontalLayout_157.addWidget(self.enc_ms_tms_frame)
+        self.enc_ms_ot_frame = QtWidgets.QFrame(self.enc_ms_t_frame)
+        self.enc_ms_ot_frame.setStyleSheet("QFrame {\n"
+"    border: none;\n"
+"}")
+        self.enc_ms_ot_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.enc_ms_ot_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.enc_ms_ot_frame.setObjectName("enc_ms_ot_frame")
+        self.verticalLayout_73 = QtWidgets.QVBoxLayout(self.enc_ms_ot_frame)
+        self.verticalLayout_73.setContentsMargins(6, 0, 0, 0)
+        self.verticalLayout_73.setObjectName("verticalLayout_73")
+        self.enc_ms_ot_table = QtWidgets.QTableWidget(self.enc_ms_ot_frame)
+        self.enc_ms_ot_table.setStyleSheet("QTableWidget {\n"
+"    gridline-color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QTableCornerButton::section {\n"
+"    background-color: rgb(48, 47, 47);\n"
+"}")
+        self.enc_ms_ot_table.setAutoScroll(True)
+        self.enc_ms_ot_table.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.enc_ms_ot_table.setRowCount(4)
+        self.enc_ms_ot_table.setColumnCount(4)
+        self.enc_ms_ot_table.setObjectName("enc_ms_ot_table")
+        self.enc_ms_ot_table.horizontalHeader().setDefaultSectionSize(60)
+        self.enc_ms_ot_table.verticalHeader().setDefaultSectionSize(60)
+        self.verticalLayout_73.addWidget(self.enc_ms_ot_table)
+        self.horizontalLayout_157.addWidget(self.enc_ms_ot_frame)
         self.horizontalLayout_156.addWidget(self.enc_ms_t_frame)
         self.verticalLayout_69.addWidget(self.enc_ms_table_frame)
         self.enc_ms_button_frame = QtWidgets.QFrame(self.enc_ms)
@@ -5605,10 +5570,8 @@ class Ui_main_window(object):
         self.kpm_types_tab.setTabText(self.kpm_types_tab.indexOf(self.dec_kpm_tab), _translate("main_window", "Дешифрование"))
         self.enc_ms_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.enc_ms_msg_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
-        self.enc_ms_row_lbl.setText(_translate("main_window", "Строки"))
-        self.enc_ms_row_txt.setPlaceholderText(_translate("main_window", "Количество строк"))
-        self.enc_ms_clm_lbl.setText(_translate("main_window", "Столбцы"))
-        self.enc_ms_clm_txt.setPlaceholderText(_translate("main_window", "Количество столбцов"))
+        self.enc_ms_rank_lbl.setText(_translate("main_window", "Строки и столбцы"))
+        self.enc_ms_rank_txt.setPlaceholderText(_translate("main_window", "Количество строк и столбцов"))
         self.enc_ms_oc_lbl.setText(_translate("main_window", "Результат"))
         self.enc_ms_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
         self.enc_ms_btn.setText(_translate("main_window", "Выполнить (Enter)"))
