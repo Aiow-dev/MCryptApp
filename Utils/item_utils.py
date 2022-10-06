@@ -6,8 +6,4 @@ def remove_item(item_value, list_obj):
 def all_equal(items):
     len_items = len(items)
 
-    for index in range(len_items):
-        if items[index] != items[index - 1]:
-            return False
-
-    return True
+    return all(items[index] == items[index - 1] for index in range(len_items))

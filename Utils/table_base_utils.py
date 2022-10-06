@@ -13,14 +13,18 @@ def transpose_table(table):
     result = []
 
     for clm in range(clm_len):
-        part_row = []
-
-        for row in range(row_len):
-            part_row.append(table[row][clm])
+        part_row = [table[row][clm] for row in range(row_len)]
 
         result.append(part_row)
 
     return result
+
+
+def table_num_items(table_widget):
+    rows = table_widget.rowCount()
+    columns = table_widget.columnCount()
+
+    return [[int(table_widget.item(row, column).text()) for column in range(columns)] for row in range(rows)]
 
 
 def table_item(item_value, color: styles.Color) -> QTableWidgetItem:

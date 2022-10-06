@@ -46,8 +46,6 @@ def enc_magic_square(msg: str, key_table: List[List[int]]) -> str | tuple[str, l
     if not check_magic_square(key_table):
         return 'Ошибка. Таблица не является магическим квадратом'
 
-    msg: str = msg.replace(' ', '')
-
     table: List[List[str]] = []
 
     enc_msg: str = ''
@@ -68,11 +66,9 @@ def dec_magic_square(enc_msg: str, key_table: List[List[int]]):
     if not check_magic_square(key_table):
         return 'Ошибка. Таблица не является магическим квадратом'
 
-    enc_msg = enc_msg.replace(' ', '')
-
     table_rank = len(key_table)
 
-    msg = ['' for _ in range(table_rank * table_rank)]
+    msg = ['' for _ in range(table_rank ** 2)]
 
     letter_index = 0
 

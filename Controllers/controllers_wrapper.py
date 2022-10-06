@@ -11,7 +11,10 @@ from Scripts import vigenere
 
 from Scripts import playfair
 
+from Scripts.magic_square import enc_magic_square
+
 from Controllers import trisemus_generic, table_permutation_generic, caesar_generic, vigenere_generic
+from Controllers.magic_square_generic import magic_square_generic_handler
 
 from Utils import controllers_utils
 
@@ -119,6 +122,11 @@ class ControllersWrapper:
                                                   self.ui.dec_ps_oc_txt, self.ui.dec_ps_ot_txt,
                                                   playfair.dec_playfair)
 
+    def magic_square_enc_handler(self):
+        magic_square_generic_handler(self.ui.enc_ms_msg_txt, self.ui.enc_ms_tms_table,
+                                     self.ui.enc_ms_oc_txt, self.ui.enc_ms_ot_table,
+                                     enc_magic_square)
+
     def controller_binding(self) -> None:
         self.ui.enc_combo_box.currentIndexChanged.connect(
             lambda: controllers_utils.page_combo_box(self.ui.enc_combo_box, self.ui.enc_widget)
@@ -141,6 +149,7 @@ class ControllersWrapper:
             self.ui.dec_vs_btn: self.un_vigenere_enc_handler,
             self.ui.enc_ps_btn: self.playfair_enc_handler,
             self.ui.dec_ps_btn: self.un_playfair_enc_handler,
+            self.ui.enc_ms_btn: self.magic_square_enc_handler,
         }
 
         for btn, function in btn_functions.items():

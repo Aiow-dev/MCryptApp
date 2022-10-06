@@ -5571,6 +5571,7 @@ class Ui_main_window(object):
         self.enc_ms_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.enc_ms_msg_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
         self.enc_ms_rank_lbl.setText(_translate("main_window", "Строки и столбцы"))
+        self.enc_ms_rank_txt.setText(_translate("main_window", "4"))
         self.enc_ms_rank_txt.setPlaceholderText(_translate("main_window", "Количество строк и столбцов"))
         self.enc_ms_oc_lbl.setText(_translate("main_window", "Результат"))
         self.enc_ms_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))

@@ -26,6 +26,17 @@ class EventControllersWrapper:
         style_utils.set_line_edit_border_color(ui_obj, color)
         ui_obj.setToolTip(tool_tip_text)
 
+    def event_num_table(self, table_item):
+        color: QtGui.QColor = QtGui.QColor(30, 30, 30)
+        tool_tip_text: str = ''
+
+        if not table_item.text().isdigit():
+            color = QtGui.QColor(255, 82, 82)
+            tool_tip_text = 'Элемент должен содержать только цифры'
+
+        table_item.setBackground(color)
+        table_item.setToolTip(tool_tip_text)
+
     def event_text(self, ui_obj):
         color: styles.Color = self.colors['default']
         tool_tip_text: str = ''
@@ -121,7 +132,8 @@ class EventControllersWrapper:
             self.ui.enc_kcs_btn, self.ui.dec_kcs_btn,
             self.ui.enc_ts_btn, self.ui.dec_ts_btn,
             self.ui.enc_vs_btn, self.ui.dec_vs_btn,
-            self.ui.enc_ps_btn, self.ui.dec_ps_btn
+            self.ui.enc_ps_btn, self.ui.dec_ps_btn,
+            self.ui.enc_ms_btn,
         ]
 
         self.event_shortcut_multi_connect(ui_obj_list, 'Return')
@@ -134,6 +146,12 @@ class EventControllersWrapper:
         for table_rank_obj, tables in table_rank_numbers.items():
             self.event_tables_rank_connect(tables, table_rank_obj, self.event_tables_rank)
 
+    def event_num_table_binding(self) -> None:
+        tables = [self.ui.enc_ms_tms_table]
+
+        for table in tables:
+            table.itemChanged.connect(self.event_num_table)
+
     def event_controller_binding(self) -> None:
         self.event_num_text_binding()
 
@@ -142,3 +160,4 @@ class EventControllersWrapper:
         self.event_shortcut_binding()
 
         self.event_table_size_binding()
+        self.event_num_table_binding()
