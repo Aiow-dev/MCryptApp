@@ -11,8 +11,8 @@ def magic_square_generic_handler(msg_obj, key_table_obj, enc_msg_obj, table_obj,
         key_table = table_num_items(key_table_obj)
 
         enc_msg, enc_msg_table = f_magic_square(msg_txt, key_table)
-        table(enc_msg_table, table_row, table_obj)
         enc_msg_obj.setText(enc_msg)
+        table(enc_msg_table, table_row, table_obj)
     except ValueError as value_error:
         print(value_error)
 

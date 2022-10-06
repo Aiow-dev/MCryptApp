@@ -68,17 +68,24 @@ def dec_magic_square(enc_msg: str, key_table: List[List[int]]):
 
     table_rank = len(key_table)
 
+    table: List[List[str]] = []
+
     msg = ['' for _ in range(table_rank ** 2)]
 
     letter_index = 0
 
     for row in key_table:
+        part_table: List[str] = []
+
         for clm in row:
+            part_table.append(enc_msg[letter_index])
             msg[clm - 1] = enc_msg[letter_index]
 
             letter_index += 1
 
-    return ''.join(msg)
+        table.append(part_table)
+
+    return ''.join(msg), table
 
 
 if __name__ == '__main__':

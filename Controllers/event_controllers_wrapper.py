@@ -93,7 +93,7 @@ class EventControllersWrapper:
             self.ui.dec_ts_row_txt, self.ui.dec_ts_clm_txt,
             self.ui.enc_ps_row_txt, self.ui.enc_ps_clm_txt,
             self.ui.dec_ps_row_txt, self.ui.dec_ps_clm_txt,
-            self.ui.enc_ms_rank_txt,
+            self.ui.enc_ms_rank_txt, self.ui.dec_ms_rank_txt,
         ]
 
         self.text_changed_multi_connect(
@@ -116,7 +116,7 @@ class EventControllersWrapper:
             self.ui.dec_vs_msg_txt, self.ui.dec_vs_key_txt,
             self.ui.enc_ps_msg_txt, self.ui.enc_ps_key_txt,
             self.ui.dec_ps_msg_txt, self.ui.dec_ps_key_txt,
-            self.ui.enc_ms_msg_txt,
+            self.ui.enc_ms_msg_txt, self.ui.dec_ms_msg_txt,
         ]
 
         self.text_changed_multi_connect(
@@ -133,7 +133,7 @@ class EventControllersWrapper:
             self.ui.enc_ts_btn, self.ui.dec_ts_btn,
             self.ui.enc_vs_btn, self.ui.dec_vs_btn,
             self.ui.enc_ps_btn, self.ui.dec_ps_btn,
-            self.ui.enc_ms_btn,
+            self.ui.enc_ms_btn, self.ui.dec_ms_btn,
         ]
 
         self.event_shortcut_multi_connect(ui_obj_list, 'Return')
@@ -141,13 +141,14 @@ class EventControllersWrapper:
     def event_table_size_binding(self) -> None:
         table_rank_numbers = {
             self.ui.enc_ms_rank_txt: [self.ui.enc_ms_tms_table, self.ui.enc_ms_ot_table],
+            self.ui.dec_ms_rank_txt: [self.ui.dec_ms_tms_table, self.ui.dec_ms_ot_table],
         }
 
         for table_rank_obj, tables in table_rank_numbers.items():
             self.event_tables_rank_connect(tables, table_rank_obj, self.event_tables_rank)
 
     def event_num_table_binding(self) -> None:
-        tables = [self.ui.enc_ms_tms_table]
+        tables = [self.ui.enc_ms_tms_table, self.ui.dec_ms_tms_table]
 
         for table in tables:
             table.itemChanged.connect(self.event_num_table)

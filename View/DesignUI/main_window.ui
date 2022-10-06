@@ -3200,34 +3200,13 @@ QLineEdit:focus {
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
-                          <layout class="QVBoxLayout" name="verticalLayout_72">
-                           <property name="leftMargin">
-                            <number>6</number>
-                           </property>
-                           <property name="topMargin">
-                            <number>0</number>
-                           </property>
-                           <property name="rightMargin">
-                            <number>0</number>
-                           </property>
-                           <property name="bottomMargin">
-                            <number>0</number>
-                           </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_177">
                            <item>
                             <widget class="QTableWidget" name="enc_ms_tms_table">
-                             <property name="minimumSize">
-                              <size>
-                               <width>0</width>
-                               <height>0</height>
-                              </size>
-                             </property>
-                             <property name="layoutDirection">
-                              <enum>Qt::LeftToRight</enum>
-                             </property>
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
-	gridline-color: rgb(48, 47, 47);
 	color: rgb(255, 255, 255);
+	gridline-color: rgb(48, 47, 47);
 }
 
 QHeaderView::section {
@@ -3251,9 +3230,6 @@ QTableCornerButton::section {
                              <property name="columnCount">
                               <number>4</number>
                              </property>
-                             <attribute name="horizontalHeaderVisible">
-                              <bool>true</bool>
-                             </attribute>
                              <attribute name="horizontalHeaderDefaultSectionSize">
                               <number>60</number>
                              </attribute>
@@ -3414,13 +3390,13 @@ QPushButton:hover {
                </item>
               </layout>
              </widget>
-             <widget class="QWidget" name="dec_acs_tab_2">
+             <widget class="QWidget" name="dec_ms_tab">
               <attribute name="title">
                <string>Дешифрование</string>
               </attribute>
-              <layout class="QHBoxLayout" name="horizontalLayout_159">
+              <layout class="QHBoxLayout" name="horizontalLayout_176">
                <item>
-                <widget class="QFrame" name="dec_acs_2">
+                <widget class="QFrame" name="dec_ms">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
 	border: 1px solid rgb(77, 77, 77);
@@ -3432,9 +3408,9 @@ QPushButton:hover {
                  <property name="frameShadow">
                   <enum>QFrame::Plain</enum>
                  </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_74">
+                 <layout class="QVBoxLayout" name="verticalLayout_79">
                   <item alignment="Qt::AlignTop">
-                   <widget class="QFrame" name="dec_acs_r_frame_2">
+                   <widget class="QFrame" name="dec_ms_r_frame">
                     <property name="maximumSize">
                      <size>
                       <width>16777215</width>
@@ -3452,7 +3428,7 @@ QPushButton:hover {
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_160">
+                    <layout class="QHBoxLayout" name="horizontalLayout_165">
                      <property name="topMargin">
                       <number>0</number>
                      </property>
@@ -3463,7 +3439,7 @@ QPushButton:hover {
                       <number>0</number>
                      </property>
                      <item alignment="Qt::AlignTop">
-                      <widget class="QFrame" name="dec_acs_in_frame_2">
+                      <widget class="QFrame" name="dec_ms_in_frame">
                        <property name="maximumSize">
                         <size>
                          <width>16777215</width>
@@ -3481,15 +3457,12 @@ QPushButton:hover {
                        <property name="frameShadow">
                         <enum>QFrame::Raised</enum>
                        </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_75">
+                       <layout class="QVBoxLayout" name="verticalLayout_80">
                         <property name="topMargin">
                          <number>0</number>
                         </property>
-                        <property name="rightMargin">
-                         <number>0</number>
-                        </property>
                         <item>
-                         <widget class="QFrame" name="dec_acs_msg_frame_2">
+                         <widget class="QFrame" name="dec_ms_msg_frame">
                           <property name="maximumSize">
                            <size>
                             <width>16777215</width>
@@ -3507,7 +3480,7 @@ QPushButton:hover {
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_161">
+                          <layout class="QHBoxLayout" name="horizontalLayout_166">
                            <property name="topMargin">
                             <number>0</number>
                            </property>
@@ -3518,7 +3491,7 @@ QPushButton:hover {
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QLabel" name="dec_acs_msg_lbl_2">
+                            <widget class="QLabel" name="dec_ms_msg_lbl">
                              <property name="minimumSize">
                               <size>
                                <width>80</width>
@@ -3536,7 +3509,7 @@ QPushButton:hover {
                             </widget>
                            </item>
                            <item>
-                            <widget class="QLineEdit" name="dec_acs_msg_txt_2">
+                            <widget class="QLineEdit" name="dec_ms_msg_txt">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -3557,7 +3530,7 @@ QLineEdit:focus {
 }</string>
                              </property>
                              <property name="placeholderText">
-                              <string>Текст зашифрованного сообщения</string>
+                              <string>Текст сообщения</string>
                              </property>
                              <property name="clearButtonEnabled">
                               <bool>true</bool>
@@ -3568,25 +3541,17 @@ QLineEdit:focus {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QFrame" name="dec_acs_key_a_frame_2">
-                          <property name="maximumSize">
-                           <size>
-                            <width>16777215</width>
-                            <height>45</height>
-                           </size>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QFrame {
-	border: none;
-}</string>
-                          </property>
+                         <widget class="QFrame" name="dec_ms_size_frame">
                           <property name="frameShape">
                            <enum>QFrame::StyledPanel</enum>
                           </property>
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_162">
+                          <layout class="QHBoxLayout" name="horizontalLayout_171">
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
                            <property name="topMargin">
                             <number>0</number>
                            </property>
@@ -3597,112 +3562,62 @@ QLineEdit:focus {
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QLabel" name="dec_acs_key_a_lbl_2">
-                             <property name="minimumSize">
+                            <widget class="QFrame" name="dec_ms_rank_frame">
+                             <property name="maximumSize">
                               <size>
-                               <width>80</width>
+                               <width>16777215</width>
                                <height>45</height>
                               </size>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
-}</string>
-                             </property>
-                             <property name="text">
-                              <string>Ключ a</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QLineEdit" name="dec_acs_key_a_txt_2">
-                             <property name="minimumSize">
-                              <size>
-                               <width>0</width>
-                               <height>45</height>
-                              </size>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
-	border-radius: 3px;
-	margin: 0 0 0 18px;
-	padding: 0 3px;
-	color: rgb(255, 255, 255);
-}
-
-QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
-}</string>
-                             </property>
-                             <property name="placeholderText">
-                              <string>Ключ шифрования a</string>
-                             </property>
-                             <property name="clearButtonEnabled">
-                              <bool>true</bool>
-                             </property>
-                            </widget>
-                           </item>
-                          </layout>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QFrame" name="dec_acs_key_b_frame_2">
-                          <property name="maximumSize">
-                           <size>
-                            <width>16777215</width>
-                            <height>45</height>
-                           </size>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QFrame {
+                              <string notr="true">QFrame {
 	border: none;
 }</string>
-                          </property>
-                          <property name="frameShape">
-                           <enum>QFrame::StyledPanel</enum>
-                          </property>
-                          <property name="frameShadow">
-                           <enum>QFrame::Raised</enum>
-                          </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_163">
-                           <property name="topMargin">
-                            <number>0</number>
-                           </property>
-                           <property name="rightMargin">
-                            <number>0</number>
-                           </property>
-                           <property name="bottomMargin">
-                            <number>0</number>
-                           </property>
-                           <item>
-                            <widget class="QLabel" name="dec_acs_key_b_lbl_2">
-                             <property name="minimumSize">
-                              <size>
-                               <width>80</width>
-                               <height>45</height>
-                              </size>
                              </property>
-                             <property name="styleSheet">
-                              <string notr="true">QLabel {
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_167">
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="dec_ms_rank_lbl">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>80</width>
+                                  <height>45</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">QLabel {
 	color: rgb(255, 255, 255);
 }</string>
-                             </property>
-                             <property name="text">
-                              <string>Ключ b</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QLineEdit" name="dec_acs_key_b_txt_2">
-                             <property name="minimumSize">
-                              <size>
-                               <width>0</width>
-                               <height>45</height>
-                              </size>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">QLineEdit {
+                                </property>
+                                <property name="text">
+                                 <string>Строки и столбцы</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QLineEdit" name="dec_ms_rank_txt">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>45</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">QLineEdit {
 	border: 1px solid rgb(48, 47, 47);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
@@ -3713,13 +3628,19 @@ QLineEdit:focus {
 QLineEdit:focus {
 	border: 1px solid rgb(77, 77, 77);
 }</string>
-                             </property>
-                             <property name="placeholderText">
-                              <string>Ключ шифрования b</string>
-                             </property>
-                             <property name="clearButtonEnabled">
-                              <bool>true</bool>
-                             </property>
+                                </property>
+                                <property name="text">
+                                 <string>4</string>
+                                </property>
+                                <property name="placeholderText">
+                                 <string>Количество строк и столбцов</string>
+                                </property>
+                                <property name="clearButtonEnabled">
+                                 <bool>true</bool>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
                             </widget>
                            </item>
                           </layout>
@@ -3729,7 +3650,7 @@ QLineEdit:focus {
                       </widget>
                      </item>
                      <item>
-                      <widget class="QFrame" name="dec_acs_chr_frame_2">
+                      <widget class="QFrame" name="dec_ms_chr_frame">
                        <property name="maximumSize">
                         <size>
                          <width>580</width>
@@ -3747,7 +3668,7 @@ QLineEdit:focus {
                        <property name="frameShadow">
                         <enum>QFrame::Raised</enum>
                        </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_76">
+                       <layout class="QVBoxLayout" name="verticalLayout_81">
                         <property name="topMargin">
                          <number>0</number>
                         </property>
@@ -3758,7 +3679,7 @@ QLineEdit:focus {
                          <number>0</number>
                         </property>
                         <item>
-                         <widget class="QFrame" name="dec_acs_oc_frame_2">
+                         <widget class="QFrame" name="dec_ms_oc_frame">
                           <property name="minimumSize">
                            <size>
                             <width>0</width>
@@ -3782,9 +3703,9 @@ QLineEdit:focus {
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_164">
+                          <layout class="QHBoxLayout" name="horizontalLayout_172">
                            <item>
-                            <widget class="QLabel" name="dec_acs_oc_lbl_2">
+                            <widget class="QLabel" name="dec_ms_oc_lbl">
                              <property name="minimumSize">
                               <size>
                                <width>80</width>
@@ -3802,7 +3723,7 @@ QLineEdit:focus {
                             </widget>
                            </item>
                            <item>
-                            <widget class="QLineEdit" name="dec_acs_oc_txt_2">
+                            <widget class="QLineEdit" name="dec_ms_oc_txt">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -3826,7 +3747,7 @@ QLineEdit:focus {
                               <bool>true</bool>
                              </property>
                              <property name="placeholderText">
-                              <string>Текст сообщения</string>
+                              <string>Текст зашифрованного сообщения</string>
                              </property>
                              <property name="clearButtonEnabled">
                               <bool>false</bool>
@@ -3843,7 +3764,7 @@ QLineEdit:focus {
                    </widget>
                   </item>
                   <item>
-                   <widget class="QFrame" name="dec_acs_table_frame_2">
+                   <widget class="QFrame" name="dec_ms_table_frame">
                     <property name="styleSheet">
                      <string notr="true">QFrame {
 	border: none;
@@ -3855,7 +3776,7 @@ QLineEdit:focus {
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_165">
+                    <layout class="QHBoxLayout" name="horizontalLayout_173">
                      <property name="topMargin">
                       <number>0</number>
                      </property>
@@ -3866,7 +3787,7 @@ QLineEdit:focus {
                       <number>0</number>
                      </property>
                      <item>
-                      <widget class="QFrame" name="dec_acs_ot_frame_2">
+                      <widget class="QFrame" name="dec_ms_t_frame">
                        <property name="styleSheet">
                         <string notr="true">QFrame {
 	border: none;
@@ -3878,12 +3799,12 @@ QLineEdit:focus {
                        <property name="frameShadow">
                         <enum>QFrame::Raised</enum>
                        </property>
-                       <layout class="QHBoxLayout" name="horizontalLayout_166">
+                       <layout class="QHBoxLayout" name="horizontalLayout_174">
                         <property name="topMargin">
                          <number>6</number>
                         </property>
                         <item>
-                         <widget class="QFrame" name="dec_acs_twn_frame_2">
+                         <widget class="QFrame" name="dec_ms_tms_frame">
                           <property name="styleSheet">
                            <string notr="true">QFrame {
 	border: none;
@@ -3895,23 +3816,12 @@ QLineEdit:focus {
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
-                          <layout class="QVBoxLayout" name="verticalLayout_77">
-                           <property name="leftMargin">
-                            <number>6</number>
-                           </property>
-                           <property name="topMargin">
-                            <number>0</number>
-                           </property>
-                           <property name="rightMargin">
-                            <number>0</number>
-                           </property>
-                           <property name="bottomMargin">
-                            <number>0</number>
-                           </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_178">
                            <item>
-                            <widget class="QTableWidget" name="dec_acs_twn_table_2">
+                            <widget class="QTableWidget" name="dec_ms_tms_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
+	color: rgb(255, 255, 255);
 	gridline-color: rgb(48, 47, 47);
 }
 
@@ -3928,30 +3838,24 @@ QTableCornerButton::section {
                               <bool>true</bool>
                              </property>
                              <property name="editTriggers">
-                              <set>QAbstractItemView::NoEditTriggers</set>
+                              <set>QAbstractItemView::CurrentChanged</set>
                              </property>
                              <property name="rowCount">
-                              <number>11</number>
+                              <number>4</number>
                              </property>
                              <property name="columnCount">
-                              <number>6</number>
+                              <number>4</number>
                              </property>
                              <attribute name="horizontalHeaderDefaultSectionSize">
-                              <number>80</number>
+                              <number>60</number>
+                             </attribute>
+                             <attribute name="verticalHeaderDefaultSectionSize">
+                              <number>60</number>
                              </attribute>
                              <row/>
                              <row/>
                              <row/>
                              <row/>
-                             <row/>
-                             <row/>
-                             <row/>
-                             <row/>
-                             <row/>
-                             <row/>
-                             <row/>
-                             <column/>
-                             <column/>
                              <column/>
                              <column/>
                              <column/>
@@ -3962,7 +3866,7 @@ QTableCornerButton::section {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QFrame" name="dec_acs_twl_frame_2">
+                         <widget class="QFrame" name="dec_ms_ot_frame">
                           <property name="styleSheet">
                            <string notr="true">QFrame {
 	border: none;
@@ -3974,7 +3878,7 @@ QTableCornerButton::section {
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
-                          <layout class="QVBoxLayout" name="verticalLayout_78">
+                          <layout class="QVBoxLayout" name="verticalLayout_83">
                            <property name="leftMargin">
                             <number>6</number>
                            </property>
@@ -3988,7 +3892,7 @@ QTableCornerButton::section {
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QTableWidget" name="dec_acs_twl_table_2">
+                            <widget class="QTableWidget" name="dec_ms_ot_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
 	gridline-color: rgb(48, 47, 47);
@@ -4010,27 +3914,21 @@ QTableCornerButton::section {
                               <set>QAbstractItemView::NoEditTriggers</set>
                              </property>
                              <property name="rowCount">
-                              <number>11</number>
+                              <number>4</number>
                              </property>
                              <property name="columnCount">
-                              <number>6</number>
+                              <number>4</number>
                              </property>
                              <attribute name="horizontalHeaderDefaultSectionSize">
-                              <number>80</number>
+                              <number>60</number>
+                             </attribute>
+                             <attribute name="verticalHeaderDefaultSectionSize">
+                              <number>60</number>
                              </attribute>
                              <row/>
                              <row/>
                              <row/>
                              <row/>
-                             <row/>
-                             <row/>
-                             <row/>
-                             <row/>
-                             <row/>
-                             <row/>
-                             <row/>
-                             <column/>
-                             <column/>
                              <column/>
                              <column/>
                              <column/>
@@ -4047,7 +3945,7 @@ QTableCornerButton::section {
                    </widget>
                   </item>
                   <item>
-                   <widget class="QFrame" name="dec_acs_button_frame_2">
+                   <widget class="QFrame" name="dec_ms_button_frame">
                     <property name="styleSheet">
                      <string notr="true">QFrame {
 	border: none;
@@ -4059,7 +3957,7 @@ QTableCornerButton::section {
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_167">
+                    <layout class="QHBoxLayout" name="horizontalLayout_175">
                      <property name="topMargin">
                       <number>0</number>
                      </property>
@@ -4070,7 +3968,7 @@ QTableCornerButton::section {
                       <number>0</number>
                      </property>
                      <item>
-                      <widget class="QPushButton" name="dec_acs_btn_2">
+                      <widget class="QPushButton" name="dec_ms_btn">
                        <property name="minimumSize">
                         <size>
                          <width>130</width>
