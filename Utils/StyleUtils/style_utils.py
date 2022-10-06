@@ -28,6 +28,24 @@ def set_menu_bar_dark_style(menu_bar_obj) -> None:
     style_base_utils.set_style(menu_bar_obj, menu_bar_stylesheet)
 
 
+def set_table_color(table_obj, color: styles.Color) -> None:
+    table_stylesheet = f'''
+    QTableWidget {{
+    gridline-color: {color.value};
+    }}
+    
+    QHeaderView::section {{
+    background-color: {color.value};
+    }}
+    
+    QTableCornerButton::section {{
+    background-color: {color.value};
+    }}
+    '''
+
+    style_base_utils.add_style(table_obj, table_stylesheet)
+
+
 def set_tab_padding(tab_widget_obj, padding: str) -> None:
     tab_stylesheet = f'\nQTabBar::tab {{\npadding: {padding};\n}}'
 

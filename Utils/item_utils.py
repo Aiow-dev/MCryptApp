@@ -7,3 +7,9 @@ def all_equal(items):
     len_items = len(items)
 
     return all(items[index] == items[index - 1] for index in range(len_items))
+
+
+def is_serial(lst, step=1):
+    len_lst = len(lst)
+
+    return all(lst[index] - lst[index - 1] == step for index in range(1, len_lst))

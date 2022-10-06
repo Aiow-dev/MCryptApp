@@ -123,14 +123,14 @@ class ControllersWrapper:
                                                   playfair.dec_playfair)
 
     def magic_square_enc_handler(self):
-        magic_square_generic_handler(self.ui.enc_ms_msg_txt, self.ui.enc_ms_tms_table,
-                                     self.ui.enc_ms_oc_txt, self.ui.enc_ms_ot_table,
-                                     enc_magic_square)
+        magic_square_generic_handler(self.ui.enc_ms_msg_txt, self.ui.enc_ms_rank_txt,
+                                     self.ui.enc_ms_tms_table, self.ui.enc_ms_oc_txt,
+                                     self.ui.enc_ms_ot_table, enc_magic_square)
 
     def un_magic_square_enc_handler(self):
-        magic_square_generic_handler(self.ui.dec_ms_msg_txt, self.ui.dec_ms_tms_table,
-                                     self.ui.dec_ms_oc_txt, self.ui.dec_ms_ot_table,
-                                     dec_magic_square)
+        magic_square_generic_handler(self.ui.dec_ms_msg_txt, self.ui.dec_ms_rank_txt,
+                                     self.ui.dec_ms_tms_table, self.ui.dec_ms_oc_txt,
+                                     self.ui.dec_ms_ot_table, dec_magic_square)
 
     def controller_binding(self) -> None:
         self.ui.enc_combo_box.currentIndexChanged.connect(

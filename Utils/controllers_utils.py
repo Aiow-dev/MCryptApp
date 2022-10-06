@@ -1,8 +1,8 @@
 from typing import Dict
 
-from Utils.StyleUtils import style_utils
-
 from Assets import styles
+
+from Utils.StyleUtils import style_utils
 
 
 def page_combo_box(combo_box_obj, stacked_widget_obj):

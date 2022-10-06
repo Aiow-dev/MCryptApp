@@ -1483,7 +1483,7 @@ class Ui_main_window(object):
         self.enc_ms_ot_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.enc_ms_ot_frame.setObjectName("enc_ms_ot_frame")
         self.verticalLayout_73 = QtWidgets.QVBoxLayout(self.enc_ms_ot_frame)
-        self.verticalLayout_73.setContentsMargins(6, 0, 0, 0)
+        self.verticalLayout_73.setContentsMargins(6, 6, 6, 6)
         self.verticalLayout_73.setObjectName("verticalLayout_73")
         self.enc_ms_ot_table = QtWidgets.QTableWidget(self.enc_ms_ot_frame)
         self.enc_ms_ot_table.setStyleSheet("QTableWidget {\n"
@@ -1760,7 +1760,7 @@ class Ui_main_window(object):
         self.dec_ms_ot_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.dec_ms_ot_frame.setObjectName("dec_ms_ot_frame")
         self.verticalLayout_83 = QtWidgets.QVBoxLayout(self.dec_ms_ot_frame)
-        self.verticalLayout_83.setContentsMargins(6, 0, 0, 0)
+        self.verticalLayout_83.setContentsMargins(6, 6, 6, 6)
         self.verticalLayout_83.setObjectName("verticalLayout_83")
         self.dec_ms_ot_table = QtWidgets.QTableWidget(self.dec_ms_ot_frame)
         self.dec_ms_ot_table.setStyleSheet("QTableWidget {\n"

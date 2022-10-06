@@ -26,13 +26,15 @@ class EventControllersWrapper:
         style_utils.set_line_edit_border_color(ui_obj, color)
         ui_obj.setToolTip(tool_tip_text)
 
-    def event_num_table(self, table_item):
-        color: QtGui.QColor = QtGui.QColor(30, 30, 30)
-        tool_tip_text: str = ''
+    def event_pos_num_table(self, table_item):
+        color = QtGui.QColor(255, 82, 82)
+        tool_tip_text = 'Элемент должен содержать только натуральные числа'
 
-        if not table_item.text().isdigit():
-            color = QtGui.QColor(255, 82, 82)
-            tool_tip_text = 'Элемент должен содержать только цифры'
+        item_text = table_item.text()
+
+        if item_text.isdigit() and int(item_text):
+            color: QtGui.QColor = QtGui.QColor(30, 30, 30)
+            tool_tip_text: str = ''
 
         table_item.setBackground(color)
         table_item.setToolTip(tool_tip_text)
@@ -151,7 +153,7 @@ class EventControllersWrapper:
         tables = [self.ui.enc_ms_tms_table, self.ui.dec_ms_tms_table]
 
         for table in tables:
-            table.itemChanged.connect(self.event_num_table)
+            table.itemChanged.connect(self.event_pos_num_table)
 
     def event_controller_binding(self) -> None:
         self.event_num_text_binding()

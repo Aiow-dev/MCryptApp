@@ -1,6 +1,6 @@
 from typing import List
 
-from Utils.item_utils import all_equal
+from Utils.item_utils import all_equal, is_serial
 
 
 def check_magic_square(magic_square):
@@ -9,6 +9,8 @@ def check_magic_square(magic_square):
 
     if row_len != clm_len:
         return False
+
+    items = []
 
     sums_row = []
     sums_clm = []
@@ -23,6 +25,8 @@ def check_magic_square(magic_square):
         for clm_index in range(clm_len):
             if not magic_square[row_index][clm_index]:
                 return False
+
+            items.append(magic_square[row_index][clm_index])
 
             sum_row += magic_square[row_index][clm_index]
             sum_clm += magic_square[clm_index][row_index]
@@ -39,7 +43,7 @@ def check_magic_square(magic_square):
     if not all_equal(sums_row) and not all_equal(sums_clm):
         return False
 
-    return sum_left_diagonal == sum_right_diagonal
+    return sum_left_diagonal == sum_right_diagonal and is_serial(sorted(items))
 
 
 def enc_magic_square(msg: str, key_table: List[List[int]]) -> str | tuple[str, list[list[str]]]:

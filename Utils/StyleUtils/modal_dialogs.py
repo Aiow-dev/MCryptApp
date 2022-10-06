@@ -7,3 +7,5 @@ def show_error_msg(txt: str, title: str = '') -> None:
     msg.setText(txt)
     msg.setWindowTitle(title)
     msg.setIcon(QMessageBox.Critical)
+
+    msg.exec()
