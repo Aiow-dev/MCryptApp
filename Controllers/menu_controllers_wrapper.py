@@ -18,6 +18,7 @@ class MenuControllersWrapper:
             self.ui.action_cs, self.ui.action_acs,
             self.ui.action_kcs, self.ui.action_ts,
             self.ui.action_vs, self.ui.action_ps,
+            self.ui.action_dp,
         ]
 
         for action_index, action in enumerate(actions_list):
