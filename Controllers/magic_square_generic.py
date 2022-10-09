@@ -3,7 +3,7 @@ from typing import Dict
 from Assets import constants, styles
 
 from Utils.table_base_utils import table_num_items, table_row
-from Utils.table_utils import table
+from Utils.table_base_utils import table
 
 from Utils.StyleUtils.modal_dialogs import show_error_msg
 from Utils.StyleUtils.style_utils import set_line_edit_border_color, set_table_color

@@ -2,19 +2,16 @@ from View import main_window
 
 from Scripts import simple_permutation
 from Scripts import key_permutation
-
 from Scripts import caesar
-
 from Scripts import trisemus
-
 from Scripts import vigenere
-
 from Scripts import playfair
-
 from Scripts.magic_square import enc_magic_square, dec_magic_square
+from Scripts.double_playfair import enc_double_playfair, dec_double_playfair
 
 from Controllers import trisemus_generic, table_permutation_generic, caesar_generic, vigenere_generic
 from Controllers.magic_square_generic import magic_square_generic_handler
+from Controllers.double_playfair_generic import double_playfair_generic_handler
 
 from Utils import controllers_utils
 
@@ -132,6 +129,16 @@ class ControllersWrapper:
                                      self.ui.dec_ms_tms_table, self.ui.dec_ms_oc_txt,
                                      self.ui.dec_ms_ot_table, dec_magic_square)
 
+    def double_playfair_enc_handler(self):
+        double_playfair_generic_handler(self.ui.enc_dp_msg_txt, self.ui.enc_dp_lt_table,
+                                        self.ui.enc_dp_rt_table, self.ui.enc_dp_oc_txt,
+                                        enc_double_playfair)
+
+    def un_double_playfair_enc_handler(self):
+        double_playfair_generic_handler(self.ui.dec_dp_msg_txt, self.ui.dec_dp_lt_table,
+                                        self.ui.dec_dp_rt_table, self.ui.dec_dp_oc_txt,
+                                        dec_double_playfair)
+
     def controller_binding(self) -> None:
         self.ui.enc_combo_box.currentIndexChanged.connect(
             lambda: controllers_utils.page_combo_box(self.ui.enc_combo_box, self.ui.enc_widget)
@@ -156,6 +163,8 @@ class ControllersWrapper:
             self.ui.dec_ps_btn: self.un_playfair_enc_handler,
             self.ui.enc_ms_btn: self.magic_square_enc_handler,
             self.ui.dec_ms_btn: self.un_magic_square_enc_handler,
+            self.ui.enc_dp_btn: self.double_playfair_enc_handler,
+            self.ui.dec_dp_btn: self.un_double_playfair_enc_handler,
         }
 
         for btn, function in btn_functions.items():

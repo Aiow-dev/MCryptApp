@@ -7,6 +7,9 @@ def enc_double_playfair(msg, left_tbl, right_tbl):
     left_size = len(left_tbl), len(left_tbl[0])
     right_size = len(right_tbl), len(right_tbl[0])
 
+    if len_msg % 2 == 1:
+        msg += 'Ъ'
+
     if left_size[0] != right_size[0] and left_size[1] != right_size[1]:
         return 'Ошибка. Возможно, размерности таблиц не равны'
 
@@ -15,6 +18,9 @@ def enc_double_playfair(msg, left_tbl, right_tbl):
     for i in range(0, len_msg, 2):
         first = find(left_tbl, msg[i], left_size[0], left_size[1])
         second = find(right_tbl, msg[i + 1], right_size[0], right_size[1])
+
+        if not first or not second:
+            return 'Ошибка. Возможно, не найдена буква сообщения в таблице подстановок'
 
         if first[0] == second[0]:
             enc_msg += right_tbl[first[0]][first[1]]
@@ -43,6 +49,9 @@ def dec_double_playfair(enc_msg, left_tbl, right_tbl):
     for i in range(0, len_msg, 2):
         first = find(right_tbl, enc_msg[i], left_size[0], left_size[1])
         second = find(left_tbl, enc_msg[i + 1], right_size[0], right_size[1])
+
+        if not first or not second:
+            return 'Ошибка. Возможно, не найдена буква сообщения в таблице подстановок'
 
         if first[0] == second[0]:
             msg += left_tbl[first[0]][first[1]]

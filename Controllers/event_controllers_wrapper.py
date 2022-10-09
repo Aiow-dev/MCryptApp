@@ -5,6 +5,7 @@ from PyQt5 import QtGui
 
 from View import main_window
 
+from Utils.table_base_utils import fill_table_rand, clear_table
 from Utils.StyleUtils import style_utils
 
 from Assets import styles
@@ -27,14 +28,25 @@ class EventControllersWrapper:
         ui_obj.setToolTip(tool_tip_text)
 
     def event_pos_num_table(self, table_item):
-        color = QtGui.QColor(255, 82, 82)
-        tool_tip_text = 'Элемент должен содержать только натуральные числа'
+        color: QtGui.QColor = QtGui.QColor(255, 82, 82)
+        tool_tip_text: str = 'Элемент должен содержать только натуральные числа'
 
-        item_text = table_item.text()
+        item_text: str = table_item.text()
 
         if item_text.isdigit() and int(item_text):
+            color = QtGui.QColor(30, 30, 30)
+            tool_tip_text = ''
+
+        table_item.setBackground(color)
+        table_item.setToolTip(tool_tip_text)
+
+    def event_symbol_table(self, table_item):
+        color: QtGui.QColor = QtGui.QColor(255, 82, 82)
+        tool_tip_text: str = 'Элемент должен содержать символ'
+
+        if len(table_item.text()) == 1:
             color: QtGui.QColor = QtGui.QColor(30, 30, 30)
-            tool_tip_text: str = ''
+            tool_tip_text = ''
 
         table_item.setBackground(color)
         table_item.setToolTip(tool_tip_text)
@@ -64,14 +76,44 @@ class EventControllersWrapper:
         try:
             number = int(text_obj.text())
 
-            for table in tables:
-                table.setRowCount(number)
-                table.setColumnCount(number)
+            if number < 1000:
+                for table in tables:
+                    table.setRowCount(number)
+                    table.setColumnCount(number)
         except ValueError as value_error:
             print(value_error)
 
+    def event_tables_row(self, tables, text_obj):
+        try:
+            number = int(text_obj.text())
+
+            if number < 1000:
+                for table in tables:
+                    table.setRowCount(number)
+        except ValueError as value_error:
+            print(value_error)
+
+    def event_tables_clm(self, tables, text_obj):
+        try:
+            number = int(text_obj.text())
+
+            if number < 1000:
+                for table in tables:
+                    table.setColumnCount(number)
+        except ValueError as value_error:
+            print(value_error)
+
+    def event_tables_rand(self, tables, check_obj):
+        f_table = fill_table_rand if check_obj.isChecked() else clear_table
+
+        for table in tables:
+            f_table(table)
+
     def event_tables_rank_connect(self, tables, text_obj, f_tables_size):
         text_obj.textChanged.connect(lambda: f_tables_size(tables, text_obj))
+
+    def event_tables_rand_connect(self, tables, check_obj, f_tables_rand):
+        check_obj.stateChanged.connect(lambda: f_tables_rand(tables, check_obj))
 
     def text_changed_multi_connect(self, text_obj_list, f_event) -> None:
         for text_obj in text_obj_list:
@@ -96,7 +138,8 @@ class EventControllersWrapper:
             self.ui.enc_ps_row_txt, self.ui.enc_ps_clm_txt,
             self.ui.dec_ps_row_txt, self.ui.dec_ps_clm_txt,
             self.ui.enc_ms_rank_txt, self.ui.dec_ms_rank_txt,
-            self.ui.enc_dp_rank_txt,
+            self.ui.enc_dp_row_txt, self.ui.enc_dp_clm_txt,
+            self.ui.dec_dp_row_txt, self.ui.dec_dp_clm_txt,
         ]
 
         self.text_changed_multi_connect(
@@ -120,7 +163,7 @@ class EventControllersWrapper:
             self.ui.enc_ps_msg_txt, self.ui.enc_ps_key_txt,
             self.ui.dec_ps_msg_txt, self.ui.dec_ps_key_txt,
             self.ui.enc_ms_msg_txt, self.ui.dec_ms_msg_txt,
-            self.ui.enc_dp_msg_txt,
+            self.ui.enc_dp_msg_txt, self.ui.dec_dp_msg_txt,
         ]
 
         self.text_changed_multi_connect(
@@ -138,6 +181,7 @@ class EventControllersWrapper:
             self.ui.enc_vs_btn, self.ui.dec_vs_btn,
             self.ui.enc_ps_btn, self.ui.dec_ps_btn,
             self.ui.enc_ms_btn, self.ui.dec_ms_btn,
+            self.ui.enc_dp_btn, self.ui.dec_dp_btn,
         ]
 
         self.event_shortcut_multi_connect(ui_obj_list, 'Return')
@@ -146,17 +190,49 @@ class EventControllersWrapper:
         table_rank_numbers = {
             self.ui.enc_ms_rank_txt: [self.ui.enc_ms_tms_table, self.ui.enc_ms_ot_table],
             self.ui.dec_ms_rank_txt: [self.ui.dec_ms_tms_table, self.ui.dec_ms_ot_table],
-            self.ui.enc_dp_rank_txt: [self.ui.enc_dp_lt_table, self.ui.enc_dp_rt_table],
+        }
+
+        table_size_numbers = {
+            (self.ui.enc_dp_lt_table, self.ui.enc_dp_rt_table): {
+                self.ui.enc_dp_row_txt: self.event_tables_row,
+                self.ui.enc_dp_clm_txt: self.event_tables_clm
+            },
+            (self.ui.dec_dp_lt_table, self.ui.dec_dp_rt_table): {
+                self.ui.dec_dp_row_txt: self.event_tables_row,
+                self.ui.dec_dp_clm_txt: self.event_tables_clm
+            },
         }
 
         for table_rank_obj, tables in table_rank_numbers.items():
             self.event_tables_rank_connect(tables, table_rank_obj, self.event_tables_rank)
+
+        for tables, tables_parameter in table_size_numbers.items():
+            for table_parameter, f_parameter in tables_parameter.items():
+                self.event_tables_rank_connect(tables, table_parameter, f_parameter)
 
     def event_num_table_binding(self) -> None:
         tables = [self.ui.enc_ms_tms_table, self.ui.dec_ms_tms_table]
 
         for table in tables:
             table.itemChanged.connect(self.event_pos_num_table)
+
+    def event_symbol_table_binding(self) -> None:
+        tables = [
+            self.ui.enc_dp_lt_table, self.ui.enc_dp_rt_table,
+            self.ui.dec_dp_lt_table, self.ui.dec_dp_rt_table,
+        ]
+
+        for table in tables:
+            table.itemChanged.connect(self.event_symbol_table)
+
+    def event_table_rand_binding(self) -> None:
+        table_rand = {
+            self.ui.enc_dp_chk: [self.ui.enc_dp_lt_table, self.ui.enc_dp_rt_table],
+            self.ui.dec_dp_chk: [self.ui.dec_dp_lt_table, self.ui.dec_dp_rt_table],
+        }
+
+        for table_rand_obj, tables in table_rand.items():
+            self.event_tables_rand_connect(tables, table_rand_obj, self.event_tables_rand)
 
     def event_controller_binding(self) -> None:
         self.event_num_text_binding()
@@ -167,3 +243,5 @@ class EventControllersWrapper:
 
         self.event_table_size_binding()
         self.event_num_table_binding()
+        self.event_symbol_table_binding()
+        self.event_table_rand_binding()

@@ -79,14 +79,6 @@ def table_text(columns_values: tuple, table_header: str = None, columns_headers:
     return table_str
 
 
-def table(part_values, f_part, table_obj, h_headers=(), v_headers=()) -> None:
-    table_obj.setHorizontalHeaderLabels(h_headers)
-    table_obj.setVerticalHeaderLabels(v_headers)
-
-    for part_num, part_value in enumerate(part_values):
-        f_part(part_num, part_value, table_obj)
-
-
 def key_permutation_table_text(key_table):
     key = '\t'.join(key[0] for key in key_table).upper()
     one_letter_keys = ''.join(key[0] for key in key_table)
@@ -130,7 +122,7 @@ def affine_table_letter_text(key_a_text: int, key_b_text: int, num_column_values
 def affine_table(key_a_text, key_b_text, column_values, table_obj):
     h_headers = table_base_utils.affine_column_headers(key_a_text, key_b_text)
 
-    table(column_values, table_base_utils.table_column, table_obj, h_headers=h_headers)
+    table_base_utils.table(column_values, table_base_utils.table_column, table_obj, h_headers=h_headers)
 
 
 def caesar_key_table_text(replace_values):
@@ -151,7 +143,7 @@ def caesar_key_table_text(replace_values):
 def caesar_key_table(column_values, table_obj):
     h_headers = ('№', '->', '№', '->', '№', '->')
 
-    table(column_values, table_base_utils.table_column, table_obj, h_headers=h_headers)
+    table_base_utils.table(column_values, table_base_utils.table_column, table_obj, h_headers=h_headers)
 
 
 def vigenere_table_text(msg_txt: str, key_text: str, enc_msg_txt: str) -> str:
@@ -175,4 +167,4 @@ def vigenere_table(row_values, table_obj):
     h_headers = list(constants.CUT_RU_ALPHABET)
     v_headers = [str(row) for row in range(32)]
 
-    table(row_values, table_base_utils.table_row, table_obj, h_headers, v_headers)
+    table_base_utils.table(row_values, table_base_utils.table_row, table_obj, h_headers, v_headers)
