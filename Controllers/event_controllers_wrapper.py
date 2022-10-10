@@ -27,6 +27,19 @@ class EventControllersWrapper:
         style_utils.set_line_edit_border_color(ui_obj, color)
         ui_obj.setToolTip(tool_tip_text)
 
+    def event_unique_num(self, ui_obj):
+        color: styles.Color = self.colors['default']
+        tool_tip_text: str = ''
+
+        ui_text = ui_obj.text()
+
+        if not ui_text.isdigit() or len(set(ui_text)) != len(ui_text):
+            color = self.colors['error']
+            tool_tip_text = 'Поле должно содержать только уникальные цифры'
+
+        style_utils.set_line_edit_border_color(ui_obj, color)
+        ui_obj.setToolTip(tool_tip_text)
+
     def event_pos_num_table(self, table_item):
         color: QtGui.QColor = QtGui.QColor(255, 82, 82)
         tool_tip_text: str = 'Элемент должен содержать только натуральные числа'
@@ -129,6 +142,8 @@ class EventControllersWrapper:
             self.ui.dec_smp_row_txt, self.ui.dec_smp_clm_txt,
             self.ui.enc_kpm_row_txt, self.ui.enc_kpm_clm_txt,
             self.ui.dec_kpm_row_txt, self.ui.dec_kpm_clm_txt,
+            self.ui.enc_dpm_row_txt, self.ui.enc_dpm_clm_txt,
+            self.ui.dec_dpm_row_txt, self.ui.dec_dpm_clm_txt,
             self.ui.enc_cs_key_txt, self.ui.dec_cs_key_txt,
             self.ui.enc_acs_key_a_txt, self.ui.enc_acs_key_b_txt,
             self.ui.dec_acs_key_a_txt, self.ui.dec_acs_key_b_txt,
@@ -140,12 +155,20 @@ class EventControllersWrapper:
             self.ui.enc_ms_rank_txt, self.ui.dec_ms_rank_txt,
             self.ui.enc_dp_row_txt, self.ui.enc_dp_clm_txt,
             self.ui.dec_dp_row_txt, self.ui.dec_dp_clm_txt,
-            self.ui.enc_dpm_row_txt, self.ui.enc_dpm_clm_txt,
-            self.ui.enc_dpm_key_r_txt, self.ui.enc_dpm_key_c_txt,
         ]
 
         self.text_changed_multi_connect(
             num_text_obj_list, self.event_num
+        )
+
+    def event_unique_num_text_binding(self) -> None:
+        num_text_obj_list: List[QLineEdit] = [
+            self.ui.enc_dpm_key_r_txt, self.ui.enc_dpm_key_c_txt,
+            self.ui.dec_dpm_key_r_txt, self.ui.dec_dpm_key_c_txt,
+        ]
+
+        self.text_changed_multi_connect(
+            num_text_obj_list, self.event_unique_num
         )
 
     def event_text_binding(self) -> None:
@@ -153,6 +176,7 @@ class EventControllersWrapper:
             self.ui.enc_smp_msg_txt, self.ui.dec_smp_msg_txt,
             self.ui.enc_kpm_msg_txt, self.ui.enc_kpm_key_txt,
             self.ui.dec_kpm_msg_txt, self.ui.dec_kpm_key_txt,
+            self.ui.enc_dpm_msg_txt, self.ui.dec_dpm_msg_txt,
             self.ui.enc_cs_msg_txt, self.ui.enc_cs_key_txt,
             self.ui.dec_cs_msg_txt, self.ui.dec_cs_key_txt,
             self.ui.enc_acs_msg_txt, self.ui.dec_acs_msg_txt,
@@ -166,7 +190,6 @@ class EventControllersWrapper:
             self.ui.dec_ps_msg_txt, self.ui.dec_ps_key_txt,
             self.ui.enc_ms_msg_txt, self.ui.dec_ms_msg_txt,
             self.ui.enc_dp_msg_txt, self.ui.dec_dp_msg_txt,
-            self.ui.enc_dpm_msg_txt,
         ]
 
         self.text_changed_multi_connect(
@@ -185,6 +208,7 @@ class EventControllersWrapper:
             self.ui.enc_ps_btn, self.ui.dec_ps_btn,
             self.ui.enc_ms_btn, self.ui.dec_ms_btn,
             self.ui.enc_dp_btn, self.ui.dec_dp_btn,
+            self.ui.enc_dpm_btn, self.ui.dec_dpm_btn,
         ]
 
         self.event_shortcut_multi_connect(ui_obj_list, 'Return')
@@ -239,6 +263,7 @@ class EventControllersWrapper:
 
     def event_controller_binding(self) -> None:
         self.event_num_text_binding()
+        self.event_unique_num_text_binding()
 
         self.event_text_binding()
 

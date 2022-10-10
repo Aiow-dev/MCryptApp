@@ -13,7 +13,7 @@ def enc_double_permutation(msg, row, clm, key_row, key_clm):
             offset = index_row * clm + index_clm
             part_clm_table.append(msg[offset])
 
-        clm_table[num_clm] = part_clm_table
+        clm_table[str(num_clm) + str(index_clm)] = part_clm_table
 
     sort_clm_table = [clm_table[sort_key] for sort_key in sorted(clm_table)]
 
@@ -26,7 +26,7 @@ def enc_double_permutation(msg, row, clm, key_row, key_clm):
 
     sort_row_table = [row_table[sort_key] for sort_key in sorted(row_table)]
 
-    return ''.join(''.join(sort_row) for sort_row in sort_row_table)
+    return ''.join(''.join(sort_row) for sort_row in sort_row_table), sort_row_table
 
 
 def dec_double_permutation(enc_msg, row, clm, key_row, key_clm):
@@ -57,4 +57,8 @@ def dec_double_permutation(enc_msg, row, clm, key_row, key_clm):
 
     row_table_key = [row_table[key] for key in key_row]
 
-    return ''.join(''.join(part_row) for part_row in row_table_key)
+    return ''.join(''.join(part_row) for part_row in row_table_key), row_table_key
+
+
+if __name__ == '__main__':
+    print(''.join(range(5)))

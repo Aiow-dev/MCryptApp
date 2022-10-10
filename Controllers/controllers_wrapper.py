@@ -2,6 +2,7 @@ from View import main_window
 
 from Scripts import simple_permutation
 from Scripts import key_permutation
+from Scripts.double_permutation import enc_double_permutation, dec_double_permutation
 from Scripts import caesar
 from Scripts import trisemus
 from Scripts import vigenere
@@ -46,6 +47,20 @@ class ControllersWrapper:
                                                   self.ui.dec_kpm_clm_txt, self.ui.dec_kpm_key_txt,
                                                   self.ui.dec_kpm_oc_txt, self.ui.dec_kpm_ot_txt,
                                                   key_permutation.dec_key_permutation)
+
+    def double_permutation_enc_handler(self):
+        table_permutation_generic. \
+            double_permutation_generic(self.ui.enc_dpm_msg_txt, self.ui.enc_dpm_row_txt,
+                                       self.ui.enc_dpm_clm_txt, self.ui.enc_dpm_key_r_txt,
+                                       self.ui.enc_dpm_key_c_txt, self.ui.enc_dpm_oc_txt,
+                                       self.ui.enc_dpm_ot_txt, enc_double_permutation)
+
+    def un_double_permutation_enc_handler(self):
+        table_permutation_generic.\
+            double_permutation_generic(self.ui.dec_dpm_msg_txt, self.ui.dec_dpm_row_txt,
+                                       self.ui.dec_dpm_clm_txt, self.ui.dec_dpm_key_r_txt,
+                                       self.ui.dec_dpm_key_c_txt, self.ui.dec_dpm_oc_txt,
+                                       self.ui.dec_dpm_ot_txt, dec_double_permutation)
 
     def caesar_classic_encryption_handler(self):
         caesar_generic. \
@@ -106,7 +121,7 @@ class ControllersWrapper:
         vigenere_generic.vigenere_generic_handler(self.ui.dec_vs_msg_txt, self.ui.dec_vs_key_txt,
                                                   self.ui.dec_vs_oc_txt, self.ui.dec_vs_tsb_text,
                                                   self.ui.dec_vs_wsb_table, vigenere.dec_vigenere)
-    
+
     def playfair_enc_handler(self):
         trisemus_generic.trisemus_generic_handler(self.ui.enc_ps_msg_txt, self.ui.enc_ps_row_txt,
                                                   self.ui.enc_ps_clm_txt, self.ui.enc_ps_key_txt,
@@ -149,6 +164,8 @@ class ControllersWrapper:
             self.ui.dec_smp_btn: self.un_simple_permutation_encryption_handler,
             self.ui.enc_kpm_btn: self.key_permutation_encryption_handler,
             self.ui.dec_kpm_btn: self.un_key_permutation_encryption_handler,
+            self.ui.enc_dpm_btn: self.double_permutation_enc_handler,
+            self.ui.dec_dpm_btn: self.un_double_permutation_enc_handler,
             self.ui.enc_cs_btn: self.caesar_key_encryption_handler,
             self.ui.dec_cs_btn: self.un_caesar_key_encryption_handler,
             self.ui.enc_acs_btn: self.caesar_affine_encryption_handler,

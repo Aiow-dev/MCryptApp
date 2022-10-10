@@ -3531,13 +3531,13 @@ QPushButton:hover {
                </item>
               </layout>
              </widget>
-             <widget class="QWidget" name="dec_kpm_tab_2">
+             <widget class="QWidget" name="dec_dpm_tab">
               <attribute name="title">
                <string>Дешифрование</string>
               </attribute>
-              <layout class="QHBoxLayout" name="horizontalLayout_205">
+              <layout class="QHBoxLayout" name="horizontalLayout_213">
                <item>
-                <widget class="QFrame" name="dec_kpm_2">
+                <widget class="QFrame" name="dec_dpm">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
 	border: 1px solid rgb(77, 77, 77);
@@ -3551,11 +3551,11 @@ QPushButton:hover {
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_89">
                   <item>
-                   <widget class="QFrame" name="dec_kpm_r_frame_2">
+                   <widget class="QFrame" name="dec_dpm_r_frame">
                     <property name="maximumSize">
                      <size>
                       <width>16777215</width>
-                      <height>285</height>
+                      <height>330</height>
                      </size>
                     </property>
                     <property name="styleSheet">
@@ -3569,7 +3569,7 @@ QPushButton:hover {
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_206">
+                    <layout class="QHBoxLayout" name="horizontalLayout_205">
                      <property name="leftMargin">
                       <number>0</number>
                      </property>
@@ -3583,11 +3583,11 @@ QPushButton:hover {
                       <number>0</number>
                      </property>
                      <item alignment="Qt::AlignTop">
-                      <widget class="QFrame" name="dec_kpm_in_frame_2">
+                      <widget class="QFrame" name="dec_dpm_in_frame">
                        <property name="maximumSize">
                         <size>
                          <width>16777215</width>
-                         <height>255</height>
+                         <height>300</height>
                         </size>
                        </property>
                        <property name="styleSheet">
@@ -3602,11 +3602,8 @@ QPushButton:hover {
                         <enum>QFrame::Raised</enum>
                        </property>
                        <layout class="QVBoxLayout" name="verticalLayout_90">
-                        <property name="topMargin">
-                         <number>0</number>
-                        </property>
                         <item>
-                         <widget class="QFrame" name="dec_kpm_msg_frame_2">
+                         <widget class="QFrame" name="dec_dpm_msg_frame">
                           <property name="maximumSize">
                            <size>
                             <width>16777215</width>
@@ -3624,7 +3621,7 @@ QPushButton:hover {
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_207">
+                          <layout class="QHBoxLayout" name="horizontalLayout_206">
                            <property name="topMargin">
                             <number>0</number>
                            </property>
@@ -3635,7 +3632,7 @@ QPushButton:hover {
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QLabel" name="dec_kpm_msg_lbl_2">
+                            <widget class="QLabel" name="dec_dpm_msg_lbl">
                              <property name="minimumSize">
                               <size>
                                <width>80</width>
@@ -3653,7 +3650,7 @@ QPushButton:hover {
                             </widget>
                            </item>
                            <item>
-                            <widget class="QLineEdit" name="dec_kpm_msg_txt_2">
+                            <widget class="QLineEdit" name="dec_dpm_msg_txt">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -3685,7 +3682,7 @@ QLineEdit:focus {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QFrame" name="dec_kpm_row_frame_2">
+                         <widget class="QFrame" name="dec_dpm_row_frame">
                           <property name="maximumSize">
                            <size>
                             <width>16777215</width>
@@ -3703,7 +3700,7 @@ QLineEdit:focus {
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_208">
+                          <layout class="QHBoxLayout" name="horizontalLayout_207">
                            <property name="topMargin">
                             <number>0</number>
                            </property>
@@ -3714,7 +3711,7 @@ QLineEdit:focus {
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QLabel" name="dec_kpm_row_lbl_2">
+                            <widget class="QLabel" name="dec_dpm_row_lbl">
                              <property name="minimumSize">
                               <size>
                                <width>80</width>
@@ -3732,7 +3729,7 @@ QLineEdit:focus {
                             </widget>
                            </item>
                            <item>
-                            <widget class="QLineEdit" name="dec_kpm_row_txt_2">
+                            <widget class="QLineEdit" name="dec_dpm_row_txt">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -3764,7 +3761,7 @@ QLineEdit:focus {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QFrame" name="dec_kpm_clm_frame_2">
+                         <widget class="QFrame" name="dec_dpm_clm_fram">
                           <property name="maximumSize">
                            <size>
                             <width>16777215</width>
@@ -3782,7 +3779,7 @@ QLineEdit:focus {
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_209">
+                          <layout class="QHBoxLayout" name="horizontalLayout_208">
                            <property name="topMargin">
                             <number>0</number>
                            </property>
@@ -3793,7 +3790,7 @@ QLineEdit:focus {
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QLabel" name="dec_kpm_clm_lbl_2">
+                            <widget class="QLabel" name="dec_dpm_clm_lbl">
                              <property name="minimumSize">
                               <size>
                                <width>80</width>
@@ -3811,7 +3808,7 @@ QLineEdit:focus {
                             </widget>
                            </item>
                            <item>
-                            <widget class="QLineEdit" name="dec_kpm_clm_txt_2">
+                            <widget class="QLineEdit" name="dec_dpm_clm_txt">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -3843,7 +3840,7 @@ QLineEdit:focus {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QFrame" name="dec_kpm_key_frame_2">
+                         <widget class="QFrame" name="dec_dpm_key_r_frame">
                           <property name="maximumSize">
                            <size>
                             <width>16777215</width>
@@ -3861,7 +3858,7 @@ QLineEdit:focus {
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_210">
+                          <layout class="QHBoxLayout" name="horizontalLayout_209">
                            <property name="topMargin">
                             <number>0</number>
                            </property>
@@ -3872,7 +3869,7 @@ QLineEdit:focus {
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QLabel" name="dec_kpm_key_lbl_2">
+                            <widget class="QLabel" name="dec_dpm_key_r_lbl">
                              <property name="minimumSize">
                               <size>
                                <width>80</width>
@@ -3885,12 +3882,12 @@ QLineEdit:focus {
 }</string>
                              </property>
                              <property name="text">
-                              <string>Ключ</string>
+                              <string>Ключ 1</string>
                              </property>
                             </widget>
                            </item>
                            <item>
-                            <widget class="QLineEdit" name="dec_kpm_key_txt_2">
+                            <widget class="QLineEdit" name="dec_dpm_key_r_txt">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -3911,7 +3908,86 @@ QLineEdit:focus {
 }</string>
                              </property>
                              <property name="placeholderText">
-                              <string>Текст ключа</string>
+                              <string>Текст ключа (строки)</string>
+                             </property>
+                             <property name="clearButtonEnabled">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="dec_dpm_key_c_frame">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>45</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QFrame {
+	border: none;
+}</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_216">
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QLabel" name="dec_dpm_key_c_lbl">
+                             <property name="minimumSize">
+                              <size>
+                               <width>80</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+}</string>
+                             </property>
+                             <property name="text">
+                              <string>Ключ 2</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="dec_dpm_key_c_txt">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLineEdit {
+	border: 1px solid rgb(48, 47, 47);
+	border-radius: 3px;
+	margin: 0 0 0 18px;
+	padding: 0 3px;
+	color: rgb(255, 255, 255);
+}
+
+QLineEdit:focus {
+	border: 1px solid rgb(77, 77, 77);
+}</string>
+                             </property>
+                             <property name="placeholderText">
+                              <string>Текст ключа (столбцы)</string>
                              </property>
                              <property name="clearButtonEnabled">
                               <bool>true</bool>
@@ -3925,7 +4001,7 @@ QLineEdit:focus {
                       </widget>
                      </item>
                      <item>
-                      <widget class="QFrame" name="dec_kpm_table_frame_2">
+                      <widget class="QFrame" name="dec_dpm_table_frame">
                        <property name="styleSheet">
                         <string notr="true">QFrame {
 	border: none;
@@ -3948,7 +4024,7 @@ QLineEdit:focus {
                          <number>0</number>
                         </property>
                         <item>
-                         <widget class="QFrame" name="dec_kpm_ot_frame_2">
+                         <widget class="QFrame" name="dec_dpm_ot_frame">
                           <property name="styleSheet">
                            <string notr="true">QFrame {
 	border: none;
@@ -3960,7 +4036,7 @@ QLineEdit:focus {
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_211">
+                          <layout class="QHBoxLayout" name="horizontalLayout_210">
                            <property name="leftMargin">
                             <number>0</number>
                            </property>
@@ -3974,7 +4050,7 @@ QLineEdit:focus {
                             <number>0</number>
                            </property>
                            <item alignment="Qt::AlignTop">
-                            <widget class="QLabel" name="dec_kpm_ot_lbl_2">
+                            <widget class="QLabel" name="dec_dpm_ot_lbl">
                              <property name="minimumSize">
                               <size>
                                <width>75</width>
@@ -4001,7 +4077,7 @@ QLineEdit:focus {
                             </widget>
                            </item>
                            <item>
-                            <widget class="QTextEdit" name="dec_kpm_ot_txt_2">
+                            <widget class="QTextEdit" name="dec_dpm_ot_txt">
                              <property name="styleSheet">
                               <string notr="true">QTextEdit {
 	border: 1px solid rgb(48, 47, 47);
@@ -4032,7 +4108,7 @@ QTextEdit:focus {
                    </widget>
                   </item>
                   <item>
-                   <widget class="QFrame" name="dec_kpm_chr_frame_2">
+                   <widget class="QFrame" name="dec_dpm_chr_frame">
                     <property name="maximumSize">
                      <size>
                       <width>580</width>
@@ -4061,7 +4137,7 @@ QTextEdit:focus {
                       <number>0</number>
                      </property>
                      <item>
-                      <widget class="QFrame" name="dec_kpm_oc_frame_2">
+                      <widget class="QFrame" name="dec_dpm_oc_frame">
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
@@ -4085,9 +4161,9 @@ QTextEdit:focus {
                        <property name="frameShadow">
                         <enum>QFrame::Raised</enum>
                        </property>
-                       <layout class="QHBoxLayout" name="horizontalLayout_212">
+                       <layout class="QHBoxLayout" name="horizontalLayout_211">
                         <item>
-                         <widget class="QLabel" name="dec_kpm_oc_lbl_2">
+                         <widget class="QLabel" name="dec_dpm_oc_lbl">
                           <property name="minimumSize">
                            <size>
                             <width>80</width>
@@ -4105,7 +4181,7 @@ QTextEdit:focus {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QLineEdit" name="dec_kpm_oc_txt_2">
+                         <widget class="QLineEdit" name="dec_dpm_oc_txt">
                           <property name="minimumSize">
                            <size>
                             <width>0</width>
@@ -4129,7 +4205,7 @@ QLineEdit:focus {
                            <bool>true</bool>
                           </property>
                           <property name="placeholderText">
-                           <string>Текст сообщения</string>
+                           <string>Текст расшифрованного сообщения</string>
                           </property>
                           <property name="clearButtonEnabled">
                            <bool>false</bool>
@@ -4143,7 +4219,7 @@ QLineEdit:focus {
                    </widget>
                   </item>
                   <item>
-                   <widget class="QFrame" name="dec_kpm_button_frame_2">
+                   <widget class="QFrame" name="dec_dpm_button_frame">
                     <property name="styleSheet">
                      <string notr="true">QFrame {
 	border: none;
@@ -4155,7 +4231,7 @@ QLineEdit:focus {
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_213">
+                    <layout class="QHBoxLayout" name="horizontalLayout_212">
                      <property name="topMargin">
                       <number>0</number>
                      </property>
@@ -4166,7 +4242,7 @@ QLineEdit:focus {
                       <number>0</number>
                      </property>
                      <item>
-                      <widget class="QPushButton" name="dec_kpm_btn_2">
+                      <widget class="QPushButton" name="dec_dpm_btn">
                        <property name="minimumSize">
                         <size>
                          <width>130</width>

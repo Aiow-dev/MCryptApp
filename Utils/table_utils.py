@@ -89,6 +89,24 @@ def key_permutation_table_text(key_table):
     return f'{key}\n{key_indexes}\n{part_table}'
 
 
+def double_permutation_table_text(msg_table, key_row, key_clm):
+    result_table = ''
+
+    h_header_row = '\t' + '\t'.join(sorted(key_clm))
+
+    v_headers = sorted(key_row)
+
+    for index_row, row in enumerate(msg_table):
+        part_row = f'{v_headers[index_row]}\t'
+
+        for clm in row:
+            part_row += clm + '\t'
+
+        result_table += part_row + '\n'
+
+    return f'{h_header_row}\n{result_table}'
+
+
 def affine_table_num_text(
         key_a_text: int,
         key_b_text: int
