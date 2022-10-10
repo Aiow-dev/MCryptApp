@@ -61,7 +61,7 @@
        <item>
         <widget class="QStackedWidget" name="enc_widget">
          <property name="currentIndex">
-          <number>2</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="smp_page">
           <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -4205,7 +4205,7 @@ QLineEdit:focus {
                            <bool>true</bool>
                           </property>
                           <property name="placeholderText">
-                           <string>Текст расшифрованного сообщения</string>
+                           <string>Текст сообщения</string>
                           </property>
                           <property name="clearButtonEnabled">
                            <bool>false</bool>
@@ -5092,7 +5092,7 @@ QLineEdit:focus {
 }</string>
                              </property>
                              <property name="placeholderText">
-                              <string>Текст сообщения</string>
+                              <string>Текст зашифрованного сообщения</string>
                              </property>
                              <property name="clearButtonEnabled">
                               <bool>true</bool>
@@ -5309,7 +5309,7 @@ QLineEdit:focus {
                               <bool>true</bool>
                              </property>
                              <property name="placeholderText">
-                              <string>Текст зашифрованного сообщения</string>
+                              <string>Текст сообщения</string>
                              </property>
                              <property name="clearButtonEnabled">
                               <bool>false</bool>
@@ -11872,7 +11872,7 @@ QLineEdit:focus {
                               <bool>true</bool>
                              </property>
                              <property name="placeholderText">
-                              <string>Текст зашифрованного сообщения</string>
+                              <string>Текст сообщения</string>
                              </property>
                              <property name="clearButtonEnabled">
                               <bool>false</bool>
@@ -12215,7 +12215,7 @@ QTabBar::tab:hover {
 }</string>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <property name="elideMode">
               <enum>Qt::ElideNone</enum>
@@ -13021,7 +13021,7 @@ QLineEdit:focus {
 }</string>
                              </property>
                              <property name="placeholderText">
-                              <string>Текст сообщения</string>
+                              <string>Текст зашифрованного сообщения</string>
                              </property>
                              <property name="clearButtonEnabled">
                               <bool>true</bool>
@@ -13369,7 +13369,7 @@ QLineEdit:focus {
                               <bool>true</bool>
                              </property>
                              <property name="placeholderText">
-                              <string>Текст зашифрованного сообщения</string>
+                              <string>Текст сообщения</string>
                              </property>
                              <property name="clearButtonEnabled">
                               <bool>false</bool>
@@ -14484,7 +14484,7 @@ QLineEdit:focus {
 }</string>
                              </property>
                              <property name="placeholderText">
-                              <string>Текст сообщения</string>
+                              <string>Текст зашифрованного сообщения</string>
                              </property>
                              <property name="clearButtonEnabled">
                               <bool>true</bool>
@@ -14848,7 +14848,7 @@ QLineEdit:focus {
                               <bool>true</bool>
                              </property>
                              <property name="placeholderText">
-                              <string>Текст зашифрованного сообщения</string>
+                              <string>Текст сообщения</string>
                              </property>
                              <property name="clearButtonEnabled">
                               <bool>false</bool>
