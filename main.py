@@ -21,6 +21,7 @@ def init_pages(ui_window):
     prm_controllers.init_key_permutation(ui_window)
     prm_controllers.init_double_permutation(ui_window)
     cs_controllers.init_classic_caesar(ui_window)
+    cs_controllers.init_affine_caesar(ui_window)
     cs_controllers.init_key_caesar(ui_window)
 
 

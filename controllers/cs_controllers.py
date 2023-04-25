@@ -18,6 +18,25 @@ def init_classic_caesar(ui):
     event_components.shortcut_return(ui.dec_cs_btn)
 
 
+def init_affine_caesar(ui):
+    enc_form_data = {'msg_input': ui.enc_acs_msg_txt, 'key_a_input': ui.enc_acs_key_a_txt,
+                     'key_b_input': ui.enc_acs_key_b_txt, 'enc_tbl_num_widget': ui.enc_acs_twn_table,
+                     'enc_tbl_letter_widget': ui.enc_acs_twl_table, 'enc_msg_input': ui.enc_acs_oc_txt}
+    dec_form_data = {'msg_input': ui.dec_acs_msg_txt, 'key_a_input': ui.dec_acs_key_a_txt,
+                     'key_b_input': ui.dec_acs_key_b_txt, 'enc_tbl_num_widget': ui.dec_acs_twn_table,
+                     'enc_tbl_letter_widget': ui.dec_acs_twl_table, 'enc_msg_input': ui.dec_acs_oc_txt}
+    ui.enc_acs_btn.clicked.connect(lambda: cs_handlers.enc_proc_affine_cs(enc_form_data))
+    ui.dec_acs_btn.clicked.connect(lambda: cs_handlers.dec_proc_affine_cs(dec_form_data))
+    event_components.empty_text_changed(ui.enc_acs_msg_txt)
+    event_components.empty_text_changed(ui.dec_acs_msg_txt)
+    event_components.positive_number_text_changed(ui.enc_acs_key_a_txt)
+    event_components.positive_number_text_changed(ui.dec_acs_key_a_txt)
+    event_components.digit_text_changed(ui.enc_acs_key_b_txt)
+    event_components.digit_text_changed(ui.dec_acs_key_b_txt)
+    event_components.shortcut_return(ui.enc_acs_btn)
+    event_components.shortcut_return(ui.dec_acs_btn)
+
+
 def init_key_caesar(ui):
     enc_form_data = {'msg_input': ui.enc_kcs_msg_txt, 'key_input': ui.enc_kcs_key_txt,
                      'key_k_input': ui.enc_kcs_key_k_txt, 'enc_msg_input': ui.enc_kcs_oc_txt,
@@ -26,8 +45,8 @@ def init_key_caesar(ui):
                      'key_k_input': ui.dec_kcs_key_k_txt, 'enc_msg_input': ui.dec_kcs_oc_txt,
                      'enc_tbl_input': ui.dec_kcs_tsb_text, 'enc_tbl_widget': ui.dec_kcs_wsb_table}
     input_delay = 800
-    ui.enc_cs_btn.clicked.connect(lambda: cs_handlers.enc_proc_key_cs(enc_form_data))
-    ui.dec_cs_btn.clicked.connect(lambda: cs_handlers.dec_proc_key_cs(dec_form_data))
+    ui.enc_kcs_btn.clicked.connect(lambda: cs_handlers.enc_proc_key_cs(enc_form_data))
+    ui.dec_kcs_btn.clicked.connect(lambda: cs_handlers.dec_proc_key_cs(dec_form_data))
     event_components.empty_text_changed(ui.enc_kcs_msg_txt)
     event_components.empty_text_changed(ui.dec_kcs_msg_txt)
     event_components.digit_text_changed(ui.enc_kcs_key_k_txt)
