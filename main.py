@@ -6,6 +6,7 @@ from views import main_window
 from controllers import (
     prm_controllers,
     cs_controllers,
+    ms_controllers,
     page,
     menu,
 )
@@ -23,6 +24,7 @@ def init_pages(ui_window):
     cs_controllers.init_classic_caesar(ui_window)
     cs_controllers.init_affine_caesar(ui_window)
     cs_controllers.init_key_caesar(ui_window)
+    ms_controllers.init_magic_square(ui_window)
 
 
 if __name__ == '__main__':
