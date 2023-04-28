@@ -137,7 +137,7 @@ def table_column(num_column, column_value, tbl_obj, color=colors.Color.q_white):
         tbl_obj.setItem(num_row, num_column, table_item(value, color))
 
 
-def fill_table_rand(tbl_wgt, charset):
+def table_rand(tbl_wgt, charset):
     size = table_size(tbl_wgt)
     if size[0] * size[1] > len(charset):
         return

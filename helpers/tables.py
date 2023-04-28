@@ -58,16 +58,22 @@ def table_size(tbl_wgt):
 
 def table_up_items(tbl_wgt):
     size = table_size(tbl_wgt)
-    return [[tbl_wgt.item(row, column).text().upper() for column in range(size[1])] for row in range(size[0])]
+    items = []
+    for row in range(size[0]):
+        row_items = []
+        for column in range(size[1]):
+            item_obj = tbl_wgt.item(row, column)
+            if item_obj is None:
+                break
+            item = item_obj.text().upper()
+            row_items.append(item)
+        items.append(row_items)
+    return items
 
 
 def table_num_items(tbl_wgt):
     size = table_size(tbl_wgt)
     return [[int(tbl_wgt.item(row, column).text()) for column in range(size[1])] for row in range(size[0])]
-
-
-def clear_table(tbl_wgt):
-    tbl_wgt.clear()
 
 
 def table_item(item_value, color):

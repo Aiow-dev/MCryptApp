@@ -2,32 +2,26 @@ from scripts import script_helpers
 
 
 def enc_double_playfair(msg, left_tbl, right_tbl):
+    msg = msg.upper()
     len_msg = len(msg)
     left_size = len(left_tbl), len(left_tbl[0])
     right_size = len(right_tbl), len(right_tbl[0])
-
     if len_msg % 2 == 1:
         msg += 'Ъ'
-
     if left_size[0] != right_size[0] and left_size[1] != right_size[1]:
         return {'err_msg': 'Ошибка. Размерности таблиц не равны!'}
-
     enc_msg = ''
-
     for i in range(0, len_msg, 2):
         first = script_helpers.find(left_tbl, msg[i], left_size[0], left_size[1])
         second = script_helpers.find(right_tbl, msg[i + 1], right_size[0], right_size[1])
-
         if not first or not second:
             return {'err_msg': 'Ошибка. Не найдена буква сообщения в таблице подстановок!'}
-
         if first[0] == second[0]:
             enc_msg += right_tbl[first[0]][first[1]]
             enc_msg += left_tbl[second[0]][second[1]]
         else:
             enc_msg += right_tbl[first[0]][second[1]]
             enc_msg += left_tbl[second[0]][first[1]]
-
     return {'msg': enc_msg}
 
 
@@ -35,29 +29,22 @@ def dec_double_playfair(enc_msg, left_tbl, right_tbl):
     len_msg = len(enc_msg)
     left_size = len(left_tbl), len(left_tbl[0])
     right_size = len(right_tbl), len(right_tbl[0])
-
     if len_msg % 2 == 1:
         enc_msg += 'Ъ'
-
     if left_size[0] != right_size[1] and left_size[1] != right_size[1]:
-        return 'Ошибка. Размерности таблиц не равны!'
-
+        return {'err_msg': 'Ошибка. Размерности таблиц не равны!'}
     msg = ''
-
     for i in range(0, len_msg, 2):
         first = script_helpers.find(right_tbl, enc_msg[i], left_size[0], left_size[1])
         second = script_helpers.find(left_tbl, enc_msg[i + 1], right_size[0], right_size[1])
-
         if not first or not second:
             return {'err_msg': 'Ошибка. Не найдена буква сообщения в таблице подстановок!'}
-
         if first[0] == second[0]:
             msg += left_tbl[first[0]][first[1]]
             msg += right_tbl[second[0]][second[1]]
         else:
             msg += left_tbl[first[0]][second[1]]
             msg += right_tbl[second[0]][first[1]]
-
     return {'msg': msg}
 
 

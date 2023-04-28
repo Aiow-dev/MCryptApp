@@ -7,6 +7,7 @@ from controllers import (
     prm_controllers,
     cs_controllers,
     ms_controllers,
+    dbl_pfr_controllers,
     page,
     menu,
 )
@@ -25,6 +26,7 @@ def init_pages(ui_window):
     cs_controllers.init_affine_caesar(ui_window)
     cs_controllers.init_key_caesar(ui_window)
     ms_controllers.init_magic_square(ui_window)
+    dbl_pfr_controllers.init_double_playfair(ui_window)
 
 
 if __name__ == '__main__':
