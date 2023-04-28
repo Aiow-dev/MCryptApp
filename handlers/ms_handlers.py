@@ -13,7 +13,6 @@ def proc_ms(form_data, encryption):
             form_data['enc_msg_input'].setText(enc_msg)
             tables.table(enc_data.get('enc_table'), enc_tables.table_row, form_data['enc_tbl_widget'])
             return
-
         err_msg = enc_data.get('err_msg')
         dialogs.show_err_msg(err_msg, 'Ошибка')
     except ValueError as value_error:

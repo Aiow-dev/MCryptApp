@@ -26,6 +26,7 @@ def enc_double_playfair(msg, left_tbl, right_tbl):
 
 
 def dec_double_playfair(enc_msg, left_tbl, right_tbl):
+    enc_msg = enc_msg.upper()
     len_msg = len(enc_msg)
     left_size = len(left_tbl), len(left_tbl[0])
     right_size = len(right_tbl), len(right_tbl[0])

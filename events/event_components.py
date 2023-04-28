@@ -5,12 +5,14 @@ from helpers import time
 
 def empty_text_changed(text_obj):
     text_obj.textChanged.connect(
-        lambda: text.check_empty(text_obj, colors.Color.dark_charcoal, colors.Color.orange_red))
+        lambda: text.check_empty(text_obj, colors.ColorSet.dark_charcoal.value.to_rgb_str(),
+                                 colors.ColorSet.orange_red.value.to_rgb_str()))
 
 
 def positive_number_text_changed(text_obj):
     text_obj.textChanged.connect(
-        lambda: text.check_positive_number(text_obj, colors.Color.dark_charcoal, colors.Color.orange_red))
+        lambda: text.check_positive_number(text_obj, colors.ColorSet.dark_charcoal.value.to_rgb_str(),
+                                           colors.ColorSet.orange_red.value.to_rgb_str()))
 
 
 def shortcut_return(ui_obj):
@@ -19,12 +21,14 @@ def shortcut_return(ui_obj):
 
 def digit_text_changed(text_obj):
     text_obj.textChanged.connect(
-        lambda: text.check_digit(text_obj, colors.Color.dark_charcoal, colors.Color.orange_red))
+        lambda: text.check_digit(text_obj, colors.ColorSet.dark_charcoal.value.to_rgb_str(),
+                                 colors.ColorSet.orange_red.value.to_rgb_str()))
 
 
 def time_chars_ign_text_changed(text_obj, charset, delay):
-    timer = time.TimerDelay(delay, lambda: text.check_chars_ign(text_obj, charset, colors.Color.dark_charcoal,
-                                                                colors.Color.orange_red))
+    timer = time.TimerDelay(delay, lambda: text.check_chars_ign(text_obj, charset,
+                                                                colors.ColorSet.dark_charcoal.value.to_rgb_str(),
+                                                                colors.ColorSet.orange_red.value.to_rgb_str()))
     text_obj.textChanged.connect(lambda: timer.update())
 
 

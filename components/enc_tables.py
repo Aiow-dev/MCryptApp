@@ -127,12 +127,12 @@ def vigenere_table(row_values, table_obj, alphabet):
     table(row_values, table_row, table_obj, h_headers, v_headers)
 
 
-def table_row(num_row, row_value, tbl_obj, color=colors.Color.q_white):
+def table_row(num_row, row_value, tbl_obj, color=colors.ColorSet.white.value.to_rgb_q()):
     for num_column, value in enumerate(row_value):
         tbl_obj.setItem(num_row, num_column, table_item(value, color))
 
 
-def table_column(num_column, column_value, tbl_obj, color=colors.Color.q_white):
+def table_column(num_column, column_value, tbl_obj, color=colors.ColorSet.white.value.to_rgb_q()):
     for num_row, value in enumerate(column_value):
         tbl_obj.setItem(num_row, num_column, table_item(value, color))
 

@@ -14,7 +14,6 @@ def proc_simple_prm(form_data, encryption):
             form_data['enc_msg_input'].setText(enc_msg)
             form_data['enc_tbl_input'].setText(enc_tbl)
             return
-
         err_msg = enc_data.get('err_msg')
         dialogs.show_err_msg(err_msg, 'Ошибка')
     except ValueError as value_error:
@@ -43,7 +42,6 @@ def proc_key_prm(form_data, encryption):
             form_data['enc_msg_input'].setText(enc_msg)
             form_data['enc_tbl_input'].setText(enc_tbl)
             return
-
         err_msg = enc_data.get('err_msg')
         dialogs.show_err_msg(err_msg, 'Ошибка')
     except ValueError as value_error:
@@ -73,7 +71,6 @@ def proc_double_prm(form_data, encryption):
             form_data['enc_msg_input'].setText(enc_msg)
             form_data['enc_tbl_input'].setText(enc_tbl)
             return
-
         err_msg = enc_data.get('err_msg')
         dialogs.show_err_msg(err_msg, 'Ошибка')
     except ValueError as value_error:

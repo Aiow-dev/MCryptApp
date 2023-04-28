@@ -3,17 +3,6 @@ import enum
 from PyQt5.QtGui import QColor
 
 
-class Color(enum.Enum):
-    dark_charcoal = 'rgb(48, 47, 47)'
-    dark_liver = 'rgb(77, 77, 77)'
-    orange_red = 'rgb(255, 82, 82)'
-    white = 'rgb(255, 255, 255)'
-    q_dark_charcoal = QColor(48, 47, 47)
-    q_dark_liver = QColor(77, 77, 77)
-    q_orange_red = QColor(255, 82, 82)
-    q_white = QColor(255, 255, 255)
-
-
 class ConvertColor:
     def __init__(self, r, g, b):
         self.__r = r
@@ -42,7 +31,7 @@ class ConvertColor:
             self.__b = b
 
     def to_rgb_str(self):
-        return f'rgb({self.get_r(), self.get_g(), self.get_b()})'
+        return f'rgb({self.get_r()}, {self.get_g()}, {self.get_b()})'
 
     def to_rgb_q(self):
         return QColor(self.get_r(), self.get_g(), self.get_b())

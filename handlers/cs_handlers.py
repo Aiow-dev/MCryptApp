@@ -14,7 +14,6 @@ def proc_classic_cs(form_data, encryption):
             form_data['enc_msg_input'].setText(enc_msg)
             form_data['enc_tbl_input'].setText(enc_tbl)
             return
-
         err_msg = enc_data.get('err_msg')
         dialogs.show_err_msg(err_msg, 'Ошибка')
     except ValueError as value_error:
@@ -45,7 +44,6 @@ def proc_affine_cs(form_data, encryption):
             enc_tables.affine_table(key_a, key_b, nums_column, form_data['enc_tbl_num_widget'])
             enc_tables.affine_table(key_a, key_b, letters_column, form_data['enc_tbl_letter_widget'])
             return
-
         err_msg = enc_data.get('err_msg')
         dialogs.show_err_msg(err_msg, 'Ошибка')
     except ValueError as value_error:
@@ -75,7 +73,6 @@ def proc_key_cs(form_data, encryption):
             form_data['enc_tbl_input'].setText(enc_tbl)
             enc_tables.caesar_key_table(letters_column, form_data['enc_tbl_widget'])
             return
-
         err_msg = enc_data.get('err_msg')
         dialogs.show_err_msg(err_msg, 'Ошибка')
     except ValueError as value_error:
