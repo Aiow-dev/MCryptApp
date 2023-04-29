@@ -154,6 +154,10 @@ cython_debug/
 *.code-workspace
 
 .idea/
+.fleet/
+.vscode/
+
+codiga.yml
 
 .qt_for_python/
 
