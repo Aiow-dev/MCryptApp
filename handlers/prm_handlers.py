@@ -1,6 +1,7 @@
 from components import dialogs, enc_tables
-from helpers import tables
+from helpers import tables, items
 from scripts.encryption import prm
+from handlers import messages
 
 
 def proc_simple_prm(form_data, encryption):
@@ -65,6 +66,14 @@ def proc_double_prm(form_data, encryption):
         columns = int(form_data['columns_input'].text())
         key_row = form_data['key_row_input'].text()
         key_column = form_data['key_column_input'].text()
+        if not items.is_all_range(key_row, range(1, rows + 1)):
+            err_msg = messages.KEY_ROW_RANGE_ERROR
+            dialogs.show_err_msg(err_msg, 'Ошибка')
+            return
+        if not items.is_all_range(key_column, range(1, columns + 1)):
+            err_msg = messages.KEY_CLM_RANGE_ERROR
+            dialogs.show_err_msg(err_msg, 'Ошибка')
+            return
         enc_data = encryption(msg, rows, columns, key_row, key_column)
         if enc_msg := enc_data.get('msg'):
             enc_tbl = enc_tables.double_permutation_table_text(enc_data.get('enc_table'), key_row, key_column)

@@ -28,7 +28,8 @@ def table_to_str_size(msg_tbl, size_h=1, size_v=1):
 
 
 def table_dict_to_str(tbl_dict, placeholder_len=30):
-    return ''.join(key + '\t->\t' + value + f'\n{placeholder_len}\n'
+    placeholder = '-' * placeholder_len
+    return ''.join(key + '\t->\t' + value + f'\n{placeholder}\n'
                    for key, value in tbl_dict.items())
 
 

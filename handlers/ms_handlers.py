@@ -1,6 +1,7 @@
 from helpers import tables
 from components import enc_tables, dialogs
 from scripts.encryption import ms
+from handlers import messages
 
 
 def proc_ms(form_data, encryption):
@@ -8,6 +9,10 @@ def proc_ms(form_data, encryption):
         msg = form_data['msg_input'].text()
         tbl_rank = int(form_data['rank_input'].text())
         key_tbl = tables.table_num_items(form_data['key_tbl_widget'])
+        if len(msg) != tbl_rank ** 2 or tbl_rank <= 0:
+            err_msg = messages.MSG_RANK_ERROR
+            dialogs.show_err_msg(err_msg, 'Ошибка')
+            return
         enc_data = encryption(msg, key_tbl)
         if enc_msg := enc_data.get('msg'):
             form_data['enc_msg_input'].setText(enc_msg)

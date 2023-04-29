@@ -66,9 +66,9 @@ def proc_key_cs(form_data, encryption):
         key = form_data['key_input'].text()
         key_k = int(form_data['key_k_input'].text())
         alphabet = chars.RU_ALPHABET
-        enc_data = encryption(msg, key, key_k, alphabet)
+        enc_data = encryption(msg, key_k, key, alphabet)
         if enc_msg := enc_data.get('msg'):
-            letters_column = enc_tbl = enc_tables.caesar_key_table_text(enc_data.get('table'), alphabet)
+            letters_column, enc_tbl = enc_tables.caesar_key_table_text(enc_data.get('enc_table'), alphabet)
             form_data['enc_msg_input'].setText(enc_msg)
             form_data['enc_tbl_input'].setText(enc_tbl)
             enc_tables.caesar_key_table(letters_column, form_data['enc_tbl_widget'])
