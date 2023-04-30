@@ -41,6 +41,6 @@ if __name__ == '__main__':
     MainWindow.show()
     init_pages(ui)
     page.init_page(ui)
-    menu.init_menu(ui)
+    menu.init_menu(MainWindow, ui)
     init_styles(ui)
     sys.exit(app.exec_())

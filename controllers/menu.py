@@ -12,8 +12,9 @@ def init_menu_pages(ui):
         action.triggered.connect(page.switch_page(ui, index))
 
 
-def init_menu(ui):
+def init_menu(window, ui):
     ui.action_program_info.triggered.connect(windows.show_program_info)
+    ui.action_settings_window.triggered.connect(lambda: windows.show_settings_window(window))
     ui.action_exit.triggered.connect(qApp.quit)
     ui.action_reboot.triggered.connect(app.restart)
     init_menu_pages(ui)
