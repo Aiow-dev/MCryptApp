@@ -15250,7 +15250,10 @@ QComboBox::drop-down:button {
      <string>Файл</string>
     </property>
     <addaction name="action_program_info"/>
+    <addaction name="action_settings_window"/>
     <addaction name="action_help"/>
+    <addaction name="action_exit"/>
+    <addaction name="action_reboot"/>
    </widget>
    <widget class="QMenu" name="enc_menu">
     <property name="title">
@@ -15330,7 +15333,7 @@ QComboBox::drop-down:button {
   </action>
   <action name="action_vs">
    <property name="text">
-    <string>Система Вижинера</string>
+    <string>Система Виженера</string>
    </property>
   </action>
   <action name="action_ps">
@@ -15346,6 +15349,21 @@ QComboBox::drop-down:button {
   <action name="action_dp">
    <property name="text">
     <string>Двойной квадрат Уитстона</string>
+   </property>
+  </action>
+  <action name="action_settings_window">
+   <property name="text">
+    <string>Настройки</string>
+   </property>
+  </action>
+  <action name="action_exit">
+   <property name="text">
+    <string>Завершение работы</string>
+   </property>
+  </action>
+  <action name="action_reboot">
+   <property name="text">
+    <string>Перезагрузка</string>
    </property>
   </action>
  </widget>
