@@ -2,6 +2,7 @@ import sys
 
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
+import components.widgets
 from views import main_window
 from controllers import (
     prm_controllers,
@@ -12,11 +13,12 @@ from controllers import (
     page,
     menu,
 )
-from components import menu_bars
+from components import color_schemes, widgets
 
 
 def init_styles(ui_window):
-    menu_bars.menu_bar_dark(ui_window.menu_bar)
+    color_schemes.light_scheme(ui_window)
+    # widgets.menu_bar_dark(ui.menu_bar)
 
 
 def init_pages(ui_window):

@@ -73,7 +73,7 @@ class Ui_main_window(object):
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.enc_smp = QtWidgets.QFrame(self.enc_smp_tab)
         self.enc_smp.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_smp.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_smp.setFrameShadow(QtWidgets.QFrame.Plain)
