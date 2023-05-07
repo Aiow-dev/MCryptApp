@@ -336,7 +336,7 @@ class Ui_main_window(object):
         self.verticalLayout_10.setObjectName("verticalLayout_10")
         self.dec_smp = QtWidgets.QFrame(self.dec_smp_tab)
         self.dec_smp.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_smp.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_smp.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -633,7 +633,7 @@ class Ui_main_window(object):
         self.horizontalLayout_19.setObjectName("horizontalLayout_19")
         self.enc_kpm = QtWidgets.QFrame(self.enc_kpm_tab)
         self.enc_kpm.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_kpm.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_kpm.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -931,7 +931,7 @@ class Ui_main_window(object):
         self.horizontalLayout_37.setObjectName("horizontalLayout_37")
         self.dec_kpm = QtWidgets.QFrame(self.dec_kpm_tab)
         self.dec_kpm.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_kpm.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_kpm.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -1264,7 +1264,7 @@ class Ui_main_window(object):
         self.horizontalLayout_196.setObjectName("horizontalLayout_196")
         self.enc_dpm = QtWidgets.QFrame(self.enc_dpm_tab)
         self.enc_dpm.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_dpm.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_dpm.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -1596,7 +1596,7 @@ class Ui_main_window(object):
         self.horizontalLayout_213.setObjectName("horizontalLayout_213")
         self.dec_dpm = QtWidgets.QFrame(self.dec_dpm_tab)
         self.dec_dpm.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_dpm.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_dpm.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -1962,7 +1962,7 @@ class Ui_main_window(object):
         self.horizontalLayout_150.setObjectName("horizontalLayout_150")
         self.enc_ms = QtWidgets.QFrame(self.enc_ms_tab)
         self.enc_ms.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_ms.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_ms.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -2239,7 +2239,7 @@ class Ui_main_window(object):
         self.horizontalLayout_176.setObjectName("horizontalLayout_176")
         self.dec_ms = QtWidgets.QFrame(self.dec_ms_tab)
         self.dec_ms.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_ms.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_ms.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -2550,7 +2550,7 @@ class Ui_main_window(object):
         self.horizontalLayout_38.setObjectName("horizontalLayout_38")
         self.enc_cs = QtWidgets.QFrame(self.enc_cs_tab)
         self.enc_cs.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_cs.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_cs.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -2778,7 +2778,7 @@ class Ui_main_window(object):
         self.horizontalLayout_51.setObjectName("horizontalLayout_51")
         self.dec_cs = QtWidgets.QFrame(self.dec_cs_tab)
         self.dec_cs.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_cs.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_cs.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -3040,7 +3040,7 @@ class Ui_main_window(object):
         self.horizontalLayout_52.setObjectName("horizontalLayout_52")
         self.enc_acs = QtWidgets.QFrame(self.enc_acs_tab)
         self.enc_acs.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_acs.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_acs.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -3342,7 +3342,7 @@ class Ui_main_window(object):
         self.horizontalLayout_66.setObjectName("horizontalLayout_66")
         self.dec_acs = QtWidgets.QFrame(self.dec_acs_tab)
         self.dec_acs.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_acs.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_acs.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -3678,7 +3678,7 @@ class Ui_main_window(object):
         self.horizontalLayout_73.setObjectName("horizontalLayout_73")
         self.enc_kcs = QtWidgets.QFrame(self.enc_kcs_tab)
         self.enc_kcs.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_kcs.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_kcs.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -3974,7 +3974,7 @@ class Ui_main_window(object):
         self.horizontalLayout_90.setObjectName("horizontalLayout_90")
         self.dec_kcs = QtWidgets.QFrame(self.dec_kcs_tab)
         self.dec_kcs.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_kcs.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_kcs.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -4304,7 +4304,7 @@ class Ui_main_window(object):
         self.horizontalLayout_92.setObjectName("horizontalLayout_92")
         self.enc_ts = QtWidgets.QFrame(self.enc_ts_tab)
         self.enc_ts.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_ts.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_ts.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -4599,7 +4599,7 @@ class Ui_main_window(object):
         self.horizontalLayout_109.setObjectName("horizontalLayout_109")
         self.dec_ts = QtWidgets.QFrame(self.dec_ts_tab)
         self.dec_ts.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_ts.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_ts.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -4928,7 +4928,7 @@ class Ui_main_window(object):
         self.horizontalLayout_112.setObjectName("horizontalLayout_112")
         self.enc_vs = QtWidgets.QFrame(self.enc_vs_tab)
         self.enc_vs.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_vs.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_vs.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -5189,7 +5189,7 @@ class Ui_main_window(object):
         self.horizontalLayout_127.setObjectName("horizontalLayout_127")
         self.dec_vs = QtWidgets.QFrame(self.dec_vs_tab)
         self.dec_vs.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_vs.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_vs.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -5484,7 +5484,7 @@ class Ui_main_window(object):
         self.horizontalLayout_128.setObjectName("horizontalLayout_128")
         self.enc_ps = QtWidgets.QFrame(self.enc_ps_tab)
         self.enc_ps.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_ps.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_ps.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -5779,7 +5779,7 @@ class Ui_main_window(object):
         self.horizontalLayout_148.setObjectName("horizontalLayout_148")
         self.dec_ps = QtWidgets.QFrame(self.dec_ps_tab)
         self.dec_ps.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_ps.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_ps.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -6108,7 +6108,7 @@ class Ui_main_window(object):
         self.horizontalLayout_153.setObjectName("horizontalLayout_153")
         self.enc_dp = QtWidgets.QFrame(self.en_dp_tab)
         self.enc_dp.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_dp.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_dp.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -6266,6 +6266,16 @@ class Ui_main_window(object):
         self.enc_dp_chk.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_dp_chk.setStyleSheet("QCheckBox {\n"
 "    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked {\n"
+"    border-radius: 2px;\n"
+"    background-color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"    border-radius: 2px;\n"
+"    background-color: rgb(67, 67, 67);\n"
 "}")
         self.enc_dp_chk.setObjectName("enc_dp_chk")
         self.horizontalLayout_192.addWidget(self.enc_dp_chk)
@@ -6441,7 +6451,7 @@ class Ui_main_window(object):
         self.horizontalLayout_190.setObjectName("horizontalLayout_190")
         self.dec_dp = QtWidgets.QFrame(self.dec_dp_tab)
         self.dec_dp.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_dp.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_dp.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -6599,6 +6609,16 @@ class Ui_main_window(object):
         self.dec_dp_chk.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_dp_chk.setStyleSheet("QCheckBox {\n"
 "    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked {\n"
+"    border-radius: 2px;\n"
+"    background-color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"    border-radius: 2px;\n"
+"    background-color: rgb(67, 67, 67);\n"
 "}")
         self.dec_dp_chk.setObjectName("dec_dp_chk")
         self.horizontalLayout_195.addWidget(self.dec_dp_chk)
@@ -6883,7 +6903,7 @@ class Ui_main_window(object):
         self.retranslateUi(main_window)
         self.enc_widget.setCurrentIndex(0)
         self.smp_types_tab.setCurrentIndex(0)
-        self.kpm_types_tab.setCurrentIndex(0)
+        self.kpm_types_tab.setCurrentIndex(1)
         self.dpm_types_tab.setCurrentIndex(0)
         self.ms_types_tab.setCurrentIndex(0)
         self.cs_types_tab.setCurrentIndex(0)

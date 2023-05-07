@@ -180,3 +180,45 @@ def push_button_light(push_btn_obj):
     }}
     '''
     push_btn_obj.setStyleSheet(push_btn_stylesheet)
+
+
+def table_widget_light(tbl_wgt_obj):
+    table_stylesheet = f'''
+    QTableWidget {{
+        color: {colors.ColorSet.dark_charcoal.value.to_rgb_str()};
+        gridline-color: {colors.ColorSet.light_purple.value.to_rgb_str()};
+        selection-background-color: {colors.ColorSet.logan.value.to_rgb_str()};
+        selection-color: {colors.ColorSet.gray.value.to_rgb_str()};
+    }}
+    
+    QHeaderView::section {{
+        color: {colors.ColorSet.gray.value.to_rgb_str()};
+        background-color: {colors.ColorSet.dark_purple.value.to_rgb_str()};
+    }}
+    
+    QTableCornerButton::section {{
+        background-color: {colors.ColorSet.dark_purple.value.to_rgb_str()};
+    }}
+    '''
+    tbl_wgt_obj.setStyleSheet(table_stylesheet)
+
+
+def check_box_light(check_box_obj):
+    check_box_stylesheet = f'''
+    QCheckBox {{
+        color: {colors.ColorSet.dark_charcoal.value.to_rgb_str()};
+    }}
+    
+    QCheckBox::indicator:unchecked {{
+        border: 1px solid {colors.ColorSet.dark_purple.value.to_rgb_str()};
+        border-radius: 2px;
+        background-color: {colors.ColorSet.gray.value.to_rgb_str()};
+    }}
+    
+    QCheckBox::indicator:checked {{
+        border: 1px solid {colors.ColorSet.light_purple.value.to_rgb_str()};
+        border-radius: 2px;
+        background-color: {colors.ColorSet.light_purple.value.to_rgb_str()};
+    }}
+    '''
+    check_box_obj.setStyleSheet(check_box_stylesheet)

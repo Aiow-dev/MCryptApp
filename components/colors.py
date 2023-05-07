@@ -49,3 +49,4 @@ class ColorSet(enum.Enum):
     light_purple = ConvertColor(159, 115, 171)
     light_blue = ConvertColor(163, 199, 214)
     gray = ConvertColor(240, 243, 249)
+    logan = ConvertColor(182, 174, 204)

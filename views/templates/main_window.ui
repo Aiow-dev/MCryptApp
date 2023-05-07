@@ -724,7 +724,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_smp">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -1351,7 +1351,7 @@ QTabBar::tab:hover {
 }</string>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>1</number>
              </property>
              <property name="elideMode">
               <enum>Qt::ElideNone</enum>
@@ -1380,7 +1380,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_kpm">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -2053,7 +2053,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_kpm">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -2791,7 +2791,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_dpm">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -3540,7 +3540,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_dpm">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -4345,7 +4345,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_ms">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -4961,7 +4961,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_ms">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -5633,7 +5633,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_cs">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -6154,7 +6154,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_cs">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -6731,7 +6731,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_acs">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -7425,7 +7425,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_acs">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -8175,7 +8175,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_kcs">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -8838,7 +8838,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_kcs">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -9557,7 +9557,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_ts">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -10209,7 +10209,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_ts">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -10917,7 +10917,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_vs">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -11548,7 +11548,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_vs">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -12235,7 +12235,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_ps">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -12887,7 +12887,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_ps">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -13595,7 +13595,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_dp">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -13976,6 +13976,16 @@ QLineEdit:focus {
                              <property name="styleSheet">
                               <string notr="true">QCheckBox {
 	color: rgb(255, 255, 255);
+}
+
+QCheckBox::indicator:unchecked {
+	border-radius: 2px;
+	background-color: rgb(255, 255, 255);
+}
+
+QCheckBox::indicator:checked {
+	border-radius: 2px;
+	background-color: rgb(67, 67, 67);
 }</string>
                              </property>
                              <property name="text">
@@ -14356,7 +14366,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_dp">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -14737,6 +14747,16 @@ QLineEdit:focus {
                              <property name="styleSheet">
                               <string notr="true">QCheckBox {
 	color: rgb(255, 255, 255);
+}
+
+QCheckBox::indicator:unchecked {
+	border-radius: 2px;
+	background-color: rgb(255, 255, 255);
+}
+
+QCheckBox::indicator:checked {
+	border-radius: 2px;
+	background-color: rgb(67, 67, 67);
 }</string>
                              </property>
                              <property name="text">
