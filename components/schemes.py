@@ -1,4 +1,4 @@
-from components import widgets
+from components import widgets, scheme_colors, colors
 from views.main_window import Ui_main_window
 
 
@@ -207,6 +207,8 @@ def dp_light_scheme(ui: Ui_main_window):
 
 
 def light_scheme(ui: Ui_main_window):
+    scheme_colors.tbl_item_bg = colors.ColorSet.gray.value.to_rgb_q()
+    scheme_colors.tbl_item_color = colors.ColorSet.dark_charcoal.value.to_rgb_q()
     widgets.central_widget_light(ui.central_widget)
     widgets.menu_bar_light(ui.menu_bar)
     widgets.combo_box_light(ui.enc_combo_box)
