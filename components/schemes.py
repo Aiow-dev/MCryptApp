@@ -207,8 +207,8 @@ def dp_light_scheme(ui: Ui_main_window):
 
 
 def light_scheme(ui: Ui_main_window):
-    scheme_colors.tbl_item_bg = colors.ColorSet.gray.value.to_rgb_q()
-    scheme_colors.tbl_item_color = colors.ColorSet.dark_charcoal.value.to_rgb_q()
+    scheme_colors.tbl_item_bg_default = colors.ColorSet.gray.value.to_rgb_q()
+    scheme_colors.tbl_item_fg_default = colors.ColorSet.dark_charcoal.value.to_rgb_q()
     widgets.central_widget_light(ui.central_widget)
     widgets.menu_bar_light(ui.menu_bar)
     widgets.combo_box_light(ui.enc_combo_box)
@@ -224,3 +224,7 @@ def light_scheme(ui: Ui_main_window):
     vs_light_scheme(ui)
     ps_light_scheme(ui)
     dp_light_scheme(ui)
+
+
+def dark_scheme(ui):
+    widgets.menu_bar_dark(ui.menu_bar)

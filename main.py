@@ -19,6 +19,8 @@ def init_styles(ui_window):
     theme = setting.app_theme()
     if theme == 'light':
         schemes.light_scheme(ui_window)
+    else:
+        schemes.dark_scheme(ui_window)
     # widgets.menu_bar_dark(ui.menu_bar)
 
 
@@ -42,8 +44,8 @@ if __name__ == '__main__':
     MainWindow = QMainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
+    init_styles(ui)
     init_pages(ui)
     page.init_page(ui)
     menu.init_menu(MainWindow, ui)
-    init_styles(ui)
     sys.exit(app.exec_())

@@ -30,7 +30,7 @@ def tab_widget_light(tab_wgt_obj):
         border: 1px solid {colors.ColorSet.dark_purple.value.to_rgb_str()};
         padding: 10 120px;
         background-color: {colors.ColorSet.dark_purple.value.to_rgb_str()};
-        color: {colors.ColorSet.snow.value.to_rgb_str()};
+        color: {colors.ColorSet.gray.value.to_rgb_str()};
     }}
     
     QTabBar::tab:selected {{
@@ -85,20 +85,20 @@ def menu_bar_dark(menu_bar_obj):
     menu_bar_stylesheet = f'''
     QMenuBar {{
         background-color: {colors.ColorSet.dark_charcoal.value.to_rgb_str()};
-        color: {colors.ColorSet.white.value.to_rgb_str()};
+        color: {colors.ColorSet.gray.value.to_rgb_str()};
     }}
 
     QMenuBar::item:selected {{
-        background-color: {palette.windows_accent_color()};
+        background-color: {colors.ColorSet.dark_liver.value.to_rgb_str()};
     }}
 
     QMenu {{
         background-color: {colors.ColorSet.dark_charcoal.value.to_rgb_str()};
-        color: {colors.ColorSet.white.value.to_rgb_str()};
+        color: {colors.ColorSet.gray.value.to_rgb_str()};
     }}
 
     QMenu::item:selected {{
-        background-color: {palette.windows_accent_color()};
+        background-color: {colors.ColorSet.dark_liver.value.to_rgb_str()};
     }}
     '''
     menu_bar_obj.setStyleSheet(menu_bar_stylesheet)
@@ -135,7 +135,7 @@ def combo_box_light(combo_box_obj):
     QComboBox {{
         border: none;
         background-color: {colors.ColorSet.dark_purple.value.to_rgb_str()};
-        color: {colors.ColorSet.snow.value.to_rgb_str()};
+        color: {colors.ColorSet.gray.value.to_rgb_str()};
     }}
     
     QComboBox:hover {{
@@ -144,7 +144,7 @@ def combo_box_light(combo_box_obj):
     
     QComboBox QAbstractItemView {{
         outline: none;
-        background-color: {colors.ColorSet.snow.value.to_rgb_str()};
+        background-color: {colors.ColorSet.gray.value.to_rgb_str()};
         color: {colors.ColorSet.dark_charcoal.value.to_rgb_str()};
         selection-background-color: {colors.ColorSet.light_purple.value.to_rgb_str()};
     }}
@@ -171,7 +171,7 @@ def push_button_light(push_btn_obj):
         border: 1px solid {colors.ColorSet.dark_purple.value.to_rgb_str()};
         border-radius: 3px;
         background-color: {colors.ColorSet.dark_purple.value.to_rgb_str()};
-        color: {colors.ColorSet.snow.value.to_rgb_str()};
+        color: {colors.ColorSet.gray.value.to_rgb_str()};
     }}
     
     QPushButton:hover {{

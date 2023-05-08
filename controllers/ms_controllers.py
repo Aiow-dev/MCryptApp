@@ -21,8 +21,8 @@ def init_magic_square(ui):
     event_components.tbl_rank_text_changed(ui.enc_ms_rank_txt, ui.enc_ms_ot_table, tbl_rank_limit)
     event_components.tbl_rank_text_changed(ui.dec_ms_rank_txt, ui.dec_ms_tms_table, tbl_rank_limit)
     event_components.tbl_rank_text_changed(ui.dec_ms_rank_txt, ui.dec_ms_ot_table, tbl_rank_limit)
-    color_default = scheme_colors.tbl_item_bg
-    color_err = colors.ColorSet.orange_red.value.to_rgb_q()
+    color_default = scheme_colors.tbl_item_bg_default
+    color_err = scheme_colors.tbl_item_bg_err
     event_components.tbl_pos_num_item_changed(ui.enc_ms_tms_table, color_default, color_err)
     event_components.tbl_pos_num_item_changed(ui.dec_ms_tms_table, color_default, color_err)
     event_components.shortcut_return(ui.enc_ms_btn)
