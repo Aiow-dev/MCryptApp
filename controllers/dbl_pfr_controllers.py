@@ -1,13 +1,15 @@
 from handlers import dbl_pfr_handlers
 from events import event_components
-from components import chars, scheme_colors, colors
+from components import chars, scheme_colors
 
 
 def init_double_playfair(ui):
-    enc_form_data = {'msg_input': ui.enc_dp_msg_txt, 'left_tbl_widget': ui.enc_dp_lt_table,
+    enc_form_data = {'msg_input': ui.enc_dp_msg_txt, 'rows_input': ui.enc_dp_row_txt,
+                     'columns_input': ui.enc_dp_clm_txt, 'left_tbl_widget': ui.enc_dp_lt_table,
                      'right_tbl_widget': ui.enc_dp_rt_table, 'enc_msg_input': ui.enc_dp_oc_txt,
                      'enc_tbl_input': ui.enc_smp_ot_txt}
-    dec_form_data = {'msg_input': ui.dec_dp_msg_txt, 'left_tbl_widget': ui.dec_dp_lt_table,
+    dec_form_data = {'msg_input': ui.dec_dp_msg_txt, 'rows_input': ui.dec_dp_row_txt,
+                     'columns_input': ui.dec_dp_clm_txt, 'left_tbl_widget': ui.dec_dp_lt_table,
                      'right_tbl_widget': ui.dec_dp_rt_table, 'enc_msg_input': ui.dec_dp_oc_txt,
                      'enc_tbl_input': ui.dec_smp_ot_txt}
     enc_tbl_widgets = [ui.enc_dp_lt_table, ui.enc_dp_rt_table]
