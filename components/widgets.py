@@ -39,6 +39,35 @@ def tab_wgt_light_sys(tab_wgt_obj):
     tab_wgt_obj.setStyleSheet(tab_stylesheet)
 
 
+def tab_wgt_dark_sys(tab_wgt_obj):
+    tab_stylesheet = f'''
+    QTabWidget::pane {{
+        background: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab {{
+        height: 25px;
+        border: 1px solid {win_palette.accent_color};
+        padding: 10 120px;
+        background-color: {win_palette.accent_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:selected {{
+        border: 1px solid {colors.Palette.eerie_black.value.to_rgb_str()};
+        background-color: {colors.Palette.eerie_black.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:hover {{
+        border: 1px solid {win_palette.complementary_color};
+        background-color: {win_palette.complementary_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    '''
+    tab_wgt_obj.setStyleSheet(tab_stylesheet)
+
+
 def line_edit_light_sys(line_edit_obj):
     line_edit_stylesheet = f'''
     QLineEdit {{
@@ -47,6 +76,8 @@ def line_edit_light_sys(line_edit_obj):
         margin: 0 0 0 18px;
         padding: 0 3px;
         color: {colors.Palette.dark_charcoal.value.to_rgb_str()};
+        selection-color: {colors.Palette.gray.value.to_rgb_str()};
+        selection-background-color: {win_palette.complementary_color};
     }}
     
     QLineEdit:focus {{
@@ -63,6 +94,8 @@ def text_edit_light_sys(text_edit_obj):
         border-radius: 3px;
         padding: 0 3px;
         color: {colors.Palette.dark_charcoal.value.to_rgb_str()};
+        selection-color: {colors.Palette.gray.value.to_rgb_str()};
+        selection-background-color: {win_palette.complementary_color};
     }}
     
     QTextEdit:focus {{

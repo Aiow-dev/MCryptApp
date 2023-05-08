@@ -238,6 +238,19 @@ def dark_sys_scheme(ui):
     widgets.menu_bar_dark_sys(ui.menu_bar)
     widgets.frame_sys(ui.status_frame)
     widgets.combo_box_dark_sys(ui.enc_combo_box)
+    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
+                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
+                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
+    for tab in tab_list:
+        widgets.tab_wgt_dark_sys(tab)
+    btn_list = [ui.enc_smp_btn, ui.dec_smp_btn, ui.enc_kpm_btn, ui.dec_kpm_btn,
+                ui.enc_dpm_btn, ui.dec_dpm_btn, ui.enc_ms_btn, ui.dec_ms_btn,
+                ui.enc_cs_btn, ui.dec_cs_btn, ui.enc_acs_btn, ui.dec_acs_btn,
+                ui.enc_kcs_btn, ui.dec_kcs_btn, ui.enc_ts_btn, ui.dec_ts_btn,
+                ui.enc_vs_btn, ui.dec_vs_btn, ui.enc_ps_btn, ui.dec_ps_btn,
+                ui.enc_dp_btn, ui.dec_dp_btn]
+    for btn in btn_list:
+        widgets.push_btn_sys(btn)
 
 
 def system_scheme(ui, is_light):

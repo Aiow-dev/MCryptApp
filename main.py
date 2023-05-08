@@ -21,7 +21,6 @@ def init_styles(theme_window, ui_window):
         schemes.light_scheme(ui_window)
     else:
         schemes.dark_scheme(ui_window)
-    # widgets.menu_bar_dark(ui.menu_bar)
 
 
 def init_win_styles(is_light_win, ui_window):
