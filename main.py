@@ -2,7 +2,7 @@ import sys
 
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
-from views import main_window
+from views import main_win_dark, main_win_light
 from controllers import (
     prm_controllers,
     cs_controllers,
@@ -15,9 +15,8 @@ from controllers import (
 from components import schemes, setting
 
 
-def init_styles(ui_window):
-    theme = setting.app_theme()
-    if theme == 'light':
+def init_styles(theme_window, ui_window):
+    if theme_window == 'light':
         schemes.light_scheme(ui_window)
     else:
         schemes.dark_scheme(ui_window)
@@ -40,11 +39,14 @@ def init_pages(ui_window):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ui = main_window.Ui_main_window()
+    ui = main_win_dark.Ui_main_window()
+    theme = setting.app_theme()
+    if theme == 'light':
+        ui = main_win_light.Ui_main_window()
     MainWindow = QMainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
-    init_styles(ui)
+    init_styles(theme, ui)
     init_pages(ui)
     page.init_page(ui)
     menu.init_menu(MainWindow, ui)

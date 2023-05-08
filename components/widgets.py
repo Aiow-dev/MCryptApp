@@ -1,4 +1,4 @@
-from components import colors, palette
+from components import colors
 
 
 def central_widget_light(central_wgt_obj):

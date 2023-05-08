@@ -1,5 +1,5 @@
 from components import widgets, scheme_colors, colors
-from views.main_window import Ui_main_window
+from views.main_win_dark import Ui_main_window
 
 
 def line_edits_light(line_edits):
@@ -209,21 +209,7 @@ def dp_light_scheme(ui: Ui_main_window):
 def light_scheme(ui: Ui_main_window):
     scheme_colors.tbl_item_bg_default = colors.ColorSet.gray.value.to_rgb_q()
     scheme_colors.tbl_item_fg_default = colors.ColorSet.dark_charcoal.value.to_rgb_q()
-    widgets.central_widget_light(ui.central_widget)
     widgets.menu_bar_light(ui.menu_bar)
-    widgets.combo_box_light(ui.enc_combo_box)
-    widgets.frame_light(ui.status_frame)
-    smp_light_scheme(ui)
-    kpm_light_scheme(ui)
-    dpm_light_scheme(ui)
-    ms_light_scheme(ui)
-    cs_light_scheme(ui)
-    acs_light_scheme(ui)
-    kcs_light_scheme(ui)
-    ts_light_scheme(ui)
-    vs_light_scheme(ui)
-    ps_light_scheme(ui)
-    dp_light_scheme(ui)
 
 
 def dark_scheme(ui):
