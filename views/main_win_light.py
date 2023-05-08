@@ -7210,7 +7210,7 @@ class Ui_main_window(object):
         self.acs_types_tab.setCurrentIndex(0)
         self.kcs_types_tab.setCurrentIndex(0)
         self.ts_types_tab.setCurrentIndex(0)
-        self.vs_types_tab.setCurrentIndex(0)
+        self.vs_types_tab.setCurrentIndex(1)
         self.ps_types_tab.setCurrentIndex(0)
         self.dp_types_tab.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(main_window)

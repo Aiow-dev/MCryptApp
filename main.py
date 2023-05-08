@@ -13,6 +13,7 @@ from controllers import (
     menu,
 )
 from components import schemes, setting
+from helpers import win
 
 
 def init_styles(theme_window, ui_window):
@@ -21,6 +22,10 @@ def init_styles(theme_window, ui_window):
     else:
         schemes.dark_scheme(ui_window)
     # widgets.menu_bar_dark(ui.menu_bar)
+
+
+def init_win_styles(is_light_win, ui_window):
+    schemes.system_scheme(ui_window, is_light_win)
 
 
 def init_pages(ui_window):
@@ -39,14 +44,22 @@ def init_pages(ui_window):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ui = main_win_dark.Ui_main_window()
-    theme = setting.app_theme()
-    if theme == 'light':
-        ui = main_win_light.Ui_main_window()
     MainWindow = QMainWindow()
-    ui.setupUi(MainWindow)
+    theme = setting.app_theme()
+    if theme == 'system':
+        is_light = win.is_light_win_theme()
+        ui = main_win_dark.Ui_main_window()
+        if is_light:
+            ui = main_win_light.Ui_main_window()
+        ui.setupUi(MainWindow)
+        init_win_styles(is_light, ui)
+    else:
+        ui = main_win_dark.Ui_main_window()
+        if theme == 'light':
+            ui = main_win_light.Ui_main_window()
+        ui.setupUi(MainWindow)
+        init_styles(theme, ui)
     MainWindow.show()
-    init_styles(theme, ui)
     init_pages(ui)
     page.init_page(ui)
     menu.init_menu(MainWindow, ui)

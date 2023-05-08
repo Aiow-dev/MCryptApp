@@ -1,5 +1,5 @@
 from helpers import text, tables, items
-from components import setting
+from components import scheme_colors
 
 
 def table_text(columns_values, tbl_header=None, columns_headers=None, placeholder='-', len_tbl_section=-1):
@@ -126,12 +126,14 @@ def vigenere_table(row_values, table_obj, alphabet):
     tables.table(row_values, table_row, table_obj, h_headers, v_headers)
 
 
-def table_row(num_row, row_value, tbl_obj, color=setting.table_item_color()):
+def table_row(num_row, row_value, tbl_obj):
+    color = scheme_colors.tbl_item_fg_default
     for num_column, value in enumerate(row_value):
         tbl_obj.setItem(num_row, num_column, tables.table_item(value, color))
 
 
-def table_column(num_column, column_value, tbl_obj, color=setting.table_item_color()):
+def table_column(num_column, column_value, tbl_obj):
+    color = scheme_colors.tbl_item_fg_default
     for num_row, value in enumerate(column_value):
         tbl_obj.setItem(num_row, num_column, tables.table_item(value, color))
 
