@@ -108,8 +108,9 @@ def text_edit_light_sys(text_edit_obj):
 def menu_bar_dark(menu_bar_obj):
     menu_bar_stylesheet = f'''
     QMenuBar {{
-        background-color: {colors.Palette.dark_charcoal.value.to_rgb_str()};
+        background-color: {colors.Palette.eerie_black.value.to_rgb_str()};
         color: {colors.Palette.gray.value.to_rgb_str()};
+        border-bottom: 1px solid {colors.Palette.dark_charcoal.value.to_rgb_str()};
     }}
 
     QMenuBar::item:selected {{
