@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import qApp
 from controllers import page
 from components import windows, app
 from windows import settings
+from helpers import func
 
 
 def init_menu_pages(ui):
@@ -14,8 +15,9 @@ def init_menu_pages(ui):
 
 
 def init_menu(window, ui):
+    func_single = func.FuncSingleCall()
     ui.action_program_info.triggered.connect(windows.show_program_info)
-    ui.action_settings_window.triggered.connect(lambda: settings.show_settings_window(window))
+    ui.action_settings_window.triggered.connect(lambda: settings.show_settings_window(func_single, window))
     ui.action_exit.triggered.connect(qApp.quit)
     ui.action_reboot.triggered.connect(app.restart)
     init_menu_pages(ui)
