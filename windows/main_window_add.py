@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets
 
 from views import main_win_dark, main_win_light
-from controllers import page, menu_add
+from controllers import page, menu
 from components import setting
 from helpers import win, time
 from windows import main_window
@@ -35,5 +35,5 @@ def show_addition_window(parent):
     form.show()
     main_window.init_pages(ui)
     page.init_page(ui)
-    menu_add.init_menu_add(ui)
+    menu.init_menu_add(ui)
     form.show()

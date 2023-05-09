@@ -6923,8 +6923,8 @@ class Ui_main_window(object):
         self.action_settings_win.setObjectName("action_settings_win")
         self.action_exit = QtWidgets.QAction(main_window)
         self.action_exit.setObjectName("action_exit")
-        self.action_reboot = QtWidgets.QAction(main_window)
-        self.action_reboot.setObjectName("action_reboot")
+        self.action_restart = QtWidgets.QAction(main_window)
+        self.action_restart.setObjectName("action_restart")
         self.action_new_win = QtWidgets.QAction(main_window)
         self.action_new_win.setObjectName("action_new_win")
         self.file_menu.addAction(self.action_program_info)
@@ -6932,7 +6932,7 @@ class Ui_main_window(object):
         self.file_menu.addAction(self.action_help)
         self.file_menu.addAction(self.action_settings_win)
         self.file_menu.addAction(self.action_exit)
-        self.file_menu.addAction(self.action_reboot)
+        self.file_menu.addAction(self.action_restart)
         self.enc_tpm_menu.addAction(self.action_smp)
         self.enc_tpm_menu.addAction(self.action_kpm)
         self.enc_tpm_menu.addAction(self.action_dpm)
@@ -7261,7 +7261,7 @@ class Ui_main_window(object):
         self.action_dp.setText(_translate("main_window", "Двойной квадрат Уитстона"))
         self.action_settings_win.setText(_translate("main_window", "Настройки"))
         self.action_exit.setText(_translate("main_window", "Завершение работы"))
-        self.action_reboot.setText(_translate("main_window", "Перезагрузка"))
+        self.action_restart.setText(_translate("main_window", "Перезагрузка"))
         self.action_new_win.setText(_translate("main_window", "Новое окно"))
 
 

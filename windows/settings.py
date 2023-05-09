@@ -14,8 +14,8 @@ class SettingsWindow(QtWidgets.QWidget):
             super().show()
 
     def closeEvent(self, event):
-        super().closeEvent(event)
         self.__func_single.reset()
+        super().closeEvent(event)
 
 
 def switch_settings_page(ui, index):

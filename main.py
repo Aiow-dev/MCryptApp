@@ -1,6 +1,6 @@
 import sys
 
-from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5 import QtWidgets
 
 from views import main_win_dark, main_win_light
 from controllers import page, menu
@@ -10,8 +10,8 @@ from windows import main_window
 
 
 if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    MainWindow = QMainWindow()
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = main_window.MainWindowApp()
     theme = setting.app_theme()
     if theme == 'system':
         is_light = win.is_light_win_theme()

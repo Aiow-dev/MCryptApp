@@ -1,3 +1,5 @@
+from PyQt5 import QtWidgets
+
 from controllers import (
     prm_controllers,
     cs_controllers,
@@ -5,9 +7,23 @@ from controllers import (
     dbl_pfr_controllers,
     systems_controllers,
 )
-from components import schemes
+from components import schemes, dialogs, setting
 from helpers import time
 from views import main_win_dark, main_win_light
+
+
+class MainWindowApp(QtWidgets.QMainWindow):
+    def closeEvent(self, event):
+        is_confirm_quit = setting.is_confirm_quit()
+        if is_confirm_quit:
+            result = dialogs.question_msg(self,
+                                          'Вы уверены, что хотите выйти? Все несохраненные изменения будут утеряны!',
+                                          'Подтверждение выхода...')
+            event.ignore()
+            if result:
+                event.accept()
+        else:
+            event.accept()
 
 
 def init_styles(theme_window, ui_window):

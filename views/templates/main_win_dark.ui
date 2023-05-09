@@ -15320,7 +15320,7 @@ QComboBox::drop-down:button {
     <addaction name="action_help"/>
     <addaction name="action_settings_win"/>
     <addaction name="action_exit"/>
-    <addaction name="action_reboot"/>
+    <addaction name="action_restart"/>
    </widget>
    <widget class="QMenu" name="enc_menu">
     <property name="title">
@@ -15428,7 +15428,7 @@ QComboBox::drop-down:button {
     <string>Завершение работы</string>
    </property>
   </action>
-  <action name="action_reboot">
+  <action name="action_restart">
    <property name="text">
     <string>Перезагрузка</string>
    </property>

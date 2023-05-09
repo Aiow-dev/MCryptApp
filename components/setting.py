@@ -10,6 +10,13 @@ def app_theme():
     return parsed_json.get('theme')
 
 
+def is_confirm_quit():
+    with open('settings.json') as settings_file:
+        text = settings_file.read()
+    parsed_json = json.loads(text)
+    return parsed_json.get('confirm-quit')
+
+
 def table_item_color():
     theme = app_theme()
     if theme == 'light':
