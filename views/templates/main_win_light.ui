@@ -15570,8 +15570,9 @@ QComboBox::drop-down:button {
      <string>Файл</string>
     </property>
     <addaction name="action_program_info"/>
-    <addaction name="action_settings_window"/>
+    <addaction name="action_new_win"/>
     <addaction name="action_help"/>
+    <addaction name="action_settings_win"/>
     <addaction name="action_exit"/>
     <addaction name="action_reboot"/>
    </widget>
@@ -15671,7 +15672,7 @@ QComboBox::drop-down:button {
     <string>Двойной квадрат Уитстона</string>
    </property>
   </action>
-  <action name="action_settings_window">
+  <action name="action_settings_win">
    <property name="text">
     <string>Настройки</string>
    </property>
@@ -15684,6 +15685,11 @@ QComboBox::drop-down:button {
   <action name="action_reboot">
    <property name="text">
     <string>Перезагрузка</string>
+   </property>
+  </action>
+  <action name="action_new_win">
+   <property name="text">
+    <string>Новое окно</string>
    </property>
   </action>
  </widget>
