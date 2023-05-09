@@ -1,4 +1,11 @@
+from datetime import datetime
+
 from PyQt5 import QtCore
+
+
+def get_current_hour():
+    current_datetime = datetime.now()
+    return current_datetime.hour
 
 
 class TimerDelay:

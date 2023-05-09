@@ -13,7 +13,7 @@ from controllers import (
     menu,
 )
 from components import schemes, setting
-from helpers import win
+from helpers import win, time
 
 
 def init_styles(theme_window, ui_window):
@@ -25,6 +25,16 @@ def init_styles(theme_window, ui_window):
 
 def init_win_styles(is_light_win, ui_window):
     schemes.system_scheme(ui_window, is_light_win)
+
+
+def init_time_styles():
+    current_hour = time.get_current_hour()
+    if 5 < current_hour < 18:
+        ui_win = main_win_light.Ui_main_window()
+        schemes.light_scheme(ui_win)
+    else:
+        ui_win = main_win_dark.Ui_main_window()
+        schemes.dark_scheme(ui_win)
 
 
 def init_pages(ui_window):
@@ -52,6 +62,15 @@ if __name__ == '__main__':
             ui = main_win_light.Ui_main_window()
         ui.setupUi(MainWindow)
         init_win_styles(is_light, ui)
+    elif theme == 'time':
+        current_hour = time.get_current_hour()
+        time_theme = 'dark'
+        ui = main_win_dark.Ui_main_window()
+        if 5 < current_hour < 18:
+            time_theme = 'light'
+            ui = main_win_light.Ui_main_window()
+        ui.setupUi(MainWindow)
+        init_styles(time_theme, ui)
     else:
         ui = main_win_dark.Ui_main_window()
         if theme == 'light':
