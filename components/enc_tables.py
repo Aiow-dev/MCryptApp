@@ -1,6 +1,5 @@
 from helpers import text, tables, items
-from helpers.tables import table_item, table_size, unique_rand_table, table
-from components import colors
+from components import scheme_colors
 
 
 def table_text(columns_values, tbl_header=None, columns_headers=None, placeholder='-', len_tbl_section=-1):
@@ -89,7 +88,7 @@ def affine_table_letter_text(key_a_text, key_b_text, num_column_values, alphabet
 
 def affine_table(key_a_text, key_b_text, column_values, tbl_obj):
     h_headers = tables.affine_column_headers(key_a_text, key_b_text)
-    table(column_values, table_column, tbl_obj, h_headers=h_headers)
+    tables.table(column_values, table_column, tbl_obj, h_headers=h_headers)
 
 
 def caesar_key_table_text(replace_values, alphabet):
@@ -108,7 +107,7 @@ def caesar_key_table_text(replace_values, alphabet):
 
 def caesar_key_table(column_values, table_obj):
     h_headers = ('№', '->', '№', '->', '№', '->')
-    table(column_values, table_column, table_obj, h_headers=h_headers)
+    tables.table(column_values, table_column, table_obj, h_headers=h_headers)
 
 
 def vigenere_table_text(msg_txt, key_text, enc_msg_txt, alphabet):
@@ -124,22 +123,24 @@ def vigenere_table_text(msg_txt, key_text, enc_msg_txt, alphabet):
 def vigenere_table(row_values, table_obj, alphabet):
     h_headers = list(alphabet)
     v_headers = [str(row) for row in range(32)]
-    table(row_values, table_row, table_obj, h_headers, v_headers)
+    tables.table(row_values, table_row, table_obj, h_headers, v_headers)
 
 
-def table_row(num_row, row_value, tbl_obj, color=colors.ColorSet.white.value.to_rgb_q()):
+def table_row(num_row, row_value, tbl_obj):
+    color = scheme_colors.tbl_item_fg_default
     for num_column, value in enumerate(row_value):
-        tbl_obj.setItem(num_row, num_column, table_item(value, color))
+        tbl_obj.setItem(num_row, num_column, tables.table_item(value, color))
 
 
-def table_column(num_column, column_value, tbl_obj, color=colors.ColorSet.white.value.to_rgb_q()):
+def table_column(num_column, column_value, tbl_obj):
+    color = scheme_colors.tbl_item_fg_default
     for num_row, value in enumerate(column_value):
-        tbl_obj.setItem(num_row, num_column, table_item(value, color))
+        tbl_obj.setItem(num_row, num_column, tables.table_item(value, color))
 
 
 def table_rand(tbl_wgt, charset):
-    size = table_size(tbl_wgt)
+    size = tables.table_size(tbl_wgt)
     if size[0] * size[1] > len(charset):
         return
-    tbl_items = unique_rand_table(size[0], size[1], charset)
-    table(tbl_items, table_row, tbl_wgt)
+    tbl_items = tables.unique_rand_table(size[0], size[1], charset)
+    tables.table(tbl_items, table_row, tbl_wgt)

@@ -6,7 +6,7 @@ from handlers import messages
 
 def proc_ms(form_data, encryption):
     try:
-        msg = form_data['msg_input'].text()
+        msg = form_data['msg_input'].text().replace(' ', '')
         tbl_rank = int(form_data['rank_input'].text())
         key_tbl = tables.table_num_items(form_data['key_tbl_widget'])
         if len(msg) != tbl_rank ** 2 or tbl_rank <= 0:

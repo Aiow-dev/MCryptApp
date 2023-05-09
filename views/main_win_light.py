@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '../views/templates/main_window.ui'
+# Form implementation generated from reading ui file '../views/templates/main_win_light.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.8
 #
@@ -20,7 +20,7 @@ class Ui_main_window(object):
 "}")
         self.central_widget = QtWidgets.QWidget(main_window)
         self.central_widget.setStyleSheet("QWidget {\n"
-"    background-color: rgb(30, 30, 30);\n"
+"    background-color: rgb(240, 243, 249);\n"
 "}")
         self.central_widget.setObjectName("central_widget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.central_widget)
@@ -42,26 +42,27 @@ class Ui_main_window(object):
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.smp_types_tab = QtWidgets.QTabWidget(self.smp_page)
         self.smp_types_tab.setStyleSheet("QTabWidget::pane {\n"
-"    background: rgb(46, 44, 44);\n"
+"    background: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab {\n"
 "    height: 25px;\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    padding: 10 120px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab:selected {\n"
-"    border: 1px solid rgb(30, 30, 30);\n"
-"    background-color: rgb(30, 30, 30);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(240, 243, 249);\n"
+"    background-color: rgb(240, 243, 249);\n"
+"    color: rgb(48, 47, 47);\n"
 "}\n"
 "\n"
 "QTabBar::tab:hover {\n"
-"    background-color: rgb(67, 67, 67);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"    color: rgb(240, 243, 249);\n"
 "}")
         self.smp_types_tab.setElideMode(QtCore.Qt.ElideNone)
         self.smp_types_tab.setDocumentMode(False)
@@ -73,7 +74,7 @@ class Ui_main_window(object):
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.enc_smp = QtWidgets.QFrame(self.enc_smp_tab)
         self.enc_smp.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_smp.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_smp.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -116,22 +117,24 @@ class Ui_main_window(object):
         self.enc_smp_msg_lbl = QtWidgets.QLabel(self.enc_smp_msg_frame)
         self.enc_smp_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_smp_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_smp_msg_lbl.setObjectName("enc_smp_msg_lbl")
         self.horizontalLayout_7.addWidget(self.enc_smp_msg_lbl)
         self.enc_smp_msg_txt = QtWidgets.QLineEdit(self.enc_smp_msg_frame)
         self.enc_smp_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_smp_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_smp_msg_txt.setClearButtonEnabled(True)
         self.enc_smp_msg_txt.setObjectName("enc_smp_msg_txt")
@@ -151,22 +154,24 @@ class Ui_main_window(object):
         self.enc_smp_row_lbl = QtWidgets.QLabel(self.enc_smp_row_frame)
         self.enc_smp_row_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_smp_row_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_smp_row_lbl.setObjectName("enc_smp_row_lbl")
         self.horizontalLayout_8.addWidget(self.enc_smp_row_lbl)
         self.enc_smp_row_txt = QtWidgets.QLineEdit(self.enc_smp_row_frame)
         self.enc_smp_row_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_smp_row_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_smp_row_txt.setClearButtonEnabled(True)
         self.enc_smp_row_txt.setObjectName("enc_smp_row_txt")
@@ -186,22 +191,24 @@ class Ui_main_window(object):
         self.enc_smp_clm_lbl = QtWidgets.QLabel(self.enc_smp_clm_frame)
         self.enc_smp_clm_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_smp_clm_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_smp_clm_lbl.setObjectName("enc_smp_clm_lbl")
         self.horizontalLayout_6.addWidget(self.enc_smp_clm_lbl)
         self.enc_smp_clm_txt = QtWidgets.QLineEdit(self.enc_smp_clm_frame)
         self.enc_smp_clm_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_smp_clm_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_smp_clm_txt.setClearButtonEnabled(True)
         self.enc_smp_clm_txt.setObjectName("enc_smp_clm_txt")
@@ -232,21 +239,23 @@ class Ui_main_window(object):
         self.enc_smp_ot_lbl.setMinimumSize(QtCore.QSize(75, 45))
         self.enc_smp_ot_lbl.setMaximumSize(QtCore.QSize(75, 16777215))
         self.enc_smp_ot_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_smp_ot_lbl.setWordWrap(True)
         self.enc_smp_ot_lbl.setObjectName("enc_smp_ot_lbl")
         self.horizontalLayout_9.addWidget(self.enc_smp_ot_lbl, 0, QtCore.Qt.AlignTop)
         self.enc_smp_ot_txt = QtWidgets.QTextEdit(self.enc_smp_ot_frame)
         self.enc_smp_ot_txt.setStyleSheet("QTextEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QTextEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_smp_ot_txt.setReadOnly(True)
         self.enc_smp_ot_txt.setObjectName("enc_smp_ot_txt")
@@ -279,22 +288,24 @@ class Ui_main_window(object):
         self.enc_smp_oc_lbl = QtWidgets.QLabel(self.enc_smp_oc_frame)
         self.enc_smp_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_smp_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_smp_oc_lbl.setObjectName("enc_smp_oc_lbl")
         self.horizontalLayout_10.addWidget(self.enc_smp_oc_lbl)
         self.enc_smp_oc_txt = QtWidgets.QLineEdit(self.enc_smp_oc_frame)
         self.enc_smp_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_smp_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_smp_oc_txt.setReadOnly(True)
         self.enc_smp_oc_txt.setClearButtonEnabled(False)
@@ -316,14 +327,15 @@ class Ui_main_window(object):
         self.enc_smp_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_smp_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.enc_smp_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.enc_smp_btn.setObjectName("enc_smp_btn")
         self.horizontalLayout_11.addWidget(self.enc_smp_btn)
@@ -336,7 +348,7 @@ class Ui_main_window(object):
         self.verticalLayout_10.setObjectName("verticalLayout_10")
         self.dec_smp = QtWidgets.QFrame(self.dec_smp_tab)
         self.dec_smp.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_smp.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_smp.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -379,22 +391,24 @@ class Ui_main_window(object):
         self.dec_smp_msg_lbl = QtWidgets.QLabel(self.dec_smp_msg_frame)
         self.dec_smp_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_smp_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_smp_msg_lbl.setObjectName("dec_smp_msg_lbl")
         self.horizontalLayout_13.addWidget(self.dec_smp_msg_lbl)
         self.dec_smp_msg_txt = QtWidgets.QLineEdit(self.dec_smp_msg_frame)
         self.dec_smp_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_smp_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_smp_msg_txt.setClearButtonEnabled(True)
         self.dec_smp_msg_txt.setObjectName("dec_smp_msg_txt")
@@ -414,22 +428,24 @@ class Ui_main_window(object):
         self.dec_smp_row_lbl = QtWidgets.QLabel(self.dec_smp_row_frame)
         self.dec_smp_row_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_smp_row_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_smp_row_lbl.setObjectName("dec_smp_row_lbl")
         self.horizontalLayout_14.addWidget(self.dec_smp_row_lbl)
         self.dec_smp_row_txt = QtWidgets.QLineEdit(self.dec_smp_row_frame)
         self.dec_smp_row_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_smp_row_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_smp_row_txt.setClearButtonEnabled(True)
         self.dec_smp_row_txt.setObjectName("dec_smp_row_txt")
@@ -449,22 +465,24 @@ class Ui_main_window(object):
         self.dec_smp_clm_lbl = QtWidgets.QLabel(self.dec_smp_clm_frame)
         self.dec_smp_clm_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_smp_clm_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_smp_clm_lbl.setObjectName("dec_smp_clm_lbl")
         self.horizontalLayout_15.addWidget(self.dec_smp_clm_lbl)
         self.dec_smp_clm_txt = QtWidgets.QLineEdit(self.dec_smp_clm_frame)
         self.dec_smp_clm_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_smp_clm_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_smp_clm_txt.setClearButtonEnabled(True)
         self.dec_smp_clm_txt.setObjectName("dec_smp_clm_txt")
@@ -495,21 +513,23 @@ class Ui_main_window(object):
         self.dec_smp_ot_lbl.setMinimumSize(QtCore.QSize(75, 45))
         self.dec_smp_ot_lbl.setMaximumSize(QtCore.QSize(75, 16777215))
         self.dec_smp_ot_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_smp_ot_lbl.setWordWrap(True)
         self.dec_smp_ot_lbl.setObjectName("dec_smp_ot_lbl")
         self.horizontalLayout_16.addWidget(self.dec_smp_ot_lbl, 0, QtCore.Qt.AlignTop)
         self.dec_smp_ot_txt = QtWidgets.QTextEdit(self.dec_smp_ot_frame)
         self.dec_smp_ot_txt.setStyleSheet("QTextEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QTextEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_smp_ot_txt.setReadOnly(True)
         self.dec_smp_ot_txt.setObjectName("dec_smp_ot_txt")
@@ -542,22 +562,24 @@ class Ui_main_window(object):
         self.dec_smp_oc_lbl = QtWidgets.QLabel(self.dec_smp_oc_frame)
         self.dec_smp_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_smp_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_smp_oc_lbl.setObjectName("dec_smp_oc_lbl")
         self.horizontalLayout_17.addWidget(self.dec_smp_oc_lbl)
         self.dec_smp_oc_txt = QtWidgets.QLineEdit(self.dec_smp_oc_frame)
         self.dec_smp_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_smp_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_smp_oc_txt.setReadOnly(True)
         self.dec_smp_oc_txt.setClearButtonEnabled(False)
@@ -578,14 +600,15 @@ class Ui_main_window(object):
         self.dec_smp_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.dec_smp_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.dec_smp_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.dec_smp_btn.setObjectName("dec_smp_btn")
         self.horizontalLayout_18.addWidget(self.dec_smp_btn)
@@ -601,26 +624,27 @@ class Ui_main_window(object):
         self.horizontalLayout_34.setObjectName("horizontalLayout_34")
         self.kpm_types_tab = QtWidgets.QTabWidget(self.kpm_page)
         self.kpm_types_tab.setStyleSheet("QTabWidget::pane {\n"
-"    background: rgb(46, 44, 44);\n"
+"    background: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab {\n"
 "    height: 25px;\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    padding: 10 120px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab:selected {\n"
-"    border: 1px solid rgb(30, 30, 30);\n"
-"    background-color: rgb(30, 30, 30);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(240, 243, 249);\n"
+"    background-color: rgb(240, 243, 249);\n"
+"    color: rgb(48, 47, 47);\n"
 "}\n"
 "\n"
 "QTabBar::tab:hover {\n"
-"    background-color: rgb(67, 67, 67);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"    color: rgb(240, 243, 249);\n"
 "}")
         self.kpm_types_tab.setElideMode(QtCore.Qt.ElideNone)
         self.kpm_types_tab.setDocumentMode(False)
@@ -633,7 +657,7 @@ class Ui_main_window(object):
         self.horizontalLayout_19.setObjectName("horizontalLayout_19")
         self.enc_kpm = QtWidgets.QFrame(self.enc_kpm_tab)
         self.enc_kpm.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_kpm.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_kpm.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -676,22 +700,24 @@ class Ui_main_window(object):
         self.enc_kpm_msg_lbl = QtWidgets.QLabel(self.enc_kpm_msg_frame)
         self.enc_kpm_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_kpm_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_kpm_msg_lbl.setObjectName("enc_kpm_msg_lbl")
         self.horizontalLayout_21.addWidget(self.enc_kpm_msg_lbl)
         self.enc_kpm_msg_txt = QtWidgets.QLineEdit(self.enc_kpm_msg_frame)
         self.enc_kpm_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_kpm_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_kpm_msg_txt.setClearButtonEnabled(True)
         self.enc_kpm_msg_txt.setObjectName("enc_kpm_msg_txt")
@@ -711,22 +737,24 @@ class Ui_main_window(object):
         self.enc_kpm_row_lbl = QtWidgets.QLabel(self.enc_kpm_row_frame)
         self.enc_kpm_row_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_kpm_row_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_kpm_row_lbl.setObjectName("enc_kpm_row_lbl")
         self.horizontalLayout_22.addWidget(self.enc_kpm_row_lbl)
         self.enc_kpm_row_txt = QtWidgets.QLineEdit(self.enc_kpm_row_frame)
         self.enc_kpm_row_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_kpm_row_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_kpm_row_txt.setClearButtonEnabled(True)
         self.enc_kpm_row_txt.setObjectName("enc_kpm_row_txt")
@@ -746,22 +774,24 @@ class Ui_main_window(object):
         self.enc_kpm_clm_lbl = QtWidgets.QLabel(self.enc_kpm_clm_frame)
         self.enc_kpm_clm_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_kpm_clm_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_kpm_clm_lbl.setObjectName("enc_kpm_clm_lbl")
         self.horizontalLayout_23.addWidget(self.enc_kpm_clm_lbl)
         self.enc_kpm_clm_txt = QtWidgets.QLineEdit(self.enc_kpm_clm_frame)
         self.enc_kpm_clm_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_kpm_clm_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_kpm_clm_txt.setClearButtonEnabled(True)
         self.enc_kpm_clm_txt.setObjectName("enc_kpm_clm_txt")
@@ -781,22 +811,24 @@ class Ui_main_window(object):
         self.enc_kpm_key_lbl = QtWidgets.QLabel(self.enc_kpm_key_frame)
         self.enc_kpm_key_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_kpm_key_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_kpm_key_lbl.setObjectName("enc_kpm_key_lbl")
         self.horizontalLayout_35.addWidget(self.enc_kpm_key_lbl)
         self.enc_kpm_key_txt = QtWidgets.QLineEdit(self.enc_kpm_key_frame)
         self.enc_kpm_key_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_kpm_key_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_kpm_key_txt.setClearButtonEnabled(True)
         self.enc_kpm_key_txt.setObjectName("enc_kpm_key_txt")
@@ -827,21 +859,23 @@ class Ui_main_window(object):
         self.enc_kpm_ot_lbl.setMinimumSize(QtCore.QSize(75, 45))
         self.enc_kpm_ot_lbl.setMaximumSize(QtCore.QSize(75, 16777215))
         self.enc_kpm_ot_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_kpm_ot_lbl.setWordWrap(True)
         self.enc_kpm_ot_lbl.setObjectName("enc_kpm_ot_lbl")
         self.horizontalLayout_24.addWidget(self.enc_kpm_ot_lbl, 0, QtCore.Qt.AlignTop)
         self.enc_kpm_ot_txt = QtWidgets.QTextEdit(self.enc_kpm_ot_frame)
         self.enc_kpm_ot_txt.setStyleSheet("QTextEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QTextEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_kpm_ot_txt.setReadOnly(True)
         self.enc_kpm_ot_txt.setObjectName("enc_kpm_ot_txt")
@@ -874,22 +908,24 @@ class Ui_main_window(object):
         self.enc_kpm_oc_lbl = QtWidgets.QLabel(self.enc_kpm_oc_frame)
         self.enc_kpm_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_kpm_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_kpm_oc_lbl.setObjectName("enc_kpm_oc_lbl")
         self.horizontalLayout_25.addWidget(self.enc_kpm_oc_lbl)
         self.enc_kpm_oc_txt = QtWidgets.QLineEdit(self.enc_kpm_oc_frame)
         self.enc_kpm_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_kpm_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_kpm_oc_txt.setReadOnly(True)
         self.enc_kpm_oc_txt.setClearButtonEnabled(False)
@@ -911,14 +947,15 @@ class Ui_main_window(object):
         self.enc_kpm_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_kpm_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.enc_kpm_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.enc_kpm_btn.setObjectName("enc_kpm_btn")
         self.horizontalLayout_26.addWidget(self.enc_kpm_btn)
@@ -931,7 +968,7 @@ class Ui_main_window(object):
         self.horizontalLayout_37.setObjectName("horizontalLayout_37")
         self.dec_kpm = QtWidgets.QFrame(self.dec_kpm_tab)
         self.dec_kpm.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_kpm.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_kpm.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -974,22 +1011,24 @@ class Ui_main_window(object):
         self.dec_kpm_msg_lbl = QtWidgets.QLabel(self.dec_kpm_msg_frame)
         self.dec_kpm_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_kpm_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_kpm_msg_lbl.setObjectName("dec_kpm_msg_lbl")
         self.horizontalLayout_28.addWidget(self.dec_kpm_msg_lbl)
         self.dec_kpm_msg_txt = QtWidgets.QLineEdit(self.dec_kpm_msg_frame)
         self.dec_kpm_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_kpm_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_kpm_msg_txt.setClearButtonEnabled(True)
         self.dec_kpm_msg_txt.setObjectName("dec_kpm_msg_txt")
@@ -1009,22 +1048,24 @@ class Ui_main_window(object):
         self.dec_kpm_row_lbl = QtWidgets.QLabel(self.dec_kpm_row_frame)
         self.dec_kpm_row_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_kpm_row_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_kpm_row_lbl.setObjectName("dec_kpm_row_lbl")
         self.horizontalLayout_29.addWidget(self.dec_kpm_row_lbl)
         self.dec_kpm_row_txt = QtWidgets.QLineEdit(self.dec_kpm_row_frame)
         self.dec_kpm_row_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_kpm_row_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_kpm_row_txt.setClearButtonEnabled(True)
         self.dec_kpm_row_txt.setObjectName("dec_kpm_row_txt")
@@ -1044,22 +1085,24 @@ class Ui_main_window(object):
         self.dec_kpm_clm_lbl = QtWidgets.QLabel(self.dec_kpm_clm_frame)
         self.dec_kpm_clm_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_kpm_clm_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_kpm_clm_lbl.setObjectName("dec_kpm_clm_lbl")
         self.horizontalLayout_30.addWidget(self.dec_kpm_clm_lbl)
         self.dec_kpm_clm_txt = QtWidgets.QLineEdit(self.dec_kpm_clm_frame)
         self.dec_kpm_clm_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_kpm_clm_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_kpm_clm_txt.setClearButtonEnabled(True)
         self.dec_kpm_clm_txt.setObjectName("dec_kpm_clm_txt")
@@ -1079,22 +1122,24 @@ class Ui_main_window(object):
         self.dec_kpm_key_lbl = QtWidgets.QLabel(self.dec_kpm_key_frame)
         self.dec_kpm_key_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_kpm_key_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_kpm_key_lbl.setObjectName("dec_kpm_key_lbl")
         self.horizontalLayout_36.addWidget(self.dec_kpm_key_lbl)
         self.dec_kpm_key_txt = QtWidgets.QLineEdit(self.dec_kpm_key_frame)
         self.dec_kpm_key_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_kpm_key_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_kpm_key_txt.setClearButtonEnabled(True)
         self.dec_kpm_key_txt.setObjectName("dec_kpm_key_txt")
@@ -1125,21 +1170,23 @@ class Ui_main_window(object):
         self.dec_kpm_ot_lbl.setMinimumSize(QtCore.QSize(75, 45))
         self.dec_kpm_ot_lbl.setMaximumSize(QtCore.QSize(75, 16777215))
         self.dec_kpm_ot_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_kpm_ot_lbl.setWordWrap(True)
         self.dec_kpm_ot_lbl.setObjectName("dec_kpm_ot_lbl")
         self.horizontalLayout_31.addWidget(self.dec_kpm_ot_lbl, 0, QtCore.Qt.AlignTop)
         self.dec_kpm_ot_txt = QtWidgets.QTextEdit(self.dec_kpm_ot_frame)
         self.dec_kpm_ot_txt.setStyleSheet("QTextEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QTextEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_kpm_ot_txt.setReadOnly(True)
         self.dec_kpm_ot_txt.setObjectName("dec_kpm_ot_txt")
@@ -1172,22 +1219,24 @@ class Ui_main_window(object):
         self.dec_kpm_oc_lbl = QtWidgets.QLabel(self.dec_kpm_oc_frame)
         self.dec_kpm_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_kpm_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_kpm_oc_lbl.setObjectName("dec_kpm_oc_lbl")
         self.horizontalLayout_32.addWidget(self.dec_kpm_oc_lbl)
         self.dec_kpm_oc_txt = QtWidgets.QLineEdit(self.dec_kpm_oc_frame)
         self.dec_kpm_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_kpm_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_kpm_oc_txt.setReadOnly(True)
         self.dec_kpm_oc_txt.setClearButtonEnabled(False)
@@ -1209,14 +1258,15 @@ class Ui_main_window(object):
         self.dec_kpm_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.dec_kpm_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.dec_kpm_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.dec_kpm_btn.setObjectName("dec_kpm_btn")
         self.horizontalLayout_33.addWidget(self.dec_kpm_btn)
@@ -1232,26 +1282,27 @@ class Ui_main_window(object):
         self.horizontalLayout_214.setObjectName("horizontalLayout_214")
         self.dpm_types_tab = QtWidgets.QTabWidget(self.page_dpm)
         self.dpm_types_tab.setStyleSheet("QTabWidget::pane {\n"
-"    background: rgb(46, 44, 44);\n"
+"    background: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab {\n"
 "    height: 25px;\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    padding: 10 120px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab:selected {\n"
-"    border: 1px solid rgb(30, 30, 30);\n"
-"    background-color: rgb(30, 30, 30);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(240, 243, 249);\n"
+"    background-color: rgb(240, 243, 249);\n"
+"    color: rgb(48, 47, 47);\n"
 "}\n"
 "\n"
 "QTabBar::tab:hover {\n"
-"    background-color: rgb(67, 67, 67);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"    color: rgb(240, 243, 249);\n"
 "}")
         self.dpm_types_tab.setElideMode(QtCore.Qt.ElideNone)
         self.dpm_types_tab.setDocumentMode(False)
@@ -1264,7 +1315,7 @@ class Ui_main_window(object):
         self.horizontalLayout_196.setObjectName("horizontalLayout_196")
         self.enc_dpm = QtWidgets.QFrame(self.enc_dpm_tab)
         self.enc_dpm.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_dpm.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_dpm.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -1306,22 +1357,24 @@ class Ui_main_window(object):
         self.enc_dpm_msg_lbl = QtWidgets.QLabel(self.enc_dpm_msg_frame)
         self.enc_dpm_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_dpm_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_dpm_msg_lbl.setObjectName("enc_dpm_msg_lbl")
         self.horizontalLayout_198.addWidget(self.enc_dpm_msg_lbl)
         self.enc_dpm_msg_txt = QtWidgets.QLineEdit(self.enc_dpm_msg_frame)
         self.enc_dpm_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_dpm_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_dpm_msg_txt.setClearButtonEnabled(True)
         self.enc_dpm_msg_txt.setObjectName("enc_dpm_msg_txt")
@@ -1341,22 +1394,24 @@ class Ui_main_window(object):
         self.enc_dpm_row_lbl = QtWidgets.QLabel(self.enc_dpm_row_frame)
         self.enc_dpm_row_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_dpm_row_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_dpm_row_lbl.setObjectName("enc_dpm_row_lbl")
         self.horizontalLayout_199.addWidget(self.enc_dpm_row_lbl)
         self.enc_dpm_row_txt = QtWidgets.QLineEdit(self.enc_dpm_row_frame)
         self.enc_dpm_row_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_dpm_row_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_dpm_row_txt.setClearButtonEnabled(True)
         self.enc_dpm_row_txt.setObjectName("enc_dpm_row_txt")
@@ -1376,22 +1431,24 @@ class Ui_main_window(object):
         self.enc_dpm_clm_lbl = QtWidgets.QLabel(self.enc_dpm_clm_frame)
         self.enc_dpm_clm_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_dpm_clm_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_dpm_clm_lbl.setObjectName("enc_dpm_clm_lbl")
         self.horizontalLayout_200.addWidget(self.enc_dpm_clm_lbl)
         self.enc_dpm_clm_txt = QtWidgets.QLineEdit(self.enc_dpm_clm_frame)
         self.enc_dpm_clm_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_dpm_clm_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_dpm_clm_txt.setClearButtonEnabled(True)
         self.enc_dpm_clm_txt.setObjectName("enc_dpm_clm_txt")
@@ -1411,22 +1468,24 @@ class Ui_main_window(object):
         self.enc_dpm_key_r_lbl = QtWidgets.QLabel(self.enc_dpm_key_r_frame)
         self.enc_dpm_key_r_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_dpm_key_r_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_dpm_key_r_lbl.setObjectName("enc_dpm_key_r_lbl")
         self.horizontalLayout_201.addWidget(self.enc_dpm_key_r_lbl)
         self.enc_dpm_key_r_txt = QtWidgets.QLineEdit(self.enc_dpm_key_r_frame)
         self.enc_dpm_key_r_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_dpm_key_r_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_dpm_key_r_txt.setClearButtonEnabled(True)
         self.enc_dpm_key_r_txt.setObjectName("enc_dpm_key_r_txt")
@@ -1446,22 +1505,24 @@ class Ui_main_window(object):
         self.enc_dpm_key_c_lbl = QtWidgets.QLabel(self.enc_dpm_key_c_frame)
         self.enc_dpm_key_c_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_dpm_key_c_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_dpm_key_c_lbl.setObjectName("enc_dpm_key_c_lbl")
         self.horizontalLayout_215.addWidget(self.enc_dpm_key_c_lbl)
         self.enc_dpm_key_c_txt = QtWidgets.QLineEdit(self.enc_dpm_key_c_frame)
         self.enc_dpm_key_c_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_dpm_key_c_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_dpm_key_c_txt.setClearButtonEnabled(True)
         self.enc_dpm_key_c_txt.setObjectName("enc_dpm_key_c_txt")
@@ -1492,21 +1553,23 @@ class Ui_main_window(object):
         self.enc_dpm_ot_lbl.setMinimumSize(QtCore.QSize(75, 45))
         self.enc_dpm_ot_lbl.setMaximumSize(QtCore.QSize(75, 16777215))
         self.enc_dpm_ot_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_dpm_ot_lbl.setWordWrap(True)
         self.enc_dpm_ot_lbl.setObjectName("enc_dpm_ot_lbl")
         self.horizontalLayout_202.addWidget(self.enc_dpm_ot_lbl, 0, QtCore.Qt.AlignTop)
         self.enc_dpm_ot_txt = QtWidgets.QTextEdit(self.enc_dpm_ot_frame)
         self.enc_dpm_ot_txt.setStyleSheet("QTextEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QTextEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_dpm_ot_txt.setReadOnly(True)
         self.enc_dpm_ot_txt.setObjectName("enc_dpm_ot_txt")
@@ -1539,22 +1602,24 @@ class Ui_main_window(object):
         self.enc_dpm_oc_lbl = QtWidgets.QLabel(self.enc_dpm_oc_frame)
         self.enc_dpm_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_dpm_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_dpm_oc_lbl.setObjectName("enc_dpm_oc_lbl")
         self.horizontalLayout_203.addWidget(self.enc_dpm_oc_lbl)
         self.enc_dpm_oc_txt = QtWidgets.QLineEdit(self.enc_dpm_oc_frame)
         self.enc_dpm_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_dpm_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_dpm_oc_txt.setReadOnly(True)
         self.enc_dpm_oc_txt.setClearButtonEnabled(False)
@@ -1576,14 +1641,15 @@ class Ui_main_window(object):
         self.enc_dpm_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_dpm_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.enc_dpm_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.enc_dpm_btn.setObjectName("enc_dpm_btn")
         self.horizontalLayout_204.addWidget(self.enc_dpm_btn)
@@ -1596,7 +1662,7 @@ class Ui_main_window(object):
         self.horizontalLayout_213.setObjectName("horizontalLayout_213")
         self.dec_dpm = QtWidgets.QFrame(self.dec_dpm_tab)
         self.dec_dpm.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_dpm.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_dpm.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -1638,22 +1704,24 @@ class Ui_main_window(object):
         self.dec_dpm_msg_lbl = QtWidgets.QLabel(self.dec_dpm_msg_frame)
         self.dec_dpm_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_dpm_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_dpm_msg_lbl.setObjectName("dec_dpm_msg_lbl")
         self.horizontalLayout_206.addWidget(self.dec_dpm_msg_lbl)
         self.dec_dpm_msg_txt = QtWidgets.QLineEdit(self.dec_dpm_msg_frame)
         self.dec_dpm_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_dpm_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_dpm_msg_txt.setClearButtonEnabled(True)
         self.dec_dpm_msg_txt.setObjectName("dec_dpm_msg_txt")
@@ -1673,22 +1741,24 @@ class Ui_main_window(object):
         self.dec_dpm_row_lbl = QtWidgets.QLabel(self.dec_dpm_row_frame)
         self.dec_dpm_row_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_dpm_row_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_dpm_row_lbl.setObjectName("dec_dpm_row_lbl")
         self.horizontalLayout_207.addWidget(self.dec_dpm_row_lbl)
         self.dec_dpm_row_txt = QtWidgets.QLineEdit(self.dec_dpm_row_frame)
         self.dec_dpm_row_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_dpm_row_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_dpm_row_txt.setClearButtonEnabled(True)
         self.dec_dpm_row_txt.setObjectName("dec_dpm_row_txt")
@@ -1708,22 +1778,24 @@ class Ui_main_window(object):
         self.dec_dpm_clm_lbl = QtWidgets.QLabel(self.dec_dpm_clm_fram)
         self.dec_dpm_clm_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_dpm_clm_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_dpm_clm_lbl.setObjectName("dec_dpm_clm_lbl")
         self.horizontalLayout_208.addWidget(self.dec_dpm_clm_lbl)
         self.dec_dpm_clm_txt = QtWidgets.QLineEdit(self.dec_dpm_clm_fram)
         self.dec_dpm_clm_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_dpm_clm_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_dpm_clm_txt.setClearButtonEnabled(True)
         self.dec_dpm_clm_txt.setObjectName("dec_dpm_clm_txt")
@@ -1743,22 +1815,24 @@ class Ui_main_window(object):
         self.dec_dpm_key_r_lbl = QtWidgets.QLabel(self.dec_dpm_key_r_frame)
         self.dec_dpm_key_r_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_dpm_key_r_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_dpm_key_r_lbl.setObjectName("dec_dpm_key_r_lbl")
         self.horizontalLayout_209.addWidget(self.dec_dpm_key_r_lbl)
         self.dec_dpm_key_r_txt = QtWidgets.QLineEdit(self.dec_dpm_key_r_frame)
         self.dec_dpm_key_r_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_dpm_key_r_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_dpm_key_r_txt.setClearButtonEnabled(True)
         self.dec_dpm_key_r_txt.setObjectName("dec_dpm_key_r_txt")
@@ -1778,22 +1852,24 @@ class Ui_main_window(object):
         self.dec_dpm_key_c_lbl = QtWidgets.QLabel(self.dec_dpm_key_c_frame)
         self.dec_dpm_key_c_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_dpm_key_c_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_dpm_key_c_lbl.setObjectName("dec_dpm_key_c_lbl")
         self.horizontalLayout_216.addWidget(self.dec_dpm_key_c_lbl)
         self.dec_dpm_key_c_txt = QtWidgets.QLineEdit(self.dec_dpm_key_c_frame)
         self.dec_dpm_key_c_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_dpm_key_c_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_dpm_key_c_txt.setClearButtonEnabled(True)
         self.dec_dpm_key_c_txt.setObjectName("dec_dpm_key_c_txt")
@@ -1824,21 +1900,23 @@ class Ui_main_window(object):
         self.dec_dpm_ot_lbl.setMinimumSize(QtCore.QSize(75, 45))
         self.dec_dpm_ot_lbl.setMaximumSize(QtCore.QSize(75, 16777215))
         self.dec_dpm_ot_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_dpm_ot_lbl.setWordWrap(True)
         self.dec_dpm_ot_lbl.setObjectName("dec_dpm_ot_lbl")
         self.horizontalLayout_210.addWidget(self.dec_dpm_ot_lbl, 0, QtCore.Qt.AlignTop)
         self.dec_dpm_ot_txt = QtWidgets.QTextEdit(self.dec_dpm_ot_frame)
         self.dec_dpm_ot_txt.setStyleSheet("QTextEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QTextEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_dpm_ot_txt.setReadOnly(True)
         self.dec_dpm_ot_txt.setObjectName("dec_dpm_ot_txt")
@@ -1871,22 +1949,24 @@ class Ui_main_window(object):
         self.dec_dpm_oc_lbl = QtWidgets.QLabel(self.dec_dpm_oc_frame)
         self.dec_dpm_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_dpm_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_dpm_oc_lbl.setObjectName("dec_dpm_oc_lbl")
         self.horizontalLayout_211.addWidget(self.dec_dpm_oc_lbl)
         self.dec_dpm_oc_txt = QtWidgets.QLineEdit(self.dec_dpm_oc_frame)
         self.dec_dpm_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_dpm_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_dpm_oc_txt.setReadOnly(True)
         self.dec_dpm_oc_txt.setClearButtonEnabled(False)
@@ -1908,14 +1988,15 @@ class Ui_main_window(object):
         self.dec_dpm_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.dec_dpm_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.dec_dpm_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.dec_dpm_btn.setObjectName("dec_dpm_btn")
         self.horizontalLayout_212.addWidget(self.dec_dpm_btn)
@@ -1931,26 +2012,27 @@ class Ui_main_window(object):
         self.horizontalLayout_168.setObjectName("horizontalLayout_168")
         self.ms_types_tab = QtWidgets.QTabWidget(self.page_ms)
         self.ms_types_tab.setStyleSheet("QTabWidget::pane {\n"
-"    background: rgb(46, 44, 44);\n"
+"    background: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab {\n"
 "    height: 25px;\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    padding: 10 120px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab:selected {\n"
-"    border: 1px solid rgb(30, 30, 30);\n"
-"    background-color: rgb(30, 30, 30);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(240, 243, 249);\n"
+"    background-color: rgb(240, 243, 249);\n"
+"    color: rgb(48, 47, 47);\n"
 "}\n"
 "\n"
 "QTabBar::tab:hover {\n"
-"    background-color: rgb(67, 67, 67);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"    color: rgb(240, 243, 249);\n"
 "}")
         self.ms_types_tab.setElideMode(QtCore.Qt.ElideNone)
         self.ms_types_tab.setDocumentMode(False)
@@ -1962,7 +2044,7 @@ class Ui_main_window(object):
         self.horizontalLayout_150.setObjectName("horizontalLayout_150")
         self.enc_ms = QtWidgets.QFrame(self.enc_ms_tab)
         self.enc_ms.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_ms.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_ms.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -2005,22 +2087,24 @@ class Ui_main_window(object):
         self.enc_ms_msg_lbl = QtWidgets.QLabel(self.enc_ms_msg_frame)
         self.enc_ms_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_ms_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_ms_msg_lbl.setObjectName("enc_ms_msg_lbl")
         self.horizontalLayout_152.addWidget(self.enc_ms_msg_lbl)
         self.enc_ms_msg_txt = QtWidgets.QLineEdit(self.enc_ms_msg_frame)
         self.enc_ms_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_ms_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_ms_msg_txt.setClearButtonEnabled(True)
         self.enc_ms_msg_txt.setObjectName("enc_ms_msg_txt")
@@ -2047,22 +2131,24 @@ class Ui_main_window(object):
         self.enc_ms_rank_lbl = QtWidgets.QLabel(self.enc_ms_rank_frame)
         self.enc_ms_rank_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_ms_rank_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_ms_rank_lbl.setObjectName("enc_ms_rank_lbl")
         self.horizontalLayout_154.addWidget(self.enc_ms_rank_lbl)
         self.enc_ms_rank_txt = QtWidgets.QLineEdit(self.enc_ms_rank_frame)
         self.enc_ms_rank_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_ms_rank_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_ms_rank_txt.setClearButtonEnabled(True)
         self.enc_ms_rank_txt.setObjectName("enc_ms_rank_txt")
@@ -2095,22 +2181,24 @@ class Ui_main_window(object):
         self.enc_ms_oc_lbl = QtWidgets.QLabel(self.enc_ms_oc_frame)
         self.enc_ms_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_ms_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_ms_oc_lbl.setObjectName("enc_ms_oc_lbl")
         self.horizontalLayout_155.addWidget(self.enc_ms_oc_lbl)
         self.enc_ms_oc_txt = QtWidgets.QLineEdit(self.enc_ms_oc_frame)
         self.enc_ms_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_ms_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_ms_oc_txt.setReadOnly(True)
         self.enc_ms_oc_txt.setClearButtonEnabled(False)
@@ -2150,17 +2238,19 @@ class Ui_main_window(object):
         self.horizontalLayout_177.setObjectName("horizontalLayout_177")
         self.enc_ms_tms_table = QtWidgets.QTableWidget(self.enc_ms_tms_frame)
         self.enc_ms_tms_table.setStyleSheet("QTableWidget {\n"
-"    color: rgb(255, 255, 255);\n"
-"    gridline-color: rgb(48, 47, 47);\n"
+"    color: rgb(48, 47, 47);\n"
+"    gridline-color: rgb(159, 115, 171);\n"
+"    selection-background-color: rgb(182, 174, 204);\n"
+"    selection-color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QHeaderView::section {\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}\n"
 "\n"
 "QTableCornerButton::section {\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}")
         self.enc_ms_tms_table.setAutoScroll(True)
         self.enc_ms_tms_table.setEditTriggers(QtWidgets.QAbstractItemView.CurrentChanged)
@@ -2183,16 +2273,19 @@ class Ui_main_window(object):
         self.verticalLayout_73.setObjectName("verticalLayout_73")
         self.enc_ms_ot_table = QtWidgets.QTableWidget(self.enc_ms_ot_frame)
         self.enc_ms_ot_table.setStyleSheet("QTableWidget {\n"
-"    gridline-color: rgb(48, 47, 47);\n"
+"    color: rgb(48, 47, 47);\n"
+"    gridline-color: rgb(159, 115, 171);\n"
+"    selection-background-color: rgb(182, 174, 204);\n"
+"    selection-color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QHeaderView::section {\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}\n"
 "\n"
 "QTableCornerButton::section {\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}")
         self.enc_ms_ot_table.setAutoScroll(True)
         self.enc_ms_ot_table.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
@@ -2219,14 +2312,15 @@ class Ui_main_window(object):
         self.enc_ms_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_ms_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.enc_ms_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.enc_ms_btn.setObjectName("enc_ms_btn")
         self.horizontalLayout_158.addWidget(self.enc_ms_btn)
@@ -2239,7 +2333,7 @@ class Ui_main_window(object):
         self.horizontalLayout_176.setObjectName("horizontalLayout_176")
         self.dec_ms = QtWidgets.QFrame(self.dec_ms_tab)
         self.dec_ms.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_ms.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_ms.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -2282,22 +2376,24 @@ class Ui_main_window(object):
         self.dec_ms_msg_lbl = QtWidgets.QLabel(self.dec_ms_msg_frame)
         self.dec_ms_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_ms_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_ms_msg_lbl.setObjectName("dec_ms_msg_lbl")
         self.horizontalLayout_166.addWidget(self.dec_ms_msg_lbl)
         self.dec_ms_msg_txt = QtWidgets.QLineEdit(self.dec_ms_msg_frame)
         self.dec_ms_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_ms_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_ms_msg_txt.setClearButtonEnabled(True)
         self.dec_ms_msg_txt.setObjectName("dec_ms_msg_txt")
@@ -2324,22 +2420,24 @@ class Ui_main_window(object):
         self.dec_ms_rank_lbl = QtWidgets.QLabel(self.dec_ms_rank_frame)
         self.dec_ms_rank_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_ms_rank_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_ms_rank_lbl.setObjectName("dec_ms_rank_lbl")
         self.horizontalLayout_167.addWidget(self.dec_ms_rank_lbl)
         self.dec_ms_rank_txt = QtWidgets.QLineEdit(self.dec_ms_rank_frame)
         self.dec_ms_rank_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_ms_rank_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_ms_rank_txt.setClearButtonEnabled(True)
         self.dec_ms_rank_txt.setObjectName("dec_ms_rank_txt")
@@ -2372,22 +2470,24 @@ class Ui_main_window(object):
         self.dec_ms_oc_lbl = QtWidgets.QLabel(self.dec_ms_oc_frame)
         self.dec_ms_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_ms_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_ms_oc_lbl.setObjectName("dec_ms_oc_lbl")
         self.horizontalLayout_172.addWidget(self.dec_ms_oc_lbl)
         self.dec_ms_oc_txt = QtWidgets.QLineEdit(self.dec_ms_oc_frame)
         self.dec_ms_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_ms_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_ms_oc_txt.setReadOnly(True)
         self.dec_ms_oc_txt.setClearButtonEnabled(False)
@@ -2427,17 +2527,19 @@ class Ui_main_window(object):
         self.horizontalLayout_178.setObjectName("horizontalLayout_178")
         self.dec_ms_tms_table = QtWidgets.QTableWidget(self.dec_ms_tms_frame)
         self.dec_ms_tms_table.setStyleSheet("QTableWidget {\n"
-"    color: rgb(255, 255, 255);\n"
-"    gridline-color: rgb(48, 47, 47);\n"
+"    color: rgb(48, 47, 47);\n"
+"    gridline-color: rgb(159, 115, 171);\n"
+"    selection-background-color: rgb(182, 174, 204);\n"
+"    selection-color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QHeaderView::section {\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}\n"
 "\n"
 "QTableCornerButton::section {\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}")
         self.dec_ms_tms_table.setAutoScroll(True)
         self.dec_ms_tms_table.setEditTriggers(QtWidgets.QAbstractItemView.CurrentChanged)
@@ -2460,16 +2562,19 @@ class Ui_main_window(object):
         self.verticalLayout_83.setObjectName("verticalLayout_83")
         self.dec_ms_ot_table = QtWidgets.QTableWidget(self.dec_ms_ot_frame)
         self.dec_ms_ot_table.setStyleSheet("QTableWidget {\n"
-"    gridline-color: rgb(48, 47, 47);\n"
+"    color: rgb(48, 47, 47);\n"
+"    gridline-color: rgb(159, 115, 171);\n"
+"    selection-background-color: rgb(182, 174, 204);\n"
+"    selection-color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QHeaderView::section {\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}\n"
 "\n"
 "QTableCornerButton::section {\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}")
         self.dec_ms_ot_table.setAutoScroll(True)
         self.dec_ms_ot_table.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
@@ -2496,14 +2601,15 @@ class Ui_main_window(object):
         self.dec_ms_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.dec_ms_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.dec_ms_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.dec_ms_btn.setObjectName("dec_ms_btn")
         self.horizontalLayout_175.addWidget(self.dec_ms_btn)
@@ -2519,26 +2625,27 @@ class Ui_main_window(object):
         self.horizontalLayout_53.setObjectName("horizontalLayout_53")
         self.cs_types_tab = QtWidgets.QTabWidget(self.cs_page)
         self.cs_types_tab.setStyleSheet("QTabWidget::pane {\n"
-"    background: rgb(46, 44, 44);\n"
+"    background: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab {\n"
 "    height: 25px;\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    padding: 10 120px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab:selected {\n"
-"    border: 1px solid rgb(30, 30, 30);\n"
-"    background-color: rgb(30, 30, 30);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(240, 243, 249);\n"
+"    background-color: rgb(240, 243, 249);\n"
+"    color: rgb(48, 47, 47);\n"
 "}\n"
 "\n"
 "QTabBar::tab:hover {\n"
-"    background-color: rgb(67, 67, 67);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"    color: rgb(240, 243, 249);\n"
 "}")
         self.cs_types_tab.setElideMode(QtCore.Qt.ElideNone)
         self.cs_types_tab.setDocumentMode(False)
@@ -2550,7 +2657,7 @@ class Ui_main_window(object):
         self.horizontalLayout_38.setObjectName("horizontalLayout_38")
         self.enc_cs = QtWidgets.QFrame(self.enc_cs_tab)
         self.enc_cs.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_cs.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_cs.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -2593,22 +2700,24 @@ class Ui_main_window(object):
         self.enc_cs_msg_lbl = QtWidgets.QLabel(self.enc_cs_msg_frame)
         self.enc_cs_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_cs_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_cs_msg_lbl.setObjectName("enc_cs_msg_lbl")
         self.horizontalLayout_40.addWidget(self.enc_cs_msg_lbl)
         self.enc_cs_msg_txt = QtWidgets.QLineEdit(self.enc_cs_msg_frame)
         self.enc_cs_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_cs_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_cs_msg_txt.setClearButtonEnabled(True)
         self.enc_cs_msg_txt.setObjectName("enc_cs_msg_txt")
@@ -2628,22 +2737,24 @@ class Ui_main_window(object):
         self.enc_cs_key_lbl = QtWidgets.QLabel(self.enc_cs_key_frame)
         self.enc_cs_key_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_cs_key_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_cs_key_lbl.setObjectName("enc_cs_key_lbl")
         self.horizontalLayout_41.addWidget(self.enc_cs_key_lbl)
         self.enc_cs_key_txt = QtWidgets.QLineEdit(self.enc_cs_key_frame)
         self.enc_cs_key_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_cs_key_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_cs_key_txt.setClearButtonEnabled(True)
         self.enc_cs_key_txt.setObjectName("enc_cs_key_txt")
@@ -2674,21 +2785,23 @@ class Ui_main_window(object):
         self.enc_cs_ot_lbl.setMinimumSize(QtCore.QSize(75, 45))
         self.enc_cs_ot_lbl.setMaximumSize(QtCore.QSize(75, 16777215))
         self.enc_cs_ot_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_cs_ot_lbl.setWordWrap(True)
         self.enc_cs_ot_lbl.setObjectName("enc_cs_ot_lbl")
         self.horizontalLayout_43.addWidget(self.enc_cs_ot_lbl, 0, QtCore.Qt.AlignTop)
         self.enc_cs_ot_txt = QtWidgets.QTextEdit(self.enc_cs_ot_frame)
         self.enc_cs_ot_txt.setStyleSheet("QTextEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QTextEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_cs_ot_txt.setReadOnly(True)
         self.enc_cs_ot_txt.setObjectName("enc_cs_ot_txt")
@@ -2721,22 +2834,24 @@ class Ui_main_window(object):
         self.enc_cs_oc_lbl = QtWidgets.QLabel(self.enc_cs_oc_frame)
         self.enc_cs_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_cs_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_cs_oc_lbl.setObjectName("enc_cs_oc_lbl")
         self.horizontalLayout_44.addWidget(self.enc_cs_oc_lbl)
         self.enc_cs_oc_txt = QtWidgets.QLineEdit(self.enc_cs_oc_frame)
         self.enc_cs_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_cs_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_cs_oc_txt.setReadOnly(True)
         self.enc_cs_oc_txt.setClearButtonEnabled(False)
@@ -2758,14 +2873,15 @@ class Ui_main_window(object):
         self.enc_cs_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_cs_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.enc_cs_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.enc_cs_btn.setObjectName("enc_cs_btn")
         self.horizontalLayout_45.addWidget(self.enc_cs_btn)
@@ -2778,7 +2894,7 @@ class Ui_main_window(object):
         self.horizontalLayout_51.setObjectName("horizontalLayout_51")
         self.dec_cs = QtWidgets.QFrame(self.dec_cs_tab)
         self.dec_cs.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_cs.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_cs.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -2821,22 +2937,24 @@ class Ui_main_window(object):
         self.dec_cs_msg_lbl = QtWidgets.QLabel(self.dec_cs_msg_frame)
         self.dec_cs_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_cs_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_cs_msg_lbl.setObjectName("dec_cs_msg_lbl")
         self.horizontalLayout_46.addWidget(self.dec_cs_msg_lbl)
         self.dec_cs_msg_txt = QtWidgets.QLineEdit(self.dec_cs_msg_frame)
         self.dec_cs_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_cs_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_cs_msg_txt.setClearButtonEnabled(True)
         self.dec_cs_msg_txt.setObjectName("dec_cs_msg_txt")
@@ -2856,22 +2974,24 @@ class Ui_main_window(object):
         self.dec_cs_key_lbl = QtWidgets.QLabel(self.dec_cs_key_frame)
         self.dec_cs_key_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_cs_key_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_cs_key_lbl.setObjectName("dec_cs_key_lbl")
         self.horizontalLayout_47.addWidget(self.dec_cs_key_lbl)
         self.dec_cs_key_txt = QtWidgets.QLineEdit(self.dec_cs_key_frame)
         self.dec_cs_key_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_cs_key_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_cs_key_txt.setClearButtonEnabled(True)
         self.dec_cs_key_txt.setObjectName("dec_cs_key_txt")
@@ -2902,21 +3022,23 @@ class Ui_main_window(object):
         self.dec_cs_ot_lbl.setMinimumSize(QtCore.QSize(75, 45))
         self.dec_cs_ot_lbl.setMaximumSize(QtCore.QSize(75, 16777215))
         self.dec_cs_ot_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_cs_ot_lbl.setWordWrap(True)
         self.dec_cs_ot_lbl.setObjectName("dec_cs_ot_lbl")
         self.horizontalLayout_48.addWidget(self.dec_cs_ot_lbl, 0, QtCore.Qt.AlignTop)
         self.dec_cs_ot_txt = QtWidgets.QTextEdit(self.dec_cs_ot_frame)
         self.dec_cs_ot_txt.setStyleSheet("QTextEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QTextEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_cs_ot_txt.setReadOnly(True)
         self.dec_cs_ot_txt.setObjectName("dec_cs_ot_txt")
@@ -2949,22 +3071,24 @@ class Ui_main_window(object):
         self.dec_cs_oc_lbl = QtWidgets.QLabel(self.dec_cs_oc_frame)
         self.dec_cs_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_cs_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_cs_oc_lbl.setObjectName("dec_cs_oc_lbl")
         self.horizontalLayout_49.addWidget(self.dec_cs_oc_lbl)
         self.dec_cs_oc_txt = QtWidgets.QLineEdit(self.dec_cs_oc_frame)
         self.dec_cs_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_cs_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_cs_oc_txt.setReadOnly(True)
         self.dec_cs_oc_txt.setClearButtonEnabled(False)
@@ -2986,14 +3110,15 @@ class Ui_main_window(object):
         self.dec_cs_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.dec_cs_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.dec_cs_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.dec_cs_btn.setObjectName("dec_cs_btn")
         self.horizontalLayout_50.addWidget(self.dec_cs_btn)
@@ -3009,26 +3134,27 @@ class Ui_main_window(object):
         self.horizontalLayout_67.setObjectName("horizontalLayout_67")
         self.acs_types_tab = QtWidgets.QTabWidget(self.acs_page)
         self.acs_types_tab.setStyleSheet("QTabWidget::pane {\n"
-"    background: rgb(46, 44, 44);\n"
+"    background: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab {\n"
 "    height: 25px;\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    padding: 10 120px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab:selected {\n"
-"    border: 1px solid rgb(30, 30, 30);\n"
-"    background-color: rgb(30, 30, 30);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(240, 243, 249);\n"
+"    background-color: rgb(240, 243, 249);\n"
+"    color: rgb(48, 47, 47);\n"
 "}\n"
 "\n"
 "QTabBar::tab:hover {\n"
-"    background-color: rgb(67, 67, 67);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"    color: rgb(240, 243, 249);\n"
 "}")
         self.acs_types_tab.setElideMode(QtCore.Qt.ElideNone)
         self.acs_types_tab.setDocumentMode(False)
@@ -3040,7 +3166,7 @@ class Ui_main_window(object):
         self.horizontalLayout_52.setObjectName("horizontalLayout_52")
         self.enc_acs = QtWidgets.QFrame(self.enc_acs_tab)
         self.enc_acs.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_acs.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_acs.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -3083,22 +3209,24 @@ class Ui_main_window(object):
         self.enc_acs_msg_lbl = QtWidgets.QLabel(self.enc_acs_msg_frame)
         self.enc_acs_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_acs_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_acs_msg_lbl.setObjectName("enc_acs_msg_lbl")
         self.horizontalLayout_55.addWidget(self.enc_acs_msg_lbl)
         self.enc_acs_msg_txt = QtWidgets.QLineEdit(self.enc_acs_msg_frame)
         self.enc_acs_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_acs_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_acs_msg_txt.setClearButtonEnabled(True)
         self.enc_acs_msg_txt.setObjectName("enc_acs_msg_txt")
@@ -3118,22 +3246,24 @@ class Ui_main_window(object):
         self.enc_acs_key_a_lbl = QtWidgets.QLabel(self.enc_acs_key_a_frame)
         self.enc_acs_key_a_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_acs_key_a_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_acs_key_a_lbl.setObjectName("enc_acs_key_a_lbl")
         self.horizontalLayout_56.addWidget(self.enc_acs_key_a_lbl)
         self.enc_acs_key_a_txt = QtWidgets.QLineEdit(self.enc_acs_key_a_frame)
         self.enc_acs_key_a_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_acs_key_a_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_acs_key_a_txt.setClearButtonEnabled(True)
         self.enc_acs_key_a_txt.setObjectName("enc_acs_key_a_txt")
@@ -3153,22 +3283,24 @@ class Ui_main_window(object):
         self.enc_acs_key_b_lbl = QtWidgets.QLabel(self.enc_acs_key_b_frame)
         self.enc_acs_key_b_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_acs_key_b_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_acs_key_b_lbl.setObjectName("enc_acs_key_b_lbl")
         self.horizontalLayout_68.addWidget(self.enc_acs_key_b_lbl)
         self.enc_acs_key_b_txt = QtWidgets.QLineEdit(self.enc_acs_key_b_frame)
         self.enc_acs_key_b_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_acs_key_b_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_acs_key_b_txt.setClearButtonEnabled(True)
         self.enc_acs_key_b_txt.setObjectName("enc_acs_key_b_txt")
@@ -3200,22 +3332,24 @@ class Ui_main_window(object):
         self.enc_acs_oc_lbl = QtWidgets.QLabel(self.enc_acs_oc_frame)
         self.enc_acs_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_acs_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_acs_oc_lbl.setObjectName("enc_acs_oc_lbl")
         self.horizontalLayout_58.addWidget(self.enc_acs_oc_lbl)
         self.enc_acs_oc_txt = QtWidgets.QLineEdit(self.enc_acs_oc_frame)
         self.enc_acs_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_acs_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_acs_oc_txt.setReadOnly(True)
         self.enc_acs_oc_txt.setClearButtonEnabled(False)
@@ -3256,16 +3390,19 @@ class Ui_main_window(object):
         self.verticalLayout_35.setObjectName("verticalLayout_35")
         self.enc_acs_twn_table = QtWidgets.QTableWidget(self.enc_acs_twn_frame)
         self.enc_acs_twn_table.setStyleSheet("QTableWidget {\n"
-"    gridline-color: rgb(48, 47, 47);\n"
+"    color: rgb(48, 47, 47);\n"
+"    gridline-color: rgb(159, 115, 171);\n"
+"    selection-background-color: rgb(182, 174, 204);\n"
+"    selection-color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QHeaderView::section {\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}\n"
 "\n"
 "QTableCornerButton::section {\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}")
         self.enc_acs_twn_table.setAutoScroll(True)
         self.enc_acs_twn_table.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
@@ -3287,16 +3424,19 @@ class Ui_main_window(object):
         self.verticalLayout_38.setObjectName("verticalLayout_38")
         self.enc_acs_twl_table = QtWidgets.QTableWidget(self.enc_acs_twl_frame)
         self.enc_acs_twl_table.setStyleSheet("QTableWidget {\n"
-"    gridline-color: rgb(48, 47, 47);\n"
+"    color: rgb(48, 47, 47);\n"
+"    gridline-color: rgb(159, 115, 171);\n"
+"    selection-background-color: rgb(182, 174, 204);\n"
+"    selection-color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QHeaderView::section {\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}\n"
 "\n"
 "QTableCornerButton::section {\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}")
         self.enc_acs_twl_table.setAutoScroll(True)
         self.enc_acs_twl_table.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
@@ -3322,14 +3462,15 @@ class Ui_main_window(object):
         self.enc_acs_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_acs_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.enc_acs_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.enc_acs_btn.setObjectName("enc_acs_btn")
         self.horizontalLayout_59.addWidget(self.enc_acs_btn)
@@ -3342,7 +3483,7 @@ class Ui_main_window(object):
         self.horizontalLayout_66.setObjectName("horizontalLayout_66")
         self.dec_acs = QtWidgets.QFrame(self.dec_acs_tab)
         self.dec_acs.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_acs.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_acs.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -3385,22 +3526,24 @@ class Ui_main_window(object):
         self.dec_acs_msg_lbl = QtWidgets.QLabel(self.dec_acs_msg_frame)
         self.dec_acs_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_acs_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_acs_msg_lbl.setObjectName("dec_acs_msg_lbl")
         self.horizontalLayout_61.addWidget(self.dec_acs_msg_lbl)
         self.dec_acs_msg_txt = QtWidgets.QLineEdit(self.dec_acs_msg_frame)
         self.dec_acs_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_acs_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_acs_msg_txt.setClearButtonEnabled(True)
         self.dec_acs_msg_txt.setObjectName("dec_acs_msg_txt")
@@ -3420,22 +3563,24 @@ class Ui_main_window(object):
         self.dec_acs_key_a_lbl = QtWidgets.QLabel(self.dec_acs_key_a_frame)
         self.dec_acs_key_a_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_acs_key_a_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_acs_key_a_lbl.setObjectName("dec_acs_key_a_lbl")
         self.horizontalLayout_62.addWidget(self.dec_acs_key_a_lbl)
         self.dec_acs_key_a_txt = QtWidgets.QLineEdit(self.dec_acs_key_a_frame)
         self.dec_acs_key_a_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_acs_key_a_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_acs_key_a_txt.setClearButtonEnabled(True)
         self.dec_acs_key_a_txt.setObjectName("dec_acs_key_a_txt")
@@ -3455,22 +3600,24 @@ class Ui_main_window(object):
         self.dec_acs_key_b_lbl = QtWidgets.QLabel(self.dec_acs_key_b_frame)
         self.dec_acs_key_b_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_acs_key_b_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_acs_key_b_lbl.setObjectName("dec_acs_key_b_lbl")
         self.horizontalLayout_71.addWidget(self.dec_acs_key_b_lbl)
         self.dec_acs_key_b_txt = QtWidgets.QLineEdit(self.dec_acs_key_b_frame)
         self.dec_acs_key_b_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_acs_key_b_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_acs_key_b_txt.setClearButtonEnabled(True)
         self.dec_acs_key_b_txt.setObjectName("dec_acs_key_b_txt")
@@ -3502,22 +3649,24 @@ class Ui_main_window(object):
         self.dec_acs_oc_lbl = QtWidgets.QLabel(self.dec_acs_oc_frame)
         self.dec_acs_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_acs_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_acs_oc_lbl.setObjectName("dec_acs_oc_lbl")
         self.horizontalLayout_63.addWidget(self.dec_acs_oc_lbl)
         self.dec_acs_oc_txt = QtWidgets.QLineEdit(self.dec_acs_oc_frame)
         self.dec_acs_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_acs_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_acs_oc_txt.setReadOnly(True)
         self.dec_acs_oc_txt.setClearButtonEnabled(False)
@@ -3558,16 +3707,19 @@ class Ui_main_window(object):
         self.verticalLayout_36.setObjectName("verticalLayout_36")
         self.dec_acs_twn_table = QtWidgets.QTableWidget(self.dec_acs_twn_frame)
         self.dec_acs_twn_table.setStyleSheet("QTableWidget {\n"
-"    gridline-color: rgb(48, 47, 47);\n"
+"    color: rgb(48, 47, 47);\n"
+"    gridline-color: rgb(159, 115, 171);\n"
+"    selection-background-color: rgb(182, 174, 204);\n"
+"    selection-color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QHeaderView::section {\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}\n"
 "\n"
 "QTableCornerButton::section {\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}")
         self.dec_acs_twn_table.setAutoScroll(True)
         self.dec_acs_twn_table.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
@@ -3589,16 +3741,19 @@ class Ui_main_window(object):
         self.verticalLayout_39.setObjectName("verticalLayout_39")
         self.dec_acs_twl_table = QtWidgets.QTableWidget(self.dec_acs_twl_frame)
         self.dec_acs_twl_table.setStyleSheet("QTableWidget {\n"
-"    gridline-color: rgb(48, 47, 47);\n"
+"    color: rgb(48, 47, 47);\n"
+"    gridline-color: rgb(159, 115, 171);\n"
+"    selection-background-color: rgb(182, 174, 204);\n"
+"    selection-color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QHeaderView::section {\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}\n"
 "\n"
 "QTableCornerButton::section {\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}")
         self.dec_acs_twl_table.setAutoScroll(True)
         self.dec_acs_twl_table.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
@@ -3624,14 +3779,15 @@ class Ui_main_window(object):
         self.dec_acs_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.dec_acs_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.dec_acs_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.dec_acs_btn.setObjectName("dec_acs_btn")
         self.horizontalLayout_65.addWidget(self.dec_acs_btn)
@@ -3647,26 +3803,27 @@ class Ui_main_window(object):
         self.horizontalLayout_91.setObjectName("horizontalLayout_91")
         self.kcs_types_tab = QtWidgets.QTabWidget(self.kcs_page)
         self.kcs_types_tab.setStyleSheet("QTabWidget::pane {\n"
-"    background: rgb(46, 44, 44);\n"
+"    background: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab {\n"
 "    height: 25px;\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    padding: 10 120px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab:selected {\n"
-"    border: 1px solid rgb(30, 30, 30);\n"
-"    background-color: rgb(30, 30, 30);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(240, 243, 249);\n"
+"    background-color: rgb(240, 243, 249);\n"
+"    color: rgb(48, 47, 47);\n"
 "}\n"
 "\n"
 "QTabBar::tab:hover {\n"
-"    background-color: rgb(67, 67, 67);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"    color: rgb(240, 243, 249);\n"
 "}")
         self.kcs_types_tab.setElideMode(QtCore.Qt.ElideNone)
         self.kcs_types_tab.setDocumentMode(False)
@@ -3678,7 +3835,7 @@ class Ui_main_window(object):
         self.horizontalLayout_73.setObjectName("horizontalLayout_73")
         self.enc_kcs = QtWidgets.QFrame(self.enc_kcs_tab)
         self.enc_kcs.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_kcs.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_kcs.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -3721,22 +3878,24 @@ class Ui_main_window(object):
         self.enc_kcs_msg_lbl = QtWidgets.QLabel(self.enc_kcs_msg_frame)
         self.enc_kcs_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_kcs_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_kcs_msg_lbl.setObjectName("enc_kcs_msg_lbl")
         self.horizontalLayout_75.addWidget(self.enc_kcs_msg_lbl)
         self.enc_kcs_msg_txt = QtWidgets.QLineEdit(self.enc_kcs_msg_frame)
         self.enc_kcs_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_kcs_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_kcs_msg_txt.setClearButtonEnabled(True)
         self.enc_kcs_msg_txt.setObjectName("enc_kcs_msg_txt")
@@ -3756,22 +3915,24 @@ class Ui_main_window(object):
         self.enc_kcs_key_lbl = QtWidgets.QLabel(self.enc_kcs_key_frame)
         self.enc_kcs_key_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_kcs_key_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_kcs_key_lbl.setObjectName("enc_kcs_key_lbl")
         self.horizontalLayout_76.addWidget(self.enc_kcs_key_lbl)
         self.enc_kcs_key_txt = QtWidgets.QLineEdit(self.enc_kcs_key_frame)
         self.enc_kcs_key_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_kcs_key_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_kcs_key_txt.setClearButtonEnabled(True)
         self.enc_kcs_key_txt.setObjectName("enc_kcs_key_txt")
@@ -3791,22 +3952,24 @@ class Ui_main_window(object):
         self.enc_kcs_key_k_lbl = QtWidgets.QLabel(self.enc_kcs_key_k_frame)
         self.enc_kcs_key_k_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_kcs_key_k_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_kcs_key_k_lbl.setObjectName("enc_kcs_key_k_lbl")
         self.horizontalLayout_77.addWidget(self.enc_kcs_key_k_lbl)
         self.enc_kcs_key_k_txt = QtWidgets.QLineEdit(self.enc_kcs_key_k_frame)
         self.enc_kcs_key_k_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_kcs_key_k_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_kcs_key_k_txt.setClearButtonEnabled(True)
         self.enc_kcs_key_k_txt.setObjectName("enc_kcs_key_k_txt")
@@ -3838,22 +4001,24 @@ class Ui_main_window(object):
         self.enc_kcs_oc_lbl = QtWidgets.QLabel(self.enc_kcs_oc_frame)
         self.enc_kcs_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_kcs_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_kcs_oc_lbl.setObjectName("enc_kcs_oc_lbl")
         self.horizontalLayout_78.addWidget(self.enc_kcs_oc_lbl)
         self.enc_kcs_oc_txt = QtWidgets.QLineEdit(self.enc_kcs_oc_frame)
         self.enc_kcs_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_kcs_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_kcs_oc_txt.setReadOnly(True)
         self.enc_kcs_oc_txt.setClearButtonEnabled(False)
@@ -3894,14 +4059,16 @@ class Ui_main_window(object):
         self.verticalLayout_40.setObjectName("verticalLayout_40")
         self.enc_kcs_tsb_text = QtWidgets.QTextEdit(self.enc_kcs_tsb_frame)
         self.enc_kcs_tsb_text.setStyleSheet("QTextEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QTextEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_kcs_tsb_text.setReadOnly(True)
         self.enc_kcs_tsb_text.setObjectName("enc_kcs_tsb_text")
@@ -3919,16 +4086,19 @@ class Ui_main_window(object):
         self.verticalLayout_41.setObjectName("verticalLayout_41")
         self.enc_kcs_wsb_table = QtWidgets.QTableWidget(self.enc_kcs_wsb_frame)
         self.enc_kcs_wsb_table.setStyleSheet("QTableWidget {\n"
-"    gridline-color: rgb(48, 47, 47);\n"
+"    color: rgb(48, 47, 47);\n"
+"    gridline-color: rgb(159, 115, 171);\n"
+"    selection-background-color: rgb(182, 174, 204);\n"
+"    selection-color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QHeaderView::section {\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}\n"
 "\n"
 "QTableCornerButton::section {\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}")
         self.enc_kcs_wsb_table.setAutoScroll(True)
         self.enc_kcs_wsb_table.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
@@ -3954,14 +4124,15 @@ class Ui_main_window(object):
         self.enc_kcs_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_kcs_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.enc_kcs_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.enc_kcs_btn.setObjectName("enc_kcs_btn")
         self.horizontalLayout_81.addWidget(self.enc_kcs_btn)
@@ -3974,7 +4145,7 @@ class Ui_main_window(object):
         self.horizontalLayout_90.setObjectName("horizontalLayout_90")
         self.dec_kcs = QtWidgets.QFrame(self.dec_kcs_tab)
         self.dec_kcs.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_kcs.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_kcs.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -4017,22 +4188,24 @@ class Ui_main_window(object):
         self.dec_kcs_msg_lbl = QtWidgets.QLabel(self.dec_kcs_msg_frame)
         self.dec_kcs_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_kcs_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_kcs_msg_lbl.setObjectName("dec_kcs_msg_lbl")
         self.horizontalLayout_83.addWidget(self.dec_kcs_msg_lbl)
         self.dec_kcs_msg_txt = QtWidgets.QLineEdit(self.dec_kcs_msg_frame)
         self.dec_kcs_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_kcs_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_kcs_msg_txt.setClearButtonEnabled(True)
         self.dec_kcs_msg_txt.setObjectName("dec_kcs_msg_txt")
@@ -4052,22 +4225,24 @@ class Ui_main_window(object):
         self.dec_kcs_key_lbl = QtWidgets.QLabel(self.dec_kcs_key_frame)
         self.dec_kcs_key_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_kcs_key_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_kcs_key_lbl.setObjectName("dec_kcs_key_lbl")
         self.horizontalLayout_84.addWidget(self.dec_kcs_key_lbl)
         self.dec_kcs_key_txt = QtWidgets.QLineEdit(self.dec_kcs_key_frame)
         self.dec_kcs_key_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_kcs_key_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_kcs_key_txt.setClearButtonEnabled(True)
         self.dec_kcs_key_txt.setObjectName("dec_kcs_key_txt")
@@ -4087,22 +4262,24 @@ class Ui_main_window(object):
         self.dec_kcs_key_k_lbl = QtWidgets.QLabel(self.dec_kcs_key_k_frame)
         self.dec_kcs_key_k_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_kcs_key_k_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_kcs_key_k_lbl.setObjectName("dec_kcs_key_k_lbl")
         self.horizontalLayout_85.addWidget(self.dec_kcs_key_k_lbl)
         self.dec_kcs_key_k_txt = QtWidgets.QLineEdit(self.dec_kcs_key_k_frame)
         self.dec_kcs_key_k_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_kcs_key_k_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_kcs_key_k_txt.setClearButtonEnabled(True)
         self.dec_kcs_key_k_txt.setObjectName("dec_kcs_key_k_txt")
@@ -4134,22 +4311,24 @@ class Ui_main_window(object):
         self.dec_kcs_oc_lbl = QtWidgets.QLabel(self.dec_kcs_oc_frame)
         self.dec_kcs_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_kcs_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_kcs_oc_lbl.setObjectName("dec_kcs_oc_lbl")
         self.horizontalLayout_86.addWidget(self.dec_kcs_oc_lbl)
         self.dec_kcs_oc_txt = QtWidgets.QLineEdit(self.dec_kcs_oc_frame)
         self.dec_kcs_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_kcs_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_kcs_oc_txt.setReadOnly(True)
         self.dec_kcs_oc_txt.setClearButtonEnabled(False)
@@ -4190,14 +4369,16 @@ class Ui_main_window(object):
         self.verticalLayout_45.setObjectName("verticalLayout_45")
         self.dec_kcs_tsb_text = QtWidgets.QTextEdit(self.dec_kcs_tsb_frame)
         self.dec_kcs_tsb_text.setStyleSheet("QTextEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QTextEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_kcs_tsb_text.setReadOnly(True)
         self.dec_kcs_tsb_text.setObjectName("dec_kcs_tsb_text")
@@ -4215,16 +4396,19 @@ class Ui_main_window(object):
         self.verticalLayout_46.setObjectName("verticalLayout_46")
         self.dec_kcs_wsb_table = QtWidgets.QTableWidget(self.dec_kcs_wsb_frame)
         self.dec_kcs_wsb_table.setStyleSheet("QTableWidget {\n"
-"    gridline-color: rgb(48, 47, 47);\n"
+"    color: rgb(48, 47, 47);\n"
+"    gridline-color: rgb(159, 115, 171);\n"
+"    selection-background-color: rgb(182, 174, 204);\n"
+"    selection-color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QHeaderView::section {\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}\n"
 "\n"
 "QTableCornerButton::section {\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}")
         self.dec_kcs_wsb_table.setAutoScroll(True)
         self.dec_kcs_wsb_table.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
@@ -4250,14 +4434,15 @@ class Ui_main_window(object):
         self.dec_kcs_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.dec_kcs_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.dec_kcs_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.dec_kcs_btn.setObjectName("dec_kcs_btn")
         self.horizontalLayout_89.addWidget(self.dec_kcs_btn)
@@ -4273,26 +4458,27 @@ class Ui_main_window(object):
         self.horizontalLayout_69.setObjectName("horizontalLayout_69")
         self.ts_types_tab = QtWidgets.QTabWidget(self.ts_page)
         self.ts_types_tab.setStyleSheet("QTabWidget::pane {\n"
-"    background: rgb(46, 44, 44);\n"
+"    background: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab {\n"
 "    height: 25px;\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    padding: 10 120px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab:selected {\n"
-"    border: 1px solid rgb(30, 30, 30);\n"
-"    background-color: rgb(30, 30, 30);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(240, 243, 249);\n"
+"    background-color: rgb(240, 243, 249);\n"
+"    color: rgb(48, 47, 47);\n"
 "}\n"
 "\n"
 "QTabBar::tab:hover {\n"
-"    background-color: rgb(67, 67, 67);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"    color: rgb(240, 243, 249);\n"
 "}")
         self.ts_types_tab.setElideMode(QtCore.Qt.ElideNone)
         self.ts_types_tab.setDocumentMode(False)
@@ -4304,7 +4490,7 @@ class Ui_main_window(object):
         self.horizontalLayout_92.setObjectName("horizontalLayout_92")
         self.enc_ts = QtWidgets.QFrame(self.enc_ts_tab)
         self.enc_ts.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_ts.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_ts.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -4347,22 +4533,24 @@ class Ui_main_window(object):
         self.enc_ts_msg_lbl = QtWidgets.QLabel(self.enc_ts_msg_frame)
         self.enc_ts_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_ts_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_ts_msg_lbl.setObjectName("enc_ts_msg_lbl")
         self.horizontalLayout_94.addWidget(self.enc_ts_msg_lbl)
         self.enc_ts_msg_txt = QtWidgets.QLineEdit(self.enc_ts_msg_frame)
         self.enc_ts_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_ts_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_ts_msg_txt.setClearButtonEnabled(True)
         self.enc_ts_msg_txt.setObjectName("enc_ts_msg_txt")
@@ -4382,22 +4570,24 @@ class Ui_main_window(object):
         self.enc_ts_row_lbl = QtWidgets.QLabel(self.enc_ts_row_frame)
         self.enc_ts_row_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_ts_row_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_ts_row_lbl.setObjectName("enc_ts_row_lbl")
         self.horizontalLayout_95.addWidget(self.enc_ts_row_lbl)
         self.enc_ts_row_txt = QtWidgets.QLineEdit(self.enc_ts_row_frame)
         self.enc_ts_row_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_ts_row_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_ts_row_txt.setClearButtonEnabled(True)
         self.enc_ts_row_txt.setObjectName("enc_ts_row_txt")
@@ -4417,22 +4607,24 @@ class Ui_main_window(object):
         self.enc_ts_clm_lbl = QtWidgets.QLabel(self.enc_ts_clm_frame)
         self.enc_ts_clm_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_ts_clm_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_ts_clm_lbl.setObjectName("enc_ts_clm_lbl")
         self.horizontalLayout_110.addWidget(self.enc_ts_clm_lbl)
         self.enc_ts_clm_txt = QtWidgets.QLineEdit(self.enc_ts_clm_frame)
         self.enc_ts_clm_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_ts_clm_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_ts_clm_txt.setClearButtonEnabled(True)
         self.enc_ts_clm_txt.setObjectName("enc_ts_clm_txt")
@@ -4452,22 +4644,24 @@ class Ui_main_window(object):
         self.enc_ts_key_lbl = QtWidgets.QLabel(self.enc_ts_key_frame)
         self.enc_ts_key_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_ts_key_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_ts_key_lbl.setObjectName("enc_ts_key_lbl")
         self.horizontalLayout_96.addWidget(self.enc_ts_key_lbl)
         self.enc_ts_key_txt = QtWidgets.QLineEdit(self.enc_ts_key_frame)
         self.enc_ts_key_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_ts_key_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_ts_key_txt.setClearButtonEnabled(True)
         self.enc_ts_key_txt.setObjectName("enc_ts_key_txt")
@@ -4499,22 +4693,24 @@ class Ui_main_window(object):
         self.enc_ts_oc_lbl = QtWidgets.QLabel(self.enc_ts_oc_frame)
         self.enc_ts_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_ts_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_ts_oc_lbl.setObjectName("enc_ts_oc_lbl")
         self.horizontalLayout_97.addWidget(self.enc_ts_oc_lbl)
         self.enc_ts_oc_txt = QtWidgets.QLineEdit(self.enc_ts_oc_frame)
         self.enc_ts_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_ts_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_ts_oc_txt.setReadOnly(True)
         self.enc_ts_oc_txt.setClearButtonEnabled(False)
@@ -4545,20 +4741,22 @@ class Ui_main_window(object):
         self.enc_ts_ot_lbl = QtWidgets.QLabel(self.enc_ts_ot_frame)
         self.enc_ts_ot_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_ts_ot_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_ts_ot_lbl.setObjectName("enc_ts_ot_lbl")
         self.horizontalLayout_99.addWidget(self.enc_ts_ot_lbl)
         self.enc_ts_ot_txt = QtWidgets.QTextEdit(self.enc_ts_ot_frame)
         self.enc_ts_ot_txt.setStyleSheet("QTextEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QTextEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_ts_ot_txt.setReadOnly(True)
         self.enc_ts_ot_txt.setObjectName("enc_ts_ot_txt")
@@ -4579,14 +4777,15 @@ class Ui_main_window(object):
         self.enc_ts_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_ts_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.enc_ts_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.enc_ts_btn.setObjectName("enc_ts_btn")
         self.horizontalLayout_100.addWidget(self.enc_ts_btn)
@@ -4599,7 +4798,7 @@ class Ui_main_window(object):
         self.horizontalLayout_109.setObjectName("horizontalLayout_109")
         self.dec_ts = QtWidgets.QFrame(self.dec_ts_tab)
         self.dec_ts.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_ts.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_ts.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -4642,22 +4841,24 @@ class Ui_main_window(object):
         self.dec_ts_msg_lbl = QtWidgets.QLabel(self.dec_ts_msg_frame)
         self.dec_ts_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_ts_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_ts_msg_lbl.setObjectName("dec_ts_msg_lbl")
         self.horizontalLayout_102.addWidget(self.dec_ts_msg_lbl)
         self.dec_ts_msg_txt = QtWidgets.QLineEdit(self.dec_ts_msg_frame)
         self.dec_ts_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_ts_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_ts_msg_txt.setClearButtonEnabled(True)
         self.dec_ts_msg_txt.setObjectName("dec_ts_msg_txt")
@@ -4677,22 +4878,24 @@ class Ui_main_window(object):
         self.dec_ts_row_lbl = QtWidgets.QLabel(self.dec_ts_row_frame)
         self.dec_ts_row_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_ts_row_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_ts_row_lbl.setObjectName("dec_ts_row_lbl")
         self.horizontalLayout_103.addWidget(self.dec_ts_row_lbl)
         self.dec_ts_row_txt = QtWidgets.QLineEdit(self.dec_ts_row_frame)
         self.dec_ts_row_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_ts_row_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_ts_row_txt.setClearButtonEnabled(True)
         self.dec_ts_row_txt.setObjectName("dec_ts_row_txt")
@@ -4712,22 +4915,24 @@ class Ui_main_window(object):
         self.dec_ts_clm_lbl = QtWidgets.QLabel(self.dec_ts_clm_frame)
         self.dec_ts_clm_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_ts_clm_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_ts_clm_lbl.setObjectName("dec_ts_clm_lbl")
         self.horizontalLayout_111.addWidget(self.dec_ts_clm_lbl)
         self.dec_ts_clm_txt = QtWidgets.QLineEdit(self.dec_ts_clm_frame)
         self.dec_ts_clm_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_ts_clm_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_ts_clm_txt.setClearButtonEnabled(True)
         self.dec_ts_clm_txt.setObjectName("dec_ts_clm_txt")
@@ -4747,22 +4952,24 @@ class Ui_main_window(object):
         self.dec_ts_key_lbl = QtWidgets.QLabel(self.dec_ts_key_frame)
         self.dec_ts_key_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_ts_key_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_ts_key_lbl.setObjectName("dec_ts_key_lbl")
         self.horizontalLayout_104.addWidget(self.dec_ts_key_lbl)
         self.dec_ts_key_txt = QtWidgets.QLineEdit(self.dec_ts_key_frame)
         self.dec_ts_key_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_ts_key_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_ts_key_txt.setClearButtonEnabled(True)
         self.dec_ts_key_txt.setObjectName("dec_ts_key_txt")
@@ -4794,22 +5001,24 @@ class Ui_main_window(object):
         self.dec_ts_oc_lbl = QtWidgets.QLabel(self.dec_ts_oc_frame)
         self.dec_ts_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_ts_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_ts_oc_lbl.setObjectName("dec_ts_oc_lbl")
         self.horizontalLayout_105.addWidget(self.dec_ts_oc_lbl)
         self.dec_ts_oc_txt = QtWidgets.QLineEdit(self.dec_ts_oc_frame)
         self.dec_ts_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_ts_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_ts_oc_txt.setReadOnly(True)
         self.dec_ts_oc_txt.setClearButtonEnabled(False)
@@ -4840,20 +5049,22 @@ class Ui_main_window(object):
         self.dec_ts_ot_lbl = QtWidgets.QLabel(self.dec_ts_ot_frame)
         self.dec_ts_ot_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_ts_ot_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_ts_ot_lbl.setObjectName("dec_ts_ot_lbl")
         self.horizontalLayout_107.addWidget(self.dec_ts_ot_lbl)
         self.dec_ts_ot_txt = QtWidgets.QTextEdit(self.dec_ts_ot_frame)
         self.dec_ts_ot_txt.setStyleSheet("QTextEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QTextEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_ts_ot_txt.setReadOnly(True)
         self.dec_ts_ot_txt.setObjectName("dec_ts_ot_txt")
@@ -4874,14 +5085,15 @@ class Ui_main_window(object):
         self.dec_ts_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.dec_ts_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.dec_ts_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.dec_ts_btn.setObjectName("dec_ts_btn")
         self.horizontalLayout_108.addWidget(self.dec_ts_btn)
@@ -4897,26 +5109,27 @@ class Ui_main_window(object):
         self.horizontalLayout_130.setObjectName("horizontalLayout_130")
         self.vs_types_tab = QtWidgets.QTabWidget(self.vs_page)
         self.vs_types_tab.setStyleSheet("QTabWidget::pane {\n"
-"    background: rgb(46, 44, 44);\n"
+"    background: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab {\n"
 "    height: 25px;\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    padding: 10 120px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab:selected {\n"
-"    border: 1px solid rgb(30, 30, 30);\n"
-"    background-color: rgb(30, 30, 30);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(240, 243, 249);\n"
+"    background-color: rgb(240, 243, 249);\n"
+"    color: rgb(48, 47, 47);\n"
 "}\n"
 "\n"
 "QTabBar::tab:hover {\n"
-"    background-color: rgb(67, 67, 67);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"    color: rgb(240, 243, 249);\n"
 "}")
         self.vs_types_tab.setElideMode(QtCore.Qt.ElideNone)
         self.vs_types_tab.setDocumentMode(False)
@@ -4928,7 +5141,7 @@ class Ui_main_window(object):
         self.horizontalLayout_112.setObjectName("horizontalLayout_112")
         self.enc_vs = QtWidgets.QFrame(self.enc_vs_tab)
         self.enc_vs.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_vs.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_vs.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -4971,22 +5184,24 @@ class Ui_main_window(object):
         self.enc_vs_msg_lbl = QtWidgets.QLabel(self.enc_vs_msg_frame)
         self.enc_vs_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_vs_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_vs_msg_lbl.setObjectName("enc_vs_msg_lbl")
         self.horizontalLayout_114.addWidget(self.enc_vs_msg_lbl)
         self.enc_vs_msg_txt = QtWidgets.QLineEdit(self.enc_vs_msg_frame)
         self.enc_vs_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_vs_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_vs_msg_txt.setClearButtonEnabled(True)
         self.enc_vs_msg_txt.setObjectName("enc_vs_msg_txt")
@@ -5006,22 +5221,24 @@ class Ui_main_window(object):
         self.enc_vs_key_lbl = QtWidgets.QLabel(self.enc_vs_key_frame)
         self.enc_vs_key_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_vs_key_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_vs_key_lbl.setObjectName("enc_vs_key_lbl")
         self.horizontalLayout_115.addWidget(self.enc_vs_key_lbl)
         self.enc_vs_key_txt = QtWidgets.QLineEdit(self.enc_vs_key_frame)
         self.enc_vs_key_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_vs_key_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_vs_key_txt.setClearButtonEnabled(True)
         self.enc_vs_key_txt.setObjectName("enc_vs_key_txt")
@@ -5053,22 +5270,24 @@ class Ui_main_window(object):
         self.enc_vs_oc_lbl = QtWidgets.QLabel(self.enc_vs_oc_frame)
         self.enc_vs_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_vs_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_vs_oc_lbl.setObjectName("enc_vs_oc_lbl")
         self.horizontalLayout_117.addWidget(self.enc_vs_oc_lbl)
         self.enc_vs_oc_txt = QtWidgets.QLineEdit(self.enc_vs_oc_frame)
         self.enc_vs_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_vs_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_vs_oc_txt.setReadOnly(True)
         self.enc_vs_oc_txt.setClearButtonEnabled(False)
@@ -5109,14 +5328,16 @@ class Ui_main_window(object):
         self.verticalLayout_56.setObjectName("verticalLayout_56")
         self.enc_vs_tsb_text = QtWidgets.QTextEdit(self.enc_vs_tsb_frame)
         self.enc_vs_tsb_text.setStyleSheet("QTextEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QTextEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_vs_tsb_text.setReadOnly(True)
         self.enc_vs_tsb_text.setObjectName("enc_vs_tsb_text")
@@ -5134,16 +5355,19 @@ class Ui_main_window(object):
         self.verticalLayout_57.setObjectName("verticalLayout_57")
         self.enc_vs_wsb_table = QtWidgets.QTableWidget(self.enc_vs_wsb_frame)
         self.enc_vs_wsb_table.setStyleSheet("QTableWidget {\n"
-"    gridline-color: rgb(48, 47, 47);\n"
+"    color: rgb(48, 47, 47);\n"
+"    gridline-color: rgb(159, 115, 171);\n"
+"    selection-background-color: rgb(182, 174, 204);\n"
+"    selection-color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QHeaderView::section {\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}\n"
 "\n"
 "QTableCornerButton::section {\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}")
         self.enc_vs_wsb_table.setAutoScroll(True)
         self.enc_vs_wsb_table.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
@@ -5169,14 +5393,15 @@ class Ui_main_window(object):
         self.enc_vs_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_vs_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.enc_vs_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.enc_vs_btn.setObjectName("enc_vs_btn")
         self.horizontalLayout_120.addWidget(self.enc_vs_btn)
@@ -5189,7 +5414,7 @@ class Ui_main_window(object):
         self.horizontalLayout_127.setObjectName("horizontalLayout_127")
         self.dec_vs = QtWidgets.QFrame(self.dec_vs_tab)
         self.dec_vs.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_vs.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_vs.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -5232,22 +5457,24 @@ class Ui_main_window(object):
         self.dec_vs_msg_lbl = QtWidgets.QLabel(self.dec_vs_msg_frame)
         self.dec_vs_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_vs_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_vs_msg_lbl.setObjectName("dec_vs_msg_lbl")
         self.horizontalLayout_121.addWidget(self.dec_vs_msg_lbl)
         self.dec_vs_msg_txt = QtWidgets.QLineEdit(self.dec_vs_msg_frame)
         self.dec_vs_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_vs_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_vs_msg_txt.setClearButtonEnabled(True)
         self.dec_vs_msg_txt.setObjectName("dec_vs_msg_txt")
@@ -5267,22 +5494,24 @@ class Ui_main_window(object):
         self.dec_vs_key_lbl = QtWidgets.QLabel(self.dec_vs_key_frame)
         self.dec_vs_key_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_vs_key_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_vs_key_lbl.setObjectName("dec_vs_key_lbl")
         self.horizontalLayout_122.addWidget(self.dec_vs_key_lbl)
         self.dec_vs_key_txt = QtWidgets.QLineEdit(self.dec_vs_key_frame)
         self.dec_vs_key_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_vs_key_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_vs_key_txt.setClearButtonEnabled(True)
         self.dec_vs_key_txt.setObjectName("dec_vs_key_txt")
@@ -5314,22 +5543,24 @@ class Ui_main_window(object):
         self.dec_vs_oc_lbl = QtWidgets.QLabel(self.dec_vs_oc_frame)
         self.dec_vs_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_vs_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_vs_oc_lbl.setObjectName("dec_vs_oc_lbl")
         self.horizontalLayout_123.addWidget(self.dec_vs_oc_lbl)
         self.dec_vs_oc_txt = QtWidgets.QLineEdit(self.dec_vs_oc_frame)
         self.dec_vs_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_vs_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_vs_oc_txt.setReadOnly(True)
         self.dec_vs_oc_txt.setClearButtonEnabled(False)
@@ -5370,14 +5601,16 @@ class Ui_main_window(object):
         self.verticalLayout_61.setObjectName("verticalLayout_61")
         self.dec_vs_tsb_text = QtWidgets.QTextEdit(self.dec_vs_tsb_frame)
         self.dec_vs_tsb_text.setStyleSheet("QTextEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QTextEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_vs_tsb_text.setReadOnly(True)
         self.dec_vs_tsb_text.setObjectName("dec_vs_tsb_text")
@@ -5395,16 +5628,19 @@ class Ui_main_window(object):
         self.verticalLayout_62.setObjectName("verticalLayout_62")
         self.dec_vs_wsb_table = QtWidgets.QTableWidget(self.dec_vs_wsb_frame)
         self.dec_vs_wsb_table.setStyleSheet("QTableWidget {\n"
-"    gridline-color: rgb(48, 47, 47);\n"
+"    color: rgb(48, 47, 47);\n"
+"    gridline-color: rgb(159, 115, 171);\n"
+"    selection-background-color: rgb(182, 174, 204);\n"
+"    selection-color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QHeaderView::section {\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}\n"
 "\n"
 "QTableCornerButton::section {\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}")
         self.dec_vs_wsb_table.setAutoScroll(True)
         self.dec_vs_wsb_table.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
@@ -5430,14 +5666,15 @@ class Ui_main_window(object):
         self.dec_vs_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.dec_vs_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.dec_vs_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.dec_vs_btn.setObjectName("dec_vs_btn")
         self.horizontalLayout_126.addWidget(self.dec_vs_btn)
@@ -5453,26 +5690,27 @@ class Ui_main_window(object):
         self.horizontalLayout_149.setObjectName("horizontalLayout_149")
         self.ps_types_tab = QtWidgets.QTabWidget(self.page_ps)
         self.ps_types_tab.setStyleSheet("QTabWidget::pane {\n"
-"    background: rgb(46, 44, 44);\n"
+"    background: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab {\n"
 "    height: 25px;\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    padding: 10 120px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab:selected {\n"
-"    border: 1px solid rgb(30, 30, 30);\n"
-"    background-color: rgb(30, 30, 30);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(240, 243, 249);\n"
+"    background-color: rgb(240, 243, 249);\n"
+"    color: rgb(48, 47, 47);\n"
 "}\n"
 "\n"
 "QTabBar::tab:hover {\n"
-"    background-color: rgb(67, 67, 67);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"    color: rgb(240, 243, 249);\n"
 "}")
         self.ps_types_tab.setElideMode(QtCore.Qt.ElideNone)
         self.ps_types_tab.setDocumentMode(False)
@@ -5484,7 +5722,7 @@ class Ui_main_window(object):
         self.horizontalLayout_128.setObjectName("horizontalLayout_128")
         self.enc_ps = QtWidgets.QFrame(self.enc_ps_tab)
         self.enc_ps.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_ps.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_ps.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -5527,22 +5765,24 @@ class Ui_main_window(object):
         self.enc_ps_msg_lbl = QtWidgets.QLabel(self.enc_ps_msg_frame)
         self.enc_ps_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_ps_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_ps_msg_lbl.setObjectName("enc_ps_msg_lbl")
         self.horizontalLayout_131.addWidget(self.enc_ps_msg_lbl)
         self.enc_ps_msg_txt = QtWidgets.QLineEdit(self.enc_ps_msg_frame)
         self.enc_ps_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_ps_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_ps_msg_txt.setClearButtonEnabled(True)
         self.enc_ps_msg_txt.setObjectName("enc_ps_msg_txt")
@@ -5562,22 +5802,24 @@ class Ui_main_window(object):
         self.enc_ps_row_lbl = QtWidgets.QLabel(self.enc_ps_row_frame)
         self.enc_ps_row_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_ps_row_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_ps_row_lbl.setObjectName("enc_ps_row_lbl")
         self.horizontalLayout_132.addWidget(self.enc_ps_row_lbl)
         self.enc_ps_row_txt = QtWidgets.QLineEdit(self.enc_ps_row_frame)
         self.enc_ps_row_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_ps_row_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_ps_row_txt.setClearButtonEnabled(True)
         self.enc_ps_row_txt.setObjectName("enc_ps_row_txt")
@@ -5597,22 +5839,24 @@ class Ui_main_window(object):
         self.enc_ps_clm_lbl = QtWidgets.QLabel(self.enc_ps_clm_frame)
         self.enc_ps_clm_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_ps_clm_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_ps_clm_lbl.setObjectName("enc_ps_clm_lbl")
         self.horizontalLayout_133.addWidget(self.enc_ps_clm_lbl)
         self.enc_ps_clm_txt = QtWidgets.QLineEdit(self.enc_ps_clm_frame)
         self.enc_ps_clm_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_ps_clm_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_ps_clm_txt.setClearButtonEnabled(True)
         self.enc_ps_clm_txt.setObjectName("enc_ps_clm_txt")
@@ -5632,22 +5876,24 @@ class Ui_main_window(object):
         self.enc_ps_key_lbl = QtWidgets.QLabel(self.enc_ps_key_frame)
         self.enc_ps_key_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_ps_key_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_ps_key_lbl.setObjectName("enc_ps_key_lbl")
         self.horizontalLayout_134.addWidget(self.enc_ps_key_lbl)
         self.enc_ps_key_txt = QtWidgets.QLineEdit(self.enc_ps_key_frame)
         self.enc_ps_key_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_ps_key_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_ps_key_txt.setClearButtonEnabled(True)
         self.enc_ps_key_txt.setObjectName("enc_ps_key_txt")
@@ -5679,22 +5925,24 @@ class Ui_main_window(object):
         self.enc_ps_oc_lbl = QtWidgets.QLabel(self.enc_ps_oc_frame)
         self.enc_ps_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_ps_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_ps_oc_lbl.setObjectName("enc_ps_oc_lbl")
         self.horizontalLayout_135.addWidget(self.enc_ps_oc_lbl)
         self.enc_ps_oc_txt = QtWidgets.QLineEdit(self.enc_ps_oc_frame)
         self.enc_ps_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_ps_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_ps_oc_txt.setReadOnly(True)
         self.enc_ps_oc_txt.setClearButtonEnabled(False)
@@ -5725,20 +5973,22 @@ class Ui_main_window(object):
         self.enc_ps_ot_lbl = QtWidgets.QLabel(self.enc_ps_ot_frame)
         self.enc_ps_ot_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_ps_ot_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_ps_ot_lbl.setObjectName("enc_ps_ot_lbl")
         self.horizontalLayout_137.addWidget(self.enc_ps_ot_lbl)
         self.enc_ps_ot_txt = QtWidgets.QTextEdit(self.enc_ps_ot_frame)
         self.enc_ps_ot_txt.setStyleSheet("QTextEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QTextEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_ps_ot_txt.setReadOnly(True)
         self.enc_ps_ot_txt.setObjectName("enc_ps_ot_txt")
@@ -5759,14 +6009,15 @@ class Ui_main_window(object):
         self.enc_ps_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_ps_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.enc_ps_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.enc_ps_btn.setObjectName("enc_ps_btn")
         self.horizontalLayout_138.addWidget(self.enc_ps_btn)
@@ -5779,7 +6030,7 @@ class Ui_main_window(object):
         self.horizontalLayout_148.setObjectName("horizontalLayout_148")
         self.dec_ps = QtWidgets.QFrame(self.dec_ps_tab)
         self.dec_ps.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_ps.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_ps.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -5822,22 +6073,24 @@ class Ui_main_window(object):
         self.dec_ps_msg_lbl = QtWidgets.QLabel(self.dec_ps_msg_frame)
         self.dec_ps_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_ps_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_ps_msg_lbl.setObjectName("dec_ps_msg_lbl")
         self.horizontalLayout_140.addWidget(self.dec_ps_msg_lbl)
         self.dec_ps_msg_txt = QtWidgets.QLineEdit(self.dec_ps_msg_frame)
         self.dec_ps_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_ps_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_ps_msg_txt.setClearButtonEnabled(True)
         self.dec_ps_msg_txt.setObjectName("dec_ps_msg_txt")
@@ -5857,22 +6110,24 @@ class Ui_main_window(object):
         self.dec_ps_row_lbl = QtWidgets.QLabel(self.dec_ps_row_frame)
         self.dec_ps_row_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_ps_row_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_ps_row_lbl.setObjectName("dec_ps_row_lbl")
         self.horizontalLayout_141.addWidget(self.dec_ps_row_lbl)
         self.dec_ps_row_txt = QtWidgets.QLineEdit(self.dec_ps_row_frame)
         self.dec_ps_row_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_ps_row_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_ps_row_txt.setClearButtonEnabled(True)
         self.dec_ps_row_txt.setObjectName("dec_ps_row_txt")
@@ -5892,22 +6147,24 @@ class Ui_main_window(object):
         self.dec_ps_clm_lbl = QtWidgets.QLabel(self.dec_ps_clm_frame)
         self.dec_ps_clm_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_ps_clm_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_ps_clm_lbl.setObjectName("dec_ps_clm_lbl")
         self.horizontalLayout_142.addWidget(self.dec_ps_clm_lbl)
         self.dec_ps_clm_txt = QtWidgets.QLineEdit(self.dec_ps_clm_frame)
         self.dec_ps_clm_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_ps_clm_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_ps_clm_txt.setClearButtonEnabled(True)
         self.dec_ps_clm_txt.setObjectName("dec_ps_clm_txt")
@@ -5927,22 +6184,24 @@ class Ui_main_window(object):
         self.dec_ps_key_lbl = QtWidgets.QLabel(self.dec_ps_key_frame)
         self.dec_ps_key_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_ps_key_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_ps_key_lbl.setObjectName("dec_ps_key_lbl")
         self.horizontalLayout_143.addWidget(self.dec_ps_key_lbl)
         self.dec_ps_key_txt = QtWidgets.QLineEdit(self.dec_ps_key_frame)
         self.dec_ps_key_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_ps_key_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_ps_key_txt.setClearButtonEnabled(True)
         self.dec_ps_key_txt.setObjectName("dec_ps_key_txt")
@@ -5974,22 +6233,24 @@ class Ui_main_window(object):
         self.dec_ps_oc_lbl = QtWidgets.QLabel(self.dec_ps_oc_frame)
         self.dec_ps_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_ps_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_ps_oc_lbl.setObjectName("dec_ps_oc_lbl")
         self.horizontalLayout_144.addWidget(self.dec_ps_oc_lbl)
         self.dec_ps_oc_txt = QtWidgets.QLineEdit(self.dec_ps_oc_frame)
         self.dec_ps_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_ps_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_ps_oc_txt.setReadOnly(True)
         self.dec_ps_oc_txt.setClearButtonEnabled(False)
@@ -6020,20 +6281,22 @@ class Ui_main_window(object):
         self.dec_ps_ot_lbl = QtWidgets.QLabel(self.dec_ps_ot_frame)
         self.dec_ps_ot_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_ps_ot_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_ps_ot_lbl.setObjectName("dec_ps_ot_lbl")
         self.horizontalLayout_146.addWidget(self.dec_ps_ot_lbl)
         self.dec_ps_ot_txt = QtWidgets.QTextEdit(self.dec_ps_ot_frame)
         self.dec_ps_ot_txt.setStyleSheet("QTextEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QTextEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_ps_ot_txt.setReadOnly(True)
         self.dec_ps_ot_txt.setObjectName("dec_ps_ot_txt")
@@ -6054,14 +6317,15 @@ class Ui_main_window(object):
         self.dec_ps_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.dec_ps_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.dec_ps_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.dec_ps_btn.setObjectName("dec_ps_btn")
         self.horizontalLayout_147.addWidget(self.dec_ps_btn)
@@ -6077,26 +6341,27 @@ class Ui_main_window(object):
         self.horizontalLayout_191.setObjectName("horizontalLayout_191")
         self.dp_types_tab = QtWidgets.QTabWidget(self.page_dp)
         self.dp_types_tab.setStyleSheet("QTabWidget::pane {\n"
-"    background: rgb(46, 44, 44);\n"
+"    background: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab {\n"
 "    height: 25px;\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    padding: 10 120px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QTabBar::tab:selected {\n"
-"    border: 1px solid rgb(30, 30, 30);\n"
-"    background-color: rgb(30, 30, 30);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(240, 243, 249);\n"
+"    background-color: rgb(240, 243, 249);\n"
+"    color: rgb(48, 47, 47);\n"
 "}\n"
 "\n"
 "QTabBar::tab:hover {\n"
-"    background-color: rgb(67, 67, 67);\n"
-"    color: rgb(255, 255, 255);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"    color: rgb(240, 243, 249);\n"
 "}")
         self.dp_types_tab.setElideMode(QtCore.Qt.ElideNone)
         self.dp_types_tab.setDocumentMode(False)
@@ -6108,7 +6373,7 @@ class Ui_main_window(object):
         self.horizontalLayout_153.setObjectName("horizontalLayout_153")
         self.enc_dp = QtWidgets.QFrame(self.en_dp_tab)
         self.enc_dp.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.enc_dp.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.enc_dp.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -6150,22 +6415,24 @@ class Ui_main_window(object):
         self.enc_dp_msg_lbl = QtWidgets.QLabel(self.enc_dp_msg_frame)
         self.enc_dp_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_dp_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_dp_msg_lbl.setObjectName("enc_dp_msg_lbl")
         self.horizontalLayout_160.addWidget(self.enc_dp_msg_lbl)
         self.enc_dp_msg_txt = QtWidgets.QLineEdit(self.enc_dp_msg_frame)
         self.enc_dp_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_dp_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_dp_msg_txt.setClearButtonEnabled(True)
         self.enc_dp_msg_txt.setObjectName("enc_dp_msg_txt")
@@ -6194,22 +6461,24 @@ class Ui_main_window(object):
         self.enc_dp_row_lbl = QtWidgets.QLabel(self.enc_dp_row_frame)
         self.enc_dp_row_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_dp_row_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_dp_row_lbl.setObjectName("enc_dp_row_lbl")
         self.horizontalLayout_161.addWidget(self.enc_dp_row_lbl)
         self.enc_dp_row_txt = QtWidgets.QLineEdit(self.enc_dp_row_frame)
         self.enc_dp_row_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_dp_row_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_dp_row_txt.setClearButtonEnabled(True)
         self.enc_dp_row_txt.setObjectName("enc_dp_row_txt")
@@ -6229,22 +6498,24 @@ class Ui_main_window(object):
         self.enc_dp_clm_lbl = QtWidgets.QLabel(self.enc_dp_clm_frame)
         self.enc_dp_clm_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_dp_clm_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_dp_clm_lbl.setObjectName("enc_dp_clm_lbl")
         self.horizontalLayout_170.addWidget(self.enc_dp_clm_lbl)
         self.enc_dp_clm_txt = QtWidgets.QLineEdit(self.enc_dp_clm_frame)
         self.enc_dp_clm_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_dp_clm_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_dp_clm_txt.setClearButtonEnabled(True)
         self.enc_dp_clm_txt.setObjectName("enc_dp_clm_txt")
@@ -6265,7 +6536,19 @@ class Ui_main_window(object):
         self.enc_dp_chk = QtWidgets.QCheckBox(self.enc_dp_chk_frame)
         self.enc_dp_chk.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_dp_chk.setStyleSheet("QCheckBox {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked {\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
+"    border-radius: 2px;\n"
+"    background-color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    border-radius: 2px;\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.enc_dp_chk.setObjectName("enc_dp_chk")
         self.horizontalLayout_192.addWidget(self.enc_dp_chk)
@@ -6296,22 +6579,24 @@ class Ui_main_window(object):
         self.enc_dp_oc_lbl = QtWidgets.QLabel(self.enc_dp_oc_frame)
         self.enc_dp_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.enc_dp_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.enc_dp_oc_lbl.setObjectName("enc_dp_oc_lbl")
         self.horizontalLayout_162.addWidget(self.enc_dp_oc_lbl)
         self.enc_dp_oc_txt = QtWidgets.QLineEdit(self.enc_dp_oc_frame)
         self.enc_dp_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.enc_dp_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.enc_dp_oc_txt.setReadOnly(True)
         self.enc_dp_oc_txt.setClearButtonEnabled(False)
@@ -6351,17 +6636,19 @@ class Ui_main_window(object):
         self.horizontalLayout_179.setObjectName("horizontalLayout_179")
         self.enc_dp_lt_table = QtWidgets.QTableWidget(self.enc_dp_lt_frame)
         self.enc_dp_lt_table.setStyleSheet("QTableWidget {\n"
-"    color: rgb(255, 255, 255);\n"
-"    gridline-color: rgb(48, 47, 47);\n"
+"    color: rgb(48, 47, 47);\n"
+"    gridline-color: rgb(159, 115, 171);\n"
+"    selection-background-color: rgb(182, 174, 204);\n"
+"    selection-color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QHeaderView::section {\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}\n"
 "\n"
 "QTableCornerButton::section {\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}")
         self.enc_dp_lt_table.setAutoScroll(True)
         self.enc_dp_lt_table.setEditTriggers(QtWidgets.QAbstractItemView.CurrentChanged)
@@ -6384,17 +6671,19 @@ class Ui_main_window(object):
         self.verticalLayout_76.setObjectName("verticalLayout_76")
         self.enc_dp_rt_table = QtWidgets.QTableWidget(self.enc_dp_rt_frame)
         self.enc_dp_rt_table.setStyleSheet("QTableWidget {\n"
-"    color: rgb(255, 255, 255);\n"
-"    gridline-color: rgb(48, 47, 47);\n"
+"    color: rgb(48, 47, 47);\n"
+"    gridline-color: rgb(159, 115, 171);\n"
+"    selection-background-color: rgb(182, 174, 204);\n"
+"    selection-color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QHeaderView::section {\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}\n"
 "\n"
 "QTableCornerButton::section {\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}")
         self.enc_dp_rt_table.setAutoScroll(True)
         self.enc_dp_rt_table.setEditTriggers(QtWidgets.QAbstractItemView.CurrentChanged)
@@ -6421,14 +6710,15 @@ class Ui_main_window(object):
         self.enc_dp_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_dp_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.enc_dp_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.enc_dp_btn.setObjectName("enc_dp_btn")
         self.horizontalLayout_180.addWidget(self.enc_dp_btn)
@@ -6441,7 +6731,7 @@ class Ui_main_window(object):
         self.horizontalLayout_190.setObjectName("horizontalLayout_190")
         self.dec_dp = QtWidgets.QFrame(self.dec_dp_tab)
         self.dec_dp.setStyleSheet("QFrame {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: none;\n"
 "}")
         self.dec_dp.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.dec_dp.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -6483,22 +6773,24 @@ class Ui_main_window(object):
         self.dec_dp_msg_lbl = QtWidgets.QLabel(self.dec_dp_msg_frame)
         self.dec_dp_msg_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_dp_msg_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_dp_msg_lbl.setObjectName("dec_dp_msg_lbl")
         self.horizontalLayout_182.addWidget(self.dec_dp_msg_lbl)
         self.dec_dp_msg_txt = QtWidgets.QLineEdit(self.dec_dp_msg_frame)
         self.dec_dp_msg_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_dp_msg_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_dp_msg_txt.setClearButtonEnabled(True)
         self.dec_dp_msg_txt.setObjectName("dec_dp_msg_txt")
@@ -6527,22 +6819,24 @@ class Ui_main_window(object):
         self.dec_dp_row_lbl = QtWidgets.QLabel(self.dec_dp_row_frame)
         self.dec_dp_row_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_dp_row_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_dp_row_lbl.setObjectName("dec_dp_row_lbl")
         self.horizontalLayout_183.addWidget(self.dec_dp_row_lbl)
         self.dec_dp_row_txt = QtWidgets.QLineEdit(self.dec_dp_row_frame)
         self.dec_dp_row_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_dp_row_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_dp_row_txt.setClearButtonEnabled(True)
         self.dec_dp_row_txt.setObjectName("dec_dp_row_txt")
@@ -6562,22 +6856,24 @@ class Ui_main_window(object):
         self.dec_dp_clm_lbl = QtWidgets.QLabel(self.dec_dp_clm_frame)
         self.dec_dp_clm_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_dp_clm_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_dp_clm_lbl.setObjectName("dec_dp_clm_lbl")
         self.horizontalLayout_184.addWidget(self.dec_dp_clm_lbl)
         self.dec_dp_clm_txt = QtWidgets.QLineEdit(self.dec_dp_clm_frame)
         self.dec_dp_clm_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_dp_clm_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_dp_clm_txt.setClearButtonEnabled(True)
         self.dec_dp_clm_txt.setObjectName("dec_dp_clm_txt")
@@ -6598,7 +6894,19 @@ class Ui_main_window(object):
         self.dec_dp_chk = QtWidgets.QCheckBox(self.dec_dp_chk_frame)
         self.dec_dp_chk.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_dp_chk.setStyleSheet("QCheckBox {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked {\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
+"    border-radius: 2px;\n"
+"    background-color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    border-radius: 2px;\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.dec_dp_chk.setObjectName("dec_dp_chk")
         self.horizontalLayout_195.addWidget(self.dec_dp_chk)
@@ -6629,22 +6937,24 @@ class Ui_main_window(object):
         self.dec_dp_oc_lbl = QtWidgets.QLabel(self.dec_dp_oc_frame)
         self.dec_dp_oc_lbl.setMinimumSize(QtCore.QSize(80, 45))
         self.dec_dp_oc_lbl.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
 "}")
         self.dec_dp_oc_lbl.setObjectName("dec_dp_oc_lbl")
         self.horizontalLayout_185.addWidget(self.dec_dp_oc_lbl)
         self.dec_dp_oc_txt = QtWidgets.QLineEdit(self.dec_dp_oc_frame)
         self.dec_dp_oc_txt.setMinimumSize(QtCore.QSize(0, 45))
         self.dec_dp_oc_txt.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid rgb(48, 47, 47);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
 "    margin: 0 0 0 18px;\n"
 "    padding: 0 3px;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-color: rgb(240, 243, 249);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QLineEdit:focus {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
 "}")
         self.dec_dp_oc_txt.setReadOnly(True)
         self.dec_dp_oc_txt.setClearButtonEnabled(False)
@@ -6684,17 +6994,19 @@ class Ui_main_window(object):
         self.horizontalLayout_188.setObjectName("horizontalLayout_188")
         self.dec_dp_lt_table = QtWidgets.QTableWidget(self.dec_dp_lt_frame)
         self.dec_dp_lt_table.setStyleSheet("QTableWidget {\n"
-"    color: rgb(255, 255, 255);\n"
-"    gridline-color: rgb(48, 47, 47);\n"
+"    color: rgb(48, 47, 47);\n"
+"    gridline-color: rgb(159, 115, 171);\n"
+"    selection-background-color: rgb(182, 174, 204);\n"
+"    selection-color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QHeaderView::section {\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}\n"
 "\n"
 "QTableCornerButton::section {\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}")
         self.dec_dp_lt_table.setAutoScroll(True)
         self.dec_dp_lt_table.setEditTriggers(QtWidgets.QAbstractItemView.CurrentChanged)
@@ -6717,17 +7029,19 @@ class Ui_main_window(object):
         self.verticalLayout_84.setObjectName("verticalLayout_84")
         self.dec_dp_rt_table = QtWidgets.QTableWidget(self.dec_dp_rt_frame)
         self.dec_dp_rt_table.setStyleSheet("QTableWidget {\n"
-"    color: rgb(255, 255, 255);\n"
-"    gridline-color: rgb(48, 47, 47);\n"
+"    color: rgb(48, 47, 47);\n"
+"    gridline-color: rgb(159, 115, 171);\n"
+"    selection-background-color: rgb(182, 174, 204);\n"
+"    selection-color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QHeaderView::section {\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}\n"
 "\n"
 "QTableCornerButton::section {\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}")
         self.dec_dp_rt_table.setAutoScroll(True)
         self.dec_dp_rt_table.setEditTriggers(QtWidgets.QAbstractItemView.CurrentChanged)
@@ -6754,14 +7068,15 @@ class Ui_main_window(object):
         self.dec_dp_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.dec_dp_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.dec_dp_btn.setStyleSheet("QPushButton {\n"
-"    border: 1px solid rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
 "    border-radius: 3px;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(77, 77, 77);\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}")
         self.dec_dp_btn.setObjectName("dec_dp_btn")
         self.horizontalLayout_189.addWidget(self.dec_dp_btn)
@@ -6774,7 +7089,7 @@ class Ui_main_window(object):
         self.status_frame = QtWidgets.QFrame(self.main_frame)
         self.status_frame.setMinimumSize(QtCore.QSize(0, 25))
         self.status_frame.setStyleSheet("QFrame {\n"
-"    background-color: rgb(48, 47, 47);\n"
+"    background-color: rgb(98, 79, 130);\n"
 "}")
         self.status_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.status_frame.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6786,14 +7101,19 @@ class Ui_main_window(object):
         self.enc_combo_box.setMinimumSize(QtCore.QSize(0, 25))
         self.enc_combo_box.setStyleSheet("QComboBox {\n"
 "    border: none;\n"
-"    background-color: rgb(48, 47, 47);\n"
-"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QComboBox:hover {\n"
+"    background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QComboBox QAbstractItemView {\n"
 "    outline: none;\n"
-"    color: rgb(255, 255, 255);\n"
-"    selection-background-color: rgb(60, 60, 60);\n"
+"    background-color: rgb(240, 243, 249);\n"
+"    color: rgb(48, 47, 47);\n"
+"    selection-background-color: rgb(159, 115, 171);\n"
 "}\n"
 "\n"
 "QComboBox::drop-down:button {\n"
@@ -6890,7 +7210,7 @@ class Ui_main_window(object):
         self.acs_types_tab.setCurrentIndex(0)
         self.kcs_types_tab.setCurrentIndex(0)
         self.ts_types_tab.setCurrentIndex(0)
-        self.vs_types_tab.setCurrentIndex(0)
+        self.vs_types_tab.setCurrentIndex(1)
         self.ps_types_tab.setCurrentIndex(0)
         self.dp_types_tab.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(main_window)

@@ -1,5 +1,6 @@
 from handlers import ms_handlers
 from events import event_components
+from components import scheme_colors, colors
 
 
 def init_magic_square(ui):
@@ -20,7 +21,9 @@ def init_magic_square(ui):
     event_components.tbl_rank_text_changed(ui.enc_ms_rank_txt, ui.enc_ms_ot_table, tbl_rank_limit)
     event_components.tbl_rank_text_changed(ui.dec_ms_rank_txt, ui.dec_ms_tms_table, tbl_rank_limit)
     event_components.tbl_rank_text_changed(ui.dec_ms_rank_txt, ui.dec_ms_ot_table, tbl_rank_limit)
-    event_components.tbl_pos_num_item_changed(ui.enc_ms_tms_table)
-    event_components.tbl_pos_num_item_changed(ui.dec_ms_tms_table)
+    color_default = scheme_colors.tbl_item_bg_default
+    color_err = scheme_colors.tbl_item_bg_err
+    event_components.tbl_pos_num_item_changed(ui.enc_ms_tms_table, color_default, color_err)
+    event_components.tbl_pos_num_item_changed(ui.dec_ms_tms_table, color_default, color_err)
     event_components.shortcut_return(ui.enc_ms_btn)
     event_components.shortcut_return(ui.dec_ms_btn)

@@ -74,7 +74,7 @@ def table_up_items(tbl_wgt):
 
 def table_num_items(tbl_wgt):
     size = table_size(tbl_wgt)
-    return [[int(tbl_wgt.item(row, column).text()) for column in range(size[1])] for roриw in range(size[0])]
+    return [[int(tbl_wgt.item(row, column).text()) for column in range(size[1])] for row in range(size[0])]
 
 
 def table_item(item_value, color):

@@ -21,7 +21,7 @@
   <widget class="QWidget" name="central_widget">
    <property name="styleSheet">
     <string notr="true">QWidget {
-	background-color: rgb(30, 30, 30);
+	background-color: rgb(240, 243, 249);
 }</string>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -81,26 +81,27 @@
             <widget class="QTabWidget" name="smp_types_tab">
              <property name="styleSheet">
               <string notr="true">QTabWidget::pane {
-	background: rgb(46, 44, 44);
+	background: rgb(240, 243, 249);
 }
 
 QTabBar::tab {
 	height: 25px;
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	padding: 10 120px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QTabBar::tab:selected {
-	border: 1px solid rgb(30, 30, 30);
-	background-color: rgb(30, 30, 30);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(240, 243, 249);
+	background-color: rgb(240, 243, 249);
+	color: rgb(48, 47, 47);
 }
 
 QTabBar::tab:hover {
-	background-color: rgb(67, 67, 67);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
+	color: rgb(240, 243, 249);
 }</string>
              </property>
              <property name="currentIndex">
@@ -124,7 +125,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_smp">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -234,7 +235,7 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -252,15 +253,17 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -313,7 +316,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -331,15 +334,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -392,7 +397,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -410,15 +415,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -500,7 +507,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -515,14 +522,16 @@ QLineEdit:focus {
                             <widget class="QTextEdit" name="enc_smp_ot_txt">
                              <property name="styleSheet">
                               <string notr="true">QTextEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QTextEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -607,7 +616,7 @@ QTextEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                           </property>
                           <property name="text">
@@ -625,15 +634,17 @@ QTextEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                           </property>
                           <property name="readOnly">
@@ -692,14 +703,15 @@ QLineEdit:focus {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -724,7 +736,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_smp">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -834,7 +846,7 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -852,15 +864,17 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -913,7 +927,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -931,15 +945,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -992,7 +1008,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -1010,15 +1026,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -1100,7 +1118,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -1115,14 +1133,16 @@ QLineEdit:focus {
                             <widget class="QTextEdit" name="dec_smp_ot_txt">
                              <property name="styleSheet">
                               <string notr="true">QTextEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QTextEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -1207,7 +1227,7 @@ QTextEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                           </property>
                           <property name="text">
@@ -1225,15 +1245,17 @@ QTextEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                           </property>
                           <property name="readOnly">
@@ -1283,14 +1305,15 @@ QLineEdit:focus {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -1328,26 +1351,27 @@ QPushButton:hover {
             <widget class="QTabWidget" name="kpm_types_tab">
              <property name="styleSheet">
               <string notr="true">QTabWidget::pane {
-	background: rgb(46, 44, 44);
+	background: rgb(240, 243, 249);
 }
 
 QTabBar::tab {
 	height: 25px;
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	padding: 10 120px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QTabBar::tab:selected {
-	border: 1px solid rgb(30, 30, 30);
-	background-color: rgb(30, 30, 30);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(240, 243, 249);
+	background-color: rgb(240, 243, 249);
+	color: rgb(48, 47, 47);
 }
 
 QTabBar::tab:hover {
-	background-color: rgb(67, 67, 67);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
+	color: rgb(240, 243, 249);
 }</string>
              </property>
              <property name="currentIndex">
@@ -1380,7 +1404,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_kpm">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -1484,7 +1508,7 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -1502,15 +1526,17 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -1563,7 +1589,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -1581,15 +1607,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -1642,7 +1670,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -1660,15 +1688,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -1721,7 +1751,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -1739,15 +1769,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -1829,7 +1861,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -1844,14 +1876,16 @@ QLineEdit:focus {
                             <widget class="QTextEdit" name="enc_kpm_ot_txt">
                              <property name="styleSheet">
                               <string notr="true">QTextEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QTextEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -1936,7 +1970,7 @@ QTextEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                           </property>
                           <property name="text">
@@ -1954,15 +1988,17 @@ QTextEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                           </property>
                           <property name="readOnly">
@@ -2021,14 +2057,15 @@ QLineEdit:focus {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -2053,7 +2090,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_kpm">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -2157,7 +2194,7 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -2175,15 +2212,17 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -2236,7 +2275,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -2254,15 +2293,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -2315,7 +2356,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -2333,15 +2374,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -2394,7 +2437,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -2412,15 +2455,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -2502,7 +2547,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -2517,14 +2562,16 @@ QLineEdit:focus {
                             <widget class="QTextEdit" name="dec_kpm_ot_txt">
                              <property name="styleSheet">
                               <string notr="true">QTextEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QTextEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -2609,7 +2656,7 @@ QTextEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                           </property>
                           <property name="text">
@@ -2627,15 +2674,17 @@ QTextEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                           </property>
                           <property name="readOnly">
@@ -2694,14 +2743,15 @@ QLineEdit:focus {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -2739,26 +2789,27 @@ QPushButton:hover {
             <widget class="QTabWidget" name="dpm_types_tab">
              <property name="styleSheet">
               <string notr="true">QTabWidget::pane {
-	background: rgb(46, 44, 44);
+	background: rgb(240, 243, 249);
 }
 
 QTabBar::tab {
 	height: 25px;
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	padding: 10 120px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QTabBar::tab:selected {
-	border: 1px solid rgb(30, 30, 30);
-	background-color: rgb(30, 30, 30);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(240, 243, 249);
+	background-color: rgb(240, 243, 249);
+	color: rgb(48, 47, 47);
 }
 
 QTabBar::tab:hover {
-	background-color: rgb(67, 67, 67);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
+	color: rgb(240, 243, 249);
 }</string>
              </property>
              <property name="currentIndex">
@@ -2791,7 +2842,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_dpm">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -2892,7 +2943,7 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -2910,15 +2961,17 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -2971,7 +3024,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -2989,15 +3042,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -3050,7 +3105,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -3068,15 +3123,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -3129,7 +3186,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -3147,15 +3204,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -3208,7 +3267,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -3226,15 +3285,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -3316,7 +3377,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -3331,14 +3392,16 @@ QLineEdit:focus {
                             <widget class="QTextEdit" name="enc_dpm_ot_txt">
                              <property name="styleSheet">
                               <string notr="true">QTextEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QTextEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -3423,7 +3486,7 @@ QTextEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                           </property>
                           <property name="text">
@@ -3441,15 +3504,17 @@ QTextEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                           </property>
                           <property name="readOnly">
@@ -3508,14 +3573,15 @@ QLineEdit:focus {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -3540,7 +3606,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_dpm">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -3641,7 +3707,7 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -3659,15 +3725,17 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -3720,7 +3788,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -3738,15 +3806,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -3799,7 +3869,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -3817,15 +3887,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -3878,7 +3950,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -3896,15 +3968,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -3957,7 +4031,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -3975,15 +4049,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -4065,7 +4141,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -4080,14 +4156,16 @@ QLineEdit:focus {
                             <widget class="QTextEdit" name="dec_dpm_ot_txt">
                              <property name="styleSheet">
                               <string notr="true">QTextEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QTextEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -4172,7 +4250,7 @@ QTextEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                           </property>
                           <property name="text">
@@ -4190,15 +4268,17 @@ QTextEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                           </property>
                           <property name="readOnly">
@@ -4257,14 +4337,15 @@ QLineEdit:focus {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -4302,26 +4383,27 @@ QPushButton:hover {
             <widget class="QTabWidget" name="ms_types_tab">
              <property name="styleSheet">
               <string notr="true">QTabWidget::pane {
-	background: rgb(46, 44, 44);
+	background: rgb(240, 243, 249);
 }
 
 QTabBar::tab {
 	height: 25px;
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	padding: 10 120px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QTabBar::tab:selected {
-	border: 1px solid rgb(30, 30, 30);
-	background-color: rgb(30, 30, 30);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(240, 243, 249);
+	background-color: rgb(240, 243, 249);
+	color: rgb(48, 47, 47);
 }
 
 QTabBar::tab:hover {
-	background-color: rgb(67, 67, 67);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
+	color: rgb(240, 243, 249);
 }</string>
              </property>
              <property name="currentIndex">
@@ -4345,7 +4427,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_ms">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -4446,7 +4528,7 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -4464,15 +4546,17 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -4546,7 +4630,7 @@ QLineEdit:focus {
                                 </property>
                                 <property name="styleSheet">
                                  <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                                 </property>
                                 <property name="text">
@@ -4564,15 +4648,17 @@ QLineEdit:focus {
                                 </property>
                                 <property name="styleSheet">
                                  <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                                 </property>
                                 <property name="text">
@@ -4660,7 +4746,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -4678,15 +4764,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -4767,17 +4855,19 @@ QLineEdit:focus {
                             <widget class="QTableWidget" name="enc_ms_tms_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
-	color: rgb(255, 255, 255);
-	gridline-color: rgb(48, 47, 47);
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
 }
 
 QHeaderView::section {
-	color: rgb(255, 255, 255);
-	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
 }
 
 QTableCornerButton::section {
-	background-color: rgb(48, 47, 47);
+	background-color: rgb(98, 79, 130);
 }</string>
                              </property>
                              <property name="autoScroll">
@@ -4841,16 +4931,19 @@ QTableCornerButton::section {
                             <widget class="QTableWidget" name="enc_ms_ot_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
-	gridline-color: rgb(48, 47, 47);
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
 }
 
 QHeaderView::section {
-	color: rgb(255, 255, 255);
-	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
 }
 
 QTableCornerButton::section {
-	background-color: rgb(48, 47, 47);
+	background-color: rgb(98, 79, 130);
 }</string>
                              </property>
                              <property name="autoScroll">
@@ -4929,14 +5022,15 @@ QTableCornerButton::section {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -4961,7 +5055,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_ms">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -5062,7 +5156,7 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -5080,15 +5174,17 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -5162,7 +5258,7 @@ QLineEdit:focus {
                                 </property>
                                 <property name="styleSheet">
                                  <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                                 </property>
                                 <property name="text">
@@ -5180,15 +5276,17 @@ QLineEdit:focus {
                                 </property>
                                 <property name="styleSheet">
                                  <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                                 </property>
                                 <property name="text">
@@ -5276,7 +5374,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -5294,15 +5392,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -5383,17 +5483,19 @@ QLineEdit:focus {
                             <widget class="QTableWidget" name="dec_ms_tms_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
-	color: rgb(255, 255, 255);
-	gridline-color: rgb(48, 47, 47);
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
 }
 
 QHeaderView::section {
-	color: rgb(255, 255, 255);
-	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
 }
 
 QTableCornerButton::section {
-	background-color: rgb(48, 47, 47);
+	background-color: rgb(98, 79, 130);
 }</string>
                              </property>
                              <property name="autoScroll">
@@ -5457,16 +5559,19 @@ QTableCornerButton::section {
                             <widget class="QTableWidget" name="dec_ms_ot_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
-	gridline-color: rgb(48, 47, 47);
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
 }
 
 QHeaderView::section {
-	color: rgb(255, 255, 255);
-	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
 }
 
 QTableCornerButton::section {
-	background-color: rgb(48, 47, 47);
+	background-color: rgb(98, 79, 130);
 }</string>
                              </property>
                              <property name="autoScroll">
@@ -5545,14 +5650,15 @@ QTableCornerButton::section {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -5590,26 +5696,27 @@ QPushButton:hover {
             <widget class="QTabWidget" name="cs_types_tab">
              <property name="styleSheet">
               <string notr="true">QTabWidget::pane {
-	background: rgb(46, 44, 44);
+	background: rgb(240, 243, 249);
 }
 
 QTabBar::tab {
 	height: 25px;
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	padding: 10 120px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QTabBar::tab:selected {
-	border: 1px solid rgb(30, 30, 30);
-	background-color: rgb(30, 30, 30);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(240, 243, 249);
+	background-color: rgb(240, 243, 249);
+	color: rgb(48, 47, 47);
 }
 
 QTabBar::tab:hover {
-	background-color: rgb(67, 67, 67);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
+	color: rgb(240, 243, 249);
 }</string>
              </property>
              <property name="currentIndex">
@@ -5633,7 +5740,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_cs">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -5743,7 +5850,7 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -5761,15 +5868,17 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -5822,7 +5931,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -5840,15 +5949,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -5930,7 +6041,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -5945,14 +6056,16 @@ QLineEdit:focus {
                             <widget class="QTextEdit" name="enc_cs_ot_txt">
                              <property name="styleSheet">
                               <string notr="true">QTextEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QTextEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -6037,7 +6150,7 @@ QTextEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                           </property>
                           <property name="text">
@@ -6055,15 +6168,17 @@ QTextEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                           </property>
                           <property name="readOnly">
@@ -6122,14 +6237,15 @@ QLineEdit:focus {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -6154,7 +6270,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_cs">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -6264,7 +6380,7 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -6282,15 +6398,17 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -6343,7 +6461,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -6361,15 +6479,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -6451,7 +6571,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -6466,14 +6586,16 @@ QLineEdit:focus {
                             <widget class="QTextEdit" name="dec_cs_ot_txt">
                              <property name="styleSheet">
                               <string notr="true">QTextEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QTextEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -6558,7 +6680,7 @@ QTextEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                           </property>
                           <property name="text">
@@ -6576,15 +6698,17 @@ QTextEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                           </property>
                           <property name="readOnly">
@@ -6643,14 +6767,15 @@ QLineEdit:focus {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -6688,26 +6813,27 @@ QPushButton:hover {
             <widget class="QTabWidget" name="acs_types_tab">
              <property name="styleSheet">
               <string notr="true">QTabWidget::pane {
-	background: rgb(46, 44, 44);
+	background: rgb(240, 243, 249);
 }
 
 QTabBar::tab {
 	height: 25px;
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	padding: 10 120px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QTabBar::tab:selected {
-	border: 1px solid rgb(30, 30, 30);
-	background-color: rgb(30, 30, 30);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(240, 243, 249);
+	background-color: rgb(240, 243, 249);
+	color: rgb(48, 47, 47);
 }
 
 QTabBar::tab:hover {
-	background-color: rgb(67, 67, 67);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
+	color: rgb(240, 243, 249);
 }</string>
              </property>
              <property name="currentIndex">
@@ -6731,7 +6857,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_acs">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -6835,7 +6961,7 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -6853,15 +6979,17 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -6914,7 +7042,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -6932,15 +7060,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -6993,7 +7123,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -7011,15 +7141,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -7101,7 +7233,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -7119,15 +7251,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -7220,16 +7354,19 @@ QLineEdit:focus {
                             <widget class="QTableWidget" name="enc_acs_twn_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
-	gridline-color: rgb(48, 47, 47);
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
 }
 
 QHeaderView::section {
-	color: rgb(255, 255, 255);
-	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
 }
 
 QTableCornerButton::section {
-	background-color: rgb(48, 47, 47);
+	background-color: rgb(98, 79, 130);
 }</string>
                              </property>
                              <property name="autoScroll">
@@ -7299,16 +7436,19 @@ QTableCornerButton::section {
                             <widget class="QTableWidget" name="enc_acs_twl_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
-	gridline-color: rgb(48, 47, 47);
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
 }
 
 QHeaderView::section {
-	color: rgb(255, 255, 255);
-	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
 }
 
 QTableCornerButton::section {
-	background-color: rgb(48, 47, 47);
+	background-color: rgb(98, 79, 130);
 }</string>
                              </property>
                              <property name="autoScroll">
@@ -7393,14 +7533,15 @@ QTableCornerButton::section {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -7425,7 +7566,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_acs">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -7529,7 +7670,7 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -7547,15 +7688,17 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -7608,7 +7751,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -7626,15 +7769,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -7687,7 +7832,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -7705,15 +7850,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -7795,7 +7942,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -7813,15 +7960,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -7914,16 +8063,19 @@ QLineEdit:focus {
                             <widget class="QTableWidget" name="dec_acs_twn_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
-	gridline-color: rgb(48, 47, 47);
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
 }
 
 QHeaderView::section {
-	color: rgb(255, 255, 255);
-	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
 }
 
 QTableCornerButton::section {
-	background-color: rgb(48, 47, 47);
+	background-color: rgb(98, 79, 130);
 }</string>
                              </property>
                              <property name="autoScroll">
@@ -7993,16 +8145,19 @@ QTableCornerButton::section {
                             <widget class="QTableWidget" name="dec_acs_twl_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
-	gridline-color: rgb(48, 47, 47);
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
 }
 
 QHeaderView::section {
-	color: rgb(255, 255, 255);
-	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
 }
 
 QTableCornerButton::section {
-	background-color: rgb(48, 47, 47);
+	background-color: rgb(98, 79, 130);
 }</string>
                              </property>
                              <property name="autoScroll">
@@ -8087,14 +8242,15 @@ QTableCornerButton::section {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -8132,26 +8288,27 @@ QPushButton:hover {
             <widget class="QTabWidget" name="kcs_types_tab">
              <property name="styleSheet">
               <string notr="true">QTabWidget::pane {
-	background: rgb(46, 44, 44);
+	background: rgb(240, 243, 249);
 }
 
 QTabBar::tab {
 	height: 25px;
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	padding: 10 120px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QTabBar::tab:selected {
-	border: 1px solid rgb(30, 30, 30);
-	background-color: rgb(30, 30, 30);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(240, 243, 249);
+	background-color: rgb(240, 243, 249);
+	color: rgb(48, 47, 47);
 }
 
 QTabBar::tab:hover {
-	background-color: rgb(67, 67, 67);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
+	color: rgb(240, 243, 249);
 }</string>
              </property>
              <property name="currentIndex">
@@ -8175,7 +8332,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_kcs">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -8279,7 +8436,7 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -8297,15 +8454,17 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -8358,7 +8517,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -8376,15 +8535,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -8437,7 +8598,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -8455,15 +8616,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -8545,7 +8708,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -8563,15 +8726,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -8661,14 +8826,16 @@ QLineEdit:focus {
                             <widget class="QTextEdit" name="enc_kcs_tsb_text">
                              <property name="styleSheet">
                               <string notr="true">QTextEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QTextEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -8712,16 +8879,19 @@ QTextEdit:focus {
                             <widget class="QTableWidget" name="enc_kcs_wsb_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
-	gridline-color: rgb(48, 47, 47);
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
 }
 
 QHeaderView::section {
-	color: rgb(255, 255, 255);
-	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
 }
 
 QTableCornerButton::section {
-	background-color: rgb(48, 47, 47);
+	background-color: rgb(98, 79, 130);
 }</string>
                              </property>
                              <property name="autoScroll">
@@ -8806,14 +8976,15 @@ QTableCornerButton::section {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -8838,7 +9009,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_kcs">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -8942,7 +9113,7 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -8960,15 +9131,17 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -9021,7 +9194,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -9039,15 +9212,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -9100,7 +9275,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -9118,15 +9293,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -9208,7 +9385,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -9226,15 +9403,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -9324,14 +9503,16 @@ QLineEdit:focus {
                             <widget class="QTextEdit" name="dec_kcs_tsb_text">
                              <property name="styleSheet">
                               <string notr="true">QTextEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QTextEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -9375,16 +9556,19 @@ QTextEdit:focus {
                             <widget class="QTableWidget" name="dec_kcs_wsb_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
-	gridline-color: rgb(48, 47, 47);
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
 }
 
 QHeaderView::section {
-	color: rgb(255, 255, 255);
-	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
 }
 
 QTableCornerButton::section {
-	background-color: rgb(48, 47, 47);
+	background-color: rgb(98, 79, 130);
 }</string>
                              </property>
                              <property name="autoScroll">
@@ -9469,14 +9653,15 @@ QTableCornerButton::section {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -9514,26 +9699,27 @@ QPushButton:hover {
             <widget class="QTabWidget" name="ts_types_tab">
              <property name="styleSheet">
               <string notr="true">QTabWidget::pane {
-	background: rgb(46, 44, 44);
+	background: rgb(240, 243, 249);
 }
 
 QTabBar::tab {
 	height: 25px;
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	padding: 10 120px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QTabBar::tab:selected {
-	border: 1px solid rgb(30, 30, 30);
-	background-color: rgb(30, 30, 30);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(240, 243, 249);
+	background-color: rgb(240, 243, 249);
+	color: rgb(48, 47, 47);
 }
 
 QTabBar::tab:hover {
-	background-color: rgb(67, 67, 67);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
+	color: rgb(240, 243, 249);
 }</string>
              </property>
              <property name="currentIndex">
@@ -9557,7 +9743,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_ts">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -9661,7 +9847,7 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -9679,15 +9865,17 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -9740,7 +9928,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -9758,15 +9946,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -9819,7 +10009,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -9837,15 +10027,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -9898,7 +10090,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -9916,15 +10108,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -10006,7 +10200,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -10024,15 +10218,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -10102,7 +10298,7 @@ QLineEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                           </property>
                           <property name="text">
@@ -10114,14 +10310,16 @@ QLineEdit:focus {
                          <widget class="QTextEdit" name="enc_ts_ot_txt">
                           <property name="styleSheet">
                            <string notr="true">QTextEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QTextEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                           </property>
                           <property name="readOnly">
@@ -10177,14 +10375,15 @@ QTextEdit:focus {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -10209,7 +10408,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_ts">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -10313,7 +10512,7 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -10331,15 +10530,17 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -10392,7 +10593,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -10410,15 +10611,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -10471,7 +10674,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -10489,15 +10692,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -10550,7 +10755,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -10568,15 +10773,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -10658,7 +10865,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -10676,15 +10883,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -10754,7 +10963,7 @@ QLineEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                           </property>
                           <property name="text">
@@ -10766,14 +10975,16 @@ QLineEdit:focus {
                          <widget class="QTextEdit" name="dec_ts_ot_txt">
                           <property name="styleSheet">
                            <string notr="true">QTextEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QTextEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                           </property>
                           <property name="readOnly">
@@ -10829,14 +11040,15 @@ QTextEdit:focus {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -10874,30 +11086,31 @@ QPushButton:hover {
             <widget class="QTabWidget" name="vs_types_tab">
              <property name="styleSheet">
               <string notr="true">QTabWidget::pane {
-	background: rgb(46, 44, 44);
+	background: rgb(240, 243, 249);
 }
 
 QTabBar::tab {
 	height: 25px;
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	padding: 10 120px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QTabBar::tab:selected {
-	border: 1px solid rgb(30, 30, 30);
-	background-color: rgb(30, 30, 30);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(240, 243, 249);
+	background-color: rgb(240, 243, 249);
+	color: rgb(48, 47, 47);
 }
 
 QTabBar::tab:hover {
-	background-color: rgb(67, 67, 67);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
+	color: rgb(240, 243, 249);
 }</string>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>1</number>
              </property>
              <property name="elideMode">
               <enum>Qt::ElideNone</enum>
@@ -10917,7 +11130,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_vs">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -11021,7 +11234,7 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -11039,15 +11252,17 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -11100,7 +11315,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -11118,15 +11333,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -11208,7 +11425,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -11226,15 +11443,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -11324,14 +11543,16 @@ QLineEdit:focus {
                             <widget class="QTextEdit" name="enc_vs_tsb_text">
                              <property name="styleSheet">
                               <string notr="true">QTextEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QTextEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -11375,16 +11596,19 @@ QTextEdit:focus {
                             <widget class="QTableWidget" name="enc_vs_wsb_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
-	gridline-color: rgb(48, 47, 47);
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
 }
 
 QHeaderView::section {
-	color: rgb(255, 255, 255);
-	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
 }
 
 QTableCornerButton::section {
-	background-color: rgb(48, 47, 47);
+	background-color: rgb(98, 79, 130);
 }</string>
                              </property>
                              <property name="autoScroll">
@@ -11516,14 +11740,15 @@ QTableCornerButton::section {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -11548,7 +11773,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_vs">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -11652,7 +11877,7 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -11670,15 +11895,17 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -11731,7 +11958,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -11749,15 +11976,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -11839,7 +12068,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -11857,15 +12086,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -11955,14 +12186,16 @@ QLineEdit:focus {
                             <widget class="QTextEdit" name="dec_vs_tsb_text">
                              <property name="styleSheet">
                               <string notr="true">QTextEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QTextEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -12006,16 +12239,19 @@ QTextEdit:focus {
                             <widget class="QTableWidget" name="dec_vs_wsb_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
-	gridline-color: rgb(48, 47, 47);
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
 }
 
 QHeaderView::section {
-	color: rgb(255, 255, 255);
-	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
 }
 
 QTableCornerButton::section {
-	background-color: rgb(48, 47, 47);
+	background-color: rgb(98, 79, 130);
 }</string>
                              </property>
                              <property name="autoScroll">
@@ -12147,14 +12383,15 @@ QTableCornerButton::section {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -12192,26 +12429,27 @@ QPushButton:hover {
             <widget class="QTabWidget" name="ps_types_tab">
              <property name="styleSheet">
               <string notr="true">QTabWidget::pane {
-	background: rgb(46, 44, 44);
+	background: rgb(240, 243, 249);
 }
 
 QTabBar::tab {
 	height: 25px;
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	padding: 10 120px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QTabBar::tab:selected {
-	border: 1px solid rgb(30, 30, 30);
-	background-color: rgb(30, 30, 30);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(240, 243, 249);
+	background-color: rgb(240, 243, 249);
+	color: rgb(48, 47, 47);
 }
 
 QTabBar::tab:hover {
-	background-color: rgb(67, 67, 67);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
+	color: rgb(240, 243, 249);
 }</string>
              </property>
              <property name="currentIndex">
@@ -12235,7 +12473,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_ps">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -12339,7 +12577,7 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -12357,15 +12595,17 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -12418,7 +12658,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -12436,15 +12676,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -12497,7 +12739,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -12515,15 +12757,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -12576,7 +12820,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -12594,15 +12838,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -12684,7 +12930,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -12702,15 +12948,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -12780,7 +13028,7 @@ QLineEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                           </property>
                           <property name="text">
@@ -12792,14 +13040,16 @@ QLineEdit:focus {
                          <widget class="QTextEdit" name="enc_ps_ot_txt">
                           <property name="styleSheet">
                            <string notr="true">QTextEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QTextEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                           </property>
                           <property name="readOnly">
@@ -12855,14 +13105,15 @@ QTextEdit:focus {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -12887,7 +13138,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_ps">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -12991,7 +13242,7 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -13009,15 +13260,17 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -13070,7 +13323,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -13088,15 +13341,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -13149,7 +13404,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -13167,15 +13422,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -13228,7 +13485,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -13246,15 +13503,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -13336,7 +13595,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -13354,15 +13613,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -13432,7 +13693,7 @@ QLineEdit:focus {
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                           </property>
                           <property name="text">
@@ -13444,14 +13705,16 @@ QLineEdit:focus {
                          <widget class="QTextEdit" name="dec_ps_ot_txt">
                           <property name="styleSheet">
                            <string notr="true">QTextEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QTextEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                           </property>
                           <property name="readOnly">
@@ -13507,14 +13770,15 @@ QTextEdit:focus {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -13552,26 +13816,27 @@ QPushButton:hover {
             <widget class="QTabWidget" name="dp_types_tab">
              <property name="styleSheet">
               <string notr="true">QTabWidget::pane {
-	background: rgb(46, 44, 44);
+	background: rgb(240, 243, 249);
 }
 
 QTabBar::tab {
 	height: 25px;
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	padding: 10 120px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QTabBar::tab:selected {
-	border: 1px solid rgb(30, 30, 30);
-	background-color: rgb(30, 30, 30);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(240, 243, 249);
+	background-color: rgb(240, 243, 249);
+	color: rgb(48, 47, 47);
 }
 
 QTabBar::tab:hover {
-	background-color: rgb(67, 67, 67);
-	color: rgb(255, 255, 255);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
+	color: rgb(240, 243, 249);
 }</string>
              </property>
              <property name="currentIndex">
@@ -13595,7 +13860,7 @@ QTabBar::tab:hover {
                 <widget class="QFrame" name="enc_dp">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -13693,7 +13958,7 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -13711,15 +13976,17 @@ QTabBar::tab:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -13805,7 +14072,7 @@ QLineEdit:focus {
                                 </property>
                                 <property name="styleSheet">
                                  <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                                 </property>
                                 <property name="text">
@@ -13823,15 +14090,17 @@ QLineEdit:focus {
                                 </property>
                                 <property name="styleSheet">
                                  <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                                 </property>
                                 <property name="text">
@@ -13887,7 +14156,7 @@ QLineEdit:focus {
                                 </property>
                                 <property name="styleSheet">
                                  <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                                 </property>
                                 <property name="text">
@@ -13905,15 +14174,17 @@ QLineEdit:focus {
                                 </property>
                                 <property name="styleSheet">
                                  <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                                 </property>
                                 <property name="text">
@@ -13975,7 +14246,19 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QCheckBox {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+}
+
+QCheckBox::indicator:unchecked {
+	border: 1px solid rgb(98, 79, 130);
+	border-radius: 2px;
+	background-color: rgb(240, 243, 249);
+}
+
+QCheckBox::indicator:checked {
+	border: 1px solid rgb(159, 115, 171);
+	border-radius: 2px;
+	background-color: rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="text">
@@ -14054,7 +14337,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -14072,15 +14355,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -14161,17 +14446,19 @@ QLineEdit:focus {
                             <widget class="QTableWidget" name="enc_dp_lt_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
-	color: rgb(255, 255, 255);
-	gridline-color: rgb(48, 47, 47);
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
 }
 
 QHeaderView::section {
-	color: rgb(255, 255, 255);
-	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
 }
 
 QTableCornerButton::section {
-	background-color: rgb(48, 47, 47);
+	background-color: rgb(98, 79, 130);
 }</string>
                              </property>
                              <property name="autoScroll">
@@ -14235,17 +14522,19 @@ QTableCornerButton::section {
                             <widget class="QTableWidget" name="enc_dp_rt_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
-	color: rgb(255, 255, 255);
-	gridline-color: rgb(48, 47, 47);
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
 }
 
 QHeaderView::section {
-	color: rgb(255, 255, 255);
-	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
 }
 
 QTableCornerButton::section {
-	background-color: rgb(48, 47, 47);
+	background-color: rgb(98, 79, 130);
 }</string>
                              </property>
                              <property name="autoScroll">
@@ -14324,14 +14613,15 @@ QTableCornerButton::section {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -14356,7 +14646,7 @@ QPushButton:hover {
                 <widget class="QFrame" name="dec_dp">
                  <property name="styleSheet">
                   <string notr="true">QFrame {
-	border: 1px solid rgb(77, 77, 77);
+	border: none;
 }</string>
                  </property>
                  <property name="frameShape">
@@ -14454,7 +14744,7 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -14472,15 +14762,17 @@ QPushButton:hover {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="placeholderText">
@@ -14566,7 +14858,7 @@ QLineEdit:focus {
                                 </property>
                                 <property name="styleSheet">
                                  <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                                 </property>
                                 <property name="text">
@@ -14584,15 +14876,17 @@ QLineEdit:focus {
                                 </property>
                                 <property name="styleSheet">
                                  <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                                 </property>
                                 <property name="text">
@@ -14648,7 +14942,7 @@ QLineEdit:focus {
                                 </property>
                                 <property name="styleSheet">
                                  <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                                 </property>
                                 <property name="text">
@@ -14666,15 +14960,17 @@ QLineEdit:focus {
                                 </property>
                                 <property name="styleSheet">
                                  <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                                 </property>
                                 <property name="text">
@@ -14736,7 +15032,19 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QCheckBox {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+}
+
+QCheckBox::indicator:unchecked {
+	border: 1px solid rgb(98, 79, 130);
+	border-radius: 2px;
+	background-color: rgb(240, 243, 249);
+}
+
+QCheckBox::indicator:checked {
+	border: 1px solid rgb(159, 115, 171);
+	border-radius: 2px;
+	background-color: rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="text">
@@ -14815,7 +15123,7 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLabel {
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
 }</string>
                              </property>
                              <property name="text">
@@ -14833,15 +15141,17 @@ QLineEdit:focus {
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
-	color: rgb(255, 255, 255);
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QLineEdit:focus {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
 }</string>
                              </property>
                              <property name="readOnly">
@@ -14922,17 +15232,19 @@ QLineEdit:focus {
                             <widget class="QTableWidget" name="dec_dp_lt_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
-	color: rgb(255, 255, 255);
-	gridline-color: rgb(48, 47, 47);
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
 }
 
 QHeaderView::section {
-	color: rgb(255, 255, 255);
-	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
 }
 
 QTableCornerButton::section {
-	background-color: rgb(48, 47, 47);
+	background-color: rgb(98, 79, 130);
 }</string>
                              </property>
                              <property name="autoScroll">
@@ -14996,17 +15308,19 @@ QTableCornerButton::section {
                             <widget class="QTableWidget" name="dec_dp_rt_table">
                              <property name="styleSheet">
                               <string notr="true">QTableWidget {
-	color: rgb(255, 255, 255);
-	gridline-color: rgb(48, 47, 47);
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
 }
 
 QHeaderView::section {
-	color: rgb(255, 255, 255);
-	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
 }
 
 QTableCornerButton::section {
-	background-color: rgb(48, 47, 47);
+	background-color: rgb(98, 79, 130);
 }</string>
                              </property>
                              <property name="autoScroll">
@@ -15085,14 +15399,15 @@ QTableCornerButton::section {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
-	border: 1px solid rgb(77, 77, 77);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
 }
 
 QPushButton:hover {
-	background-color: rgb(77, 77, 77);
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
 }</string>
                        </property>
                        <property name="text">
@@ -15124,7 +15439,7 @@ QPushButton:hover {
          </property>
          <property name="styleSheet">
           <string notr="true">QFrame {
-	background-color: rgb(48, 47, 47);
+	background-color: rgb(98, 79, 130);
 }</string>
          </property>
          <property name="frameShape">
@@ -15157,14 +15472,19 @@ QPushButton:hover {
             <property name="styleSheet">
              <string notr="true">QComboBox {
 	border: none;
-	background-color: rgb(48, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
+}
+
+QComboBox:hover {
+	background-color: rgb(159, 115, 171);
 }
 
 QComboBox QAbstractItemView {
 	outline: none;
-	color: rgb(255, 255, 255);
-	selection-background-color: rgb(60, 60, 60);
+	background-color: rgb(240, 243, 249);
+	color: rgb(48, 47, 47);
+	selection-background-color: rgb(159, 115, 171);
 }
 
 QComboBox::drop-down:button {
