@@ -19,7 +19,7 @@ def proc_classic_cs(form_data, encryption):
     except ValueError as value_error:
         dialogs.show_err_msg('Параметры шифрования не соответствуют требуемым!', 'Ошибка')
     except AttributeError as attribute_error:
-        dialogs.show_err_msg('Не удалось выполнить шифрование!')
+        dialogs.show_err_msg('Не удалось выполнить шифрование!', 'Ошибка')
 
 
 def enc_proc_classic_cs(form_data):
@@ -49,7 +49,7 @@ def proc_affine_cs(form_data, encryption):
     except ValueError as value_error:
         dialogs.show_err_msg('Параметры шифрования не соответствуют требуемым!', 'Ошибка')
     except AttributeError as attribute_error:
-        dialogs.show_err_msg('Не удалось выполнить шифрование!')
+        dialogs.show_err_msg('Не удалось выполнить шифрование!', 'Ошибка')
 
 
 def enc_proc_affine_cs(form_data):
@@ -78,7 +78,7 @@ def proc_key_cs(form_data, encryption):
     except ValueError as value_error:
         dialogs.show_err_msg('Параметры шифрования не соответствуют требуемым!', 'Ошибка')
     except AttributeError as attribute_error:
-        dialogs.show_err_msg('Не удалось выполнить шифрование!')
+        dialogs.show_err_msg('Не удалось выполнить шифрование!', 'Ошибка')
 
 
 def enc_proc_key_cs(form_data):

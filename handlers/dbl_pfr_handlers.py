@@ -27,7 +27,7 @@ def proc_double_playfair(form_data, encryption):
     except ValueError as value_error:
         dialogs.show_err_msg('Параметры шифрования не соответствуют требуемым!', 'Ошибка')
     except AttributeError as attribute_error:
-        dialogs.show_err_msg('Не удалось выполнить шифрование!')
+        dialogs.show_err_msg('Не удалось выполнить шифрование!', 'Ошибка')
 
 
 def enc_proc_double_playfair(form_data):
