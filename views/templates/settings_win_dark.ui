@@ -142,7 +142,7 @@ QPushButton:hover {
    <item>
     <widget class="QStackedWidget" name="section_widget">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="program_info_page">
       <widget class="QLabel" name="label_2">
@@ -951,7 +951,7 @@ QPushButton:hover {
         <bool>true</bool>
        </property>
        <property name="plainText">
-        <string>Цветовая схема позволяет настроить цветовое оформление элементов интерфейса приложения. Вы можете настроить отображение светлого или темного оформления, а также оформления Windows. Оформление Windows позволяет отображать цвета элементов в зависимости от настроек цветов Windows. Также вы можете выбрать автоматический режим смены цветового оформления в зависимости от текущего времени суток
+        <string>Цветовая схема позволяет настроить цветовое оформление элементов интерфейса приложения. Вы можете настроить отображение светлого или темного оформления, а также системного оформления. Системное оформление позволяет отображать цвета элементов в зависимости от выбранных в персонализации Windows цветов. Также вы можете выбрать автоматический режим смены цветового оформления в зависимости от текущего времени суток
 ВАЖНО: Изменения этого параметра вступают в силу после перезагрузки приложения!</string>
        </property>
       </widget>
@@ -1021,6 +1021,29 @@ QPushButton:hover {
         <enum>QFrame::Raised</enum>
        </property>
       </widget>
+      <widget class="QFrame" name="light_style_frame">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>180</y>
+         <width>343</width>
+         <height>222</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+	border-radius: 10px;
+	border: 1px solid rgba(240, 243, 249, 150);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+      <zorder>light_style_frame</zorder>
       <zorder>time_color_style_frame</zorder>
       <zorder>system_style_frame</zorder>
       <zorder>dark_style_frame</zorder>

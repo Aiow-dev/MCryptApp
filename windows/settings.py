@@ -4,7 +4,6 @@ from PyQt5.QtCore import Qt
 from views import settings_win_dark
 from components import widgets, win_palette, setting
 from controllers import color_style_controllers
-from helpers import win, time
 
 
 class SettingsWindow(QtWidgets.QWidget):
@@ -36,21 +35,25 @@ def init_settings_styles(ui):
     widgets.frame_color_style_sys(ui.accent_dark_win_color)
 
 
-def active_color_style_win(is_light_win, ui):
-    if not is_light_win:
-        ui.dark_style_frame.setVisible(False)
+def active_color_style_win(ui):
+    ui.light_style_frame.setVisible(False)
+    ui.dark_style_frame.setVisible(False)
     ui.time_color_style_frame.setVisible(False)
     ui.system_style_frame.setVisible(True)
 
 
-def active_color_style_time(time_theme, ui):
-    if time_theme == 'dark':
-        ui.dark_style_frame.setVisible(False)
+def active_color_style_time(ui):
+    ui.light_style_frame.setVisible(False)
+    ui.dark_style_frame.setVisible(False)
     ui.system_style_frame.setVisible(False)
     ui.time_color_style_frame.setVisible(True)
 
 
-def active_color_style(ui):
+def active_color_style(theme_window, ui):
+    if theme_window == 'light':
+        ui.dark_style_frame.setVisible(False)
+    else:
+        ui.light_style_frame.setVisible(False)
     ui.system_style_frame.setVisible(False)
     ui.time_color_style_frame.setVisible(False)
 
@@ -72,16 +75,11 @@ def show_settings_window(func_single, parent):
     ui.setupUi(form)
     theme = setting.app_theme()
     if theme == 'system':
-        is_light = win.is_light_win_theme()
-        active_color_style_win(is_light, ui)
+        active_color_style_win(ui)
     elif theme == 'time':
-        current_hour = time.get_current_hour()
-        time_theme = 'dark'
-        if 5 < current_hour < 18:
-            time_theme = 'light'
-        active_color_style_time(time_theme, ui)
+        active_color_style_time(ui)
     else:
-        active_color_style(ui)
+        active_color_style(theme, ui)
     init_settings_styles(ui)
     init_settings_panel(ui)
     init_settings_pages(ui)
