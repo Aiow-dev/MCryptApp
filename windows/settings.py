@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt
 
-from views import settings_window
+from views import settings_win_dark
 
 
 class SettingsWindow(QtWidgets.QWidget):
@@ -31,7 +31,7 @@ def init_settings_panel(ui):
 def show_settings_window(func_single, parent):
     form = SettingsWindow(func_single, parent, Qt.Window)
     form.setFixedSize(1060, 740)
-    ui = settings_window.Ui_Form()
+    ui = settings_win_dark.Ui_settings_form()
     ui.setupUi(form)
     init_settings_panel(ui)
     form.show()
