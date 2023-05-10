@@ -232,7 +232,7 @@ QPushButton:hover {
       <widget class="QFrame" name="frame">
        <property name="geometry">
         <rect>
-         <x>0</x>
+         <x>20</x>
          <y>190</y>
          <width>321</width>
          <height>201</height>
@@ -321,7 +321,7 @@ QPushButton:hover {
       <widget class="QPushButton" name="light_btn">
        <property name="geometry">
         <rect>
-         <x>70</x>
+         <x>90</x>
          <y>410</y>
          <width>180</width>
          <height>45</height>
@@ -358,7 +358,7 @@ QPushButton:hover {
       <widget class="QPushButton" name="dark_btn">
        <property name="geometry">
         <rect>
-         <x>440</x>
+         <x>480</x>
          <y>410</y>
          <width>180</width>
          <height>45</height>
@@ -395,7 +395,7 @@ QPushButton:hover {
       <widget class="QFrame" name="frame_11">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>410</x>
          <y>190</y>
          <width>321</width>
          <height>201</height>
@@ -487,8 +487,8 @@ QPushButton:hover {
       <widget class="QPushButton" name="win_btn">
        <property name="geometry">
         <rect>
-         <x>70</x>
-         <y>700</y>
+         <x>90</x>
+         <y>720</y>
          <width>180</width>
          <height>45</height>
         </rect>
@@ -524,8 +524,8 @@ QPushButton:hover {
       <widget class="QFrame" name="frame_4">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>480</y>
+         <x>20</x>
+         <y>490</y>
          <width>321</width>
          <height>201</height>
         </rect>
@@ -711,8 +711,8 @@ QPushButton:hover {
       <widget class="QPushButton" name="time_color_btn">
        <property name="geometry">
         <rect>
-         <x>440</x>
-         <y>700</y>
+         <x>480</x>
+         <y>720</y>
          <width>180</width>
          <height>45</height>
         </rect>
@@ -748,8 +748,8 @@ QPushButton:hover {
       <widget class="QFrame" name="frame_14">
        <property name="geometry">
         <rect>
-         <x>370</x>
-         <y>480</y>
+         <x>410</x>
+         <y>490</y>
          <width>321</width>
          <height>201</height>
         </rect>
@@ -955,6 +955,84 @@ QPushButton:hover {
 ВАЖНО: Изменения этого параметра вступают в силу после перезагрузки приложения!</string>
        </property>
       </widget>
+      <widget class="QFrame" name="dark_style_frame">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>180</y>
+         <width>343</width>
+         <height>222</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+	border-radius: 10px;
+	border: 1px solid rgba(240, 243, 249, 150);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="system_style_frame">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>480</y>
+         <width>343</width>
+         <height>222</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+	border-radius: 10px;
+	border: 1px solid rgba(240, 243, 249, 150);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="time_color_style_frame">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>480</y>
+         <width>343</width>
+         <height>222</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+	border-radius: 10px;
+	border: 1px solid rgba(240, 243, 249, 150);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+      <zorder>time_color_style_frame</zorder>
+      <zorder>system_style_frame</zorder>
+      <zorder>dark_style_frame</zorder>
+      <zorder>frame</zorder>
+      <zorder>light_btn</zorder>
+      <zorder>dark_btn</zorder>
+      <zorder>frame_11</zorder>
+      <zorder>win_btn</zorder>
+      <zorder>frame_4</zorder>
+      <zorder>time_color_btn</zorder>
+      <zorder>frame_14</zorder>
+      <zorder>plainTextEdit</zorder>
      </widget>
      <widget class="QWidget" name="page_3">
       <widget class="QPlainTextEdit" name="plainTextEdit_3">
