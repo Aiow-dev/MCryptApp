@@ -10,6 +10,28 @@ def frame_sys(frame_obj):
     frame_obj.setStyleSheet(frame_stylesheet)
 
 
+def frame_color_style_sys(frame_obj):
+    frame_stylesheet = f'''
+    QFrame {{
+        border-radius: 3px;
+        border: none;
+        background-color: {win_palette.accent_color};
+    }}
+    '''
+    frame_obj.setStyleSheet(frame_stylesheet)
+
+
+def frame_compl_color_style_sys(frame_obj):
+    frame_stylesheet = f'''
+    QFrame {{
+        border-radius: 3px;
+        border: none;
+        background-color: {win_palette.complementary_color};
+    }}
+    '''
+    frame_obj.setStyleSheet(frame_stylesheet)
+
+
 def tab_wgt_light_sys(tab_wgt_obj):
     tab_stylesheet = f'''
     QTabWidget::pane {{
