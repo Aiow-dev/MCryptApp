@@ -2,7 +2,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt
 
 from views import settings_win_dark
-from components import widgets
+from components import widgets, win_palette
 from controllers import color_style_controllers
 
 
@@ -25,11 +25,14 @@ def switch_settings_page(ui, index):
 
 
 def init_settings_styles(ui):
+    accent = win_palette.win_accent_converted()
+    complementary = win_palette.win_complementary_converted(accent)
+    win_palette.accent_color = accent.to_rgb_str()
+    win_palette.complementary_color = complementary.to_rgb_str()
     widgets.frame_compl_color_style_sys(ui.compl_light_win_color)
     widgets.frame_compl_color_style_sys(ui.compl_dark_win_color)
     widgets.frame_color_style_sys(ui.accent_light_win_color)
     widgets.frame_color_style_sys(ui.accent_dark_win_color)
-
 
 
 def init_settings_panel(ui):
@@ -44,7 +47,7 @@ def init_settings_pages(ui):
 
 def show_settings_window(func_single, parent):
     form = SettingsWindow(func_single, parent, Qt.Window)
-    form.setFixedSize(1060, 740)
+    form.setFixedSize(1060, 780)
     ui = settings_win_dark.Ui_settings_form()
     ui.setupUi(form)
     init_settings_styles(ui)

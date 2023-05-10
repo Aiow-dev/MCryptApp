@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_settings_form(object):
     def setupUi(self, settings_form):
         settings_form.setObjectName("settings_form")
-        settings_form.resize(1060, 740)
+        settings_form.resize(1060, 780)
         settings_form.setStyleSheet("QWidget {\n"
 "    background-color: rgb(30, 30, 30);\n"
 "}")
@@ -115,7 +115,7 @@ class Ui_settings_form(object):
         self.color_style_page = QtWidgets.QWidget()
         self.color_style_page.setObjectName("color_style_page")
         self.frame = QtWidgets.QFrame(self.color_style_page)
-        self.frame.setGeometry(QtCore.QRect(0, 150, 321, 201))
+        self.frame.setGeometry(QtCore.QRect(0, 190, 321, 201))
         self.frame.setStyleSheet("QFrame {\n"
 "    border-radius: 5px;\n"
 "    background-color: rgb(240, 243, 249);\n"
@@ -151,7 +151,7 @@ class Ui_settings_form(object):
 "}")
         self.label_6.setObjectName("label_6")
         self.light_btn = QtWidgets.QPushButton(self.color_style_page)
-        self.light_btn.setGeometry(QtCore.QRect(70, 370, 180, 45))
+        self.light_btn.setGeometry(QtCore.QRect(70, 410, 180, 45))
         self.light_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.light_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.light_btn.setStyleSheet("QPushButton {\n"
@@ -166,7 +166,7 @@ class Ui_settings_form(object):
 "}")
         self.light_btn.setObjectName("light_btn")
         self.dark_btn = QtWidgets.QPushButton(self.color_style_page)
-        self.dark_btn.setGeometry(QtCore.QRect(440, 370, 180, 45))
+        self.dark_btn.setGeometry(QtCore.QRect(440, 410, 180, 45))
         self.dark_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.dark_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.dark_btn.setStyleSheet("QPushButton {\n"
@@ -181,7 +181,7 @@ class Ui_settings_form(object):
 "}")
         self.dark_btn.setObjectName("dark_btn")
         self.frame_11 = QtWidgets.QFrame(self.color_style_page)
-        self.frame_11.setGeometry(QtCore.QRect(370, 150, 321, 201))
+        self.frame_11.setGeometry(QtCore.QRect(370, 190, 321, 201))
         self.frame_11.setStyleSheet("QFrame {\n"
 "    border-radius: 5px;\n"
 "    border: 1px solid rgb(77, 77, 77);\n"
@@ -220,7 +220,7 @@ class Ui_settings_form(object):
 "}")
         self.label_9.setObjectName("label_9")
         self.win_btn = QtWidgets.QPushButton(self.color_style_page)
-        self.win_btn.setGeometry(QtCore.QRect(70, 660, 180, 45))
+        self.win_btn.setGeometry(QtCore.QRect(70, 700, 180, 45))
         self.win_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.win_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.win_btn.setStyleSheet("QPushButton {\n"
@@ -235,7 +235,7 @@ class Ui_settings_form(object):
 "}")
         self.win_btn.setObjectName("win_btn")
         self.frame_4 = QtWidgets.QFrame(self.color_style_page)
-        self.frame_4.setGeometry(QtCore.QRect(0, 440, 321, 201))
+        self.frame_4.setGeometry(QtCore.QRect(0, 480, 321, 201))
         self.frame_4.setStyleSheet("QFrame {\n"
 "    border-radius: 5px;\n"
 "    border: 1px solid rgb(77, 77, 77);\n"
@@ -316,7 +316,7 @@ class Ui_settings_form(object):
         self.accent_dark_win_color.setFrameShadow(QtWidgets.QFrame.Raised)
         self.accent_dark_win_color.setObjectName("accent_dark_win_color")
         self.time_color_btn = QtWidgets.QPushButton(self.color_style_page)
-        self.time_color_btn.setGeometry(QtCore.QRect(440, 660, 180, 45))
+        self.time_color_btn.setGeometry(QtCore.QRect(440, 700, 180, 45))
         self.time_color_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.time_color_btn.setMaximumSize(QtCore.QSize(200, 16777215))
         self.time_color_btn.setStyleSheet("QPushButton {\n"
@@ -331,7 +331,7 @@ class Ui_settings_form(object):
 "}")
         self.time_color_btn.setObjectName("time_color_btn")
         self.frame_14 = QtWidgets.QFrame(self.color_style_page)
-        self.frame_14.setGeometry(QtCore.QRect(370, 440, 321, 201))
+        self.frame_14.setGeometry(QtCore.QRect(370, 480, 321, 201))
         self.frame_14.setStyleSheet("QFrame {\n"
 "    border-radius: 5px;\n"
 "    border: 1px solid rgb(77, 77, 77);\n"
@@ -412,7 +412,7 @@ class Ui_settings_form(object):
         self.frame_22.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_22.setObjectName("frame_22")
         self.plainTextEdit = QtWidgets.QPlainTextEdit(self.color_style_page)
-        self.plainTextEdit.setGeometry(QtCore.QRect(0, 0, 751, 131))
+        self.plainTextEdit.setGeometry(QtCore.QRect(0, 10, 751, 131))
         self.plainTextEdit.setStyleSheet("QPlainTextEdit {\n"
 "    border: none;\n"
 "    color: rgb(240, 243, 249);\n"
@@ -434,7 +434,7 @@ class Ui_settings_form(object):
         self.horizontalLayout.addWidget(self.section_widget)
 
         self.retranslateUi(settings_form)
-        self.section_widget.setCurrentIndex(0)
+        self.section_widget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(settings_form)
 
     def retranslateUi(self, settings_form):
