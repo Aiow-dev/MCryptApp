@@ -60,7 +60,7 @@ class Ui_settings_form(object):
 "}")
         self.btn_color_style.setObjectName("btn_color_style")
         self.btn_privacy_policy = QtWidgets.QPushButton(self.section_frame)
-        self.btn_privacy_policy.setGeometry(QtCore.QRect(0, 80, 301, 41))
+        self.btn_privacy_policy.setGeometry(QtCore.QRect(0, 120, 301, 41))
         font = QtGui.QFont()
         font.setPointSize(8)
         self.btn_privacy_policy.setFont(font)
@@ -74,13 +74,28 @@ class Ui_settings_form(object):
 "    background-color: rgb(77, 77, 77);\n"
 "}")
         self.btn_privacy_policy.setObjectName("btn_privacy_policy")
+        self.btn_set_app = QtWidgets.QPushButton(self.section_frame)
+        self.btn_set_app.setGeometry(QtCore.QRect(0, 80, 301, 41))
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        self.btn_set_app.setFont(font)
+        self.btn_set_app.setStyleSheet("QPushButton {\n"
+"    background-color: rgb(30, 30, 30);\n"
+"    color: rgb(240, 243, 249);\n"
+"    border: 0px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(77, 77, 77);\n"
+"}")
+        self.btn_set_app.setObjectName("btn_set_app")
         self.horizontalLayout.addWidget(self.section_frame)
         self.section_widget = QtWidgets.QStackedWidget(settings_form)
         self.section_widget.setObjectName("section_widget")
         self.program_info_page = QtWidgets.QWidget()
         self.program_info_page.setObjectName("program_info_page")
         self.label_2 = QtWidgets.QLabel(self.program_info_page)
-        self.label_2.setGeometry(QtCore.QRect(0, 240, 271, 31))
+        self.label_2.setGeometry(QtCore.QRect(6, 240, 271, 31))
         font = QtGui.QFont()
         font.setPointSize(8)
         self.label_2.setFont(font)
@@ -93,7 +108,7 @@ class Ui_settings_form(object):
         self.label_2.setWordWrap(True)
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(self.program_info_page)
-        self.label_3.setGeometry(QtCore.QRect(0, 280, 751, 31))
+        self.label_3.setGeometry(QtCore.QRect(6, 280, 751, 31))
         font = QtGui.QFont()
         font.setPointSize(8)
         self.label_3.setFont(font)
@@ -469,6 +484,76 @@ class Ui_settings_form(object):
         self.frame_14.raise_()
         self.plainTextEdit.raise_()
         self.section_widget.addWidget(self.color_style_page)
+        self.page = QtWidgets.QWidget()
+        self.page.setObjectName("page")
+        self.plainTextEdit_4 = QtWidgets.QPlainTextEdit(self.page)
+        self.plainTextEdit_4.setGeometry(QtCore.QRect(0, 10, 751, 91))
+        self.plainTextEdit_4.setStyleSheet("QPlainTextEdit {\n"
+"    border: none;\n"
+"    color: rgb(240, 243, 249);\n"
+"}")
+        self.plainTextEdit_4.setReadOnly(True)
+        self.plainTextEdit_4.setObjectName("plainTextEdit_4")
+        self.label_4 = QtWidgets.QLabel(self.page)
+        self.label_4.setGeometry(QtCore.QRect(6, 120, 621, 31))
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        self.label_4.setFont(font)
+        self.label_4.setStyleSheet("QLabel {\n"
+"    color: rgb(240, 243, 249);\n"
+"}")
+        self.label_4.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label_4.setWordWrap(True)
+        self.label_4.setObjectName("label_4")
+        self.confirm_quit_chk = QtWidgets.QCheckBox(self.page)
+        self.confirm_quit_chk.setGeometry(QtCore.QRect(630, 108, 101, 45))
+        self.confirm_quit_chk.setMinimumSize(QtCore.QSize(0, 45))
+        self.confirm_quit_chk.setStyleSheet("QCheckBox {\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked {\n"
+"    border-radius: 2px;\n"
+"    background-color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"    border-radius: 2px;\n"
+"    background-color: rgb(67, 67, 67);\n"
+"}")
+        self.confirm_quit_chk.setText("")
+        self.confirm_quit_chk.setObjectName("confirm_quit_chk")
+        self.btn_restart = QtWidgets.QPushButton(self.page)
+        self.btn_restart.setGeometry(QtCore.QRect(6, 170, 180, 45))
+        self.btn_restart.setMinimumSize(QtCore.QSize(130, 45))
+        self.btn_restart.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.btn_restart.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(77, 77, 77);\n"
+"}")
+        self.btn_restart.setObjectName("btn_restart")
+        self.btn_quit = QtWidgets.QPushButton(self.page)
+        self.btn_quit.setGeometry(QtCore.QRect(200, 170, 180, 45))
+        self.btn_quit.setMinimumSize(QtCore.QSize(130, 45))
+        self.btn_quit.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.btn_quit.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(77, 77, 77);\n"
+"}")
+        self.btn_quit.setObjectName("btn_quit")
+        self.section_widget.addWidget(self.page)
         self.page_3 = QtWidgets.QWidget()
         self.page_3.setObjectName("page_3")
         self.plainTextEdit_3 = QtWidgets.QPlainTextEdit(self.page_3)
@@ -483,7 +568,7 @@ class Ui_settings_form(object):
         self.horizontalLayout.addWidget(self.section_widget)
 
         self.retranslateUi(settings_form)
-        self.section_widget.setCurrentIndex(0)
+        self.section_widget.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(settings_form)
 
     def retranslateUi(self, settings_form):
@@ -492,6 +577,7 @@ class Ui_settings_form(object):
         self.btn_program_info.setText(_translate("settings_form", "О приложении"))
         self.btn_color_style.setText(_translate("settings_form", "Цветовая схема"))
         self.btn_privacy_policy.setText(_translate("settings_form", "Политика конфиденциальности"))
+        self.btn_set_app.setText(_translate("settings_form", "Рабочая область"))
         self.label_2.setText(_translate("settings_form", "Версия: MCrypt 1.9.1 Preview"))
         self.label_3.setText(_translate("settings_form", "©MCryptTeam, 2023, все права защищены"))
         self.plainTextEdit_2.setPlainText(_translate("settings_form", "MCrypt - программное обеспечение, позволяющее выполнять шифрование, дешифрование, хеширование и множество других преобразований быстро и эффективно. При этом, MCrypt позволяет просмотреть каждый шаг выполнения данных преобразований, а также содержит справочник по различным алгоритмам шифрования, применяемых в данном программном обеспечении, что позволяет более подробно рассмотреть различные процессы преобразования данных. Также MCrypt содержит множество различных алгоритмов шифрования, включая более сложные алгоритмы шифрования, предоставляя возможность автоматического заполнения параметров шифрования, что позволяет существенно сократить время на шифрование данных"))
@@ -507,6 +593,11 @@ class Ui_settings_form(object):
         self.label_12.setText(_translate("settings_form", "🌙"))
         self.plainTextEdit.setPlainText(_translate("settings_form", "Цветовая схема позволяет настроить цветовое оформление элементов интерфейса приложения. Вы можете настроить отображение светлого или темного оформления, а также системного оформления. Системное оформление позволяет отображать цвета элементов в зависимости от выбранных в персонализации Windows цветов. Также вы можете выбрать автоматический режим смены цветового оформления в зависимости от текущего времени суток\n"
 "ВАЖНО: Изменения этого параметра вступают в силу после перезагрузки приложения!"))
+        self.plainTextEdit_4.setPlainText(_translate("settings_form", "Этот раздел содержит возможности, связанные с основной рабочей областью приложения. Вы можете выполнить завершение работы или перезагрузку приложения, а также отключить или включить отображение окна с подтверждением выхода из рабочей области\n"
+"ВАЖНО: Изменения этого параметра вступают в силу после перезагрузки приложения!"))
+        self.label_4.setText(_translate("settings_form", "Отображать окно подтверждения при завершении или перезагрузке приложения:"))
+        self.btn_restart.setText(_translate("settings_form", "Перезагрузить"))
+        self.btn_quit.setText(_translate("settings_form", "Завершить работу"))
         self.plainTextEdit_3.setPlainText(_translate("settings_form", "MCrypt - программное обеспечение, позволяющее выполнять различные преобразования данных в целях обеспечения безопасности и конфиденциальности данных, а также для безопасного способа их передачи и обмена. Данное программное обеспечение не хранит исходную информацию, предназначенную для ее передачи и обмена, поэтому после завершения работы приложения данная информация будет утеряна без возможности восстановления. В MCrypt пользовательские учетные данные хранятся в формате, не позволяющем получить к ним какой-либо доступ. Однако в случае утери каких-либо данных, MCryptTeam не несет никакой ответственности за утерю или получение доступа сторонних лиц к вашим данным.\n"
 "ВАЖНО: Данное программное обеспечение предназначено для изучения различных методов шифрования и хеширования данных. Несмотря на то, что в MCrypt есть возможность шифровать и хешировать информацию, данные возможности, как правило, предназначены также для дополнительного и более подробного изучения. В MCrypt различные алгоритмы обладают достаточной степенью надежности, чтобы защитить ваши данные, однако мы настоятельно не рекомендуем использовать данное программное обеспечение, если вам действительно необходимо обеспечить реальную защиту данных!"))
 

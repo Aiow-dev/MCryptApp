@@ -1,4 +1,4 @@
-from controllers import page
+from controllers import page, messages
 from components import windows, app, dialogs
 from windows import settings, main_window_add
 from helpers import func
@@ -23,27 +23,27 @@ def init_menu(window, ui):
 
 
 def settings_menu():
-    dialogs.show_info_msg('Переход в настройки в данном окне недоступен. Перейдите в главное окно!', 'Информация')
+    dialogs.show_info_msg(messages.NOT_ALLOW_SETTINGS, 'Информация')
 
 
 def new_window_menu():
-    dialogs.show_info_msg('Создание окна в данном окне недоступно. Перейдите в главное окно!', 'Информация')
+    dialogs.show_info_msg(messages.NOT_ALLOW_NEW_WIN, 'Информация')
 
 
 def quit_menu_add():
-    dialogs.show_info_msg('Завершение работы в данном окне недоступно. Перейдите в главное окно!', 'Информация')
+    dialogs.show_info_msg(messages.NOT_ALLOW_QUIT, 'Информация')
 
 
 def restart_menu_add():
-    dialogs.show_info_msg('Перезагрузка в данном окне недоступно. Перейдите в главное окно!', 'Информация')
+    dialogs.show_info_msg(messages.NOT_ALLOW_RESTART, 'Информация')
 
 
 def program_info_menu_add():
-    dialogs.show_info_msg('Информация о программе в данном окне недоступно. Перейдите в главное окно!', 'Информация')
+    dialogs.show_info_msg(messages.NOT_ALLOW_PROGRAM_INFO, 'Информация')
 
 
 def help_menu_add():
-    dialogs.show_info_msg('Справка в данном окне недоступна. Перейдите в главное окно!', 'Информация')
+    dialogs.show_info_msg(messages.NOT_ALLOW_HELP, 'Информация')
 
 
 def init_menu_add(ui):

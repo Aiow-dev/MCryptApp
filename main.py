@@ -12,7 +12,7 @@ from windows import main_window
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = main_window.MainWindowApp()
-    theme = setting.app_theme()
+    theme = setting.get_app_theme()
     if theme == 'system':
         is_light = win.is_light_win_theme()
         ui = main_win_dark.Ui_main_window()

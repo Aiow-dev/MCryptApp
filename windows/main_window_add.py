@@ -9,7 +9,7 @@ from windows import main_window
 
 def show_addition_window(parent):
     form = QtWidgets.QMainWindow(parent)
-    theme = setting.app_theme()
+    theme = setting.get_app_theme()
     if theme == 'system':
         is_light = win.is_light_win_theme()
         ui = main_win_dark.Ui_main_window()

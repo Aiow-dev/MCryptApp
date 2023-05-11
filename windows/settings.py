@@ -3,7 +3,7 @@ from PyQt5.QtCore import Qt
 
 from views import settings_win_dark
 from components import widgets, win_palette, setting
-from controllers import color_style_controllers
+from controllers import color_style_controllers, set_app_controllers
 
 
 class SettingsWindow(QtWidgets.QWidget):
@@ -61,11 +61,13 @@ def active_color_style(theme_window, ui):
 def init_settings_panel(ui):
     ui.btn_program_info.clicked.connect(switch_settings_page(ui, 0))
     ui.btn_color_style.clicked.connect(switch_settings_page(ui, 1))
-    ui.btn_privacy_policy.clicked.connect(switch_settings_page(ui, 2))
+    ui.btn_set_app.clicked.connect(switch_settings_page(ui, 2))
+    ui.btn_privacy_policy.clicked.connect(switch_settings_page(ui, 3))
 
 
-def init_settings_pages(ui):
+def init_settings_pages(parent, ui):
     color_style_controllers.init_color_styles(ui)
+    set_app_controllers.init_confirm_quit(parent, ui)
 
 
 def show_settings_window(func_single, parent):
@@ -73,7 +75,7 @@ def show_settings_window(func_single, parent):
     form.setFixedSize(1060, 780)
     ui = settings_win_dark.Ui_settings_form()
     ui.setupUi(form)
-    theme = setting.app_theme()
+    theme = setting.get_app_theme()
     if theme == 'system':
         active_color_style_win(ui)
     elif theme == 'time':
@@ -82,5 +84,5 @@ def show_settings_window(func_single, parent):
         active_color_style(theme, ui)
     init_settings_styles(ui)
     init_settings_panel(ui)
-    init_settings_pages(ui)
+    init_settings_pages(form, ui)
     form.show()

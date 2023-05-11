@@ -1,38 +1,25 @@
-import json
-
-from components import dialogs
-
-
-def set_color_style(color_style):
-    with open('settings.json', 'r+') as settings_file:
-        text = settings_file.read()
-        settings_file.seek(0)
-        parsed_json = json.loads(text)
-        parsed_json['theme'] = color_style
-        json_str = json.dumps(parsed_json)
-        settings_file.write(json_str)
-        settings_file.truncate()
-    return parsed_json.get('theme')
+from components import dialogs, setting
+from controllers import messages
 
 
 def light_color_style():
-    dialogs.show_info_msg('Успешно применено светлое цветовое оформление!', 'Информация')
-    set_color_style('light')
+    dialogs.show_info_msg(messages.ON_LIGHT_THEME, 'Информация')
+    setting.set_app_theme('light')
 
 
 def dark_color_style():
-    dialogs.show_info_msg('Успешно применено темное цветовое оформление!', 'Информация')
-    set_color_style('dark')
+    dialogs.show_info_msg(messages.ON_DARK_THEME, 'Информация')
+    setting.set_app_theme('dark')
 
 
 def system_color_style():
-    dialogs.show_info_msg('Успешно применено системное цветовое оформление!', 'Информация')
-    set_color_style('system')
+    dialogs.show_info_msg(messages.ON_SYSTEM_THEME, 'Информация')
+    setting.set_app_theme('system')
 
 
 def time_color_style():
-    dialogs.show_info_msg('Успешно применена автоматическая смена цветового оформления!', 'Информация')
-    set_color_style('time')
+    dialogs.show_info_msg(messages.ON_TIME_THEME, 'Информация')
+    setting.set_app_theme('time')
 
 
 def init_color_styles(ui):

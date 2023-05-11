@@ -112,7 +112,7 @@ QPushButton:hover {
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>80</y>
+        <y>120</y>
         <width>301</width>
         <height>41</height>
        </rect>
@@ -137,18 +137,47 @@ QPushButton:hover {
        <string>Политика конфиденциальности</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="btn_set_app">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>80</y>
+        <width>301</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(30, 30, 30);
+	color: rgb(240, 243, 249);
+	border: 0px;
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+      </property>
+      <property name="text">
+       <string>Рабочая область</string>
+      </property>
+     </widget>
     </widget>
    </item>
    <item>
     <widget class="QStackedWidget" name="section_widget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="program_info_page">
       <widget class="QLabel" name="label_2">
        <property name="geometry">
         <rect>
-         <x>0</x>
+         <x>6</x>
          <y>240</y>
          <width>271</width>
          <height>31</height>
@@ -179,7 +208,7 @@ QPushButton:hover {
       <widget class="QLabel" name="label_3">
        <property name="geometry">
         <rect>
-         <x>0</x>
+         <x>6</x>
          <y>280</y>
          <width>751</width>
          <height>31</height>
@@ -1056,6 +1085,168 @@ QPushButton:hover {
       <zorder>time_color_btn</zorder>
       <zorder>frame_14</zorder>
       <zorder>plainTextEdit</zorder>
+     </widget>
+     <widget class="QWidget" name="page">
+      <widget class="QPlainTextEdit" name="plainTextEdit_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>751</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPlainTextEdit {
+	border: none;
+	color: rgb(240, 243, 249);
+}</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="plainText">
+        <string>Этот раздел содержит возможности, связанные с основной рабочей областью приложения. Вы можете выполнить завершение работы или перезагрузку приложения, а также отключить или включить отображение окна с подтверждением выхода из рабочей области
+ВАЖНО: Изменения этого параметра вступают в силу после перезагрузки приложения!</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>6</x>
+         <y>120</y>
+         <width>621</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	color: rgb(240, 243, 249);
+}</string>
+       </property>
+       <property name="text">
+        <string>Отображать окно подтверждения при завершении или перезагрузке приложения:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="confirm_quit_chk">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>108</y>
+         <width>101</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QCheckBox {
+	color: rgb(255, 255, 255);
+}
+
+QCheckBox::indicator:unchecked {
+	border-radius: 2px;
+	background-color: rgb(255, 255, 255);
+}
+
+QCheckBox::indicator:checked {
+	border-radius: 2px;
+	background-color: rgb(67, 67, 67);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_restart">
+       <property name="geometry">
+        <rect>
+         <x>6</x>
+         <y>170</y>
+         <width>180</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>130</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+       </property>
+       <property name="text">
+        <string>Перезагрузить</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_quit">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>170</y>
+         <width>180</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>130</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+       </property>
+       <property name="text">
+        <string>Завершить работу</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QWidget" name="page_3">
       <widget class="QPlainTextEdit" name="plainTextEdit_3">
