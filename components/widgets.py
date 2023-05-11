@@ -251,7 +251,7 @@ def tab_wgt_light_sys_corn_rad(tab_wgt_obj):
     QTabBar::tab {{
         height: 25px;
         border: 1px solid {win_palette.accent_color};
-        border-right-radius: 5px;
+        border-top-right-radius: 5px;
         padding: 10 120px;
         background-color: {win_palette.accent_color};
         color: {colors.Palette.gray.value.to_rgb_str()};
