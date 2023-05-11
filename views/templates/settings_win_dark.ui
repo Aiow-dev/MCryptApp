@@ -112,7 +112,7 @@ QPushButton:hover {
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>160</y>
+        <y>200</y>
         <width>301</width>
         <height>41</height>
        </rect>
@@ -137,7 +137,7 @@ QPushButton:hover {
        <string>Политика конфиденциальности</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btn_set_app">
+     <widget class="QPushButton" name="btn_app_set">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -193,6 +193,35 @@ QPushButton:hover {
       </property>
       <property name="text">
        <string>Панель быстрого доступа</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_help_set">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>160</y>
+        <width>301</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(30, 30, 30);
+	color: rgb(240, 243, 249);
+	border: 0px;
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+      </property>
+      <property name="text">
+       <string>Справка</string>
       </property>
      </widget>
     </widget>
@@ -1387,6 +1416,55 @@ QCheckBox::indicator:checked {
        </property>
        <property name="text">
         <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_4">
+      <widget class="QPlainTextEdit" name="plainTextEdit_6">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>751</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPlainTextEdit {
+	border: none;
+	color: rgb(240, 243, 249);
+}</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="plainText">
+        <string>Этот раздел содержит сведения о возможностях и навигации в приложении</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="help_open_btn">
+       <property name="geometry">
+        <rect>
+         <x>6</x>
+         <y>120</y>
+         <width>211</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+       </property>
+       <property name="text">
+        <string>Открыть справку</string>
        </property>
       </widget>
      </widget>

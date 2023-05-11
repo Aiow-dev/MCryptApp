@@ -60,7 +60,7 @@ class Ui_settings_form(object):
 "}")
         self.btn_color_style.setObjectName("btn_color_style")
         self.btn_privacy_policy = QtWidgets.QPushButton(self.section_frame)
-        self.btn_privacy_policy.setGeometry(QtCore.QRect(0, 160, 301, 41))
+        self.btn_privacy_policy.setGeometry(QtCore.QRect(0, 200, 301, 41))
         font = QtGui.QFont()
         font.setPointSize(8)
         self.btn_privacy_policy.setFont(font)
@@ -74,12 +74,12 @@ class Ui_settings_form(object):
 "    background-color: rgb(77, 77, 77);\n"
 "}")
         self.btn_privacy_policy.setObjectName("btn_privacy_policy")
-        self.btn_set_app = QtWidgets.QPushButton(self.section_frame)
-        self.btn_set_app.setGeometry(QtCore.QRect(0, 80, 301, 41))
+        self.btn_app_set = QtWidgets.QPushButton(self.section_frame)
+        self.btn_app_set.setGeometry(QtCore.QRect(0, 80, 301, 41))
         font = QtGui.QFont()
         font.setPointSize(8)
-        self.btn_set_app.setFont(font)
-        self.btn_set_app.setStyleSheet("QPushButton {\n"
+        self.btn_app_set.setFont(font)
+        self.btn_app_set.setStyleSheet("QPushButton {\n"
 "    background-color: rgb(30, 30, 30);\n"
 "    color: rgb(240, 243, 249);\n"
 "    border: 0px;\n"
@@ -88,7 +88,7 @@ class Ui_settings_form(object):
 "QPushButton:hover {\n"
 "    background-color: rgb(77, 77, 77);\n"
 "}")
-        self.btn_set_app.setObjectName("btn_set_app")
+        self.btn_app_set.setObjectName("btn_app_set")
         self.btn_quick_panel = QtWidgets.QPushButton(self.section_frame)
         self.btn_quick_panel.setGeometry(QtCore.QRect(0, 120, 301, 41))
         font = QtGui.QFont()
@@ -104,6 +104,21 @@ class Ui_settings_form(object):
 "    background-color: rgb(77, 77, 77);\n"
 "}")
         self.btn_quick_panel.setObjectName("btn_quick_panel")
+        self.btn_help_set = QtWidgets.QPushButton(self.section_frame)
+        self.btn_help_set.setGeometry(QtCore.QRect(0, 160, 301, 41))
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        self.btn_help_set.setFont(font)
+        self.btn_help_set.setStyleSheet("QPushButton {\n"
+"    background-color: rgb(30, 30, 30);\n"
+"    color: rgb(240, 243, 249);\n"
+"    border: 0px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(77, 77, 77);\n"
+"}")
+        self.btn_help_set.setObjectName("btn_help_set")
         self.horizontalLayout.addWidget(self.section_frame)
         self.section_widget = QtWidgets.QStackedWidget(settings_form)
         self.section_widget.setObjectName("section_widget")
@@ -622,6 +637,30 @@ class Ui_settings_form(object):
         self.quick_panel_chk.setText("")
         self.quick_panel_chk.setObjectName("quick_panel_chk")
         self.section_widget.addWidget(self.page_2)
+        self.page_4 = QtWidgets.QWidget()
+        self.page_4.setObjectName("page_4")
+        self.plainTextEdit_6 = QtWidgets.QPlainTextEdit(self.page_4)
+        self.plainTextEdit_6.setGeometry(QtCore.QRect(0, 10, 751, 91))
+        self.plainTextEdit_6.setStyleSheet("QPlainTextEdit {\n"
+"    border: none;\n"
+"    color: rgb(240, 243, 249);\n"
+"}")
+        self.plainTextEdit_6.setReadOnly(True)
+        self.plainTextEdit_6.setObjectName("plainTextEdit_6")
+        self.help_open_btn = QtWidgets.QPushButton(self.page_4)
+        self.help_open_btn.setGeometry(QtCore.QRect(6, 120, 211, 45))
+        self.help_open_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(77, 77, 77);\n"
+"}")
+        self.help_open_btn.setObjectName("help_open_btn")
+        self.section_widget.addWidget(self.page_4)
         self.page_3 = QtWidgets.QWidget()
         self.page_3.setObjectName("page_3")
         self.plainTextEdit_3 = QtWidgets.QPlainTextEdit(self.page_3)
@@ -645,8 +684,9 @@ class Ui_settings_form(object):
         self.btn_program_info.setText(_translate("settings_form", "О приложении"))
         self.btn_color_style.setText(_translate("settings_form", "Цветовая схема"))
         self.btn_privacy_policy.setText(_translate("settings_form", "Политика конфиденциальности"))
-        self.btn_set_app.setText(_translate("settings_form", "Рабочая область"))
+        self.btn_app_set.setText(_translate("settings_form", "Рабочая область"))
         self.btn_quick_panel.setText(_translate("settings_form", "Панель быстрого доступа"))
+        self.btn_help_set.setText(_translate("settings_form", "Справка"))
         self.label_2.setText(_translate("settings_form", "Версия: MCrypt 1.9.1 Preview"))
         self.label_3.setText(_translate("settings_form", "©MCryptTeam, 2023, все права защищены"))
         self.plainTextEdit_2.setPlainText(_translate("settings_form", "MCrypt - программное обеспечение, позволяющее выполнять шифрование, дешифрование, хеширование и множество других преобразований быстро и эффективно. При этом, MCrypt позволяет просмотреть каждый шаг выполнения данных преобразований, а также содержит справочник по различным алгоритмам шифрования, применяемых в данном программном обеспечении, что позволяет более подробно рассмотреть различные процессы преобразования данных. Также MCrypt содержит множество различных алгоритмов шифрования, включая более сложные алгоритмы шифрования, предоставляя возможность автоматического заполнения параметров шифрования, что позволяет существенно сократить время на шифрование данных"))
@@ -671,6 +711,8 @@ class Ui_settings_form(object):
         self.plainTextEdit_5.setPlainText(_translate("settings_form", "Панель быстрого доступа позволяет быстро перемещаться между некоторыми страницами приложения. Вы можете отключить или включить отображение данной панели\n"
 "ВАЖНО: Изменения этого параметра вступают в силу после перезагрузки приложения!"))
         self.label_5.setText(_translate("settings_form", "Отображать панель быстрого доступа:"))
+        self.plainTextEdit_6.setPlainText(_translate("settings_form", "Этот раздел содержит сведения о возможностях и навигации в приложении"))
+        self.help_open_btn.setText(_translate("settings_form", "Открыть справку"))
         self.plainTextEdit_3.setPlainText(_translate("settings_form", "MCrypt - программное обеспечение, позволяющее выполнять различные преобразования данных в целях обеспечения безопасности и конфиденциальности данных, а также для безопасного способа их передачи и обмена. Данное программное обеспечение не хранит исходную информацию, предназначенную для ее передачи и обмена, поэтому после завершения работы приложения данная информация будет утеряна без возможности восстановления. В MCrypt пользовательские учетные данные хранятся в формате, не позволяющем получить к ним какой-либо доступ. Однако в случае утери каких-либо данных, MCryptTeam не несет никакой ответственности за утерю или получение доступа сторонних лиц к вашим данным.\n"
 "ВАЖНО: Данное программное обеспечение предназначено для изучения различных методов шифрования и хеширования данных. Несмотря на то, что в MCrypt есть возможность шифровать и хешировать информацию, данные возможности, как правило, предназначены также для дополнительного и более подробного изучения. В MCrypt различные алгоритмы обладают достаточной степенью надежности, чтобы защитить ваши данные, однако мы настоятельно не рекомендуем использовать данное программное обеспечение, если вам действительно необходимо обеспечить реальную защиту данных!"))
 

@@ -68,9 +68,10 @@ def active_color_style(theme_window, ui):
 def init_settings_panel(ui):
     ui.btn_program_info.clicked.connect(switch_settings_page(ui, 0))
     ui.btn_color_style.clicked.connect(switch_settings_page(ui, 1))
-    ui.btn_set_app.clicked.connect(switch_settings_page(ui, 2))
+    ui.btn_app_set.clicked.connect(switch_settings_page(ui, 2))
     ui.btn_quick_panel.clicked.connect(switch_settings_page(ui, 3))
-    ui.btn_privacy_policy.clicked.connect(switch_settings_page(ui, 4))
+    ui.btn_help_set.clicked.connect(switch_settings_page(ui, 4))
+    ui.btn_privacy_policy.clicked.connect(switch_settings_page(ui, 5))
 
 
 def init_settings_pages(parent, ui):
