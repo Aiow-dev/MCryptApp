@@ -3,7 +3,7 @@ from PyQt5.QtCore import Qt
 
 from views import settings_win_dark
 from components import widgets, win_palette, setting
-from controllers import color_style_controllers, set_app_controllers
+from controllers import color_style_controllers, set_app_controllers, quick_panel_controllers
 
 
 class SettingsWindow(QtWidgets.QWidget):
@@ -62,12 +62,14 @@ def init_settings_panel(ui):
     ui.btn_program_info.clicked.connect(switch_settings_page(ui, 0))
     ui.btn_color_style.clicked.connect(switch_settings_page(ui, 1))
     ui.btn_set_app.clicked.connect(switch_settings_page(ui, 2))
-    ui.btn_privacy_policy.clicked.connect(switch_settings_page(ui, 3))
+    ui.btn_quick_panel.clicked.connect(switch_settings_page(ui, 3))
+    ui.btn_privacy_policy.clicked.connect(switch_settings_page(ui, 4))
 
 
 def init_settings_pages(parent, ui):
     color_style_controllers.init_color_styles(ui)
     set_app_controllers.init_confirm_quit(parent, ui)
+    quick_panel_controllers.init_quick_panel(ui)
 
 
 def show_settings_window(func_single, parent):
@@ -75,7 +77,7 @@ def show_settings_window(func_single, parent):
     form.setFixedSize(1060, 780)
     ui = settings_win_dark.Ui_settings_form()
     ui.setupUi(form)
-    theme = setting.get_app_theme()
+    theme = setting.get_parameter('theme')
     if theme == 'system':
         active_color_style_win(ui)
     elif theme == 'time':

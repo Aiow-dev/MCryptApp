@@ -60,7 +60,7 @@ class Ui_settings_form(object):
 "}")
         self.btn_color_style.setObjectName("btn_color_style")
         self.btn_privacy_policy = QtWidgets.QPushButton(self.section_frame)
-        self.btn_privacy_policy.setGeometry(QtCore.QRect(0, 120, 301, 41))
+        self.btn_privacy_policy.setGeometry(QtCore.QRect(0, 160, 301, 41))
         font = QtGui.QFont()
         font.setPointSize(8)
         self.btn_privacy_policy.setFont(font)
@@ -89,6 +89,21 @@ class Ui_settings_form(object):
 "    background-color: rgb(77, 77, 77);\n"
 "}")
         self.btn_set_app.setObjectName("btn_set_app")
+        self.btn_quick_panel = QtWidgets.QPushButton(self.section_frame)
+        self.btn_quick_panel.setGeometry(QtCore.QRect(0, 120, 301, 41))
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        self.btn_quick_panel.setFont(font)
+        self.btn_quick_panel.setStyleSheet("QPushButton {\n"
+"    background-color: rgb(30, 30, 30);\n"
+"    color: rgb(240, 243, 249);\n"
+"    border: 0px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(77, 77, 77);\n"
+"}")
+        self.btn_quick_panel.setObjectName("btn_quick_panel")
         self.horizontalLayout.addWidget(self.section_frame)
         self.section_widget = QtWidgets.QStackedWidget(settings_form)
         self.section_widget.setObjectName("section_widget")
@@ -554,6 +569,46 @@ class Ui_settings_form(object):
 "}")
         self.btn_quit.setObjectName("btn_quit")
         self.section_widget.addWidget(self.page)
+        self.page_2 = QtWidgets.QWidget()
+        self.page_2.setObjectName("page_2")
+        self.plainTextEdit_5 = QtWidgets.QPlainTextEdit(self.page_2)
+        self.plainTextEdit_5.setGeometry(QtCore.QRect(0, 10, 751, 91))
+        self.plainTextEdit_5.setStyleSheet("QPlainTextEdit {\n"
+"    border: none;\n"
+"    color: rgb(240, 243, 249);\n"
+"}")
+        self.plainTextEdit_5.setReadOnly(True)
+        self.plainTextEdit_5.setObjectName("plainTextEdit_5")
+        self.label_5 = QtWidgets.QLabel(self.page_2)
+        self.label_5.setGeometry(QtCore.QRect(6, 120, 301, 31))
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        self.label_5.setFont(font)
+        self.label_5.setStyleSheet("QLabel {\n"
+"    color: rgb(240, 243, 249);\n"
+"}")
+        self.label_5.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label_5.setWordWrap(True)
+        self.label_5.setObjectName("label_5")
+        self.quick_panel_chk = QtWidgets.QCheckBox(self.page_2)
+        self.quick_panel_chk.setGeometry(QtCore.QRect(310, 108, 101, 45))
+        self.quick_panel_chk.setMinimumSize(QtCore.QSize(0, 45))
+        self.quick_panel_chk.setStyleSheet("QCheckBox {\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked {\n"
+"    border-radius: 2px;\n"
+"    background-color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"    border-radius: 2px;\n"
+"    background-color: rgb(67, 67, 67);\n"
+"}")
+        self.quick_panel_chk.setText("")
+        self.quick_panel_chk.setObjectName("quick_panel_chk")
+        self.section_widget.addWidget(self.page_2)
         self.page_3 = QtWidgets.QWidget()
         self.page_3.setObjectName("page_3")
         self.plainTextEdit_3 = QtWidgets.QPlainTextEdit(self.page_3)
@@ -568,7 +623,7 @@ class Ui_settings_form(object):
         self.horizontalLayout.addWidget(self.section_widget)
 
         self.retranslateUi(settings_form)
-        self.section_widget.setCurrentIndex(2)
+        self.section_widget.setCurrentIndex(3)
         QtCore.QMetaObject.connectSlotsByName(settings_form)
 
     def retranslateUi(self, settings_form):
@@ -578,6 +633,7 @@ class Ui_settings_form(object):
         self.btn_color_style.setText(_translate("settings_form", "Цветовая схема"))
         self.btn_privacy_policy.setText(_translate("settings_form", "Политика конфиденциальности"))
         self.btn_set_app.setText(_translate("settings_form", "Рабочая область"))
+        self.btn_quick_panel.setText(_translate("settings_form", "Панель быстрого доступа"))
         self.label_2.setText(_translate("settings_form", "Версия: MCrypt 1.9.1 Preview"))
         self.label_3.setText(_translate("settings_form", "©MCryptTeam, 2023, все права защищены"))
         self.plainTextEdit_2.setPlainText(_translate("settings_form", "MCrypt - программное обеспечение, позволяющее выполнять шифрование, дешифрование, хеширование и множество других преобразований быстро и эффективно. При этом, MCrypt позволяет просмотреть каждый шаг выполнения данных преобразований, а также содержит справочник по различным алгоритмам шифрования, применяемых в данном программном обеспечении, что позволяет более подробно рассмотреть различные процессы преобразования данных. Также MCrypt содержит множество различных алгоритмов шифрования, включая более сложные алгоритмы шифрования, предоставляя возможность автоматического заполнения параметров шифрования, что позволяет существенно сократить время на шифрование данных"))
@@ -598,6 +654,9 @@ class Ui_settings_form(object):
         self.label_4.setText(_translate("settings_form", "Отображать окно подтверждения при завершении или перезагрузке приложения:"))
         self.btn_restart.setText(_translate("settings_form", "Перезагрузить"))
         self.btn_quit.setText(_translate("settings_form", "Завершить работу"))
+        self.plainTextEdit_5.setPlainText(_translate("settings_form", "Панель быстрого доступа позволяет быстро перемещаться между некоторыми страницами приложения. Вы можете отключить или включить отображение данной панели\n"
+"ВАЖНО: Изменения этого параметра вступают в силу после перезагрузки приложения!"))
+        self.label_5.setText(_translate("settings_form", "Отображать панель быстрого доступа:"))
         self.plainTextEdit_3.setPlainText(_translate("settings_form", "MCrypt - программное обеспечение, позволяющее выполнять различные преобразования данных в целях обеспечения безопасности и конфиденциальности данных, а также для безопасного способа их передачи и обмена. Данное программное обеспечение не хранит исходную информацию, предназначенную для ее передачи и обмена, поэтому после завершения работы приложения данная информация будет утеряна без возможности восстановления. В MCrypt пользовательские учетные данные хранятся в формате, не позволяющем получить к ним какой-либо доступ. Однако в случае утери каких-либо данных, MCryptTeam не несет никакой ответственности за утерю или получение доступа сторонних лиц к вашим данным.\n"
 "ВАЖНО: Данное программное обеспечение предназначено для изучения различных методов шифрования и хеширования данных. Несмотря на то, что в MCrypt есть возможность шифровать и хешировать информацию, данные возможности, как правило, предназначены также для дополнительного и более подробного изучения. В MCrypt различные алгоритмы обладают достаточной степенью надежности, чтобы защитить ваши данные, однако мы настоятельно не рекомендуем использовать данное программное обеспечение, если вам действительно необходимо обеспечить реальную защиту данных!"))
 

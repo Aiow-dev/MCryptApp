@@ -4,22 +4,22 @@ from controllers import messages
 
 def light_color_style():
     dialogs.show_info_msg(messages.ON_LIGHT_THEME, 'Информация')
-    setting.set_app_theme('light')
+    setting.set_parameter('theme', 'light')
 
 
 def dark_color_style():
     dialogs.show_info_msg(messages.ON_DARK_THEME, 'Информация')
-    setting.set_app_theme('dark')
+    setting.set_parameter('theme', 'dark')
 
 
 def system_color_style():
     dialogs.show_info_msg(messages.ON_SYSTEM_THEME, 'Информация')
-    setting.set_app_theme('system')
+    setting.set_parameter('theme', 'system')
 
 
 def time_color_style():
     dialogs.show_info_msg(messages.ON_TIME_THEME, 'Информация')
-    setting.set_app_theme('time')
+    setting.set_parameter('theme', 'time')
 
 
 def init_color_styles(ui):

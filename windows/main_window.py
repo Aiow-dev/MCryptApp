@@ -14,7 +14,7 @@ from views import main_win_dark, main_win_light
 
 class MainWindowApp(QtWidgets.QMainWindow):
     def closeEvent(self, event):
-        is_confirm_quit = setting.is_confirm_quit()
+        is_confirm_quit = setting.get_parameter('confirm-quit')
         if is_confirm_quit:
             result = dialogs.question_msg(self,
                                           'Вы уверены, что хотите выйти? Все несохраненные изменения будут утеряны!',
@@ -31,6 +31,13 @@ def init_styles(theme_window, ui_window):
         schemes.light_scheme(ui_window)
     else:
         schemes.dark_scheme(ui_window)
+
+
+def init_elements(ui_window):
+    quick_panel_status = setting.get_parameter('show-quick-panel')
+    if not quick_panel_status:
+        ui_window.status_frame.setVisible(False)
+        ui_window.enc_combo_box.setVisible(False)
 
 
 def init_win_styles(is_light_win, ui_window):

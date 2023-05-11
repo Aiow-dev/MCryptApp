@@ -11,7 +11,7 @@ def restart():
 
 
 def quit_confirm(parent):
-    is_confirm_quit = setting.is_confirm_quit()
+    is_confirm_quit = setting.get_parameter('confirm-quit')
     if is_confirm_quit:
         result = dialogs.question_msg(parent,
                                       'Вы уверены, что хотите выйти? Все несохраненные изменения будут утеряны!',
@@ -23,7 +23,7 @@ def quit_confirm(parent):
 
 
 def restart_confirm(parent):
-    is_confirm_quit = setting.is_confirm_quit()
+    is_confirm_quit = setting.get_parameter('confirm-quit')
     if is_confirm_quit:
         result = dialogs.question_msg(parent,
                                       'Вы уверены, что хотите выйти? Все несохраненные изменения будут утеряны!',
