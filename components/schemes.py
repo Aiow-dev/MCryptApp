@@ -12,7 +12,6 @@ def labels_light(labels):
 
 
 def smp_light_sys_scheme(ui):
-    widgets.tab_wgt_light_sys(ui.smp_types_tab)
     line_edits = [ui.enc_smp_msg_txt, ui.enc_smp_row_txt, ui.enc_smp_clm_txt,
                   ui.enc_smp_oc_txt, ui.dec_smp_msg_txt, ui.dec_smp_row_txt,
                   ui.dec_smp_clm_txt, ui.dec_smp_oc_txt]
@@ -29,7 +28,6 @@ def smp_light_sys_scheme(ui):
 
 
 def kpm_light_sys_scheme(ui):
-    widgets.tab_wgt_light_sys(ui.kpm_types_tab)
     line_edits = [ui.enc_kpm_msg_txt, ui.enc_kpm_row_txt, ui.enc_kpm_clm_txt,
                   ui.enc_kpm_key_txt, ui.enc_kpm_oc_txt, ui.dec_kpm_msg_txt,
                   ui.dec_kpm_row_txt, ui.dec_kpm_clm_txt, ui.dec_kpm_key_txt,
@@ -47,7 +45,6 @@ def kpm_light_sys_scheme(ui):
 
 
 def dpm_light_sys_scheme(ui):
-    widgets.tab_wgt_light_sys(ui.dpm_types_tab)
     line_edits = [ui.enc_dpm_msg_txt, ui.enc_dpm_row_txt, ui.enc_dpm_clm_txt,
                   ui.enc_dpm_key_r_txt, ui.enc_dpm_key_c_txt, ui.enc_dpm_oc_txt,
                   ui.dec_dpm_msg_txt, ui.dec_dpm_row_txt, ui.dec_dpm_clm_txt,
@@ -66,7 +63,6 @@ def dpm_light_sys_scheme(ui):
 
 
 def ms_light_sys_scheme(ui):
-    widgets.tab_wgt_light_sys(ui.ms_types_tab)
     line_edits = [ui.enc_ms_msg_txt, ui.enc_ms_rank_txt, ui.enc_dpm_clm_txt,
                   ui.enc_ms_oc_txt, ui.dec_ms_msg_txt, ui.dec_ms_rank_txt,
                   ui.dec_ms_oc_txt]
@@ -83,7 +79,6 @@ def ms_light_sys_scheme(ui):
 
 
 def cs_light_sys_scheme(ui):
-    widgets.tab_wgt_light_sys(ui.cs_types_tab)
     line_edits = [ui.enc_cs_msg_txt, ui.enc_cs_key_txt, ui.enc_cs_oc_txt,
                   ui.dec_cs_msg_txt, ui.dec_cs_key_txt, ui.dec_cs_oc_txt]
     line_edits_light(line_edits)
@@ -98,7 +93,6 @@ def cs_light_sys_scheme(ui):
 
 
 def acs_light_sys_scheme(ui):
-    widgets.tab_wgt_light_sys(ui.acs_types_tab)
     line_edits = [ui.enc_acs_msg_txt, ui.enc_acs_key_a_txt, ui.enc_acs_key_b_txt,
                   ui.enc_acs_oc_txt, ui.dec_acs_msg_txt, ui.dec_acs_key_a_txt,
                   ui.dec_acs_key_b_txt, ui.dec_acs_oc_txt]
@@ -116,7 +110,6 @@ def acs_light_sys_scheme(ui):
 
 
 def kcs_light_sys_scheme(ui):
-    widgets.tab_wgt_light_sys(ui.kcs_types_tab)
     line_edits = [ui.enc_kcs_msg_txt, ui.enc_kcs_key_txt, ui.enc_kcs_key_k_txt,
                   ui.enc_kcs_oc_txt, ui.dec_kcs_msg_txt, ui.dec_kcs_key_txt,
                   ui.dec_kcs_key_k_txt, ui.dec_kcs_oc_txt]
@@ -134,7 +127,6 @@ def kcs_light_sys_scheme(ui):
 
 
 def ts_light_sys_scheme(ui):
-    widgets.tab_wgt_light_sys(ui.ts_types_tab)
     line_edits = [ui.enc_ts_msg_txt, ui.enc_ts_row_txt, ui.enc_ts_clm_txt,
                   ui.enc_ts_key_txt, ui.enc_ts_oc_txt, ui.dec_ts_msg_txt,
                   ui.dec_ts_row_txt, ui.dec_ts_clm_txt, ui.dec_ts_key_txt,
@@ -152,7 +144,6 @@ def ts_light_sys_scheme(ui):
 
 
 def vs_light_sys_scheme(ui):
-    widgets.tab_wgt_light_sys(ui.vs_types_tab)
     line_edits = [ui.enc_vs_msg_txt, ui.enc_vs_key_txt, ui.enc_vs_oc_txt,
                   ui.dec_vs_msg_txt, ui.dec_vs_key_txt, ui.dec_vs_oc_txt]
     line_edits_light(line_edits)
@@ -168,7 +159,6 @@ def vs_light_sys_scheme(ui):
 
 
 def ps_light_sys_scheme(ui):
-    widgets.tab_wgt_light_sys(ui.ps_types_tab)
     line_edits = [ui.enc_ps_msg_txt, ui.enc_ps_row_txt, ui.enc_ps_clm_txt,
                   ui.enc_ps_key_txt, ui.enc_ps_oc_txt, ui.dec_ps_msg_txt,
                   ui.dec_ps_row_txt, ui.dec_ps_clm_txt, ui.dec_ps_key_txt,
@@ -186,7 +176,6 @@ def ps_light_sys_scheme(ui):
 
 
 def dp_light_sys_scheme(ui):
-    widgets.tab_wgt_light_sys(ui.dp_types_tab)
     line_edits = [ui.enc_dp_msg_txt, ui.enc_dp_row_txt, ui.enc_dp_clm_txt,
                   ui.enc_dp_oc_txt, ui.dec_dp_msg_txt, ui.dec_dp_row_txt,
                   ui.dec_dp_clm_txt, ui.dec_dp_oc_txt]
@@ -238,11 +227,6 @@ def dark_sys_scheme(ui):
     widgets.menu_bar_dark_sys(ui.menu_bar)
     widgets.frame_sys(ui.status_frame)
     widgets.combo_box_dark_sys(ui.enc_combo_box)
-    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
-                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
-                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
-    for tab in tab_list:
-        widgets.tab_wgt_dark_sys(tab)
     btn_list = [ui.enc_smp_btn, ui.dec_smp_btn, ui.enc_kpm_btn, ui.dec_kpm_btn,
                 ui.enc_dpm_btn, ui.dec_dpm_btn, ui.enc_ms_btn, ui.dec_ms_btn,
                 ui.enc_cs_btn, ui.dec_cs_btn, ui.enc_acs_btn, ui.dec_acs_btn,
@@ -251,6 +235,14 @@ def dark_sys_scheme(ui):
                 ui.enc_dp_btn, ui.dec_dp_btn]
     for btn in btn_list:
         widgets.push_btn_sys(btn)
+
+
+def light_tab_corn_scheme(ui):
+    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
+                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
+                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
+    for tab in tab_list:
+        widgets.tab_wgt_light(tab)
 
 
 def light_tab_rad_scheme(ui):
@@ -277,6 +269,14 @@ def light_tab_corn_rad_scheme(ui):
         widgets.tab_wgt_light_corn_rad(tab)
 
 
+def light_sys_tab_corn_scheme(ui):
+    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
+                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
+                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
+    for tab in tab_list:
+        widgets.tab_wgt_light_sys(tab)
+
+
 def light_sys_tab_rad_scheme(ui):
     tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
                 ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
@@ -301,6 +301,14 @@ def light_sys_tab_corn_rad_scheme(ui):
         widgets.tab_wgt_light_sys_corn_rad(tab)
 
 
+def dark_tab_corn_scheme(ui):
+    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
+                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
+                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
+    for tab in tab_list:
+        widgets.tab_wgt_dark(tab)
+
+
 def dark_tab_rad_scheme(ui):
     tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
                 ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
@@ -323,6 +331,14 @@ def dark_tab_corn_rad_scheme(ui):
                 ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
     for tab in tab_list:
         widgets.tab_wgt_dark_corn_rad(tab)
+
+
+def dark_sys_tab_corn_scheme(ui):
+    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
+                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
+                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
+    for tab in tab_list:
+        widgets.tab_wgt_dark_sys(tab)
 
 
 def dark_sys_tab_rad_scheme(ui):

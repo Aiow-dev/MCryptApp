@@ -70,6 +70,11 @@ def init_tab_styles(theme_window, tab_style, ui):
             schemes.light_tab_corn_rad_scheme(ui)
         else:
             schemes.dark_tab_corn_rad_scheme(ui)
+    else:
+        if theme_window == 'light':
+            schemes.light_tab_corn_scheme(ui)
+        else:
+            schemes.dark_tab_corn_scheme(ui)
 
 
 def init_sys_tab_styles(is_light, tab_style, ui):
@@ -88,6 +93,11 @@ def init_sys_tab_styles(is_light, tab_style, ui):
             schemes.light_sys_tab_corn_rad_scheme(ui)
         else:
             schemes.dark_sys_tab_corn_rad_scheme(ui)
+    else:
+        if is_light:
+            schemes.light_sys_tab_corn_scheme(ui)
+        else:
+            schemes.dark_sys_tab_corn_scheme(ui)
 
 
 def init_pages(ui_window):
