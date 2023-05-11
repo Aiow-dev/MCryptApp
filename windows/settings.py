@@ -3,7 +3,14 @@ from PyQt5.QtCore import Qt
 
 from views import settings_win_dark
 from components import widgets, win_palette, setting
-from controllers import color_style_controllers, set_app_controllers, quick_panel_controllers
+from controllers import (
+    color_style_controllers,
+    set_app_controllers,
+    quick_panel_controllers,
+    program_info_controllers
+)
+from windows import ext_info
+from helpers import func
 
 
 class SettingsWindow(QtWidgets.QWidget):
@@ -70,6 +77,7 @@ def init_settings_pages(parent, ui):
     color_style_controllers.init_color_styles(ui)
     set_app_controllers.init_confirm_quit(parent, ui)
     quick_panel_controllers.init_quick_panel(ui)
+    program_info_controllers.init_program_info(parent, ui)
 
 
 def show_settings_window(func_single, parent):

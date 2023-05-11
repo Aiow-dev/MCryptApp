@@ -110,7 +110,7 @@ class Ui_settings_form(object):
         self.program_info_page = QtWidgets.QWidget()
         self.program_info_page.setObjectName("program_info_page")
         self.label_2 = QtWidgets.QLabel(self.program_info_page)
-        self.label_2.setGeometry(QtCore.QRect(6, 240, 271, 31))
+        self.label_2.setGeometry(QtCore.QRect(6, 300, 271, 31))
         font = QtGui.QFont()
         font.setPointSize(8)
         self.label_2.setFont(font)
@@ -123,7 +123,7 @@ class Ui_settings_form(object):
         self.label_2.setWordWrap(True)
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(self.program_info_page)
-        self.label_3.setGeometry(QtCore.QRect(6, 280, 751, 31))
+        self.label_3.setGeometry(QtCore.QRect(6, 340, 751, 31))
         font = QtGui.QFont()
         font.setPointSize(8)
         self.label_3.setFont(font)
@@ -141,6 +141,19 @@ class Ui_settings_form(object):
 "}")
         self.plainTextEdit_2.setReadOnly(True)
         self.plainTextEdit_2.setObjectName("plainTextEdit_2")
+        self.ext_info_btn = QtWidgets.QPushButton(self.program_info_page)
+        self.ext_info_btn.setGeometry(QtCore.QRect(6, 240, 321, 45))
+        self.ext_info_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(77, 77, 77);\n"
+"}")
+        self.ext_info_btn.setObjectName("ext_info_btn")
         self.section_widget.addWidget(self.program_info_page)
         self.color_style_page = QtWidgets.QWidget()
         self.color_style_page.setObjectName("color_style_page")
@@ -623,7 +636,7 @@ class Ui_settings_form(object):
         self.horizontalLayout.addWidget(self.section_widget)
 
         self.retranslateUi(settings_form)
-        self.section_widget.setCurrentIndex(3)
+        self.section_widget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(settings_form)
 
     def retranslateUi(self, settings_form):
@@ -637,6 +650,7 @@ class Ui_settings_form(object):
         self.label_2.setText(_translate("settings_form", "Версия: MCrypt 1.9.1 Preview"))
         self.label_3.setText(_translate("settings_form", "©MCryptTeam, 2023, все права защищены"))
         self.plainTextEdit_2.setPlainText(_translate("settings_form", "MCrypt - программное обеспечение, позволяющее выполнять шифрование, дешифрование, хеширование и множество других преобразований быстро и эффективно. При этом, MCrypt позволяет просмотреть каждый шаг выполнения данных преобразований, а также содержит справочник по различным алгоритмам шифрования, применяемых в данном программном обеспечении, что позволяет более подробно рассмотреть различные процессы преобразования данных. Также MCrypt содержит множество различных алгоритмов шифрования, включая более сложные алгоритмы шифрования, предоставляя возможность автоматического заполнения параметров шифрования, что позволяет существенно сократить время на шифрование данных"))
+        self.ext_info_btn.setText(_translate("settings_form", "Открыть расширенную информацию"))
         self.label_6.setText(_translate("settings_form", "☀"))
         self.light_btn.setText(_translate("settings_form", "Применить"))
         self.dark_btn.setText(_translate("settings_form", "Применить"))

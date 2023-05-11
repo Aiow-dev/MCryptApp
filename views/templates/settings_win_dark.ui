@@ -200,14 +200,14 @@ QPushButton:hover {
    <item>
     <widget class="QStackedWidget" name="section_widget">
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="program_info_page">
       <widget class="QLabel" name="label_2">
        <property name="geometry">
         <rect>
          <x>6</x>
-         <y>240</y>
+         <y>300</y>
          <width>271</width>
          <height>31</height>
         </rect>
@@ -238,7 +238,7 @@ QPushButton:hover {
        <property name="geometry">
         <rect>
          <x>6</x>
-         <y>280</y>
+         <y>340</y>
          <width>751</width>
          <height>31</height>
         </rect>
@@ -283,6 +283,31 @@ QPushButton:hover {
        </property>
        <property name="plainText">
         <string>MCrypt - программное обеспечение, позволяющее выполнять шифрование, дешифрование, хеширование и множество других преобразований быстро и эффективно. При этом, MCrypt позволяет просмотреть каждый шаг выполнения данных преобразований, а также содержит справочник по различным алгоритмам шифрования, применяемых в данном программном обеспечении, что позволяет более подробно рассмотреть различные процессы преобразования данных. Также MCrypt содержит множество различных алгоритмов шифрования, включая более сложные алгоритмы шифрования, предоставляя возможность автоматического заполнения параметров шифрования, что позволяет существенно сократить время на шифрование данных</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ext_info_btn">
+       <property name="geometry">
+        <rect>
+         <x>6</x>
+         <y>240</y>
+         <width>321</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+       </property>
+       <property name="text">
+        <string>Открыть расширенную информацию</string>
        </property>
       </widget>
      </widget>
