@@ -54,6 +54,42 @@ def init_time_styles():
         schemes.dark_scheme(ui_win)
 
 
+def init_tab_styles(theme_window, tab_style, ui):
+    if tab_style == 'radius':
+        if theme_window == 'light':
+            schemes.light_tab_rad_scheme(ui)
+        else:
+            schemes.dark_tab_rad_scheme(ui)
+    elif tab_style == 'top-radius':
+        if theme_window == 'light':
+            schemes.light_tab_top_rad_scheme(ui)
+        else:
+            schemes.dark_tab_top_rad_scheme(ui)
+    elif tab_style == 'corner-radius':
+        if theme_window == 'light':
+            schemes.light_tab_corn_rad_scheme(ui)
+        else:
+            schemes.dark_tab_corn_rad_scheme(ui)
+
+
+def init_sys_tab_styles(is_light, tab_style, ui):
+    if tab_style == 'radius':
+        if is_light:
+            schemes.light_sys_tab_rad_scheme(ui)
+        else:
+            schemes.dark_sys_tab_rad_scheme(ui)
+    elif tab_style == 'top-radius':
+        if is_light:
+            schemes.light_sys_tab_top_rad_scheme(ui)
+        else:
+            schemes.dark_sys_tab_top_rad_scheme(ui)
+    elif tab_style == 'corner-radius':
+        if is_light:
+            schemes.light_sys_tab_corn_rad_scheme(ui)
+        else:
+            schemes.dark_sys_tab_corn_rad_scheme(ui)
+
+
 def init_pages(ui_window):
     prm_controllers.init_simple_permutation(ui_window)
     prm_controllers.init_key_permutation(ui_window)

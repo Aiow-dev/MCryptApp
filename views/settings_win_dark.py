@@ -60,7 +60,7 @@ class Ui_settings_form(object):
 "}")
         self.btn_color_style.setObjectName("btn_color_style")
         self.btn_privacy_policy = QtWidgets.QPushButton(self.section_frame)
-        self.btn_privacy_policy.setGeometry(QtCore.QRect(0, 200, 301, 41))
+        self.btn_privacy_policy.setGeometry(QtCore.QRect(0, 240, 301, 41))
         font = QtGui.QFont()
         font.setPointSize(8)
         self.btn_privacy_policy.setFont(font)
@@ -105,7 +105,7 @@ class Ui_settings_form(object):
 "}")
         self.btn_quick_panel.setObjectName("btn_quick_panel")
         self.btn_help_set = QtWidgets.QPushButton(self.section_frame)
-        self.btn_help_set.setGeometry(QtCore.QRect(0, 160, 301, 41))
+        self.btn_help_set.setGeometry(QtCore.QRect(0, 200, 301, 41))
         font = QtGui.QFont()
         font.setPointSize(8)
         self.btn_help_set.setFont(font)
@@ -119,6 +119,21 @@ class Ui_settings_form(object):
 "    background-color: rgb(77, 77, 77);\n"
 "}")
         self.btn_help_set.setObjectName("btn_help_set")
+        self.btn_tab = QtWidgets.QPushButton(self.section_frame)
+        self.btn_tab.setGeometry(QtCore.QRect(0, 160, 301, 41))
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        self.btn_tab.setFont(font)
+        self.btn_tab.setStyleSheet("QPushButton {\n"
+"    background-color: rgb(30, 30, 30);\n"
+"    color: rgb(240, 243, 249);\n"
+"    border: 0px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(77, 77, 77);\n"
+"}")
+        self.btn_tab.setObjectName("btn_tab")
         self.horizontalLayout.addWidget(self.section_frame)
         self.section_widget = QtWidgets.QStackedWidget(settings_form)
         self.section_widget.setObjectName("section_widget")
@@ -527,9 +542,9 @@ class Ui_settings_form(object):
         self.frame_14.raise_()
         self.plainTextEdit.raise_()
         self.section_widget.addWidget(self.color_style_page)
-        self.page = QtWidgets.QWidget()
-        self.page.setObjectName("page")
-        self.plainTextEdit_4 = QtWidgets.QPlainTextEdit(self.page)
+        self.app_set_page = QtWidgets.QWidget()
+        self.app_set_page.setObjectName("app_set_page")
+        self.plainTextEdit_4 = QtWidgets.QPlainTextEdit(self.app_set_page)
         self.plainTextEdit_4.setGeometry(QtCore.QRect(0, 10, 751, 91))
         self.plainTextEdit_4.setStyleSheet("QPlainTextEdit {\n"
 "    border: none;\n"
@@ -537,7 +552,7 @@ class Ui_settings_form(object):
 "}")
         self.plainTextEdit_4.setReadOnly(True)
         self.plainTextEdit_4.setObjectName("plainTextEdit_4")
-        self.label_4 = QtWidgets.QLabel(self.page)
+        self.label_4 = QtWidgets.QLabel(self.app_set_page)
         self.label_4.setGeometry(QtCore.QRect(6, 120, 621, 31))
         font = QtGui.QFont()
         font.setPointSize(8)
@@ -548,7 +563,7 @@ class Ui_settings_form(object):
         self.label_4.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_4.setWordWrap(True)
         self.label_4.setObjectName("label_4")
-        self.confirm_quit_chk = QtWidgets.QCheckBox(self.page)
+        self.confirm_quit_chk = QtWidgets.QCheckBox(self.app_set_page)
         self.confirm_quit_chk.setGeometry(QtCore.QRect(630, 108, 101, 45))
         self.confirm_quit_chk.setMinimumSize(QtCore.QSize(0, 45))
         self.confirm_quit_chk.setStyleSheet("QCheckBox {\n"
@@ -566,7 +581,7 @@ class Ui_settings_form(object):
 "}")
         self.confirm_quit_chk.setText("")
         self.confirm_quit_chk.setObjectName("confirm_quit_chk")
-        self.btn_restart = QtWidgets.QPushButton(self.page)
+        self.btn_restart = QtWidgets.QPushButton(self.app_set_page)
         self.btn_restart.setGeometry(QtCore.QRect(6, 170, 180, 45))
         self.btn_restart.setMinimumSize(QtCore.QSize(130, 45))
         self.btn_restart.setMaximumSize(QtCore.QSize(200, 16777215))
@@ -581,7 +596,7 @@ class Ui_settings_form(object):
 "    background-color: rgb(77, 77, 77);\n"
 "}")
         self.btn_restart.setObjectName("btn_restart")
-        self.btn_quit = QtWidgets.QPushButton(self.page)
+        self.btn_quit = QtWidgets.QPushButton(self.app_set_page)
         self.btn_quit.setGeometry(QtCore.QRect(200, 170, 180, 45))
         self.btn_quit.setMinimumSize(QtCore.QSize(130, 45))
         self.btn_quit.setMaximumSize(QtCore.QSize(200, 16777215))
@@ -596,10 +611,10 @@ class Ui_settings_form(object):
 "    background-color: rgb(77, 77, 77);\n"
 "}")
         self.btn_quit.setObjectName("btn_quit")
-        self.section_widget.addWidget(self.page)
-        self.page_2 = QtWidgets.QWidget()
-        self.page_2.setObjectName("page_2")
-        self.plainTextEdit_5 = QtWidgets.QPlainTextEdit(self.page_2)
+        self.section_widget.addWidget(self.app_set_page)
+        self.qiuck_panel_page = QtWidgets.QWidget()
+        self.qiuck_panel_page.setObjectName("qiuck_panel_page")
+        self.plainTextEdit_5 = QtWidgets.QPlainTextEdit(self.qiuck_panel_page)
         self.plainTextEdit_5.setGeometry(QtCore.QRect(0, 10, 751, 91))
         self.plainTextEdit_5.setStyleSheet("QPlainTextEdit {\n"
 "    border: none;\n"
@@ -607,7 +622,7 @@ class Ui_settings_form(object):
 "}")
         self.plainTextEdit_5.setReadOnly(True)
         self.plainTextEdit_5.setObjectName("plainTextEdit_5")
-        self.label_5 = QtWidgets.QLabel(self.page_2)
+        self.label_5 = QtWidgets.QLabel(self.qiuck_panel_page)
         self.label_5.setGeometry(QtCore.QRect(6, 120, 301, 31))
         font = QtGui.QFont()
         font.setPointSize(8)
@@ -618,7 +633,7 @@ class Ui_settings_form(object):
         self.label_5.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_5.setWordWrap(True)
         self.label_5.setObjectName("label_5")
-        self.quick_panel_chk = QtWidgets.QCheckBox(self.page_2)
+        self.quick_panel_chk = QtWidgets.QCheckBox(self.qiuck_panel_page)
         self.quick_panel_chk.setGeometry(QtCore.QRect(310, 108, 101, 45))
         self.quick_panel_chk.setMinimumSize(QtCore.QSize(0, 45))
         self.quick_panel_chk.setStyleSheet("QCheckBox {\n"
@@ -636,7 +651,299 @@ class Ui_settings_form(object):
 "}")
         self.quick_panel_chk.setText("")
         self.quick_panel_chk.setObjectName("quick_panel_chk")
-        self.section_widget.addWidget(self.page_2)
+        self.section_widget.addWidget(self.qiuck_panel_page)
+        self.tab_page = QtWidgets.QWidget()
+        self.tab_page.setObjectName("tab_page")
+        self.plainTextEdit_7 = QtWidgets.QPlainTextEdit(self.tab_page)
+        self.plainTextEdit_7.setGeometry(QtCore.QRect(0, 10, 751, 91))
+        self.plainTextEdit_7.setStyleSheet("QPlainTextEdit {\n"
+"    border: none;\n"
+"    color: rgb(240, 243, 249);\n"
+"}")
+        self.plainTextEdit_7.setReadOnly(True)
+        self.plainTextEdit_7.setObjectName("plainTextEdit_7")
+        self.frame_18 = QtWidgets.QFrame(self.tab_page)
+        self.frame_18.setGeometry(QtCore.QRect(16, 130, 321, 201))
+        self.frame_18.setStyleSheet("QFrame {\n"
+"    border-radius: 5px;\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    background-color: rgb(30, 30, 30);\n"
+"}")
+        self.frame_18.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_18.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_18.setObjectName("frame_18")
+        self.tab_corner_frame = QtWidgets.QFrame(self.tab_page)
+        self.tab_corner_frame.setGeometry(QtCore.QRect(6, 120, 343, 222))
+        self.tab_corner_frame.setStyleSheet("QFrame {\n"
+"    border-radius: 10px;\n"
+"    border: 1px solid rgba(240, 243, 249, 150);\n"
+"}")
+        self.tab_corner_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.tab_corner_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.tab_corner_frame.setObjectName("tab_corner_frame")
+        self.tabWidget = QtWidgets.QTabWidget(self.tab_page)
+        self.tabWidget.setGeometry(QtCore.QRect(20, 140, 311, 181))
+        self.tabWidget.setStyleSheet("QTabWidget::pane {\n"
+"    background: rgb(46, 44, 44);\n"
+"}\n"
+"\n"
+"QTabBar::tab {\n"
+"    height: 20px;\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    padding: 10 40px;\n"
+"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QTabBar::tab:selected {\n"
+"    border: 1px solid rgb(30, 30, 30);\n"
+"    background-color: rgb(30, 30, 30);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QTabBar::tab:hover {\n"
+"    background-color: rgb(67, 67, 67);\n"
+"    color: rgb(240, 243, 249);\n"
+"}")
+        self.tabWidget.setObjectName("tabWidget")
+        self.tab = QtWidgets.QWidget()
+        self.tab.setObjectName("tab")
+        self.tabWidget.addTab(self.tab, "")
+        self.tab_2 = QtWidgets.QWidget()
+        self.tab_2.setObjectName("tab_2")
+        self.tabWidget.addTab(self.tab_2, "")
+        self.tab_radius_frame = QtWidgets.QFrame(self.tab_page)
+        self.tab_radius_frame.setGeometry(QtCore.QRect(400, 120, 343, 222))
+        self.tab_radius_frame.setStyleSheet("QFrame {\n"
+"    border-radius: 10px;\n"
+"    border: 1px solid rgba(240, 243, 249, 150);\n"
+"}")
+        self.tab_radius_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.tab_radius_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.tab_radius_frame.setObjectName("tab_radius_frame")
+        self.tabWidget_2 = QtWidgets.QTabWidget(self.tab_page)
+        self.tabWidget_2.setGeometry(QtCore.QRect(414, 140, 311, 181))
+        self.tabWidget_2.setStyleSheet("QTabWidget::pane {\n"
+"    background: rgb(46, 44, 44);\n"
+"}\n"
+"\n"
+"QTabBar::tab {\n"
+"    height: 20px;\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    border-radius: 3px;\n"
+"    padding: 10 40px;\n"
+"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QTabBar::tab:selected {\n"
+"    border: 1px solid rgb(30, 30, 30);\n"
+"    background-color: rgb(30, 30, 30);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QTabBar::tab:hover {\n"
+"    background-color: rgb(67, 67, 67);\n"
+"    color: rgb(240, 243, 249);\n"
+"}")
+        self.tabWidget_2.setObjectName("tabWidget_2")
+        self.tab_3 = QtWidgets.QWidget()
+        self.tab_3.setObjectName("tab_3")
+        self.tabWidget_2.addTab(self.tab_3, "")
+        self.tab_4 = QtWidgets.QWidget()
+        self.tab_4.setObjectName("tab_4")
+        self.tabWidget_2.addTab(self.tab_4, "")
+        self.frame_19 = QtWidgets.QFrame(self.tab_page)
+        self.frame_19.setGeometry(QtCore.QRect(410, 130, 321, 201))
+        self.frame_19.setStyleSheet("QFrame {\n"
+"    border-radius: 5px;\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    background-color: rgb(30, 30, 30);\n"
+"}")
+        self.frame_19.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_19.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_19.setObjectName("frame_19")
+        self.tab_corner_btn = QtWidgets.QPushButton(self.tab_page)
+        self.tab_corner_btn.setGeometry(QtCore.QRect(90, 360, 180, 45))
+        self.tab_corner_btn.setMinimumSize(QtCore.QSize(130, 45))
+        self.tab_corner_btn.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.tab_corner_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(77, 77, 77);\n"
+"}")
+        self.tab_corner_btn.setObjectName("tab_corner_btn")
+        self.tab_radius_btn = QtWidgets.QPushButton(self.tab_page)
+        self.tab_radius_btn.setGeometry(QtCore.QRect(480, 360, 180, 45))
+        self.tab_radius_btn.setMinimumSize(QtCore.QSize(130, 45))
+        self.tab_radius_btn.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.tab_radius_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(77, 77, 77);\n"
+"}")
+        self.tab_radius_btn.setObjectName("tab_radius_btn")
+        self.tab_top_radius_btn = QtWidgets.QPushButton(self.tab_page)
+        self.tab_top_radius_btn.setGeometry(QtCore.QRect(94, 670, 180, 45))
+        self.tab_top_radius_btn.setMinimumSize(QtCore.QSize(130, 45))
+        self.tab_top_radius_btn.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.tab_top_radius_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(77, 77, 77);\n"
+"}")
+        self.tab_top_radius_btn.setObjectName("tab_top_radius_btn")
+        self.tab_top_radius_frame = QtWidgets.QFrame(self.tab_page)
+        self.tab_top_radius_frame.setGeometry(QtCore.QRect(10, 430, 343, 222))
+        self.tab_top_radius_frame.setStyleSheet("QFrame {\n"
+"    border-radius: 10px;\n"
+"    border: 1px solid rgba(240, 243, 249, 150);\n"
+"}")
+        self.tab_top_radius_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.tab_top_radius_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.tab_top_radius_frame.setObjectName("tab_top_radius_frame")
+        self.tabWidget_5 = QtWidgets.QTabWidget(self.tab_page)
+        self.tabWidget_5.setGeometry(QtCore.QRect(24, 450, 311, 181))
+        self.tabWidget_5.setStyleSheet("QTabWidget::pane {\n"
+"    background: rgb(46, 44, 44);\n"
+"}\n"
+"\n"
+"QTabBar::tab {\n"
+"    height: 20px;\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    border-top-left-radius: 6px;\n"
+"    border-top-right-radius: 6px;\n"
+"    padding: 10 40px;\n"
+"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QTabBar::tab:selected {\n"
+"    border: 1px solid rgb(30, 30, 30);\n"
+"    background-color: rgb(30, 30, 30);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QTabBar::tab:hover {\n"
+"    background-color: rgb(67, 67, 67);\n"
+"    color: rgb(240, 243, 249);\n"
+"}")
+        self.tabWidget_5.setObjectName("tabWidget_5")
+        self.tab_9 = QtWidgets.QWidget()
+        self.tab_9.setObjectName("tab_9")
+        self.tabWidget_5.addTab(self.tab_9, "")
+        self.tab_10 = QtWidgets.QWidget()
+        self.tab_10.setObjectName("tab_10")
+        self.tabWidget_5.addTab(self.tab_10, "")
+        self.frame_35 = QtWidgets.QFrame(self.tab_page)
+        self.frame_35.setGeometry(QtCore.QRect(20, 440, 321, 201))
+        self.frame_35.setStyleSheet("QFrame {\n"
+"    border-radius: 5px;\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    background-color: rgb(30, 30, 30);\n"
+"}")
+        self.frame_35.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_35.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_35.setObjectName("frame_35")
+        self.tab_corner_radius_btn = QtWidgets.QPushButton(self.tab_page)
+        self.tab_corner_radius_btn.setGeometry(QtCore.QRect(484, 670, 180, 45))
+        self.tab_corner_radius_btn.setMinimumSize(QtCore.QSize(130, 45))
+        self.tab_corner_radius_btn.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.tab_corner_radius_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(77, 77, 77);\n"
+"}")
+        self.tab_corner_radius_btn.setObjectName("tab_corner_radius_btn")
+        self.tabWidget_6 = QtWidgets.QTabWidget(self.tab_page)
+        self.tabWidget_6.setGeometry(QtCore.QRect(414, 450, 311, 181))
+        self.tabWidget_6.setStyleSheet("QTabWidget::pane {\n"
+"    background: rgb(46, 44, 44);\n"
+"}\n"
+"\n"
+"QTabBar::tab {\n"
+"    height: 20px;\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    border-top-right-radius: 6px;\n"
+"    padding: 10 40px;\n"
+"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QTabBar::tab:selected {\n"
+"    border: 1px solid rgb(30, 30, 30);\n"
+"    background-color: rgb(30, 30, 30);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QTabBar::tab:hover {\n"
+"    background-color: rgb(67, 67, 67);\n"
+"    color: rgb(240, 243, 249);\n"
+"}")
+        self.tabWidget_6.setObjectName("tabWidget_6")
+        self.tab_11 = QtWidgets.QWidget()
+        self.tab_11.setObjectName("tab_11")
+        self.tabWidget_6.addTab(self.tab_11, "")
+        self.tab_12 = QtWidgets.QWidget()
+        self.tab_12.setObjectName("tab_12")
+        self.tabWidget_6.addTab(self.tab_12, "")
+        self.tab_corner_radius_frame = QtWidgets.QFrame(self.tab_page)
+        self.tab_corner_radius_frame.setGeometry(QtCore.QRect(400, 430, 343, 222))
+        self.tab_corner_radius_frame.setStyleSheet("QFrame {\n"
+"    border-radius: 10px;\n"
+"    border: 1px solid rgba(240, 243, 249, 150);\n"
+"}")
+        self.tab_corner_radius_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.tab_corner_radius_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.tab_corner_radius_frame.setObjectName("tab_corner_radius_frame")
+        self.frame_36 = QtWidgets.QFrame(self.tab_page)
+        self.frame_36.setGeometry(QtCore.QRect(410, 440, 321, 201))
+        self.frame_36.setStyleSheet("QFrame {\n"
+"    border-radius: 5px;\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    background-color: rgb(30, 30, 30);\n"
+"}")
+        self.frame_36.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_36.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_36.setObjectName("frame_36")
+        self.tab_corner_radius_frame.raise_()
+        self.frame_36.raise_()
+        self.tab_top_radius_frame.raise_()
+        self.frame_35.raise_()
+        self.tab_radius_frame.raise_()
+        self.frame_19.raise_()
+        self.tab_corner_frame.raise_()
+        self.plainTextEdit_7.raise_()
+        self.frame_18.raise_()
+        self.tabWidget.raise_()
+        self.tabWidget_2.raise_()
+        self.tab_corner_btn.raise_()
+        self.tab_radius_btn.raise_()
+        self.tab_top_radius_btn.raise_()
+        self.tabWidget_5.raise_()
+        self.tab_corner_radius_btn.raise_()
+        self.tabWidget_6.raise_()
+        self.section_widget.addWidget(self.tab_page)
         self.page_4 = QtWidgets.QWidget()
         self.page_4.setObjectName("page_4")
         self.plainTextEdit_6 = QtWidgets.QPlainTextEdit(self.page_4)
@@ -676,6 +983,10 @@ class Ui_settings_form(object):
 
         self.retranslateUi(settings_form)
         self.section_widget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget_2.setCurrentIndex(0)
+        self.tabWidget_5.setCurrentIndex(0)
+        self.tabWidget_6.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(settings_form)
 
     def retranslateUi(self, settings_form):
@@ -687,6 +998,7 @@ class Ui_settings_form(object):
         self.btn_app_set.setText(_translate("settings_form", "Рабочая область"))
         self.btn_quick_panel.setText(_translate("settings_form", "Панель быстрого доступа"))
         self.btn_help_set.setText(_translate("settings_form", "Справка"))
+        self.btn_tab.setText(_translate("settings_form", "Вкладки"))
         self.label_2.setText(_translate("settings_form", "Версия: MCrypt 1.9.1 Preview"))
         self.label_3.setText(_translate("settings_form", "©MCryptTeam, 2023, все права защищены"))
         self.plainTextEdit_2.setPlainText(_translate("settings_form", "MCrypt - программное обеспечение, позволяющее выполнять шифрование, дешифрование, хеширование и множество других преобразований быстро и эффективно. При этом, MCrypt позволяет просмотреть каждый шаг выполнения данных преобразований, а также содержит справочник по различным алгоритмам шифрования, применяемых в данном программном обеспечении, что позволяет более подробно рассмотреть различные процессы преобразования данных. Также MCrypt содержит множество различных алгоритмов шифрования, включая более сложные алгоритмы шифрования, предоставляя возможность автоматического заполнения параметров шифрования, что позволяет существенно сократить время на шифрование данных"))
@@ -711,6 +1023,20 @@ class Ui_settings_form(object):
         self.plainTextEdit_5.setPlainText(_translate("settings_form", "Панель быстрого доступа позволяет быстро перемещаться между некоторыми страницами приложения. Вы можете отключить или включить отображение данной панели\n"
 "ВАЖНО: Изменения этого параметра вступают в силу после перезагрузки приложения!"))
         self.label_5.setText(_translate("settings_form", "Отображать панель быстрого доступа:"))
+        self.plainTextEdit_7.setPlainText(_translate("settings_form", "Вкладки рабочей области позволяют быстро перемещаться между различными режимами преобразования данных. Вы можете настроить различный стиль отображения данных вкладок\n"
+"ВАЖНО: Изменения данного параметра вступают в силу после перезагрузки приложения!"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("settings_form", "Вкладка 1"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("settings_form", "Вкладка 2"))
+        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_3), _translate("settings_form", "Вкладка 1"))
+        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_4), _translate("settings_form", "Вкладка 2"))
+        self.tab_corner_btn.setText(_translate("settings_form", "Применить"))
+        self.tab_radius_btn.setText(_translate("settings_form", "Применить"))
+        self.tab_top_radius_btn.setText(_translate("settings_form", "Применить"))
+        self.tabWidget_5.setTabText(self.tabWidget_5.indexOf(self.tab_9), _translate("settings_form", "Вкладка 1"))
+        self.tabWidget_5.setTabText(self.tabWidget_5.indexOf(self.tab_10), _translate("settings_form", "Вкладка 2"))
+        self.tab_corner_radius_btn.setText(_translate("settings_form", "Применить"))
+        self.tabWidget_6.setTabText(self.tabWidget_6.indexOf(self.tab_11), _translate("settings_form", "Вкладка 1"))
+        self.tabWidget_6.setTabText(self.tabWidget_6.indexOf(self.tab_12), _translate("settings_form", "Вкладка 2"))
         self.plainTextEdit_6.setPlainText(_translate("settings_form", "Этот раздел содержит сведения о возможностях и навигации в приложении"))
         self.help_open_btn.setText(_translate("settings_form", "Открыть справку"))
         self.plainTextEdit_3.setPlainText(_translate("settings_form", "MCrypt - программное обеспечение, позволяющее выполнять различные преобразования данных в целях обеспечения безопасности и конфиденциальности данных, а также для безопасного способа их передачи и обмена. Данное программное обеспечение не хранит исходную информацию, предназначенную для ее передачи и обмена, поэтому после завершения работы приложения данная информация будет утеряна без возможности восстановления. В MCrypt пользовательские учетные данные хранятся в формате, не позволяющем получить к ним какой-либо доступ. Однако в случае утери каких-либо данных, MCryptTeam не несет никакой ответственности за утерю или получение доступа сторонних лиц к вашим данным.\n"

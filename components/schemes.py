@@ -253,6 +253,102 @@ def dark_sys_scheme(ui):
         widgets.push_btn_sys(btn)
 
 
+def light_tab_rad_scheme(ui):
+    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
+                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
+                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
+    for tab in tab_list:
+        widgets.tab_wgt_light_rad(tab)
+
+
+def light_tab_top_rad_scheme(ui):
+    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
+                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
+                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
+    for tab in tab_list:
+        widgets.tab_wgt_light_top_rad(tab)
+
+
+def light_tab_corn_rad_scheme(ui):
+    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
+                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
+                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
+    for tab in tab_list:
+        widgets.tab_wgt_light_corn_rad(tab)
+
+
+def light_sys_tab_rad_scheme(ui):
+    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
+                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
+                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
+    for tab in tab_list:
+        widgets.tab_wgt_light_sys_rad(tab)
+
+
+def light_sys_tab_top_rad_scheme(ui):
+    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
+                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
+                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
+    for tab in tab_list:
+        widgets.tab_wgt_light_sys_top_rad(tab)
+
+
+def light_sys_tab_corn_rad_scheme(ui):
+    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
+                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
+                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
+    for tab in tab_list:
+        widgets.tab_wgt_light_sys_corn_rad(tab)
+
+
+def dark_tab_rad_scheme(ui):
+    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
+                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
+                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
+    for tab in tab_list:
+        widgets.tab_wgt_dark_rad(tab)
+
+
+def dark_tab_top_rad_scheme(ui):
+    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
+                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
+                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
+    for tab in tab_list:
+        widgets.tab_wgt_dark_top_rad(tab)
+
+
+def dark_tab_corn_rad_scheme(ui):
+    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
+                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
+                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
+    for tab in tab_list:
+        widgets.tab_wgt_dark_corn_rad(tab)
+
+
+def dark_sys_tab_rad_scheme(ui):
+    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
+                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
+                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
+    for tab in tab_list:
+        widgets.tab_wgt_dark_sys_rad(tab)
+
+
+def dark_sys_tab_top_rad_scheme(ui):
+    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
+                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
+                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
+    for tab in tab_list:
+        widgets.tab_wgt_dark_sys_top_rad(tab)
+
+
+def dark_sys_tab_corn_rad_scheme(ui):
+    tab_list = [ui.smp_types_tab, ui.kpm_types_tab, ui.dpm_types_tab, ui.ms_types_tab,
+                ui.cs_types_tab, ui.acs_types_tab, ui.kcs_types_tab, ui.ts_types_tab,
+                ui.vs_types_tab, ui.ps_types_tab, ui.dp_types_tab]
+    for tab in tab_list:
+        widgets.tab_wgt_dark_sys_corn_rad(tab)
+
+
 def system_scheme(ui, is_light):
     accent = win_palette.win_accent_converted()
     complementary = win_palette.win_complementary_converted(accent)

@@ -39,6 +39,8 @@ class ConvertedColor:
 
 class Palette(enum.Enum):
     dark_charcoal = ConvertedColor(48, 47, 47)
+    mine_shaft = ConvertedColor(46, 44, 44)
+    tundora = ConvertedColor(67, 67, 67)
     dark_liver = ConvertedColor(77, 77, 77)
     orange_red = ConvertedColor(255, 82, 82)
     light_red = ConvertedColor(255, 186, 186)

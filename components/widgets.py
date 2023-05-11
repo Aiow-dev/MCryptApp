@@ -32,6 +32,97 @@ def frame_compl_color_style_sys(frame_obj):
     frame_obj.setStyleSheet(frame_stylesheet)
 
 
+def tab_wgt_light_rad(tab_wgt_obj):
+    tab_stylesheet = f'''
+    QTabWidget::pane {{
+        background: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab {{
+        height: 25px;
+        border: 1px solid {colors.Palette.dark_purple.value.to_rgb_str()};
+        border-radius: 5px;
+        padding: 10 120px;
+        background-color: {colors.Palette.dark_purple.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:selected {{
+        border: 1px solid {colors.Palette.gray.value.to_rgb_str()};
+        background-color: {colors.Palette.gray.value.to_rgb_str()};
+        color: {colors.Palette.dark_charcoal.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:hover {{
+        border: 1px solid {colors.Palette.light_purple.value.to_rgb_str()};
+        background-color: {colors.Palette.light_purple.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    '''
+    tab_wgt_obj.setStyleSheet(tab_stylesheet)
+
+
+def tab_wgt_light_top_rad(tab_wgt_obj):
+    tab_stylesheet = f'''
+    QTabWidget::pane {{
+        background: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab {{
+        height: 25px;
+        border: 1px solid {colors.Palette.dark_purple.value.to_rgb_str()};
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 10 120px;
+        background-color: {colors.Palette.dark_purple.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:selected {{
+        border: 1px solid {colors.Palette.gray.value.to_rgb_str()};
+        background-color: {colors.Palette.gray.value.to_rgb_str()};
+        color: {colors.Palette.dark_charcoal.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:hover {{
+        border: 1px solid {colors.Palette.light_purple.value.to_rgb_str()};
+        background-color: {colors.Palette.light_purple.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    '''
+    tab_wgt_obj.setStyleSheet(tab_stylesheet)
+
+
+def tab_wgt_light_corn_rad(tab_wgt_obj):
+    tab_stylesheet = f'''
+    QTabWidget::pane {{
+        background: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab {{
+        height: 25px;
+        border: 1px solid {colors.Palette.dark_purple.value.to_rgb_str()};
+        border-top-right-radius: 5px;
+        padding: 10 120px;
+        background-color: {colors.Palette.dark_purple.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:selected {{
+        border: 1px solid {colors.Palette.gray.value.to_rgb_str()};
+        background-color: {colors.Palette.gray.value.to_rgb_str()};
+        color: {colors.Palette.dark_charcoal.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:hover {{
+        border: 1px solid {colors.Palette.light_purple.value.to_rgb_str()};
+        background-color: {colors.Palette.light_purple.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    '''
+    tab_wgt_obj.setStyleSheet(tab_stylesheet)
+
+
 def tab_wgt_light_sys(tab_wgt_obj):
     tab_stylesheet = f'''
     QTabWidget::pane {{
@@ -61,6 +152,185 @@ def tab_wgt_light_sys(tab_wgt_obj):
     tab_wgt_obj.setStyleSheet(tab_stylesheet)
 
 
+def tab_wgt_light_sys_rad(tab_wgt_obj):
+    tab_stylesheet = f'''
+    QTabWidget::pane {{
+        background: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab {{
+        height: 25px;
+        border: 1px solid {win_palette.accent_color};
+        border-radius: 5px;
+        padding: 10 120px;
+        background-color: {win_palette.accent_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:selected {{
+        border: 1px solid {colors.Palette.gray.value.to_rgb_str()};
+        background-color: {colors.Palette.gray.value.to_rgb_str()};
+        color: {colors.Palette.dark_charcoal.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:hover {{
+        border: 1px solid {win_palette.complementary_color};
+        background-color: {win_palette.complementary_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    '''
+    tab_wgt_obj.setStyleSheet(tab_stylesheet)
+
+
+def tab_wgt_light_sys_top_rad(tab_wgt_obj):
+    tab_stylesheet = f'''
+    QTabWidget::pane {{
+        background: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab {{
+        height: 25px;
+        border: 1px solid {win_palette.accent_color};
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 10 120px;
+        background-color: {win_palette.accent_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:selected {{
+        border: 1px solid {colors.Palette.gray.value.to_rgb_str()};
+        background-color: {colors.Palette.gray.value.to_rgb_str()};
+        color: {colors.Palette.dark_charcoal.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:hover {{
+        border: 1px solid {win_palette.complementary_color};
+        background-color: {win_palette.complementary_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    '''
+    tab_wgt_obj.setStyleSheet(tab_stylesheet)
+
+
+def tab_wgt_light_sys_corn_rad(tab_wgt_obj):
+    tab_stylesheet = f'''
+    QTabWidget::pane {{
+        background: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab {{
+        height: 25px;
+        border: 1px solid {win_palette.accent_color};
+        border-right-radius: 5px;
+        padding: 10 120px;
+        background-color: {win_palette.accent_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:selected {{
+        border: 1px solid {colors.Palette.gray.value.to_rgb_str()};
+        background-color: {colors.Palette.gray.value.to_rgb_str()};
+        color: {colors.Palette.dark_charcoal.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:hover {{
+        border: 1px solid {win_palette.complementary_color};
+        background-color: {win_palette.complementary_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    '''
+    tab_wgt_obj.setStyleSheet(tab_stylesheet)
+
+
+def tab_wgt_dark_rad(tab_wgt_obj):
+    tab_stylesheet = f'''
+    QTabWidget::pane {{
+        background: {colors.Palette.mine_shaft.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab {{
+        height: 25px;
+        border: 1px solid {colors.Palette.dark_liver.value.to_rgb_str()};
+        border-radius: 5px;
+        padding: 10 120px;
+        background-color: {colors.Palette.dark_charcoal.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:selected {{
+        border: 1px solid {colors.Palette.eerie_black.value.to_rgb_str()};
+        background-color: {colors.Palette.eerie_black.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:hover {{
+        background-color: {colors.Palette.tundora.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    '''
+    tab_wgt_obj.setStyleSheet(tab_stylesheet)
+
+
+def tab_wgt_dark_top_rad(tab_wgt_obj):
+    tab_stylesheet = f'''
+    QTabWidget::pane {{
+        background: {colors.Palette.mine_shaft.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab {{
+        height: 25px;
+        border: 1px solid {colors.Palette.dark_liver.value.to_rgb_str()};
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 10 120px;
+        background-color: {colors.Palette.dark_charcoal.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:selected {{
+        border: 1px solid {colors.Palette.eerie_black.value.to_rgb_str()};
+        background-color: {colors.Palette.eerie_black.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:hover {{
+        background-color: {colors.Palette.tundora.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    '''
+    tab_wgt_obj.setStyleSheet(tab_stylesheet)
+
+
+def tab_wgt_dark_corn_rad(tab_wgt_obj):
+    tab_stylesheet = f'''
+    QTabWidget::pane {{
+        background: {colors.Palette.mine_shaft.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab {{
+        height: 25px;
+        border: 1px solid {colors.Palette.dark_liver.value.to_rgb_str()};
+        border-top-right-radius: 5px;
+        padding: 10 120px;
+        background-color: {colors.Palette.dark_charcoal.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:selected {{
+        border: 1px solid {colors.Palette.eerie_black.value.to_rgb_str()};
+        background-color: {colors.Palette.eerie_black.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:hover {{
+        background-color: {colors.Palette.tundora.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    '''
+    tab_wgt_obj.setStyleSheet(tab_stylesheet)
+
+
 def tab_wgt_dark_sys(tab_wgt_obj):
     tab_stylesheet = f'''
     QTabWidget::pane {{
@@ -70,6 +340,97 @@ def tab_wgt_dark_sys(tab_wgt_obj):
     QTabBar::tab {{
         height: 25px;
         border: 1px solid {win_palette.accent_color};
+        padding: 10 120px;
+        background-color: {win_palette.accent_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:selected {{
+        border: 1px solid {colors.Palette.eerie_black.value.to_rgb_str()};
+        background-color: {colors.Palette.eerie_black.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:hover {{
+        border: 1px solid {win_palette.complementary_color};
+        background-color: {win_palette.complementary_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    '''
+    tab_wgt_obj.setStyleSheet(tab_stylesheet)
+
+
+def tab_wgt_dark_sys_rad(tab_wgt_obj):
+    tab_stylesheet = f'''
+    QTabWidget::pane {{
+        background: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab {{
+        height: 25px;
+        border: 1px solid {win_palette.accent_color};
+        border-radius: 5px;
+        padding: 10 120px;
+        background-color: {win_palette.accent_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:selected {{
+        border: 1px solid {colors.Palette.eerie_black.value.to_rgb_str()};
+        background-color: {colors.Palette.eerie_black.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:hover {{
+        border: 1px solid {win_palette.complementary_color};
+        background-color: {win_palette.complementary_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    '''
+    tab_wgt_obj.setStyleSheet(tab_stylesheet)
+
+
+def tab_wgt_dark_sys_top_rad(tab_wgt_obj):
+    tab_stylesheet = f'''
+    QTabWidget::pane {{
+        background: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab {{
+        height: 25px;
+        border: 1px solid {win_palette.accent_color};
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 10 120px;
+        background-color: {win_palette.accent_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:selected {{
+        border: 1px solid {colors.Palette.eerie_black.value.to_rgb_str()};
+        background-color: {colors.Palette.eerie_black.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:hover {{
+        border: 1px solid {win_palette.complementary_color};
+        background-color: {win_palette.complementary_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    '''
+    tab_wgt_obj.setStyleSheet(tab_stylesheet)
+
+
+def tab_wgt_dark_sys_corn_rad(tab_wgt_obj):
+    tab_stylesheet = f'''
+    QTabWidget::pane {{
+        background: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab {{
+        height: 25px;
+        border: 1px solid {win_palette.accent_color};
+        border-top-right-radius: 5px;
         padding: 10 120px;
         background-color: {win_palette.accent_color};
         color: {colors.Palette.gray.value.to_rgb_str()};

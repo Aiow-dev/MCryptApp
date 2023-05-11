@@ -112,7 +112,7 @@ QPushButton:hover {
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>200</y>
+        <y>240</y>
         <width>301</width>
         <height>41</height>
        </rect>
@@ -199,7 +199,7 @@ QPushButton:hover {
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>160</y>
+        <y>200</y>
         <width>301</width>
         <height>41</height>
        </rect>
@@ -222,6 +222,35 @@ QPushButton:hover {
       </property>
       <property name="text">
        <string>Справка</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_tab">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>160</y>
+        <width>301</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(30, 30, 30);
+	color: rgb(240, 243, 249);
+	border: 0px;
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+      </property>
+      <property name="text">
+       <string>Вкладки</string>
       </property>
      </widget>
     </widget>
@@ -1169,7 +1198,7 @@ QPushButton:hover {
       <zorder>frame_14</zorder>
       <zorder>plainTextEdit</zorder>
      </widget>
-     <widget class="QWidget" name="page">
+     <widget class="QWidget" name="app_set_page">
       <widget class="QPlainTextEdit" name="plainTextEdit_4">
        <property name="geometry">
         <rect>
@@ -1331,7 +1360,7 @@ QPushButton:hover {
        </property>
       </widget>
      </widget>
-     <widget class="QWidget" name="page_2">
+     <widget class="QWidget" name="qiuck_panel_page">
       <widget class="QPlainTextEdit" name="plainTextEdit_5">
        <property name="geometry">
         <rect>
@@ -1418,6 +1447,568 @@ QCheckBox::indicator:checked {
         <string/>
        </property>
       </widget>
+     </widget>
+     <widget class="QWidget" name="tab_page">
+      <widget class="QPlainTextEdit" name="plainTextEdit_7">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>751</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPlainTextEdit {
+	border: none;
+	color: rgb(240, 243, 249);
+}</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="plainText">
+        <string>Вкладки рабочей области позволяют быстро перемещаться между различными режимами преобразования данных. Вы можете настроить различный стиль отображения данных вкладок
+ВАЖНО: Изменения данного параметра вступают в силу после перезагрузки приложения!</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_18">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>130</y>
+         <width>321</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+	border-radius: 5px;
+	border: 1px solid rgb(77, 77, 77);
+	background-color: rgb(30, 30, 30);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="tab_corner_frame">
+       <property name="geometry">
+        <rect>
+         <x>6</x>
+         <y>120</y>
+         <width>343</width>
+         <height>222</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+	border-radius: 10px;
+	border: 1px solid rgba(240, 243, 249, 150);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>140</y>
+         <width>311</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTabWidget::pane {
+	background: rgb(46, 44, 44);
+}
+
+QTabBar::tab {
+	height: 20px;
+	border: 1px solid rgb(77, 77, 77);
+	padding: 10 40px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QTabBar::tab:selected {
+	border: 1px solid rgb(30, 30, 30);
+	background-color: rgb(30, 30, 30);
+	color: rgb(240, 243, 249);
+}
+
+QTabBar::tab:hover {
+	background-color: rgb(67, 67, 67);
+	color: rgb(240, 243, 249);
+}</string>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>Вкладка 1</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string>Вкладка 2</string>
+        </attribute>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="tab_radius_frame">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>120</y>
+         <width>343</width>
+         <height>222</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+	border-radius: 10px;
+	border: 1px solid rgba(240, 243, 249, 150);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QTabWidget" name="tabWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>414</x>
+         <y>140</y>
+         <width>311</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTabWidget::pane {
+	background: rgb(46, 44, 44);
+}
+
+QTabBar::tab {
+	height: 20px;
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	padding: 10 40px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QTabBar::tab:selected {
+	border: 1px solid rgb(30, 30, 30);
+	background-color: rgb(30, 30, 30);
+	color: rgb(240, 243, 249);
+}
+
+QTabBar::tab:hover {
+	background-color: rgb(67, 67, 67);
+	color: rgb(240, 243, 249);
+}</string>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab_3">
+        <attribute name="title">
+         <string>Вкладка 1</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="tab_4">
+        <attribute name="title">
+         <string>Вкладка 2</string>
+        </attribute>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_19">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>130</y>
+         <width>321</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+	border-radius: 5px;
+	border: 1px solid rgb(77, 77, 77);
+	background-color: rgb(30, 30, 30);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="tab_corner_btn">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>360</y>
+         <width>180</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>130</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+       </property>
+       <property name="text">
+        <string>Применить</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="tab_radius_btn">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>360</y>
+         <width>180</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>130</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+       </property>
+       <property name="text">
+        <string>Применить</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="tab_top_radius_btn">
+       <property name="geometry">
+        <rect>
+         <x>94</x>
+         <y>670</y>
+         <width>180</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>130</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+       </property>
+       <property name="text">
+        <string>Применить</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="tab_top_radius_frame">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>430</y>
+         <width>343</width>
+         <height>222</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+	border-radius: 10px;
+	border: 1px solid rgba(240, 243, 249, 150);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QTabWidget" name="tabWidget_5">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>450</y>
+         <width>311</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTabWidget::pane {
+	background: rgb(46, 44, 44);
+}
+
+QTabBar::tab {
+	height: 20px;
+	border: 1px solid rgb(77, 77, 77);
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	padding: 10 40px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QTabBar::tab:selected {
+	border: 1px solid rgb(30, 30, 30);
+	background-color: rgb(30, 30, 30);
+	color: rgb(240, 243, 249);
+}
+
+QTabBar::tab:hover {
+	background-color: rgb(67, 67, 67);
+	color: rgb(240, 243, 249);
+}</string>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab_9">
+        <attribute name="title">
+         <string>Вкладка 1</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="tab_10">
+        <attribute name="title">
+         <string>Вкладка 2</string>
+        </attribute>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_35">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>440</y>
+         <width>321</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+	border-radius: 5px;
+	border: 1px solid rgb(77, 77, 77);
+	background-color: rgb(30, 30, 30);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="tab_corner_radius_btn">
+       <property name="geometry">
+        <rect>
+         <x>484</x>
+         <y>670</y>
+         <width>180</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>130</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+       </property>
+       <property name="text">
+        <string>Применить</string>
+       </property>
+      </widget>
+      <widget class="QTabWidget" name="tabWidget_6">
+       <property name="geometry">
+        <rect>
+         <x>414</x>
+         <y>450</y>
+         <width>311</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTabWidget::pane {
+	background: rgb(46, 44, 44);
+}
+
+QTabBar::tab {
+	height: 20px;
+	border: 1px solid rgb(77, 77, 77);
+	border-top-right-radius: 6px;
+	padding: 10 40px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QTabBar::tab:selected {
+	border: 1px solid rgb(30, 30, 30);
+	background-color: rgb(30, 30, 30);
+	color: rgb(240, 243, 249);
+}
+
+QTabBar::tab:hover {
+	background-color: rgb(67, 67, 67);
+	color: rgb(240, 243, 249);
+}</string>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab_11">
+        <attribute name="title">
+         <string>Вкладка 1</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="tab_12">
+        <attribute name="title">
+         <string>Вкладка 2</string>
+        </attribute>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="tab_corner_radius_frame">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>430</y>
+         <width>343</width>
+         <height>222</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+	border-radius: 10px;
+	border: 1px solid rgba(240, 243, 249, 150);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_36">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>440</y>
+         <width>321</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+	border-radius: 5px;
+	border: 1px solid rgb(77, 77, 77);
+	background-color: rgb(30, 30, 30);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+      <zorder>tab_corner_radius_frame</zorder>
+      <zorder>frame_36</zorder>
+      <zorder>tab_top_radius_frame</zorder>
+      <zorder>frame_35</zorder>
+      <zorder>tab_radius_frame</zorder>
+      <zorder>frame_19</zorder>
+      <zorder>tab_corner_frame</zorder>
+      <zorder>plainTextEdit_7</zorder>
+      <zorder>frame_18</zorder>
+      <zorder>tabWidget</zorder>
+      <zorder>tabWidget_2</zorder>
+      <zorder>tab_corner_btn</zorder>
+      <zorder>tab_radius_btn</zorder>
+      <zorder>tab_top_radius_btn</zorder>
+      <zorder>tabWidget_5</zorder>
+      <zorder>tab_corner_radius_btn</zorder>
+      <zorder>tabWidget_6</zorder>
      </widget>
      <widget class="QWidget" name="page_4">
       <widget class="QPlainTextEdit" name="plainTextEdit_6">

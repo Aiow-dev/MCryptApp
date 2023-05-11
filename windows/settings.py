@@ -7,10 +7,9 @@ from controllers import (
     color_style_controllers,
     set_app_controllers,
     quick_panel_controllers,
-    program_info_controllers
+    program_info_controllers,
+    tab_controllers
 )
-from windows import ext_info
-from helpers import func
 
 
 class SettingsWindow(QtWidgets.QWidget):
@@ -65,13 +64,33 @@ def active_color_style(theme_window, ui):
     ui.time_color_style_frame.setVisible(False)
 
 
+def active_tab_style(tab_style, ui):
+    if tab_style == 'corner':
+        ui.tab_radius_frame.setVisible(False)
+        ui.tab_top_radius_frame.setVisible(False)
+        ui.tab_corner_radius_frame.setVisible(False)
+    elif tab_style == 'radius':
+        ui.tab_corner_frame.setVisible(False)
+        ui.tab_top_radius_frame.setVisible(False)
+        ui.tab_corner_radius_frame.setVisible(False)
+    elif tab_style == 'top-radius':
+        ui.tab_corner_frame.setVisible(False)
+        ui.tab_radius_frame.setVisible(False)
+        ui.tab_corner_radius_frame.setVisible(False)
+    else:
+        ui.tab_corner_frame.setVisible(False)
+        ui.tab_radius_frame.setVisible(False)
+        ui.tab_top_radius_frame.setVisible(False)
+
+
 def init_settings_panel(ui):
     ui.btn_program_info.clicked.connect(switch_settings_page(ui, 0))
     ui.btn_color_style.clicked.connect(switch_settings_page(ui, 1))
     ui.btn_app_set.clicked.connect(switch_settings_page(ui, 2))
     ui.btn_quick_panel.clicked.connect(switch_settings_page(ui, 3))
-    ui.btn_help_set.clicked.connect(switch_settings_page(ui, 4))
-    ui.btn_privacy_policy.clicked.connect(switch_settings_page(ui, 5))
+    ui.btn_tab.clicked.connect(switch_settings_page(ui, 4))
+    ui.btn_help_set.clicked.connect(switch_settings_page(ui, 5))
+    ui.btn_privacy_policy.clicked.connect(switch_settings_page(ui, 6))
 
 
 def init_settings_pages(parent, ui):
@@ -79,6 +98,7 @@ def init_settings_pages(parent, ui):
     set_app_controllers.init_confirm_quit(parent, ui)
     quick_panel_controllers.init_quick_panel(ui)
     program_info_controllers.init_program_info(parent, ui)
+    tab_controllers.init_tab_style(ui)
 
 
 def show_settings_window(func_single, parent):
@@ -93,6 +113,8 @@ def show_settings_window(func_single, parent):
         active_color_style_time(ui)
     else:
         active_color_style(theme, ui)
+    tab_style = setting.get_parameter('tab-style')
+    active_tab_style(tab_style, ui)
     init_settings_styles(ui)
     init_settings_panel(ui)
     init_settings_pages(form, ui)
