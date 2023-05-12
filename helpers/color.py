@@ -15,10 +15,7 @@ def brighten(r, g, b):
     brighten_r = math.floor(r * 1.1)
     brighten_g = math.floor(g * 1.1)
     brighten_b = math.floor(b * 1.1)
-    if brighten_r > 255:
-        brighten_r = 255
-    if brighten_g > 255:
-        brighten_g = 255
-    if brighten_b > 255:
-        brighten_b = 255
+    brighten_r = brighten_r if brighten_r <= 255 else 255
+    brighten_b = brighten_b if brighten_b <= 255 else 255
+    brighten_g = brighten_g if brighten_g <= 255 else 255
     return brighten_r, brighten_g, brighten_b

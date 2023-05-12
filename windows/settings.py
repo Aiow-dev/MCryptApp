@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt
 
-from views import settings_win_dark
+from views import settings_win_dark, settings_win_light
 from components import widgets, win_palette, setting
 from controllers import (
     color_style_controllers,
@@ -10,6 +10,7 @@ from controllers import (
     program_info_controllers,
     tab_controllers
 )
+from helpers import win, time
 
 
 class SettingsWindow(QtWidgets.QWidget):
@@ -39,6 +40,39 @@ def init_settings_styles(ui):
     widgets.frame_compl_color_style_sys(ui.compl_dark_win_color)
     widgets.frame_color_style_sys(ui.accent_light_win_color)
     widgets.frame_color_style_sys(ui.accent_dark_win_color)
+
+
+def init_settings_win_styles(is_light, ui):
+    accent = win_palette.win_accent_converted()
+    complementary = win_palette.win_complementary_converted(accent)
+    win_palette.accent_color = accent.to_rgb_str()
+    win_palette.complementary_color = complementary.to_rgb_str()
+    widgets.panel_push_btn_light_sys(ui.btn_program_info)
+    widgets.panel_push_btn_light_sys(ui.btn_color_style)
+    widgets.panel_push_btn_light_sys(ui.btn_app_set)
+    widgets.panel_push_btn_light_sys(ui.btn_quick_panel)
+    widgets.panel_push_btn_light_sys(ui.btn_tab)
+    widgets.panel_push_btn_light_sys(ui.btn_help_set)
+    widgets.panel_push_btn_light_sys(ui.btn_privacy_policy)
+    widgets.push_btn_sys(ui.ext_info_btn)
+    widgets.push_btn_sys(ui.light_btn)
+    widgets.push_btn_sys(ui.dark_btn)
+    widgets.push_btn_sys(ui.win_btn)
+    widgets.push_btn_sys(ui.time_color_btn)
+    widgets.push_btn_sys(ui.btn_restart)
+    widgets.push_btn_sys(ui.btn_quit)
+    widgets.push_btn_sys(ui.tab_corner_btn)
+    widgets.push_btn_sys(ui.tab_radius_btn)
+    widgets.push_btn_sys(ui.tab_top_radius_btn)
+    widgets.push_btn_sys(ui.tab_corner_radius_btn)
+    widgets.push_btn_sys(ui.help_open_btn)
+    if is_light:
+        widgets.check_box_light_sys(ui.confirm_quit_chk)
+        widgets.check_box_light_sys(ui.quick_panel_chk)
+        widgets.tab_set_light_sys(ui.tab_corner_wgt)
+        widgets.tab_set_light_sys_rad(ui.tab_radius_wgt)
+        widgets.tab_set_light_sys_top_rad(ui.tab_top_radius_wgt)
+        widgets.tab_set_light_sys_corn_rad(ui.tab_corner_radius_wgt)
 
 
 def active_color_style_win(ui):
@@ -104,14 +138,28 @@ def init_settings_pages(parent, ui):
 def show_settings_window(func_single, parent):
     form = SettingsWindow(func_single, parent, Qt.Window)
     form.setFixedSize(1060, 780)
-    ui = settings_win_dark.Ui_settings_form()
-    ui.setupUi(form)
     theme = setting.get_parameter('theme')
     if theme == 'system':
+        is_light = win.is_light_win_theme()
+        ui = settings_win_dark.Ui_settings_form()
+        if is_light:
+            ui = settings_win_light.Ui_settings_form()
+        ui.setupUi(form)
+        init_settings_win_styles(is_light, ui)
         active_color_style_win(ui)
     elif theme == 'time':
+        current_hour = time.get_current_hour()
+        time_theme = 'dark'
+        ui = settings_win_dark.Ui_settings_form()
+        if 5 < current_hour < 18:
+            time_theme = 'light'
+            ui = settings_win_light.Ui_settings_form()
+        ui.setupUi(form)
         active_color_style_time(ui)
     else:
+        ui = settings_win_dark.Ui_settings_form()
+        if theme == 'light':
+            ui = settings_win_light.Ui_settings_form()
         active_color_style(theme, ui)
     tab_style = setting.get_parameter('tab-style')
     active_tab_style(tab_style, ui)
