@@ -139,19 +139,17 @@ class Ui_settings_form(object):
         self.section_widget.setObjectName("section_widget")
         self.program_info_page = QtWidgets.QWidget()
         self.program_info_page.setObjectName("program_info_page")
-        self.label_2 = QtWidgets.QLabel(self.program_info_page)
-        self.label_2.setGeometry(QtCore.QRect(6, 300, 271, 31))
+        self.version_lbl = QtWidgets.QLabel(self.program_info_page)
+        self.version_lbl.setGeometry(QtCore.QRect(6, 300, 271, 31))
         font = QtGui.QFont()
         font.setPointSize(8)
-        self.label_2.setFont(font)
-        self.label_2.setStyleSheet("QLabel {\n"
-"    background-color: rgb(240, 243, 249);\n"
-"    color: rgb(30, 30, 30);\n"
-"    border-radius: 3px;\n"
+        self.version_lbl.setFont(font)
+        self.version_lbl.setStyleSheet("QLabel {\n"
+"    color: rgb(240, 243, 249);\n"
 "}")
-        self.label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.label_2.setWordWrap(True)
-        self.label_2.setObjectName("label_2")
+        self.version_lbl.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.version_lbl.setWordWrap(True)
+        self.version_lbl.setObjectName("version_lbl")
         self.label_3 = QtWidgets.QLabel(self.program_info_page)
         self.label_3.setGeometry(QtCore.QRect(6, 340, 751, 31))
         font = QtGui.QFont()
@@ -681,9 +679,9 @@ class Ui_settings_form(object):
         self.tab_corner_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.tab_corner_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.tab_corner_frame.setObjectName("tab_corner_frame")
-        self.tabWidget = QtWidgets.QTabWidget(self.tab_page)
-        self.tabWidget.setGeometry(QtCore.QRect(20, 140, 311, 181))
-        self.tabWidget.setStyleSheet("QTabWidget::pane {\n"
+        self.tab_corner_wgt = QtWidgets.QTabWidget(self.tab_page)
+        self.tab_corner_wgt.setGeometry(QtCore.QRect(20, 140, 311, 181))
+        self.tab_corner_wgt.setStyleSheet("QTabWidget::pane {\n"
 "    background: rgb(46, 44, 44);\n"
 "}\n"
 "\n"
@@ -705,13 +703,13 @@ class Ui_settings_form(object):
 "    background-color: rgb(67, 67, 67);\n"
 "    color: rgb(240, 243, 249);\n"
 "}")
-        self.tabWidget.setObjectName("tabWidget")
+        self.tab_corner_wgt.setObjectName("tab_corner_wgt")
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
-        self.tabWidget.addTab(self.tab, "")
+        self.tab_corner_wgt.addTab(self.tab, "")
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
-        self.tabWidget.addTab(self.tab_2, "")
+        self.tab_corner_wgt.addTab(self.tab_2, "")
         self.tab_radius_frame = QtWidgets.QFrame(self.tab_page)
         self.tab_radius_frame.setGeometry(QtCore.QRect(400, 120, 343, 222))
         self.tab_radius_frame.setStyleSheet("QFrame {\n"
@@ -721,9 +719,9 @@ class Ui_settings_form(object):
         self.tab_radius_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.tab_radius_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.tab_radius_frame.setObjectName("tab_radius_frame")
-        self.tabWidget_2 = QtWidgets.QTabWidget(self.tab_page)
-        self.tabWidget_2.setGeometry(QtCore.QRect(414, 140, 311, 181))
-        self.tabWidget_2.setStyleSheet("QTabWidget::pane {\n"
+        self.tab_radius_wgt = QtWidgets.QTabWidget(self.tab_page)
+        self.tab_radius_wgt.setGeometry(QtCore.QRect(414, 140, 311, 181))
+        self.tab_radius_wgt.setStyleSheet("QTabWidget::pane {\n"
 "    background: rgb(46, 44, 44);\n"
 "}\n"
 "\n"
@@ -746,13 +744,13 @@ class Ui_settings_form(object):
 "    background-color: rgb(67, 67, 67);\n"
 "    color: rgb(240, 243, 249);\n"
 "}")
-        self.tabWidget_2.setObjectName("tabWidget_2")
+        self.tab_radius_wgt.setObjectName("tab_radius_wgt")
         self.tab_3 = QtWidgets.QWidget()
         self.tab_3.setObjectName("tab_3")
-        self.tabWidget_2.addTab(self.tab_3, "")
+        self.tab_radius_wgt.addTab(self.tab_3, "")
         self.tab_4 = QtWidgets.QWidget()
         self.tab_4.setObjectName("tab_4")
-        self.tabWidget_2.addTab(self.tab_4, "")
+        self.tab_radius_wgt.addTab(self.tab_4, "")
         self.frame_19 = QtWidgets.QFrame(self.tab_page)
         self.frame_19.setGeometry(QtCore.QRect(410, 130, 321, 201))
         self.frame_19.setStyleSheet("QFrame {\n"
@@ -817,9 +815,9 @@ class Ui_settings_form(object):
         self.tab_top_radius_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.tab_top_radius_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.tab_top_radius_frame.setObjectName("tab_top_radius_frame")
-        self.tabWidget_5 = QtWidgets.QTabWidget(self.tab_page)
-        self.tabWidget_5.setGeometry(QtCore.QRect(24, 450, 311, 181))
-        self.tabWidget_5.setStyleSheet("QTabWidget::pane {\n"
+        self.tab_top_radius_wgt = QtWidgets.QTabWidget(self.tab_page)
+        self.tab_top_radius_wgt.setGeometry(QtCore.QRect(24, 450, 311, 181))
+        self.tab_top_radius_wgt.setStyleSheet("QTabWidget::pane {\n"
 "    background: rgb(46, 44, 44);\n"
 "}\n"
 "\n"
@@ -843,13 +841,13 @@ class Ui_settings_form(object):
 "    background-color: rgb(67, 67, 67);\n"
 "    color: rgb(240, 243, 249);\n"
 "}")
-        self.tabWidget_5.setObjectName("tabWidget_5")
+        self.tab_top_radius_wgt.setObjectName("tab_top_radius_wgt")
         self.tab_9 = QtWidgets.QWidget()
         self.tab_9.setObjectName("tab_9")
-        self.tabWidget_5.addTab(self.tab_9, "")
+        self.tab_top_radius_wgt.addTab(self.tab_9, "")
         self.tab_10 = QtWidgets.QWidget()
         self.tab_10.setObjectName("tab_10")
-        self.tabWidget_5.addTab(self.tab_10, "")
+        self.tab_top_radius_wgt.addTab(self.tab_10, "")
         self.frame_35 = QtWidgets.QFrame(self.tab_page)
         self.frame_35.setGeometry(QtCore.QRect(20, 440, 321, 201))
         self.frame_35.setStyleSheet("QFrame {\n"
@@ -875,9 +873,9 @@ class Ui_settings_form(object):
 "    background-color: rgb(77, 77, 77);\n"
 "}")
         self.tab_corner_radius_btn.setObjectName("tab_corner_radius_btn")
-        self.tabWidget_6 = QtWidgets.QTabWidget(self.tab_page)
-        self.tabWidget_6.setGeometry(QtCore.QRect(414, 450, 311, 181))
-        self.tabWidget_6.setStyleSheet("QTabWidget::pane {\n"
+        self.tab_corner_radius_wgt = QtWidgets.QTabWidget(self.tab_page)
+        self.tab_corner_radius_wgt.setGeometry(QtCore.QRect(414, 450, 311, 181))
+        self.tab_corner_radius_wgt.setStyleSheet("QTabWidget::pane {\n"
 "    background: rgb(46, 44, 44);\n"
 "}\n"
 "\n"
@@ -900,13 +898,13 @@ class Ui_settings_form(object):
 "    background-color: rgb(67, 67, 67);\n"
 "    color: rgb(240, 243, 249);\n"
 "}")
-        self.tabWidget_6.setObjectName("tabWidget_6")
+        self.tab_corner_radius_wgt.setObjectName("tab_corner_radius_wgt")
         self.tab_11 = QtWidgets.QWidget()
         self.tab_11.setObjectName("tab_11")
-        self.tabWidget_6.addTab(self.tab_11, "")
+        self.tab_corner_radius_wgt.addTab(self.tab_11, "")
         self.tab_12 = QtWidgets.QWidget()
         self.tab_12.setObjectName("tab_12")
-        self.tabWidget_6.addTab(self.tab_12, "")
+        self.tab_corner_radius_wgt.addTab(self.tab_12, "")
         self.tab_corner_radius_frame = QtWidgets.QFrame(self.tab_page)
         self.tab_corner_radius_frame.setGeometry(QtCore.QRect(400, 430, 343, 222))
         self.tab_corner_radius_frame.setStyleSheet("QFrame {\n"
@@ -935,14 +933,14 @@ class Ui_settings_form(object):
         self.tab_corner_frame.raise_()
         self.plainTextEdit_7.raise_()
         self.frame_18.raise_()
-        self.tabWidget.raise_()
-        self.tabWidget_2.raise_()
+        self.tab_corner_wgt.raise_()
+        self.tab_radius_wgt.raise_()
         self.tab_corner_btn.raise_()
         self.tab_radius_btn.raise_()
         self.tab_top_radius_btn.raise_()
-        self.tabWidget_5.raise_()
+        self.tab_top_radius_wgt.raise_()
         self.tab_corner_radius_btn.raise_()
-        self.tabWidget_6.raise_()
+        self.tab_corner_radius_wgt.raise_()
         self.section_widget.addWidget(self.tab_page)
         self.page_4 = QtWidgets.QWidget()
         self.page_4.setObjectName("page_4")
@@ -983,10 +981,10 @@ class Ui_settings_form(object):
 
         self.retranslateUi(settings_form)
         self.section_widget.setCurrentIndex(0)
-        self.tabWidget.setCurrentIndex(0)
-        self.tabWidget_2.setCurrentIndex(0)
-        self.tabWidget_5.setCurrentIndex(0)
-        self.tabWidget_6.setCurrentIndex(0)
+        self.tab_corner_wgt.setCurrentIndex(0)
+        self.tab_radius_wgt.setCurrentIndex(0)
+        self.tab_top_radius_wgt.setCurrentIndex(0)
+        self.tab_corner_radius_wgt.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(settings_form)
 
     def retranslateUi(self, settings_form):
@@ -999,7 +997,7 @@ class Ui_settings_form(object):
         self.btn_quick_panel.setText(_translate("settings_form", "Панель быстрого доступа"))
         self.btn_help_set.setText(_translate("settings_form", "Справка"))
         self.btn_tab.setText(_translate("settings_form", "Вкладки"))
-        self.label_2.setText(_translate("settings_form", "Версия: MCrypt 1.9.1 Preview"))
+        self.version_lbl.setText(_translate("settings_form", "Версия: MCrypt 1.9.1 Preview"))
         self.label_3.setText(_translate("settings_form", "©MCryptTeam, 2023, все права защищены"))
         self.plainTextEdit_2.setPlainText(_translate("settings_form", "MCrypt - программное обеспечение, позволяющее выполнять шифрование, дешифрование, хеширование и множество других преобразований быстро и эффективно. При этом, MCrypt позволяет просмотреть каждый шаг выполнения данных преобразований, а также содержит справочник по различным алгоритмам шифрования, применяемых в данном программном обеспечении, что позволяет более подробно рассмотреть различные процессы преобразования данных. Также MCrypt содержит множество различных алгоритмов шифрования, включая более сложные алгоритмы шифрования, предоставляя возможность автоматического заполнения параметров шифрования, что позволяет существенно сократить время на шифрование данных"))
         self.ext_info_btn.setText(_translate("settings_form", "Открыть расширенную информацию"))
@@ -1025,18 +1023,18 @@ class Ui_settings_form(object):
         self.label_5.setText(_translate("settings_form", "Отображать панель быстрого доступа:"))
         self.plainTextEdit_7.setPlainText(_translate("settings_form", "Вкладки рабочей области позволяют быстро перемещаться между различными режимами преобразования данных. Вы можете настроить различный стиль отображения данных вкладок\n"
 "ВАЖНО: Изменения данного параметра вступают в силу после перезагрузки приложения!"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("settings_form", "Вкладка 1"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("settings_form", "Вкладка 2"))
-        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_3), _translate("settings_form", "Вкладка 1"))
-        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_4), _translate("settings_form", "Вкладка 2"))
+        self.tab_corner_wgt.setTabText(self.tab_corner_wgt.indexOf(self.tab), _translate("settings_form", "Вкладка 1"))
+        self.tab_corner_wgt.setTabText(self.tab_corner_wgt.indexOf(self.tab_2), _translate("settings_form", "Вкладка 2"))
+        self.tab_radius_wgt.setTabText(self.tab_radius_wgt.indexOf(self.tab_3), _translate("settings_form", "Вкладка 1"))
+        self.tab_radius_wgt.setTabText(self.tab_radius_wgt.indexOf(self.tab_4), _translate("settings_form", "Вкладка 2"))
         self.tab_corner_btn.setText(_translate("settings_form", "Применить"))
         self.tab_radius_btn.setText(_translate("settings_form", "Применить"))
         self.tab_top_radius_btn.setText(_translate("settings_form", "Применить"))
-        self.tabWidget_5.setTabText(self.tabWidget_5.indexOf(self.tab_9), _translate("settings_form", "Вкладка 1"))
-        self.tabWidget_5.setTabText(self.tabWidget_5.indexOf(self.tab_10), _translate("settings_form", "Вкладка 2"))
+        self.tab_top_radius_wgt.setTabText(self.tab_top_radius_wgt.indexOf(self.tab_9), _translate("settings_form", "Вкладка 1"))
+        self.tab_top_radius_wgt.setTabText(self.tab_top_radius_wgt.indexOf(self.tab_10), _translate("settings_form", "Вкладка 2"))
         self.tab_corner_radius_btn.setText(_translate("settings_form", "Применить"))
-        self.tabWidget_6.setTabText(self.tabWidget_6.indexOf(self.tab_11), _translate("settings_form", "Вкладка 1"))
-        self.tabWidget_6.setTabText(self.tabWidget_6.indexOf(self.tab_12), _translate("settings_form", "Вкладка 2"))
+        self.tab_corner_radius_wgt.setTabText(self.tab_corner_radius_wgt.indexOf(self.tab_11), _translate("settings_form", "Вкладка 1"))
+        self.tab_corner_radius_wgt.setTabText(self.tab_corner_radius_wgt.indexOf(self.tab_12), _translate("settings_form", "Вкладка 2"))
         self.plainTextEdit_6.setPlainText(_translate("settings_form", "Этот раздел содержит сведения о возможностях и навигации в приложении"))
         self.help_open_btn.setText(_translate("settings_form", "Открыть справку"))
         self.plainTextEdit_3.setPlainText(_translate("settings_form", "MCrypt - программное обеспечение, позволяющее выполнять различные преобразования данных в целях обеспечения безопасности и конфиденциальности данных, а также для безопасного способа их передачи и обмена. Данное программное обеспечение не хранит исходную информацию, предназначенную для ее передачи и обмена, поэтому после завершения работы приложения данная информация будет утеряна без возможности восстановления. В MCrypt пользовательские учетные данные хранятся в формате, не позволяющем получить к ним какой-либо доступ. Однако в случае утери каких-либо данных, MCryptTeam не несет никакой ответственности за утерю или получение доступа сторонних лиц к вашим данным.\n"

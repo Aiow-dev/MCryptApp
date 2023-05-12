@@ -245,7 +245,7 @@ def tab_set_light_sys_rad(tab_wgt_obj):
     QTabWidget::pane {{
         background: {colors.Palette.gray.value.to_rgb_str()};
     }}
-
+    
     QTabBar::tab {{
         height: 20px;
         border: 1px solid {win_palette.accent_color};
@@ -306,7 +306,7 @@ def tab_set_light_sys_top_rad(tab_wgt_obj):
     QTabWidget::pane {{
         background: {colors.Palette.gray.value.to_rgb_str()};
     }}
-
+    
     QTabBar::tab {{
         height: 20px;
         border: 1px solid {win_palette.accent_color};
@@ -367,7 +367,7 @@ def tab_set_light_sys_corn_rad(tab_wgt_obj):
     QTabWidget::pane {{
         background: {colors.Palette.gray.value.to_rgb_str()};
     }}
-
+    
     QTabBar::tab {{
         height: 20px;
         border: 1px solid {win_palette.accent_color};
@@ -537,6 +537,35 @@ def tab_wgt_dark_sys(tab_wgt_obj):
     tab_wgt_obj.setStyleSheet(tab_stylesheet)
 
 
+def tab_set_dark_sys(tab_wgt_obj):
+    tab_stylesheet = f'''
+    QTabWidget::pane {{
+        background: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab {{
+        height: 20px;
+        border: 1px solid {win_palette.accent_color};
+        padding: 10 40px;
+        background-color: {win_palette.accent_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:selected {{
+        border: 1px solid {colors.Palette.eerie_black.value.to_rgb_str()};
+        background-color: {colors.Palette.eerie_black.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:hover {{
+        border: 1px solid {win_palette.complementary_color};
+        background-color: {win_palette.complementary_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    '''
+    tab_wgt_obj.setStyleSheet(tab_stylesheet)
+
+
 def tab_wgt_dark_sys_rad(tab_wgt_obj):
     tab_stylesheet = f'''
     QTabWidget::pane {{
@@ -548,6 +577,36 @@ def tab_wgt_dark_sys_rad(tab_wgt_obj):
         border: 1px solid {win_palette.accent_color};
         border-radius: 5px;
         padding: 10 120px;
+        background-color: {win_palette.accent_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:selected {{
+        border: 1px solid {colors.Palette.eerie_black.value.to_rgb_str()};
+        background-color: {colors.Palette.eerie_black.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:hover {{
+        border: 1px solid {win_palette.complementary_color};
+        background-color: {win_palette.complementary_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    '''
+    tab_wgt_obj.setStyleSheet(tab_stylesheet)
+
+
+def tab_set_dark_sys_rad(tab_wgt_obj):
+    tab_stylesheet = f'''
+    QTabWidget::pane {{
+        background: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab {{
+        height: 20px;
+        border: 1px solid {win_palette.accent_color};
+        border-radius: 5px;
+        padding: 10 40px;
         background-color: {win_palette.accent_color};
         color: {colors.Palette.gray.value.to_rgb_str()};
     }}
@@ -598,6 +657,37 @@ def tab_wgt_dark_sys_top_rad(tab_wgt_obj):
     tab_wgt_obj.setStyleSheet(tab_stylesheet)
 
 
+def tab_set_dark_sys_top_rad(tab_wgt_obj):
+    tab_stylesheet = f'''
+    QTabWidget::pane {{
+        background: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab {{
+        height: 20px;
+        border: 1px solid {win_palette.accent_color};
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 10 40px;
+        background-color: {win_palette.accent_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:selected {{
+        border: 1px solid {colors.Palette.eerie_black.value.to_rgb_str()};
+        background-color: {colors.Palette.eerie_black.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:hover {{
+        border: 1px solid {win_palette.complementary_color};
+        background-color: {win_palette.complementary_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    '''
+    tab_wgt_obj.setStyleSheet(tab_stylesheet)
+
+
 def tab_wgt_dark_sys_corn_rad(tab_wgt_obj):
     tab_stylesheet = f'''
     QTabWidget::pane {{
@@ -609,6 +699,36 @@ def tab_wgt_dark_sys_corn_rad(tab_wgt_obj):
         border: 1px solid {win_palette.accent_color};
         border-top-right-radius: 5px;
         padding: 10 120px;
+        background-color: {win_palette.accent_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:selected {{
+        border: 1px solid {colors.Palette.eerie_black.value.to_rgb_str()};
+        background-color: {colors.Palette.eerie_black.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab:hover {{
+        border: 1px solid {win_palette.complementary_color};
+        background-color: {win_palette.complementary_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    '''
+    tab_wgt_obj.setStyleSheet(tab_stylesheet)
+
+
+def tab_set_dark_sys_corn_rad(tab_wgt_obj):
+    tab_stylesheet = f'''
+    QTabWidget::pane {{
+        background: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QTabBar::tab {{
+        height: 20px;
+        border: 1px solid {win_palette.accent_color};
+        border-top-right-radius: 5px;
+        padding: 10 40px;
         background-color: {win_palette.accent_color};
         color: {colors.Palette.gray.value.to_rgb_str()};
     }}
@@ -853,6 +973,22 @@ def panel_push_btn_light_sys(push_btn_obj):
     QPushButton:hover {{
         border: 1px solid {win_palette.complementary_color};
         background-color: {win_palette.complementary_color};
+    }}
+    '''
+    push_btn_obj.setStyleSheet(push_btn_stylesheet)
+
+
+def panel_push_btn_dark_sys(push_btn_obj):
+    push_btn_stylesheet = f'''
+    QPushButton {{
+        border: none;
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+
+    QPushButton:hover {{
+        border: 1px solid {win_palette.complementary_color};
+        background-color: {win_palette.complementary_color};
+        color: {colors.Palette.dark_charcoal.value.to_rgb_str()};
     }}
     '''
     push_btn_obj.setStyleSheet(push_btn_stylesheet)
