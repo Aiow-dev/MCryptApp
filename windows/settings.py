@@ -172,6 +172,7 @@ def show_settings_window(func_single, parent):
         ui = settings_win_dark.Ui_settings_form()
         if theme == 'light':
             ui = settings_win_light.Ui_settings_form()
+        ui.setupUi(form)
         active_color_style(theme, ui)
     tab_style = setting.get_parameter('tab-style')
     active_tab_style(tab_style, ui)
