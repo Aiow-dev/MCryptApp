@@ -100,8 +100,8 @@ def init_sys_tab_styles(is_light, tab_style, ui):
             schemes.dark_sys_tab_corn_scheme(ui)
 
 
-def init_pages(ui_window):
-    prm_controllers.init_simple_permutation(ui_window)
+def init_pages(parent, ui_window):
+    prm_controllers.init_simple_permutation(parent, ui_window)
     prm_controllers.init_key_permutation(ui_window)
     prm_controllers.init_double_permutation(ui_window)
     cs_controllers.init_classic_caesar(ui_window)

@@ -41,7 +41,7 @@ if __name__ == '__main__':
         main_window.init_tab_styles(theme, tab_style, ui)
     main_window.init_elements(ui)
     MainWindow.show()
-    main_window.init_pages(ui)
+    main_window.init_pages(MainWindow, ui)
     page.init_page(ui)
     menu.init_menu(MainWindow, ui)
     sys.exit(app.exec_())

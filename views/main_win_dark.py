@@ -310,8 +310,22 @@ class Ui_main_window(object):
         self.enc_smp_button_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.enc_smp_button_frame.setObjectName("enc_smp_button_frame")
         self.horizontalLayout_11 = QtWidgets.QHBoxLayout(self.enc_smp_button_frame)
-        self.horizontalLayout_11.setContentsMargins(-1, 0, 0, 0)
         self.horizontalLayout_11.setObjectName("horizontalLayout_11")
+        self.enc_smp_auto_btn = QtWidgets.QPushButton(self.enc_smp_button_frame)
+        self.enc_smp_auto_btn.setMinimumSize(QtCore.QSize(130, 45))
+        self.enc_smp_auto_btn.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.enc_smp_auto_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(77, 77, 77);\n"
+"}")
+        self.enc_smp_auto_btn.setObjectName("enc_smp_auto_btn")
+        self.horizontalLayout_11.addWidget(self.enc_smp_auto_btn)
         self.enc_smp_btn = QtWidgets.QPushButton(self.enc_smp_button_frame)
         self.enc_smp_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_smp_btn.setMaximumSize(QtCore.QSize(200, 16777215))
@@ -6977,6 +6991,7 @@ class Ui_main_window(object):
         self.enc_smp_ot_txt.setPlaceholderText(_translate("main_window", "Текст шифрующей таблицы"))
         self.enc_smp_oc_lbl.setText(_translate("main_window", "Результат"))
         self.enc_smp_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
+        self.enc_smp_auto_btn.setText(_translate("main_window", "Сгенерировать"))
         self.enc_smp_btn.setText(_translate("main_window", "Выполнить (Enter)"))
         self.smp_types_tab.setTabText(self.smp_types_tab.indexOf(self.enc_smp_tab), _translate("main_window", "Шифрование"))
         self.dec_smp_msg_lbl.setText(_translate("main_window", "Сообщение"))

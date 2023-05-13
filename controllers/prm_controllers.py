@@ -2,7 +2,7 @@ from handlers import prm_handlers
 from events import event_components
 
 
-def init_simple_permutation(ui):
+def init_simple_permutation(parent, ui):
     enc_form_data = {'msg_input': ui.enc_smp_msg_txt, 'rows_input': ui.enc_smp_row_txt,
                      'columns_input': ui.enc_smp_clm_txt, 'enc_msg_input': ui.enc_smp_oc_txt,
                      'enc_tbl_input': ui.enc_smp_ot_txt}
@@ -11,6 +11,7 @@ def init_simple_permutation(ui):
                      'enc_tbl_input': ui.dec_smp_ot_txt}
     ui.enc_smp_btn.clicked.connect(lambda: prm_handlers.enc_proc_simple_prm(enc_form_data))
     ui.dec_smp_btn.clicked.connect(lambda: prm_handlers.dec_proc_simple_prm(dec_form_data))
+    ui.enc_smp_auto_btn.clicked.connect(lambda: prm_handlers.auto_simple_prm(parent, enc_form_data))
     event_components.empty_text_changed(ui.enc_smp_msg_txt)
     event_components.empty_text_changed(ui.dec_smp_msg_txt)
     event_components.positive_number_text_changed(ui.enc_smp_row_txt)

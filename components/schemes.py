@@ -25,6 +25,7 @@ def smp_light_sys_scheme(ui):
     labels_light(labels)
     widgets.push_btn_sys(ui.enc_smp_btn)
     widgets.push_btn_sys(ui.dec_smp_btn)
+    widgets.push_btn_sys(ui.enc_smp_auto_btn)
 
 
 def kpm_light_sys_scheme(ui):
@@ -232,7 +233,7 @@ def dark_sys_scheme(ui):
                 ui.enc_cs_btn, ui.dec_cs_btn, ui.enc_acs_btn, ui.dec_acs_btn,
                 ui.enc_kcs_btn, ui.dec_kcs_btn, ui.enc_ts_btn, ui.dec_ts_btn,
                 ui.enc_vs_btn, ui.dec_vs_btn, ui.enc_ps_btn, ui.dec_ps_btn,
-                ui.enc_dp_btn, ui.dec_dp_btn]
+                ui.enc_dp_btn, ui.dec_dp_btn, ui.enc_smp_auto_btn]
     for btn in btn_list:
         widgets.push_btn_sys(btn)
 

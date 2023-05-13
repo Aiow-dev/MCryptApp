@@ -31,6 +31,30 @@ def dec_proc_simple_prm(form_data):
     proc_simple_prm(form_data, prm.dec_simple_prm)
 
 
+def auto_simple_prm(parent, form_data):
+    try:
+        msg = form_data['msg_input'].text().replace(' ', '')
+        rows_text = form_data['rows_input'].text().replace(' ', '')
+        columns_text = form_data['columns_input'].text().replace(' ', '')
+        if len(rows_text) > 0 or len(columns_text) > 0:
+            result = dialogs.question_msg(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
+            if not result:
+                return
+        len_msg = len(msg)
+        if len_msg > 0:
+            multipliers = items.get_multipliers(len_msg)
+            if multipliers:
+                rows, columns = items.couple_multipliers(multipliers)
+                form_data['rows_input'].setText(str(rows))
+                form_data['columns_input'].setText(str(columns))
+            else:
+                dialogs.show_err_msg(messages.MSG_PRIME_LEN, 'Ошибка')
+        else:
+            dialogs.show_err_msg('Сообщение не заполнено!', 'Ошибка')
+    except AttributeError as attribute_error:
+        dialogs.show_err_msg('Не удалось сгенерировать параметры!', 'Ошибка')
+
+
 def proc_key_prm(form_data, encryption):
     try:
         msg = form_data['msg_input'].text()

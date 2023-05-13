@@ -161,10 +161,8 @@ def show_settings_window(func_single, parent):
         active_color_style_win(ui)
     elif theme == 'time':
         current_hour = time.get_current_hour()
-        time_theme = 'dark'
         ui = settings_win_dark.Ui_settings_form()
         if 5 < current_hour < 18:
-            time_theme = 'light'
             ui = settings_win_light.Ui_settings_form()
         ui.setupUi(form)
         active_color_style_time(ui)
