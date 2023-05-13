@@ -22,7 +22,7 @@ def init_simple_permutation(parent, ui):
     event_components.shortcut_return(ui.dec_smp_btn)
 
 
-def init_key_permutation(ui):
+def init_key_permutation(parent, ui):
     enc_form_data = {'msg_input': ui.enc_kpm_msg_txt, 'rows_input': ui.enc_kpm_row_txt,
                      'columns_input': ui.enc_kpm_clm_txt, 'key_input': ui.enc_kpm_key_txt,
                      'enc_msg_input': ui.enc_kpm_oc_txt, 'enc_tbl_input': ui.enc_kpm_ot_txt}
@@ -31,6 +31,7 @@ def init_key_permutation(ui):
                      'enc_msg_input': ui.dec_kpm_oc_txt, 'enc_tbl_input': ui.dec_kpm_ot_txt}
     ui.enc_kpm_btn.clicked.connect(lambda: prm_handlers.enc_proc_key_prm(enc_form_data))
     ui.dec_kpm_btn.clicked.connect(lambda: prm_handlers.dec_proc_key_prm(dec_form_data))
+    ui.enc_kpm_auto_btn.clicked.connect(lambda: prm_handlers.auto_key_prm(parent, enc_form_data))
     event_components.empty_text_changed(ui.enc_kpm_msg_txt)
     event_components.empty_text_changed(ui.dec_kpm_msg_txt)
     event_components.empty_text_changed(ui.enc_kpm_key_txt)

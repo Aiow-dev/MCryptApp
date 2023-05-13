@@ -30,3 +30,7 @@ def get_index(txt, symbols):
 
 def get_number_letter(txt):
     return [str(index + 1) for index in range(len(txt))]
+
+
+def get_words_len(words, len_word):
+    return list(filter(lambda word: len(word) == len_word, words))

@@ -1,5 +1,7 @@
-from components import dialogs, enc_tables
-from helpers import tables, items
+import random
+
+from components import dialogs, enc_tables, dictionary
+from helpers import tables, items, text
 from scripts.encryption import prm
 from handlers import messages
 
@@ -81,6 +83,34 @@ def enc_proc_key_prm(form_data):
 
 def dec_proc_key_prm(form_data):
     proc_key_prm(form_data, prm.dec_key_prm)
+
+
+def auto_key_prm(parent, form_data):
+    try:
+        msg = form_data['msg_input'].text().replace(' ', '')
+        rows_text = form_data['rows_input'].text().replace(' ', '')
+        columns_text = form_data['columns_input'].text().replace(' ', '')
+        key_text = form_data['key_input'].text().replace(' ', '')
+        if len(rows_text) > 0 or len(columns_text) > 0 or len(key_text) > 0:
+            result = dialogs.question_msg(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
+            if not result:
+                return
+        len_msg = len(msg)
+        if len_msg > 0:
+            multipliers = items.get_multipliers(len_msg)
+            if multipliers:
+                rows, columns = items.couple_multipliers(multipliers)
+                key_words = text.get_words_len(dictionary.animals, columns)
+                key = random.choice(key_words)
+                form_data['rows_input'].setText(str(rows))
+                form_data['columns_input'].setText(str(columns))
+                form_data['key_input'].setText(key)
+            else:
+                dialogs.show_err_msg(messages.MSG_PRIME_LEN, 'Ошибка')
+        else:
+            dialogs.show_err_msg('Сообщение не заполнено!', 'Ошибка')
+    except AttributeError as attribute_error:
+        dialogs.show_err_msg('Не удалось сгенерировать параметры!', 'Ошибка')
 
 
 def proc_double_prm(form_data, encryption):

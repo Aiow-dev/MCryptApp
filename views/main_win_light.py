@@ -956,8 +956,23 @@ class Ui_main_window(object):
         self.enc_kpm_button_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.enc_kpm_button_frame.setObjectName("enc_kpm_button_frame")
         self.horizontalLayout_26 = QtWidgets.QHBoxLayout(self.enc_kpm_button_frame)
-        self.horizontalLayout_26.setContentsMargins(-1, 0, 0, 0)
         self.horizontalLayout_26.setObjectName("horizontalLayout_26")
+        self.enc_kpm_auto_btn = QtWidgets.QPushButton(self.enc_kpm_button_frame)
+        self.enc_kpm_auto_btn.setMinimumSize(QtCore.QSize(130, 45))
+        self.enc_kpm_auto_btn.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.enc_kpm_auto_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"}")
+        self.enc_kpm_auto_btn.setObjectName("enc_kpm_auto_btn")
+        self.horizontalLayout_26.addWidget(self.enc_kpm_auto_btn)
         self.enc_kpm_btn = QtWidgets.QPushButton(self.enc_kpm_button_frame)
         self.enc_kpm_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_kpm_btn.setMaximumSize(QtCore.QSize(200, 16777215))
@@ -7274,6 +7289,7 @@ class Ui_main_window(object):
         self.enc_kpm_ot_txt.setPlaceholderText(_translate("main_window", "Текст шифрующей таблицы"))
         self.enc_kpm_oc_lbl.setText(_translate("main_window", "Результат"))
         self.enc_kpm_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
+        self.enc_kpm_auto_btn.setText(_translate("main_window", "Сгенерировать"))
         self.enc_kpm_btn.setText(_translate("main_window", "Выполнить (Enter)"))
         self.kpm_types_tab.setTabText(self.kpm_types_tab.indexOf(self.enc_kpm_tab), _translate("main_window", "Шифрование"))
         self.dec_kpm_msg_lbl.setText(_translate("main_window", "Сообщение"))
