@@ -10,6 +10,7 @@ from windows import main_window
 def show_addition_window(parent):
     form = QtWidgets.QMainWindow(parent)
     theme = setting.get_parameter('theme')
+    tab_style = setting.get_parameter('tab-style')
     if theme == 'system':
         is_light = win.is_light_win_theme()
         ui = main_win_dark.Ui_main_window()
@@ -17,6 +18,7 @@ def show_addition_window(parent):
             ui = main_win_light.Ui_main_window()
         ui.setupUi(form)
         main_window.init_win_styles(is_light, ui)
+        main_window.init_sys_tab_styles(is_light, tab_style, ui)
     elif theme == 'time':
         current_hour = time.get_current_hour()
         time_theme = 'dark'
@@ -26,15 +28,17 @@ def show_addition_window(parent):
             ui = main_win_light.Ui_main_window()
         ui.setupUi(form)
         main_window.init_styles(time_theme, ui)
+        main_window.init_tab_styles(time_theme, tab_style, ui)
     else:
         ui = main_win_dark.Ui_main_window()
         if theme == 'light':
             ui = main_win_light.Ui_main_window()
         ui.setupUi(form)
         main_window.init_styles(theme, ui)
+        main_window.init_tab_styles(theme, tab_style, ui)
     main_window.init_elements(ui)
     form.show()
-    main_window.init_pages(ui)
+    main_window.init_pages(form, ui)
     page.init_page(ui)
     menu.init_menu_add(ui)
     form.show()
