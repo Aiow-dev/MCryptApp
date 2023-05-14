@@ -14,8 +14,7 @@ from views import main_win_dark, main_win_light
 
 class MainWindowApp(QtWidgets.QMainWindow):
     def closeEvent(self, event):
-        is_confirm_quit = setting.get_parameter('confirm-quit')
-        if is_confirm_quit:
+        if setting.get_parameter('confirm-quit'):
             result = dialogs.question_msg(self,
                                           'Вы уверены, что хотите выйти? Все несохраненные изменения будут утеряны!',
                                           'Подтверждение выхода...')
@@ -70,11 +69,10 @@ def init_tab_styles(theme_window, tab_style, ui):
             schemes.light_tab_corn_rad_scheme(ui)
         else:
             schemes.dark_tab_corn_rad_scheme(ui)
+    elif theme_window == 'light':
+        schemes.light_tab_corn_scheme(ui)
     else:
-        if theme_window == 'light':
-            schemes.light_tab_corn_scheme(ui)
-        else:
-            schemes.dark_tab_corn_scheme(ui)
+        schemes.dark_tab_corn_scheme(ui)
 
 
 def init_sys_tab_styles(is_light, tab_style, ui):
@@ -93,17 +91,16 @@ def init_sys_tab_styles(is_light, tab_style, ui):
             schemes.light_sys_tab_corn_rad_scheme(ui)
         else:
             schemes.dark_sys_tab_corn_rad_scheme(ui)
+    elif is_light:
+        schemes.light_sys_tab_corn_scheme(ui)
     else:
-        if is_light:
-            schemes.light_sys_tab_corn_scheme(ui)
-        else:
-            schemes.dark_sys_tab_corn_scheme(ui)
+        schemes.dark_sys_tab_corn_scheme(ui)
 
 
 def init_pages(parent, ui_window):
     prm_controllers.init_simple_permutation(parent, ui_window)
     prm_controllers.init_key_permutation(parent, ui_window)
-    prm_controllers.init_double_permutation(ui_window)
+    prm_controllers.init_double_permutation(parent, ui_window)
     cs_controllers.init_classic_caesar(ui_window)
     cs_controllers.init_affine_caesar(ui_window)
     cs_controllers.init_key_caesar(ui_window)

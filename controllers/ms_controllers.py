@@ -1,6 +1,6 @@
 from handlers import ms_handlers
 from events import event_components
-from components import scheme_colors, colors
+from components import scheme_colors
 
 
 def init_magic_square(ui):

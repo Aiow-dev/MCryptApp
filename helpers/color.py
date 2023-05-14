@@ -9,13 +9,13 @@ def hex_to_rgb(color):
 
 
 def brighten(r, g, b):
-    r = r if r >= 30 else 30
-    g = g if g >= 30 else 30
-    b = b if b >= 30 else 30
+    r = max(r, 30)
+    g = max(g, 30)
+    b = max(b, 30)
     brighten_r = math.floor(r * 1.1)
     brighten_g = math.floor(g * 1.1)
     brighten_b = math.floor(b * 1.1)
-    brighten_r = brighten_r if brighten_r <= 255 else 255
-    brighten_b = brighten_b if brighten_b <= 255 else 255
-    brighten_g = brighten_g if brighten_g <= 255 else 255
+    brighten_r = min(brighten_r, 255)
+    brighten_b = min(brighten_b, 255)
+    brighten_g = min(brighten_g, 255)
     return brighten_r, brighten_g, brighten_b

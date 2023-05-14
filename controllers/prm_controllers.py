@@ -44,7 +44,7 @@ def init_key_permutation(parent, ui):
     event_components.shortcut_return(ui.dec_kpm_btn)
 
 
-def init_double_permutation(ui):
+def init_double_permutation(parent, ui):
     enc_form_data = {'msg_input': ui.enc_dpm_msg_txt, 'rows_input': ui.enc_dpm_row_txt,
                      'columns_input': ui.enc_dpm_clm_txt, 'key_row_input': ui.enc_dpm_key_r_txt,
                      'key_column_input': ui.enc_dpm_key_c_txt, 'enc_msg_input': ui.enc_dpm_oc_txt,
@@ -55,6 +55,7 @@ def init_double_permutation(ui):
                      'enc_tbl_input': ui.dec_dpm_ot_txt}
     ui.enc_dpm_btn.clicked.connect(lambda: prm_handlers.enc_proc_double_prm(enc_form_data))
     ui.dec_dpm_btn.clicked.connect(lambda: prm_handlers.dec_proc_double_prm(dec_form_data))
+    ui.enc_dpm_auto_btn.clicked.connect(lambda: prm_handlers.auto_double_prm(parent, enc_form_data))
     event_components.empty_text_changed(ui.enc_dpm_msg_txt)
     event_components.empty_text_changed(ui.dec_dpm_msg_txt)
     event_components.empty_text_changed(ui.enc_dpm_key_r_txt)

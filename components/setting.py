@@ -1,11 +1,11 @@
 import json
+import pathlib
 
 from components import colors
 
 
 def get_parameter(parameter):
-    with open('settings.json') as settings_file:
-        text = settings_file.read()
+    text = pathlib.Path('settings.json').read_text()
     parsed_json = json.loads(text)
     return parsed_json.get(parameter)
 

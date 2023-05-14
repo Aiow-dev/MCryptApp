@@ -11,24 +11,24 @@ def restart():
 
 
 def quit_confirm(parent):
-    is_confirm_quit = setting.get_parameter('confirm-quit')
-    if is_confirm_quit:
-        result = dialogs.question_msg(parent,
-                                      'Вы уверены, что хотите выйти? Все несохраненные изменения будут утеряны!',
-                                      'Подтверждение выхода...')
-        if result:
+    if setting.get_parameter('confirm-quit'):
+        if dialogs.question_msg(
+                parent,
+                'Вы уверены, что хотите выйти? Все несохраненные изменения будут утеряны!',
+                'Подтверждение выхода...'
+        ):
             QtWidgets.qApp.quit()
     else:
         QtWidgets.qApp.quit()
 
 
 def restart_confirm(parent):
-    is_confirm_quit = setting.get_parameter('confirm-quit')
-    if is_confirm_quit:
-        result = dialogs.question_msg(parent,
-                                      'Вы уверены, что хотите выйти? Все несохраненные изменения будут утеряны!',
-                                      'Подтверждение выхода...')
-        if result:
+    if setting.get_parameter('confirm-quit'):
+        if dialogs.question_msg(
+                parent,
+                'Вы уверены, что хотите выйти? Все несохраненные изменения будут утеряны!',
+                'Подтверждение выхода...',
+        ):
             restart()
     else:
         restart()

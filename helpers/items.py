@@ -30,14 +30,15 @@ def is_all_range(txt, range_obj):
 def get_multipliers(number):
     multipliers = []
     multiplier = 2
+    max_multiplier = math.floor(number / 2)
     while number > 1:
         if number % multiplier == 0:
             number = number // multiplier
             multipliers.append(multiplier)
             multiplier = 2
+        elif multiplier > max_multiplier:
+            break
         else:
-            if multiplier > 7:
-                break
             multiplier += 1
     return multipliers
 
