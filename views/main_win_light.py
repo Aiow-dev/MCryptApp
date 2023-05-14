@@ -7566,6 +7566,7 @@ class Ui_main_window(object):
         self.enc_tpm_menu.setTitle(_translate("main_window", "Таблицы перестановок"))
         self.enc_cs_menu.setTitle(_translate("main_window", "Система Цезаря"))
         self.action_program_info.setText(_translate("main_window", "О программе"))
+        self.action_program_info.setShortcut(_translate("main_window", "Ctrl+I"))
         self.action_help.setText(_translate("main_window", "Справка"))
         self.action_smp.setText(_translate("main_window", "Простая перестановка"))
         self.action_kpm.setText(_translate("main_window", "Перестановка по ключу"))
@@ -7579,9 +7580,11 @@ class Ui_main_window(object):
         self.action_ms.setText(_translate("main_window", "Магический квадрат"))
         self.action_dp.setText(_translate("main_window", "Двойной квадрат Уитстона"))
         self.action_settings_win.setText(_translate("main_window", "Настройки"))
+        self.action_settings_win.setShortcut(_translate("main_window", "Ctrl+S"))
         self.action_exit.setText(_translate("main_window", "Завершение работы"))
         self.action_restart.setText(_translate("main_window", "Перезагрузка"))
         self.action_new_win.setText(_translate("main_window", "Новое окно"))
+        self.action_new_win.setShortcut(_translate("main_window", "Ctrl+W"))
 
 
 if __name__ == "__main__":

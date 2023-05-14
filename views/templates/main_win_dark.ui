@@ -15445,6 +15445,9 @@ QComboBox::drop-down:button {
    <property name="text">
     <string>О программе</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
   </action>
   <action name="action_help">
    <property name="text">
@@ -15510,6 +15513,9 @@ QComboBox::drop-down:button {
    <property name="text">
     <string>Настройки</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
   </action>
   <action name="action_exit">
    <property name="text">
@@ -15524,6 +15530,9 @@ QComboBox::drop-down:button {
   <action name="action_new_win">
    <property name="text">
     <string>Новое окно</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
    </property>
   </action>
  </widget>

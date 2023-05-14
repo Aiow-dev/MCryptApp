@@ -60,7 +60,7 @@ class Ui_settings_form(object):
 "}")
         self.btn_color_style.setObjectName("btn_color_style")
         self.btn_privacy_policy = QtWidgets.QPushButton(self.section_frame)
-        self.btn_privacy_policy.setGeometry(QtCore.QRect(0, 240, 301, 41))
+        self.btn_privacy_policy.setGeometry(QtCore.QRect(0, 280, 301, 41))
         font = QtGui.QFont()
         font.setPointSize(8)
         self.btn_privacy_policy.setFont(font)
@@ -90,7 +90,7 @@ class Ui_settings_form(object):
 "}")
         self.btn_app_set.setObjectName("btn_app_set")
         self.btn_quick_panel = QtWidgets.QPushButton(self.section_frame)
-        self.btn_quick_panel.setGeometry(QtCore.QRect(0, 120, 301, 41))
+        self.btn_quick_panel.setGeometry(QtCore.QRect(0, 160, 301, 41))
         font = QtGui.QFont()
         font.setPointSize(8)
         self.btn_quick_panel.setFont(font)
@@ -105,7 +105,7 @@ class Ui_settings_form(object):
 "}")
         self.btn_quick_panel.setObjectName("btn_quick_panel")
         self.btn_help_set = QtWidgets.QPushButton(self.section_frame)
-        self.btn_help_set.setGeometry(QtCore.QRect(0, 200, 301, 41))
+        self.btn_help_set.setGeometry(QtCore.QRect(0, 240, 301, 41))
         font = QtGui.QFont()
         font.setPointSize(8)
         self.btn_help_set.setFont(font)
@@ -120,7 +120,7 @@ class Ui_settings_form(object):
 "}")
         self.btn_help_set.setObjectName("btn_help_set")
         self.btn_tab = QtWidgets.QPushButton(self.section_frame)
-        self.btn_tab.setGeometry(QtCore.QRect(0, 160, 301, 41))
+        self.btn_tab.setGeometry(QtCore.QRect(0, 200, 301, 41))
         font = QtGui.QFont()
         font.setPointSize(8)
         self.btn_tab.setFont(font)
@@ -134,6 +134,21 @@ class Ui_settings_form(object):
 "    background-color: rgb(77, 77, 77);\n"
 "}")
         self.btn_tab.setObjectName("btn_tab")
+        self.btn_line_menu = QtWidgets.QPushButton(self.section_frame)
+        self.btn_line_menu.setGeometry(QtCore.QRect(0, 120, 301, 41))
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        self.btn_line_menu.setFont(font)
+        self.btn_line_menu.setStyleSheet("QPushButton {\n"
+"    background-color: rgb(30, 30, 30);\n"
+"    color: rgb(240, 243, 249);\n"
+"    border: 0px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(77, 77, 77);\n"
+"}")
+        self.btn_line_menu.setObjectName("btn_line_menu")
         self.horizontalLayout.addWidget(self.section_frame)
         self.section_widget = QtWidgets.QStackedWidget(settings_form)
         self.section_widget.setObjectName("section_widget")
@@ -610,6 +625,46 @@ class Ui_settings_form(object):
 "}")
         self.btn_quit.setObjectName("btn_quit")
         self.section_widget.addWidget(self.app_set_page)
+        self.page = QtWidgets.QWidget()
+        self.page.setObjectName("page")
+        self.plainTextEdit_8 = QtWidgets.QPlainTextEdit(self.page)
+        self.plainTextEdit_8.setGeometry(QtCore.QRect(0, 10, 751, 91))
+        self.plainTextEdit_8.setStyleSheet("QPlainTextEdit {\n"
+"    border: none;\n"
+"    color: rgb(240, 243, 249);\n"
+"}")
+        self.plainTextEdit_8.setReadOnly(True)
+        self.plainTextEdit_8.setObjectName("plainTextEdit_8")
+        self.label_7 = QtWidgets.QLabel(self.page)
+        self.label_7.setGeometry(QtCore.QRect(6, 120, 211, 31))
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        self.label_7.setFont(font)
+        self.label_7.setStyleSheet("QLabel {\n"
+"    color: rgb(240, 243, 249);\n"
+"}")
+        self.label_7.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label_7.setWordWrap(True)
+        self.label_7.setObjectName("label_7")
+        self.menu_line_chk = QtWidgets.QCheckBox(self.page)
+        self.menu_line_chk.setGeometry(QtCore.QRect(220, 108, 171, 45))
+        self.menu_line_chk.setMinimumSize(QtCore.QSize(0, 45))
+        self.menu_line_chk.setStyleSheet("QCheckBox {\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked {\n"
+"    border-radius: 2px;\n"
+"    background-color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"    border-radius: 2px;\n"
+"    background-color: rgb(67, 67, 67);\n"
+"}")
+        self.menu_line_chk.setText("")
+        self.menu_line_chk.setObjectName("menu_line_chk")
+        self.section_widget.addWidget(self.page)
         self.qiuck_panel_page = QtWidgets.QWidget()
         self.qiuck_panel_page.setObjectName("qiuck_panel_page")
         self.plainTextEdit_5 = QtWidgets.QPlainTextEdit(self.qiuck_panel_page)
@@ -997,6 +1052,7 @@ class Ui_settings_form(object):
         self.btn_quick_panel.setText(_translate("settings_form", "Панель быстрого доступа"))
         self.btn_help_set.setText(_translate("settings_form", "Справка"))
         self.btn_tab.setText(_translate("settings_form", "Вкладки"))
+        self.btn_line_menu.setText(_translate("settings_form", "Строка меню"))
         self.version_lbl.setText(_translate("settings_form", "Версия: MCrypt 1.9.1 Preview"))
         self.label_3.setText(_translate("settings_form", "©MCryptTeam, 2023, все права защищены"))
         self.plainTextEdit_2.setPlainText(_translate("settings_form", "MCrypt - программное обеспечение, позволяющее выполнять шифрование, дешифрование, хеширование и множество других преобразований быстро и эффективно. При этом, MCrypt позволяет просмотреть каждый шаг выполнения данных преобразований, а также содержит справочник по различным алгоритмам шифрования, применяемых в данном программном обеспечении, что позволяет более подробно рассмотреть различные процессы преобразования данных. Также MCrypt содержит множество различных алгоритмов шифрования, включая более сложные алгоритмы шифрования, предоставляя возможность автоматического заполнения параметров шифрования, что позволяет существенно сократить время на шифрование данных"))
@@ -1018,6 +1074,9 @@ class Ui_settings_form(object):
         self.label_4.setText(_translate("settings_form", "Отображать окно подтверждения при завершении или перезагрузке приложения:"))
         self.btn_restart.setText(_translate("settings_form", "Перезагрузить"))
         self.btn_quit.setText(_translate("settings_form", "Завершить работу"))
+        self.plainTextEdit_8.setPlainText(_translate("settings_form", "Строка меню содержит навигацию по основным возможностям приложения. Вы можете отключить или включить отображение строки меню, а также выбрать стиль отображения меню приложения\n"
+"ВАЖНО: Изменения этого параметра вступают в силу после перезагрузки приложения!"))
+        self.label_7.setText(_translate("settings_form", "Отображать строку меню:"))
         self.plainTextEdit_5.setPlainText(_translate("settings_form", "Панель быстрого доступа позволяет быстро перемещаться между некоторыми страницами приложения. Вы можете отключить или включить отображение данной панели\n"
 "ВАЖНО: Изменения этого параметра вступают в силу после перезагрузки приложения!"))
         self.label_5.setText(_translate("settings_form", "Отображать панель быстрого доступа:"))

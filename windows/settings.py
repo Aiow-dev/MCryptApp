@@ -7,6 +7,7 @@ from controllers import (
     color_style_controllers,
     set_app_controllers,
     quick_panel_controllers,
+    menu_line_controllers,
     program_info_controllers,
     tab_controllers
 )
@@ -63,11 +64,13 @@ def init_settings_win_styles(is_light, ui):
         widgets.panel_push_btn_light_sys(ui.btn_program_info)
         widgets.panel_push_btn_light_sys(ui.btn_color_style)
         widgets.panel_push_btn_light_sys(ui.btn_app_set)
+        widgets.panel_push_btn_light_sys(ui.btn_line_menu)
         widgets.panel_push_btn_light_sys(ui.btn_quick_panel)
         widgets.panel_push_btn_light_sys(ui.btn_tab)
         widgets.panel_push_btn_light_sys(ui.btn_help_set)
         widgets.panel_push_btn_light_sys(ui.btn_privacy_policy)
         widgets.check_box_light_sys(ui.confirm_quit_chk)
+        widgets.check_box_light_sys(ui.menu_line_chk)
         widgets.check_box_light_sys(ui.quick_panel_chk)
         widgets.tab_set_light_sys(ui.tab_corner_wgt)
         widgets.tab_set_light_sys_rad(ui.tab_radius_wgt)
@@ -77,6 +80,7 @@ def init_settings_win_styles(is_light, ui):
         widgets.panel_push_btn_dark_sys(ui.btn_program_info)
         widgets.panel_push_btn_dark_sys(ui.btn_color_style)
         widgets.panel_push_btn_dark_sys(ui.btn_app_set)
+        widgets.panel_push_btn_dark_sys(ui.btn_line_menu)
         widgets.panel_push_btn_dark_sys(ui.btn_quick_panel)
         widgets.panel_push_btn_dark_sys(ui.btn_tab)
         widgets.panel_push_btn_dark_sys(ui.btn_help_set)
@@ -133,16 +137,18 @@ def init_settings_panel(ui):
     ui.btn_program_info.clicked.connect(switch_settings_page(ui, 0))
     ui.btn_color_style.clicked.connect(switch_settings_page(ui, 1))
     ui.btn_app_set.clicked.connect(switch_settings_page(ui, 2))
-    ui.btn_quick_panel.clicked.connect(switch_settings_page(ui, 3))
-    ui.btn_tab.clicked.connect(switch_settings_page(ui, 4))
-    ui.btn_help_set.clicked.connect(switch_settings_page(ui, 5))
-    ui.btn_privacy_policy.clicked.connect(switch_settings_page(ui, 6))
+    ui.btn_line_menu.clicked.connect(switch_settings_page(ui, 3))
+    ui.btn_quick_panel.clicked.connect(switch_settings_page(ui, 4))
+    ui.btn_tab.clicked.connect(switch_settings_page(ui, 5))
+    ui.btn_help_set.clicked.connect(switch_settings_page(ui, 6))
+    ui.btn_privacy_policy.clicked.connect(switch_settings_page(ui, 7))
 
 
 def init_settings_pages(parent, ui):
     color_style_controllers.init_color_styles(ui)
     set_app_controllers.init_confirm_quit(parent, ui)
     quick_panel_controllers.init_quick_panel(ui)
+    menu_line_controllers.init_menu_line(parent, ui)
     program_info_controllers.init_program_info(parent, ui)
     tab_controllers.init_tab_style(ui)
 

@@ -1,4 +1,5 @@
 from PyQt5 import QtWidgets
+from PyQt5 import QtGui
 
 from controllers import (
     prm_controllers,
@@ -8,21 +9,36 @@ from controllers import (
     systems_controllers,
 )
 from components import schemes, dialogs, setting
-from helpers import time
+from helpers import time, func
 from views import main_win_dark, main_win_light
+from windows import settings, messages
 
 
 class MainWindowApp(QtWidgets.QMainWindow):
+    def __init__(self):
+        super().__init__()
+
+        self.__func_single = func.FuncSingleCall()
+        self.shortcut_settings = QtWidgets.QShortcut(QtGui.QKeySequence('Ctrl+S'), self)
+        self.shortcut_settings.activated.connect(self.open_settings)
+        self.shortcut_settings.setEnabled(False)
+        self.check_menu_line()
+
     def closeEvent(self, event):
         if setting.get_parameter('confirm-quit'):
-            result = dialogs.question_msg(self,
-                                          'Вы уверены, что хотите выйти? Все несохраненные изменения будут утеряны!',
-                                          'Подтверждение выхода...')
+            result = dialogs.question_msg(self, messages.CONFIRM_QUIT, 'Подтверждение выхода...')
             event.ignore()
             if result:
                 event.accept()
         else:
             event.accept()
+
+    def open_settings(self):
+        settings.show_settings_window(self.__func_single, self)
+
+    def check_menu_line(self):
+        if not setting.get_parameter('show-menu'):
+            self.shortcut_settings.setEnabled(True)
 
 
 def init_styles(theme_window, ui_window):
@@ -33,7 +49,10 @@ def init_styles(theme_window, ui_window):
 
 
 def init_elements(ui_window):
+    menu_line_status = setting.get_parameter('show-menu')
     quick_panel_status = setting.get_parameter('show-quick-panel')
+    if not menu_line_status:
+        ui_window.menu_bar.setHidden(True)
     if not quick_panel_status:
         ui_window.status_frame.setVisible(False)
         ui_window.enc_combo_box.setVisible(False)
