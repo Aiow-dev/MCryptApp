@@ -1,5 +1,7 @@
 import math
 
+from helpers import tables
+
 
 def remove_item(item_value, lst):
     if item_value in lst:
@@ -54,6 +56,24 @@ def couple_multipliers(multipliers):
     for part in part_right:
         couple_right *= part
     return couple_left, couple_right
+
+
+def table_str_items(table):
+    table_text = []
+    for row in table:
+        part_row = [str(column) for column in row]
+        table_text.append(part_row)
+    return table_text
+
+
+def is_empty_table(tbl_wgt):
+    size = tables.table_size(tbl_wgt)
+    for row in range(size[0]):
+        for column in range(size[1]):
+            item_obj = tbl_wgt.item(row, column)
+            if item_obj is not None:
+                return False
+    return True
 
 
 if __name__ == '__main__':

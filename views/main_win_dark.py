@@ -2260,8 +2260,22 @@ class Ui_main_window(object):
         self.enc_ms_button_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.enc_ms_button_frame.setObjectName("enc_ms_button_frame")
         self.horizontalLayout_158 = QtWidgets.QHBoxLayout(self.enc_ms_button_frame)
-        self.horizontalLayout_158.setContentsMargins(-1, 0, 0, 0)
         self.horizontalLayout_158.setObjectName("horizontalLayout_158")
+        self.enc_ms_auto_btn = QtWidgets.QPushButton(self.enc_ms_button_frame)
+        self.enc_ms_auto_btn.setMinimumSize(QtCore.QSize(130, 45))
+        self.enc_ms_auto_btn.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.enc_ms_auto_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(77, 77, 77);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(48, 47, 47);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(77, 77, 77);\n"
+"}")
+        self.enc_ms_auto_btn.setObjectName("enc_ms_auto_btn")
+        self.horizontalLayout_158.addWidget(self.enc_ms_auto_btn)
         self.enc_ms_btn = QtWidgets.QPushButton(self.enc_ms_button_frame)
         self.enc_ms_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_ms_btn.setMaximumSize(QtCore.QSize(200, 16777215))
@@ -7103,6 +7117,7 @@ class Ui_main_window(object):
         self.enc_ms_rank_txt.setPlaceholderText(_translate("main_window", "Количество строк и столбцов"))
         self.enc_ms_oc_lbl.setText(_translate("main_window", "Результат"))
         self.enc_ms_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
+        self.enc_ms_auto_btn.setText(_translate("main_window", "Сгенерировать"))
         self.enc_ms_btn.setText(_translate("main_window", "Выполнить (Enter)"))
         self.ms_types_tab.setTabText(self.ms_types_tab.indexOf(self.enc_ms_tab), _translate("main_window", "Шифрование"))
         self.dec_ms_msg_lbl.setText(_translate("main_window", "Сообщение"))

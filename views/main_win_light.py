@@ -2251,7 +2251,7 @@ class Ui_main_window(object):
         self.horizontalLayout_155.addWidget(self.enc_ms_oc_txt)
         self.verticalLayout_71.addWidget(self.enc_ms_oc_frame)
         self.horizontalLayout_151.addWidget(self.enc_ms_chr_frame)
-        self.verticalLayout_69.addWidget(self.enc_ms_r_frame, 0, QtCore.Qt.AlignTop)
+        self.verticalLayout_69.addWidget(self.enc_ms_r_frame)
         self.enc_ms_table_frame = QtWidgets.QFrame(self.enc_ms)
         self.enc_ms_table_frame.setStyleSheet("QFrame {\n"
 "    border: none;\n"
@@ -2351,8 +2351,23 @@ class Ui_main_window(object):
         self.enc_ms_button_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.enc_ms_button_frame.setObjectName("enc_ms_button_frame")
         self.horizontalLayout_158 = QtWidgets.QHBoxLayout(self.enc_ms_button_frame)
-        self.horizontalLayout_158.setContentsMargins(-1, 0, 0, 0)
         self.horizontalLayout_158.setObjectName("horizontalLayout_158")
+        self.enc_ms_auto_btn = QtWidgets.QPushButton(self.enc_ms_button_frame)
+        self.enc_ms_auto_btn.setMinimumSize(QtCore.QSize(130, 45))
+        self.enc_ms_auto_btn.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.enc_ms_auto_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"}")
+        self.enc_ms_auto_btn.setObjectName("enc_ms_auto_btn")
+        self.horizontalLayout_158.addWidget(self.enc_ms_auto_btn)
         self.enc_ms_btn = QtWidgets.QPushButton(self.enc_ms_button_frame)
         self.enc_ms_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_ms_btn.setMaximumSize(QtCore.QSize(200, 16777215))
@@ -7254,7 +7269,7 @@ class Ui_main_window(object):
         self.smp_types_tab.setCurrentIndex(0)
         self.kpm_types_tab.setCurrentIndex(0)
         self.dpm_types_tab.setCurrentIndex(0)
-        self.ms_types_tab.setCurrentIndex(0)
+        self.ms_types_tab.setCurrentIndex(1)
         self.cs_types_tab.setCurrentIndex(0)
         self.acs_types_tab.setCurrentIndex(0)
         self.kcs_types_tab.setCurrentIndex(0)
@@ -7361,6 +7376,7 @@ class Ui_main_window(object):
         self.enc_ms_rank_txt.setPlaceholderText(_translate("main_window", "Количество строк и столбцов"))
         self.enc_ms_oc_lbl.setText(_translate("main_window", "Результат"))
         self.enc_ms_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
+        self.enc_ms_auto_btn.setText(_translate("main_window", "Сгенерировать"))
         self.enc_ms_btn.setText(_translate("main_window", "Выполнить (Enter)"))
         self.ms_types_tab.setTabText(self.ms_types_tab.indexOf(self.enc_ms_tab), _translate("main_window", "Шифрование"))
         self.dec_ms_msg_lbl.setText(_translate("main_window", "Сообщение"))

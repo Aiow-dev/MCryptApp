@@ -104,7 +104,7 @@ def init_pages(parent, ui_window):
     cs_controllers.init_classic_caesar(ui_window)
     cs_controllers.init_affine_caesar(ui_window)
     cs_controllers.init_key_caesar(ui_window)
-    ms_controllers.init_magic_square(ui_window)
+    ms_controllers.init_magic_square(parent, ui_window)
     dbl_pfr_controllers.init_double_playfair(ui_window)
     systems_controllers.init_playfair(ui_window)
     systems_controllers.init_trisemus(ui_window)
