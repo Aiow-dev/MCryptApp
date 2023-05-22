@@ -156,6 +156,7 @@ cython_debug/
 .idea/
 .fleet/
 .vscode/
+.hg/
 
 codiga.yml
 
