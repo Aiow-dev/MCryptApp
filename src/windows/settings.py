@@ -3,8 +3,14 @@ from PyQt5.QtCore import Qt
 
 from src.views import settings_win_dark, settings_win_light
 from src.components import visual, setting, win_palette
-from src.controllers import set_app_controllers, menu_line_controllers, program_info_controllers, \
-    quick_panel_controllers, tab_controllers, color_style_controllers
+from src.controllers import (
+    set_app_controllers,
+    menu_line_controllers,
+    program_info_controllers,
+    quick_panel_controllers,
+    tab_controllers,
+    color_style_controllers
+)
 from src.helpers import time, win
 
 
