@@ -15,6 +15,12 @@ def positive_number_text_changed(text_obj):
                                            colors.Palette.light_red.value.to_rgb_str()))
 
 
+def number_text_changed(text_obj):
+    text_obj.textChanged.connect(
+        lambda: text.check_number(text_obj, colors.Palette.dark_charcoal.value.to_rgb_str(),
+                                  colors.Palette.light_red.value.to_rgb_str()))
+
+
 def digit_text_changed(text_obj):
     text_obj.textChanged.connect(
         lambda: text.check_digit(text_obj, colors.Palette.dark_charcoal.value.to_rgb_str(),

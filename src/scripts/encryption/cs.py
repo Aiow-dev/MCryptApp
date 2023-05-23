@@ -1,13 +1,14 @@
 import math
 
+from . import messages
 from src.scripts import script_helpers
 
 
 def enc_classic_cs(msg, key, alphabet):
     if key <= 0:
-        return {'err_msg': 'Ошибка. Число символов ключа не может быть отрицательно или равно 0!'}
+        return {'err_msg': messages.NOT_POS_KEY_ERR}
     if key > len(alphabet):
-        return {'err_msg': 'Ошибка. Число символов ключа превышает число символов алфавита!'}
+        return {'err_msg': messages.OVER_CHARS_KEY_ERR}
     msg = msg.lower()
     tbl = alphabet
     enc_tbl = ''.join(tbl[i % 33] for i in range(key, 33 + key))
@@ -17,9 +18,9 @@ def enc_classic_cs(msg, key, alphabet):
 
 def dec_classic_cs(enc_msg, key, alphabet):
     if key <= 0:
-        return {'err_msg': 'Ошибка. Число символов ключа не может быть отрицательно или равно 0!'}
+        return {'err_msg': messages.NOT_POS_KEY_ERR}
     if key > len(alphabet):
-        return {'err_msg': 'Ошибка. Число символов ключа превышает число символов алфавита!'}
+        return {'err_msg': messages.OVER_CHARS_KEY_ERR}
     enc_msg = enc_msg.lower()
     tbl = alphabet
     enc_tbl = ''.join(tbl[i % 33] for i in range(key, 33 + key))
@@ -28,8 +29,10 @@ def dec_classic_cs(enc_msg, key, alphabet):
 
 
 def enc_affine_cs(msg, key_a, key_b, alphabet):
-    if math.gcd(key_a, len(alphabet)) != 1 or key_a <= 0:
-        return {'err_msg': 'Ошибка. Значение ключа a и число символов алфавита не являются взаимно простыми числами!'}
+    if key_a <= 0:
+        return {'err_msg': messages.NOT_POS_KEY_ERR}
+    if math.gcd(key_a, len(alphabet)) != 1:
+        return {'err_msg': messages.KEY_A_GCD_CHARS_ERR}
     msg = msg.lower()
     tbl = alphabet
     enc_tbl = ''.join(tbl[(key_a * i + key_b) % 33] for i in range(33))
@@ -38,8 +41,10 @@ def enc_affine_cs(msg, key_a, key_b, alphabet):
 
 
 def dec_affine_cs(enc_msg, key_a, key_b, alphabet):
-    if math.gcd(key_a, len(alphabet)) != 1 or key_a <= 0:
-        return {'err_msg': 'Ошибка. Значение ключа a и число символов алфавита не являются взаимно простыми числами!'}
+    if key_a <= 0:
+        return {'err_msg': messages.NOT_POS_KEY_ERR}
+    if math.gcd(key_a, len(alphabet)) != 1:
+        return {'err_msg': messages.KEY_A_GCD_CHARS_ERR}
     enc_msg = enc_msg.lower()
     tbl = alphabet
     enc_tbl = ''
@@ -52,9 +57,9 @@ def dec_affine_cs(enc_msg, key_a, key_b, alphabet):
 
 def enc_key_cs(msg, key_num, key_word, alphabet):
     if key_num <= 0:
-        return {'err_msg': 'Ошибка. Число символов ключа k не может быть отрицательно или равно 0!'}
+        return {'err_msg': messages.NOT_POS_KEY_K_ERR}
     if key_num >= len(alphabet):
-        return {'err_msg': 'Ошибка. Число символов ключа k превышает или равно числу символов алфавита!'}
+        return {'err_msg': messages.KEY_K_CHARS_ERR}
     msg = msg.lower()
     table = alphabet
     enc_tbl = script_helpers.sum_unique(key_word, '')
@@ -67,9 +72,9 @@ def enc_key_cs(msg, key_num, key_word, alphabet):
 
 def dec_key_cs(enc_msg, key_num, key_word, alphabet):
     if key_num <= 0:
-        return {'err_msg': 'Ошибка. Число символов ключа k не может быть отрицательно или равно 0!'}
+        return {'err_msg': messages.NOT_POS_KEY_K_ERR}
     if key_num >= len(alphabet):
-        return {'err_msg': 'Ошибка. Число символов ключа k превышает или равно числу символов алфавита!'}
+        return {'err_msg': messages.KEY_K_CHARS_ERR}
     enc_msg = enc_msg.lower()
     tbl = alphabet
     enc_tbl = script_helpers.sum_unique(key_word, '')

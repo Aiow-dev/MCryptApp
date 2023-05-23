@@ -1,7 +1,10 @@
+from . import messages
+
+
 def enc_simple_prm(msg, row, column):  # Шифруемая фраза "Прилетаю седьмого в полдень"
     msg = msg.replace(' ', '').upper()  # Строки - 4, Столбцы - 6 Результат - "ПЕСМВДРТЕОПЕИАДГОНЛЬЮОЛЬ"
     if len(msg) != row * column or row <= 0 or column <= 0:
-        return {'err_msg': 'Ошибка заполнения таблицы. Проверьте количество строк и столбцов!'}
+        return {'err_msg': messages.TABLE_PERM_ERR}
     mas = [[] for _ in range(row)]
     index = -1
     for j in range(column):
@@ -18,7 +21,7 @@ def enc_simple_prm(msg, row, column):  # Шифруемая фраза "Прил
 def dec_simple_prm(enc_msg, row, column):  # Строка - "ПЕСМВДРТЕОПЕИАДГОНЛЮЬОЛЬ"
     enc_msg = enc_msg.replace(' ', '').upper()  # Строки - 4, Столбцы - 6 Результат - "ПРИЛЕТАЮСЕДЬМОГОВПОЛДЕНЬ"
     if len(enc_msg) != row * column or row <= 0 or column <= 0:
-        return {'err_msg': 'Ошибка заполнения таблицы. Проверьте количество строк и столбцов!'}
+        return {'err_msg': messages.TABLE_PERM_ERR}
     mas = [[] for _ in range(row)]
     index = -1
     for j in range(row):
@@ -36,9 +39,9 @@ def enc_key_prm(msg, row, column, key):
     clear_msg = ''.join(msg.split(' ')).upper()
     k = row
     if len(clear_msg) != k * column or k <= 0 or column <= 0:
-        return {'err_msg': 'Ошибка заполнения таблицы. Проверьте количество строк и столбцов!'}
+        return {'err_msg': messages.TABLE_PERM_ERR}
     if len(key) != column:
-        return {'err_msg': 'Ошибка заполнения таблицы. Число символов ключа не равно числу столбцов!'}
+        return {'err_msg': messages.KEY_COLUMN_ERR}
     cipher = {}
     index_ch = 0
     for index, ch in enumerate(key.lower()):
@@ -56,9 +59,9 @@ def enc_key_prm(msg, row, column, key):
 def dec_key_prm(enc_msg, row, column, key):
     clear_enc_msg = ''.join(enc_msg.split(' ')).upper()
     if len(clear_enc_msg) != row * column:
-        return {'err_msg': 'Ошибка заполнения таблицы. Проверьте количество строк и столбцов!'}
+        return {'err_msg': messages.TABLE_PERM_ERR}
     if len(key) != column:
-        return {'err_msg': 'Ошибка заполнения таблицы. Число символов ключа не равно числу столбцов!'}
+        return {'err_msg': messages.KEY_COLUMN_ERR}
     mas = [[] for _ in range(column)]
     for i in range(column):
         for k in range(row):
@@ -82,7 +85,7 @@ def enc_double_prm(msg, row, clm, key_row, key_clm):
     msg = msg.replace(' ', '').upper()
     clm_tbl = {}
     if len(msg) != row * clm or row <= 0 or clm <= 0:
-        return {'err_msg': 'Ошибка заполнения таблицы. Проверьте количество строк и столбцов!'}
+        return {'err_msg': messages.TABLE_PERM_ERR}
     for index_clm, num_clm in enumerate(key_clm):
         part_clm_tbl = []
         for index_row in range(row):
@@ -103,7 +106,7 @@ def dec_double_prm(enc_msg, row, clm, key_row, key_clm):
     enc_msg = enc_msg.replace(' ', '').upper()
     clm_tbl = {}
     if len(enc_msg) != row * clm or row <= 0 or clm <= 0:
-        return {'err_msg': 'Ошибка заполнения таблицы. Проверьте количество строк и столбцов!'}
+        return {'err_msg': messages.TABLE_PERM_ERR}
     for index_clm, num_clm in enumerate(key_clm):
         part_clm_tbl = []
         for index_row in range(row):

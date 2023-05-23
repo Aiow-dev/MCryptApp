@@ -15837,7 +15837,7 @@ QComboBox::drop-down:button {
             </item>
             <item>
              <property name="text">
-              <string>Афинная система Цезаря</string>
+              <string>Аффинная система Цезаря</string>
              </property>
             </item>
             <item>
@@ -15967,7 +15967,7 @@ QComboBox::drop-down:button {
   </action>
   <action name="action_acs">
    <property name="text">
-    <string>Афинная система Цезаря</string>
+    <string>Аффинная система Цезаря</string>
    </property>
   </action>
   <action name="action_kcs">

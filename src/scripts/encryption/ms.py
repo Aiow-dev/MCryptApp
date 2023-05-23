@@ -1,9 +1,10 @@
+from . import messages
 from src.helpers import encryption
 
 
 def enc_magic_square(msg, key_tbl):
     if not encryption.check_magic_square(key_tbl):
-        return {'err_msg': 'Ошибка. Таблица не является магическим квадратом!'}
+        return {'err_msg': messages.TABLE_MS_ERR}
     tbl = []
     enc_msg = ''
     for row in key_tbl:
@@ -17,7 +18,7 @@ def enc_magic_square(msg, key_tbl):
 
 def dec_magic_square(enc_msg, key_tbl):
     if not encryption.check_magic_square(key_tbl):
-        return {'err_msg': 'Ошибка. Таблица не является магическим квадратом!'}
+        return {'err_msg': messages.TABLE_MS_ERR}
     tbl_rank = len(key_tbl)
     tbl = []
     msg = ['' for _ in range(tbl_rank ** 2)]

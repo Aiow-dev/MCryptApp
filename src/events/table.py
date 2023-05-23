@@ -4,7 +4,7 @@ from src.helpers import tables
 
 def check_tbl_pos_num(tbl_item_obj, color_default, color_err):
     color = color_err
-    msg = messages.TBL_POS_NUM_ERROR
+    msg = messages.TBL_POS_NUM_ERR
     try:
         num = int(tbl_item_obj.text())
         if num > 0:
@@ -19,7 +19,7 @@ def check_tbl_pos_num(tbl_item_obj, color_default, color_err):
 
 def check_tbl_char_unique(tbl_obj, tbl_item_obj, color_default, color_err):
     color = color_err
-    msg = messages.TBL_CHAR_UNIQUE_ERROR
+    msg = messages.TBL_CHAR_UNIQUE_ERR
     tbl_item = tbl_item_obj.text().upper()
     tbl_items = ''.join(''.join(row) for row in tables.table_up_items(tbl_obj))
     item_count = tbl_items.count(tbl_item)

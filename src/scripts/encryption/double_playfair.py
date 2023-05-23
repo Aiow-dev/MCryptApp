@@ -1,3 +1,4 @@
+from . import messages
 from src.scripts import script_helpers
 
 
@@ -9,13 +10,13 @@ def enc_double_playfair(msg, left_tbl, right_tbl):
     if len_msg % 2 == 1:
         msg += 'Ъ'
     if left_size[0] != right_size[0] and left_size[1] != right_size[1]:
-        return {'err_msg': 'Ошибка. Размерности таблиц не равны!'}
+        return {'err_msg': messages.TABLES_RANKS_ERR}
     enc_msg = ''
     for i in range(0, len_msg, 2):
         first = script_helpers.find(left_tbl, msg[i], left_size[0], left_size[1])
         second = script_helpers.find(right_tbl, msg[i + 1], right_size[0], right_size[1])
         if not first or not second:
-            return {'err_msg': 'Ошибка. Не найдена буква сообщения в таблице подстановок!'}
+            return {'err_msg': messages.NOT_FOUND_LETTER_ERR}
         if first[0] == second[0]:
             enc_msg += right_tbl[first[0]][first[1]]
             enc_msg += left_tbl[second[0]][second[1]]
@@ -33,13 +34,13 @@ def dec_double_playfair(enc_msg, left_tbl, right_tbl):
     if len_msg % 2 == 1:
         enc_msg += 'Ъ'
     if left_size[0] != right_size[1] and left_size[1] != right_size[1]:
-        return {'err_msg': 'Ошибка. Размерности таблиц не равны!'}
+        return {'err_msg': messages.TABLES_RANKS_ERR}
     msg = ''
     for i in range(0, len_msg, 2):
         first = script_helpers.find(right_tbl, enc_msg[i], left_size[0], left_size[1])
         second = script_helpers.find(left_tbl, enc_msg[i + 1], right_size[0], right_size[1])
         if not first or not second:
-            return {'err_msg': 'Ошибка. Не найдена буква сообщения в таблице подстановок!'}
+            return {'err_msg': messages.NOT_FOUND_LETTER_ERR}
         if first[0] == second[0]:
             msg += left_tbl[first[0]][first[1]]
             msg += right_tbl[second[0]][second[1]]

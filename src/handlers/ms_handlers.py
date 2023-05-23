@@ -13,7 +13,7 @@ def proc_ms(form_data, encryption):
         tbl_rank = int(form_data['rank_input'].text())
         key_tbl = tables.table_num_items(form_data['key_tbl_widget'])
         if len(msg) != tbl_rank ** 2 or tbl_rank <= 0:
-            err_msg = messages.MSG_RANK_ERROR
+            err_msg = messages.MSG_RANK_ERR
             dialogs.show_err_msg(err_msg, 'Ошибка')
             return
         enc_data = encryption(msg, key_tbl)
@@ -49,7 +49,7 @@ def auto_ms(parent, form_data):
             square = math.floor(math.sqrt(len_msg))
             if square * square == len_msg:
                 if square < 3 or square > 6:
-                    dialogs.show_err_msg(messages.MSG_OVER_LEN, 'Ошибка')
+                    dialogs.show_err_msg(messages.MSG_OVER_LEN_ERR, 'Ошибка')
                     return
                 form_data['rank_input'].setText(str(square))
                 random_min = 3
@@ -68,7 +68,7 @@ def auto_ms(parent, form_data):
                 table_text = items.table_str_items(table)
                 tables.table(table_text, enc_tables.table_row, form_data['key_tbl_widget'])
             else:
-                dialogs.show_err_msg(messages.MSG_NOT_ROOT_LEN, 'Ошибка')
+                dialogs.show_err_msg(messages.MSG_ROOT_LEN_ERR, 'Ошибка')
         else:
             dialogs.show_err_msg('Сообщение не заполнено!', 'Ошибка')
     except AttributeError as attribute_error:

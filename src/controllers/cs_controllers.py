@@ -30,8 +30,8 @@ def init_affine_caesar(ui):
     event_components.empty_text_changed(ui.dec_acs_msg_txt)
     event_components.positive_number_text_changed(ui.enc_acs_key_a_txt)
     event_components.positive_number_text_changed(ui.dec_acs_key_a_txt)
-    event_components.digit_text_changed(ui.enc_acs_key_b_txt)
-    event_components.digit_text_changed(ui.dec_acs_key_b_txt)
+    event_components.number_text_changed(ui.enc_acs_key_b_txt)
+    event_components.number_text_changed(ui.dec_acs_key_b_txt)
 
 
 def init_key_caesar(ui):

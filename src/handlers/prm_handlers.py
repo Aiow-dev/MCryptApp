@@ -49,7 +49,7 @@ def auto_simple_prm(parent, form_data):
                 form_data['rows_input'].setText(str(rows))
                 form_data['columns_input'].setText(str(columns))
             else:
-                dialogs.show_err_msg(messages.MSG_PRIME_LEN, 'Ошибка')
+                dialogs.show_err_msg(messages.MSG_PRIME_LEN_ERR, 'Ошибка')
         else:
             dialogs.show_err_msg('Сообщение не заполнено!', 'Ошибка')
     except AttributeError as attribute_error:
@@ -108,7 +108,7 @@ def auto_key_prm(parent, form_data):
                 else:
                     dialogs.show_err_msg('Не удалось сгенерировать параметры!', 'Ошибка')
             else:
-                dialogs.show_err_msg(messages.MSG_PRIME_LEN, 'Ошибка')
+                dialogs.show_err_msg(messages.MSG_PRIME_LEN_ERR, 'Ошибка')
         else:
             dialogs.show_err_msg('Сообщение не заполнено!', 'Ошибка')
     except AttributeError as attribute_error:
@@ -123,11 +123,11 @@ def proc_double_prm(form_data, encryption):
         key_row = form_data['key_row_input'].text()
         key_column = form_data['key_column_input'].text()
         if not items.is_all_range(key_row, range(1, rows + 1)):
-            err_msg = messages.KEY_ROW_RANGE_ERROR
+            err_msg = messages.KEY_ROW_RANGE_ERR
             dialogs.show_err_msg(err_msg, 'Ошибка')
             return
         if not items.is_all_range(key_column, range(1, columns + 1)):
-            err_msg = messages.KEY_CLM_RANGE_ERROR
+            err_msg = messages.KEY_CLM_RANGE_ERR
             dialogs.show_err_msg(err_msg, 'Ошибка')
             return
         enc_data = encryption(msg, rows, columns, key_row, key_column)
@@ -178,7 +178,7 @@ def auto_double_prm(parent, form_data):
                 form_data['key_row_input'].setText(key_row)
                 form_data['key_column_input'].setText(key_column)
             else:
-                dialogs.show_err_msg(messages.MSG_PRIME_LEN, 'Ошибка')
+                dialogs.show_err_msg(messages.MSG_PRIME_LEN_ERR, 'Ошибка')
         else:
             dialogs.show_err_msg('Сообщение не заполнено!', 'Ошибка')
     except AttributeError as attribute_error:

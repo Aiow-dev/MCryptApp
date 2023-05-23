@@ -83,14 +83,15 @@ def table_item(item_value, color):
     return item
 
 
-def affine_column_headers(key_a_text, key_b_text):
-    key_text = f'{key_a_text}t+{key_b_text}'
+def affine_column_headers(key_a, key_b):
+    sign = '' if key_b < 0 else '+'
+    key_text = f'{key_a}t{sign}{key_b}'
     return 't', key_text, 't', key_text, 't', key_text
 
 
-def affine_num_column(key_a_text, key_b_text, start_t, end_t):
+def affine_num_column(key_a, key_b, start_t, end_t):
     letters_num = 33
-    return [str((key_a_text * t + key_b_text) % letters_num) for t in range(start_t, end_t)]
+    return [str((key_a * t + key_b) % letters_num) for t in range(start_t, end_t)]
 
 
 def affine_letter_column(num_column_value, alphabet):

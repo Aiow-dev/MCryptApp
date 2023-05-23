@@ -28,12 +28,25 @@ def check_positive_number(text_obj, color_default, color_err):
         text_obj.setToolTip(msg)
 
 
+def check_number(text_obj, color_default, color_err):
+    color = color_err
+    msg = messages.NUM_ERR
+    text = text_obj.text()
+    if len(text) > 0 and text[0] == '-':
+        text = text[1:]
+    if text.isdigit():
+        color = color_default
+        msg = ''
+    styles.set_border_color(text_obj, color)
+    text_obj.setToolTip(msg)
+
+
 def check_digit(text_obj, color_default, color_err):
     color = color_default
     msg = ''
     if not text_obj.text().isdigit():
         color = color_err
-        msg = messages.DIGIT_ERROR
+        msg = messages.DIGIT_ERR
     styles.set_border_color(text_obj, color)
     text_obj.setToolTip(msg)
 
@@ -42,7 +55,7 @@ def check_chars_ign(text_obj, charset, color_default, color_err):
     text = text_obj.text().lower()
     check_chars = charset.lower()
     color = color_err
-    msg = messages.CHARSET_ERROR.format(charset)
+    msg = messages.CHARSET_ERR.format(charset)
     is_charset = True
     if not text:
         styles.set_border_color(text_obj, color)
