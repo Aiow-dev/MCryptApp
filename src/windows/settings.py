@@ -43,35 +43,43 @@ def init_settings_styles(ui):
     visual.frame_color_style_sys(ui.accent_dark_win_color)
 
 
+def init_push_btn_sys_styles(ui):
+    push_btn_list = [ui.ext_info_btn, ui.light_btn, ui.dark_btn,
+                     ui.win_btn, ui.time_color_btn, ui.btn_restart,
+                     ui.btn_quit, ui.menu_style_btn, ui.menu_color_style_btn,
+                     ui.tab_corner_btn, ui.tab_radius_btn, ui.tab_top_radius_btn,
+                     ui.tab_corner_radius_btn, ui.help_open_btn]
+    for push_btn in push_btn_list:
+        visual.push_btn_sys(push_btn)
+
+
+def init_panel_sys_styles(is_light, ui):
+    push_btn_list = [ui.btn_program_info, ui.btn_color_style, ui.btn_app_set,
+                     ui.btn_line_menu, ui.btn_quick_panel, ui.btn_tab,
+                     ui.btn_help_set, ui.btn_privacy_policy]
+    visual_function = visual.panel_push_btn_light_sys if is_light else visual.panel_push_btn_dark_sys
+    for push_btn in push_btn_list:
+        visual_function(push_btn)
+
+
+def init_label_back_sys_styles(is_light, ui):
+    visual_function = visual.label_back_light_sys if is_light else visual.label_back_dark_sys
+    visual_function(ui.menu_bar_style_lbl)
+    visual_function(ui.menu_bar_style_lbl_2)
+
+
 def init_settings_win_styles(is_light, ui):
     accent = win_palette.win_accent_converted()
     complementary = win_palette.win_complementary_converted(accent)
     win_palette.accent_color = accent.to_rgb_str()
     win_palette.complementary_color = complementary.to_rgb_str()
-    visual.push_btn_sys(ui.ext_info_btn)
-    visual.push_btn_sys(ui.light_btn)
-    visual.push_btn_sys(ui.dark_btn)
-    visual.push_btn_sys(ui.win_btn)
-    visual.push_btn_sys(ui.time_color_btn)
-    visual.push_btn_sys(ui.btn_restart)
-    visual.push_btn_sys(ui.btn_quit)
-    visual.push_btn_sys(ui.menu_style_btn)
-    visual.push_btn_sys(ui.menu_color_style_btn)
-    visual.push_btn_sys(ui.tab_corner_btn)
-    visual.push_btn_sys(ui.tab_radius_btn)
-    visual.push_btn_sys(ui.tab_top_radius_btn)
-    visual.push_btn_sys(ui.tab_corner_radius_btn)
-    visual.push_btn_sys(ui.help_open_btn)
+
+    init_panel_sys_styles(is_light, ui)
+    init_label_back_sys_styles(is_light, ui)
+    init_push_btn_sys_styles(ui)
     visual.frame_bottom_color_sys(ui.menu_bar_color_style_frame)
+
     if is_light:
-        visual.panel_push_btn_light_sys(ui.btn_program_info)
-        visual.panel_push_btn_light_sys(ui.btn_color_style)
-        visual.panel_push_btn_light_sys(ui.btn_app_set)
-        visual.panel_push_btn_light_sys(ui.btn_line_menu)
-        visual.panel_push_btn_light_sys(ui.btn_quick_panel)
-        visual.panel_push_btn_light_sys(ui.btn_tab)
-        visual.panel_push_btn_light_sys(ui.btn_help_set)
-        visual.panel_push_btn_light_sys(ui.btn_privacy_policy)
         visual.check_box_light_sys(ui.confirm_quit_chk)
         visual.check_box_light_sys(ui.menu_line_chk)
         visual.check_box_light_sys(ui.quick_panel_chk)
@@ -79,25 +87,12 @@ def init_settings_win_styles(is_light, ui):
         visual.tab_set_light_sys_rad(ui.tab_radius_wgt)
         visual.tab_set_light_sys_top_rad(ui.tab_top_radius_wgt)
         visual.tab_set_light_sys_corn_rad(ui.tab_corner_radius_wgt)
-        visual.label_back_light_sys(ui.menu_bar_style_lbl)
-        visual.label_back_light_sys(ui.menu_bar_style_lbl_2)
         visual.frame_bottom_sys(ui.menu_bar_style_frame)
     else:
-        visual.panel_push_btn_dark_sys(ui.btn_program_info)
-        visual.panel_push_btn_dark_sys(ui.btn_color_style)
-        visual.panel_push_btn_dark_sys(ui.btn_app_set)
-        visual.panel_push_btn_dark_sys(ui.btn_line_menu)
-        visual.panel_push_btn_dark_sys(ui.btn_quick_panel)
-        visual.panel_push_btn_dark_sys(ui.btn_tab)
-        visual.panel_push_btn_dark_sys(ui.btn_help_set)
-        visual.panel_push_btn_dark_sys(ui.btn_privacy_policy)
         visual.tab_set_dark_sys(ui.tab_corner_wgt)
         visual.tab_set_dark_sys_rad(ui.tab_radius_wgt)
         visual.tab_set_dark_sys_top_rad(ui.tab_top_radius_wgt)
         visual.tab_set_dark_sys_corn_rad(ui.tab_corner_radius_wgt)
-        visual.label_back_dark_sys(ui.menu_bar_style_lbl)
-        visual.label_back_dark_sys(ui.menu_bar_style_lbl_2)
-        visual.frame_bottom_dark(ui.menu_bar_style_frame)
 
 
 def active_color_style_win(ui):

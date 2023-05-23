@@ -1185,15 +1185,3 @@ def frame_bottom_color_sys(frame_obj):
     }}
     '''
     frame_obj.setStyleSheet(frame_stylesheet)
-
-
-def frame_bottom_dark(frame_obj):
-    frame_stylesheet = f'''
-    QFrame {{
-        border-radius: 0px;
-        border: none;
-        border-bottom: 1px solid {colors.Palette.dark_charcoal.value.to_rgb_str()};
-        background-color: {colors.Palette.eerie_black.value.to_rgb_str()};
-    }}
-    '''
-    frame_obj.setStyleSheet(frame_stylesheet)

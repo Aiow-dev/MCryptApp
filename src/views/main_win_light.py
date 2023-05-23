@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '../views/templates/main_win_light.ui'
+# Form implementation generated from reading ui file '../src/views/templates/main_win_light.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.8
 #
@@ -2927,8 +2927,23 @@ class Ui_main_window(object):
         self.enc_cs_button_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.enc_cs_button_frame.setObjectName("enc_cs_button_frame")
         self.horizontalLayout_45 = QtWidgets.QHBoxLayout(self.enc_cs_button_frame)
-        self.horizontalLayout_45.setContentsMargins(-1, 0, 0, 0)
         self.horizontalLayout_45.setObjectName("horizontalLayout_45")
+        self.enc_cs_auto_btn = QtWidgets.QPushButton(self.enc_cs_button_frame)
+        self.enc_cs_auto_btn.setMinimumSize(QtCore.QSize(130, 45))
+        self.enc_cs_auto_btn.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.enc_cs_auto_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"}")
+        self.enc_cs_auto_btn.setObjectName("enc_cs_auto_btn")
+        self.horizontalLayout_45.addWidget(self.enc_cs_auto_btn)
         self.enc_cs_btn = QtWidgets.QPushButton(self.enc_cs_button_frame)
         self.enc_cs_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_cs_btn.setMaximumSize(QtCore.QSize(200, 16777215))
@@ -3516,8 +3531,23 @@ class Ui_main_window(object):
         self.enc_acs_button_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.enc_acs_button_frame.setObjectName("enc_acs_button_frame")
         self.horizontalLayout_59 = QtWidgets.QHBoxLayout(self.enc_acs_button_frame)
-        self.horizontalLayout_59.setContentsMargins(-1, 0, 0, 0)
         self.horizontalLayout_59.setObjectName("horizontalLayout_59")
+        self.enc_acs_auto_btn = QtWidgets.QPushButton(self.enc_acs_button_frame)
+        self.enc_acs_auto_btn.setMinimumSize(QtCore.QSize(130, 45))
+        self.enc_acs_auto_btn.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.enc_acs_auto_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"}")
+        self.enc_acs_auto_btn.setObjectName("enc_acs_auto_btn")
+        self.horizontalLayout_59.addWidget(self.enc_acs_auto_btn)
         self.enc_acs_btn = QtWidgets.QPushButton(self.enc_acs_button_frame)
         self.enc_acs_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_acs_btn.setMaximumSize(QtCore.QSize(200, 16777215))
@@ -4178,8 +4208,23 @@ class Ui_main_window(object):
         self.enc_kcs_button_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.enc_kcs_button_frame.setObjectName("enc_kcs_button_frame")
         self.horizontalLayout_81 = QtWidgets.QHBoxLayout(self.enc_kcs_button_frame)
-        self.horizontalLayout_81.setContentsMargins(-1, 0, 0, 0)
         self.horizontalLayout_81.setObjectName("horizontalLayout_81")
+        self.enc_kcs_auto_btn = QtWidgets.QPushButton(self.enc_kcs_button_frame)
+        self.enc_kcs_auto_btn.setMinimumSize(QtCore.QSize(130, 45))
+        self.enc_kcs_auto_btn.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.enc_kcs_auto_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"}")
+        self.enc_kcs_auto_btn.setObjectName("enc_kcs_auto_btn")
+        self.horizontalLayout_81.addWidget(self.enc_kcs_auto_btn)
         self.enc_kcs_btn = QtWidgets.QPushButton(self.enc_kcs_button_frame)
         self.enc_kcs_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_kcs_btn.setMaximumSize(QtCore.QSize(200, 16777215))
@@ -4831,8 +4876,23 @@ class Ui_main_window(object):
         self.enc_ts_button_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.enc_ts_button_frame.setObjectName("enc_ts_button_frame")
         self.horizontalLayout_100 = QtWidgets.QHBoxLayout(self.enc_ts_button_frame)
-        self.horizontalLayout_100.setContentsMargins(-1, 0, 0, 0)
         self.horizontalLayout_100.setObjectName("horizontalLayout_100")
+        self.enc_ts_auto_btn = QtWidgets.QPushButton(self.enc_ts_button_frame)
+        self.enc_ts_auto_btn.setMinimumSize(QtCore.QSize(130, 45))
+        self.enc_ts_auto_btn.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.enc_ts_auto_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"}")
+        self.enc_ts_auto_btn.setObjectName("enc_ts_auto_btn")
+        self.horizontalLayout_100.addWidget(self.enc_ts_auto_btn)
         self.enc_ts_btn = QtWidgets.QPushButton(self.enc_ts_button_frame)
         self.enc_ts_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_ts_btn.setMaximumSize(QtCore.QSize(200, 16777215))
@@ -5447,8 +5507,23 @@ class Ui_main_window(object):
         self.enc_vs_button_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.enc_vs_button_frame.setObjectName("enc_vs_button_frame")
         self.horizontalLayout_120 = QtWidgets.QHBoxLayout(self.enc_vs_button_frame)
-        self.horizontalLayout_120.setContentsMargins(-1, 0, 0, 0)
         self.horizontalLayout_120.setObjectName("horizontalLayout_120")
+        self.enc_vs_auto_btn = QtWidgets.QPushButton(self.enc_vs_button_frame)
+        self.enc_vs_auto_btn.setMinimumSize(QtCore.QSize(130, 45))
+        self.enc_vs_auto_btn.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.enc_vs_auto_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"}")
+        self.enc_vs_auto_btn.setObjectName("enc_vs_auto_btn")
+        self.horizontalLayout_120.addWidget(self.enc_vs_auto_btn)
         self.enc_vs_btn = QtWidgets.QPushButton(self.enc_vs_button_frame)
         self.enc_vs_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_vs_btn.setMaximumSize(QtCore.QSize(200, 16777215))
@@ -6063,8 +6138,23 @@ class Ui_main_window(object):
         self.enc_ps_button_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.enc_ps_button_frame.setObjectName("enc_ps_button_frame")
         self.horizontalLayout_138 = QtWidgets.QHBoxLayout(self.enc_ps_button_frame)
-        self.horizontalLayout_138.setContentsMargins(-1, 0, 0, 0)
         self.horizontalLayout_138.setObjectName("horizontalLayout_138")
+        self.enc_ps_auto_btn = QtWidgets.QPushButton(self.enc_ps_button_frame)
+        self.enc_ps_auto_btn.setMinimumSize(QtCore.QSize(130, 45))
+        self.enc_ps_auto_btn.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.enc_ps_auto_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"}")
+        self.enc_ps_auto_btn.setObjectName("enc_ps_auto_btn")
+        self.horizontalLayout_138.addWidget(self.enc_ps_auto_btn)
         self.enc_ps_btn = QtWidgets.QPushButton(self.enc_ps_button_frame)
         self.enc_ps_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_ps_btn.setMaximumSize(QtCore.QSize(200, 16777215))
@@ -6764,8 +6854,23 @@ class Ui_main_window(object):
         self.enc_dp_button_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.enc_dp_button_frame.setObjectName("enc_dp_button_frame")
         self.horizontalLayout_180 = QtWidgets.QHBoxLayout(self.enc_dp_button_frame)
-        self.horizontalLayout_180.setContentsMargins(-1, 0, 0, 0)
         self.horizontalLayout_180.setObjectName("horizontalLayout_180")
+        self.enc_dp_auto_btn = QtWidgets.QPushButton(self.enc_dp_button_frame)
+        self.enc_dp_auto_btn.setMinimumSize(QtCore.QSize(130, 45))
+        self.enc_dp_auto_btn.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.enc_dp_auto_btn.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(98, 79, 130);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(98, 79, 130);\n"
+"    color: rgb(240, 243, 249);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 1px solid rgb(159, 115, 171);\n"
+"    background-color: rgb(159, 115, 171);\n"
+"}")
+        self.enc_dp_auto_btn.setObjectName("enc_dp_auto_btn")
+        self.horizontalLayout_180.addWidget(self.enc_dp_auto_btn)
         self.enc_dp_btn = QtWidgets.QPushButton(self.enc_dp_button_frame)
         self.enc_dp_btn.setMinimumSize(QtCore.QSize(130, 45))
         self.enc_dp_btn.setMaximumSize(QtCore.QSize(200, 16777215))
@@ -7274,7 +7379,7 @@ class Ui_main_window(object):
         self.acs_types_tab.setCurrentIndex(0)
         self.kcs_types_tab.setCurrentIndex(0)
         self.ts_types_tab.setCurrentIndex(0)
-        self.vs_types_tab.setCurrentIndex(1)
+        self.vs_types_tab.setCurrentIndex(0)
         self.ps_types_tab.setCurrentIndex(0)
         self.dp_types_tab.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(main_window)
@@ -7293,7 +7398,8 @@ class Ui_main_window(object):
         self.enc_smp_oc_lbl.setText(_translate("main_window", "Результат"))
         self.enc_smp_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
         self.enc_smp_auto_btn.setText(_translate("main_window", "Сгенерировать"))
-        self.enc_smp_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.enc_smp_btn.setText(_translate("main_window", "Выполнить"))
+        self.enc_smp_btn.setShortcut(_translate("main_window", "Return"))
         self.smp_types_tab.setTabText(self.smp_types_tab.indexOf(self.enc_smp_tab), _translate("main_window", "Шифрование"))
         self.dec_smp_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.dec_smp_msg_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
@@ -7305,7 +7411,8 @@ class Ui_main_window(object):
         self.dec_smp_ot_txt.setPlaceholderText(_translate("main_window", "Текст шифрующей таблицы"))
         self.dec_smp_oc_lbl.setText(_translate("main_window", "Результат"))
         self.dec_smp_oc_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
-        self.dec_smp_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.dec_smp_btn.setText(_translate("main_window", "Выполнить"))
+        self.dec_smp_btn.setShortcut(_translate("main_window", "Return"))
         self.smp_types_tab.setTabText(self.smp_types_tab.indexOf(self.dec_smp_tab), _translate("main_window", "Дешифрование"))
         self.enc_kpm_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.enc_kpm_msg_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
@@ -7320,7 +7427,8 @@ class Ui_main_window(object):
         self.enc_kpm_oc_lbl.setText(_translate("main_window", "Результат"))
         self.enc_kpm_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
         self.enc_kpm_auto_btn.setText(_translate("main_window", "Сгенерировать"))
-        self.enc_kpm_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.enc_kpm_btn.setText(_translate("main_window", "Выполнить"))
+        self.enc_kpm_btn.setShortcut(_translate("main_window", "Return"))
         self.kpm_types_tab.setTabText(self.kpm_types_tab.indexOf(self.enc_kpm_tab), _translate("main_window", "Шифрование"))
         self.dec_kpm_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.dec_kpm_msg_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
@@ -7334,7 +7442,8 @@ class Ui_main_window(object):
         self.dec_kpm_ot_txt.setPlaceholderText(_translate("main_window", "Текст шифрующей таблицы"))
         self.dec_kpm_oc_lbl.setText(_translate("main_window", "Результат"))
         self.dec_kpm_oc_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
-        self.dec_kpm_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.dec_kpm_btn.setText(_translate("main_window", "Выполнить"))
+        self.dec_kpm_btn.setShortcut(_translate("main_window", "Return"))
         self.kpm_types_tab.setTabText(self.kpm_types_tab.indexOf(self.dec_kpm_tab), _translate("main_window", "Дешифрование"))
         self.enc_dpm_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.enc_dpm_msg_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
@@ -7351,7 +7460,8 @@ class Ui_main_window(object):
         self.enc_dpm_oc_lbl.setText(_translate("main_window", "Результат"))
         self.enc_dpm_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
         self.enc_dpm_auto_btn.setText(_translate("main_window", "Сгенерировать"))
-        self.enc_dpm_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.enc_dpm_btn.setText(_translate("main_window", "Выполнить"))
+        self.enc_dpm_btn.setShortcut(_translate("main_window", "Return"))
         self.dpm_types_tab.setTabText(self.dpm_types_tab.indexOf(self.enc_dpm_tab), _translate("main_window", "Шифрование"))
         self.dec_dpm_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.dec_dpm_msg_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
@@ -7367,7 +7477,8 @@ class Ui_main_window(object):
         self.dec_dpm_ot_txt.setPlaceholderText(_translate("main_window", "Текст шифрующей таблицы"))
         self.dec_dpm_oc_lbl.setText(_translate("main_window", "Результат"))
         self.dec_dpm_oc_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
-        self.dec_dpm_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.dec_dpm_btn.setText(_translate("main_window", "Выполнить"))
+        self.dec_dpm_btn.setShortcut(_translate("main_window", "Return"))
         self.dpm_types_tab.setTabText(self.dpm_types_tab.indexOf(self.dec_dpm_tab), _translate("main_window", "Дешифрование"))
         self.enc_ms_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.enc_ms_msg_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
@@ -7377,7 +7488,8 @@ class Ui_main_window(object):
         self.enc_ms_oc_lbl.setText(_translate("main_window", "Результат"))
         self.enc_ms_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
         self.enc_ms_auto_btn.setText(_translate("main_window", "Сгенерировать"))
-        self.enc_ms_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.enc_ms_btn.setText(_translate("main_window", "Выполнить"))
+        self.enc_ms_btn.setShortcut(_translate("main_window", "Return"))
         self.ms_types_tab.setTabText(self.ms_types_tab.indexOf(self.enc_ms_tab), _translate("main_window", "Шифрование"))
         self.dec_ms_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.dec_ms_msg_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
@@ -7386,7 +7498,8 @@ class Ui_main_window(object):
         self.dec_ms_rank_txt.setPlaceholderText(_translate("main_window", "Количество строк и столбцов"))
         self.dec_ms_oc_lbl.setText(_translate("main_window", "Результат"))
         self.dec_ms_oc_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
-        self.dec_ms_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.dec_ms_btn.setText(_translate("main_window", "Выполнить"))
+        self.dec_ms_btn.setShortcut(_translate("main_window", "Return"))
         self.ms_types_tab.setTabText(self.ms_types_tab.indexOf(self.dec_ms_tab), _translate("main_window", "Дешифрование"))
         self.enc_cs_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.enc_cs_msg_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
@@ -7396,7 +7509,9 @@ class Ui_main_window(object):
         self.enc_cs_ot_txt.setPlaceholderText(_translate("main_window", "Текст шифрующей таблицы"))
         self.enc_cs_oc_lbl.setText(_translate("main_window", "Результат"))
         self.enc_cs_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
-        self.enc_cs_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.enc_cs_auto_btn.setText(_translate("main_window", "Сгенерировать"))
+        self.enc_cs_btn.setText(_translate("main_window", "Выполнить"))
+        self.enc_cs_btn.setShortcut(_translate("main_window", "Return"))
         self.cs_types_tab.setTabText(self.cs_types_tab.indexOf(self.enc_cs_tab), _translate("main_window", "Шифрование"))
         self.dec_cs_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.dec_cs_msg_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
@@ -7406,7 +7521,8 @@ class Ui_main_window(object):
         self.dec_cs_ot_txt.setPlaceholderText(_translate("main_window", "Текст шифрующей таблицы"))
         self.dec_cs_oc_lbl.setText(_translate("main_window", "Результат"))
         self.dec_cs_oc_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
-        self.dec_cs_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.dec_cs_btn.setText(_translate("main_window", "Выполнить"))
+        self.dec_cs_btn.setShortcut(_translate("main_window", "Return"))
         self.cs_types_tab.setTabText(self.cs_types_tab.indexOf(self.dec_cs_tab), _translate("main_window", "Дешифрование"))
         self.enc_acs_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.enc_acs_msg_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
@@ -7416,7 +7532,9 @@ class Ui_main_window(object):
         self.enc_acs_key_b_txt.setPlaceholderText(_translate("main_window", "Ключ шифрования b"))
         self.enc_acs_oc_lbl.setText(_translate("main_window", "Результат"))
         self.enc_acs_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
-        self.enc_acs_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.enc_acs_auto_btn.setText(_translate("main_window", "Сгенерировать"))
+        self.enc_acs_btn.setText(_translate("main_window", "Выполнить"))
+        self.enc_acs_btn.setShortcut(_translate("main_window", "Return"))
         self.acs_types_tab.setTabText(self.acs_types_tab.indexOf(self.enc_acs_tab), _translate("main_window", "Шифрование"))
         self.dec_acs_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.dec_acs_msg_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
@@ -7426,7 +7544,8 @@ class Ui_main_window(object):
         self.dec_acs_key_b_txt.setPlaceholderText(_translate("main_window", "Ключ шифрования b"))
         self.dec_acs_oc_lbl.setText(_translate("main_window", "Результат"))
         self.dec_acs_oc_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
-        self.dec_acs_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.dec_acs_btn.setText(_translate("main_window", "Выполнить"))
+        self.dec_acs_btn.setShortcut(_translate("main_window", "Return"))
         self.acs_types_tab.setTabText(self.acs_types_tab.indexOf(self.dec_acs_tab), _translate("main_window", "Дешифрование"))
         self.enc_kcs_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.enc_kcs_msg_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
@@ -7437,7 +7556,9 @@ class Ui_main_window(object):
         self.enc_kcs_oc_lbl.setText(_translate("main_window", "Результат"))
         self.enc_kcs_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
         self.enc_kcs_tsb_text.setPlaceholderText(_translate("main_window", "Текст шифрующей таблицы"))
-        self.enc_kcs_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.enc_kcs_auto_btn.setText(_translate("main_window", "Сгенерировать"))
+        self.enc_kcs_btn.setText(_translate("main_window", "Выполнить"))
+        self.enc_kcs_btn.setShortcut(_translate("main_window", "Return"))
         self.kcs_types_tab.setTabText(self.kcs_types_tab.indexOf(self.enc_kcs_tab), _translate("main_window", "Шифрование"))
         self.dec_kcs_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.dec_kcs_msg_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
@@ -7448,7 +7569,8 @@ class Ui_main_window(object):
         self.dec_kcs_oc_lbl.setText(_translate("main_window", "Результат"))
         self.dec_kcs_oc_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
         self.dec_kcs_tsb_text.setPlaceholderText(_translate("main_window", "Текст шифрующей таблицы"))
-        self.dec_kcs_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.dec_kcs_btn.setText(_translate("main_window", "Выполнить"))
+        self.dec_kcs_btn.setShortcut(_translate("main_window", "Return"))
         self.kcs_types_tab.setTabText(self.kcs_types_tab.indexOf(self.dec_kcs_tab), _translate("main_window", "Дешифрование"))
         self.enc_ts_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.enc_ts_msg_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
@@ -7462,7 +7584,9 @@ class Ui_main_window(object):
         self.enc_ts_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
         self.enc_ts_ot_lbl.setText(_translate("main_window", "Шифр-таблица"))
         self.enc_ts_ot_txt.setPlaceholderText(_translate("main_window", "Текст шифрующей таблицы"))
-        self.enc_ts_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.enc_ts_auto_btn.setText(_translate("main_window", "Сгенерировать"))
+        self.enc_ts_btn.setText(_translate("main_window", "Выполнить"))
+        self.enc_ts_btn.setShortcut(_translate("main_window", "Return"))
         self.ts_types_tab.setTabText(self.ts_types_tab.indexOf(self.enc_ts_tab), _translate("main_window", "Шифрование"))
         self.dec_ts_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.dec_ts_msg_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
@@ -7476,7 +7600,8 @@ class Ui_main_window(object):
         self.dec_ts_oc_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
         self.dec_ts_ot_lbl.setText(_translate("main_window", "Шифр-таблица"))
         self.dec_ts_ot_txt.setPlaceholderText(_translate("main_window", "Текст шифрующей таблицы"))
-        self.dec_ts_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.dec_ts_btn.setText(_translate("main_window", "Выполнить"))
+        self.dec_ts_btn.setShortcut(_translate("main_window", "Return"))
         self.ts_types_tab.setTabText(self.ts_types_tab.indexOf(self.dec_ts_tab), _translate("main_window", "Дешифрование"))
         self.enc_vs_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.enc_vs_msg_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
@@ -7485,7 +7610,9 @@ class Ui_main_window(object):
         self.enc_vs_oc_lbl.setText(_translate("main_window", "Результат"))
         self.enc_vs_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
         self.enc_vs_tsb_text.setPlaceholderText(_translate("main_window", "Текст шифрующей таблицы"))
-        self.enc_vs_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.enc_vs_auto_btn.setText(_translate("main_window", "Сгенерировать"))
+        self.enc_vs_btn.setText(_translate("main_window", "Выполнить"))
+        self.enc_vs_btn.setShortcut(_translate("main_window", "Return"))
         self.vs_types_tab.setTabText(self.vs_types_tab.indexOf(self.enc_vs_tab), _translate("main_window", "Шифрование"))
         self.dec_vs_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.dec_vs_msg_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
@@ -7494,7 +7621,8 @@ class Ui_main_window(object):
         self.dec_vs_oc_lbl.setText(_translate("main_window", "Результат"))
         self.dec_vs_oc_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
         self.dec_vs_tsb_text.setPlaceholderText(_translate("main_window", "Текст шифрующей таблицы"))
-        self.dec_vs_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.dec_vs_btn.setText(_translate("main_window", "Выполнить"))
+        self.dec_vs_btn.setShortcut(_translate("main_window", "Return"))
         self.vs_types_tab.setTabText(self.vs_types_tab.indexOf(self.dec_vs_tab), _translate("main_window", "Дешифрование"))
         self.enc_ps_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.enc_ps_msg_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
@@ -7508,7 +7636,9 @@ class Ui_main_window(object):
         self.enc_ps_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
         self.enc_ps_ot_lbl.setText(_translate("main_window", "Шифр-таблица"))
         self.enc_ps_ot_txt.setPlaceholderText(_translate("main_window", "Текст шифрующей таблицы"))
-        self.enc_ps_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.enc_ps_auto_btn.setText(_translate("main_window", "Сгенерировать"))
+        self.enc_ps_btn.setText(_translate("main_window", "Выполнить"))
+        self.enc_ps_btn.setShortcut(_translate("main_window", "Return"))
         self.ps_types_tab.setTabText(self.ps_types_tab.indexOf(self.enc_ps_tab), _translate("main_window", "Шифрование"))
         self.dec_ps_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.dec_ps_msg_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
@@ -7522,7 +7652,8 @@ class Ui_main_window(object):
         self.dec_ps_oc_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
         self.dec_ps_ot_lbl.setText(_translate("main_window", "Шифр-таблица"))
         self.dec_ps_ot_txt.setPlaceholderText(_translate("main_window", "Текст шифрующей таблицы"))
-        self.dec_ps_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.dec_ps_btn.setText(_translate("main_window", "Выполнить"))
+        self.dec_ps_btn.setShortcut(_translate("main_window", "Return"))
         self.ps_types_tab.setTabText(self.ps_types_tab.indexOf(self.dec_ps_tab), _translate("main_window", "Дешифрование"))
         self.enc_dp_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.enc_dp_msg_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
@@ -7535,7 +7666,9 @@ class Ui_main_window(object):
         self.enc_dp_chk.setText(_translate("main_window", "Заполнить случайно"))
         self.enc_dp_oc_lbl.setText(_translate("main_window", "Результат"))
         self.enc_dp_oc_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
-        self.enc_dp_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.enc_dp_auto_btn.setText(_translate("main_window", "Сгенерировать"))
+        self.enc_dp_btn.setText(_translate("main_window", "Выполнить"))
+        self.enc_dp_btn.setShortcut(_translate("main_window", "Return"))
         self.dp_types_tab.setTabText(self.dp_types_tab.indexOf(self.en_dp_tab), _translate("main_window", "Шифрование"))
         self.dec_dp_msg_lbl.setText(_translate("main_window", "Сообщение"))
         self.dec_dp_msg_txt.setPlaceholderText(_translate("main_window", "Текст зашифрованного сообщения"))
@@ -7548,7 +7681,8 @@ class Ui_main_window(object):
         self.dec_dp_chk.setText(_translate("main_window", "Заполнить случайно"))
         self.dec_dp_oc_lbl.setText(_translate("main_window", "Результат"))
         self.dec_dp_oc_txt.setPlaceholderText(_translate("main_window", "Текст сообщения"))
-        self.dec_dp_btn.setText(_translate("main_window", "Выполнить (Enter)"))
+        self.dec_dp_btn.setText(_translate("main_window", "Выполнить"))
+        self.dec_dp_btn.setShortcut(_translate("main_window", "Return"))
         self.dp_types_tab.setTabText(self.dp_types_tab.indexOf(self.dec_dp_tab), _translate("main_window", "Дешифрование"))
         self.enc_combo_box.setItemText(0, _translate("main_window", "Простая перестановка"))
         self.enc_combo_box.setItemText(1, _translate("main_window", "Перестановка по ключу"))
@@ -7568,6 +7702,7 @@ class Ui_main_window(object):
         self.action_program_info.setText(_translate("main_window", "О программе"))
         self.action_program_info.setShortcut(_translate("main_window", "Ctrl+I"))
         self.action_help.setText(_translate("main_window", "Справка"))
+        self.action_help.setShortcut(_translate("main_window", "Ctrl+H"))
         self.action_smp.setText(_translate("main_window", "Простая перестановка"))
         self.action_kpm.setText(_translate("main_window", "Перестановка по ключу"))
         self.action_dpm.setText(_translate("main_window", "Двойная перестановка"))
@@ -7582,7 +7717,9 @@ class Ui_main_window(object):
         self.action_settings_win.setText(_translate("main_window", "Настройки"))
         self.action_settings_win.setShortcut(_translate("main_window", "Ctrl+S"))
         self.action_exit.setText(_translate("main_window", "Завершение работы"))
+        self.action_exit.setShortcut(_translate("main_window", "Ctrl+E"))
         self.action_restart.setText(_translate("main_window", "Перезагрузка"))
+        self.action_restart.setShortcut(_translate("main_window", "Ctrl+R"))
         self.action_new_win.setText(_translate("main_window", "Новое окно"))
         self.action_new_win.setShortcut(_translate("main_window", "Ctrl+W"))
 

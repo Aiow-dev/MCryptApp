@@ -26,5 +26,3 @@ def init_magic_square(parent, ui):
     color_err = scheme_colors.tbl_item_bg_err
     event_components.tbl_pos_num_item_changed(ui.enc_ms_tms_table, color_default, color_err)
     event_components.tbl_pos_num_item_changed(ui.dec_ms_tms_table, color_default, color_err)
-    event_components.shortcut_return(ui.enc_ms_btn)
-    event_components.shortcut_return(ui.dec_ms_btn)

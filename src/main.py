@@ -4,6 +4,7 @@ from PyQt5 import QtWidgets, QtCore
 
 from src.windows import main_window
 
+
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
 

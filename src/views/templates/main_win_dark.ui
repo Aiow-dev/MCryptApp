@@ -725,7 +725,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -1316,7 +1319,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -2076,7 +2082,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -2749,7 +2758,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -3585,7 +3597,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -4334,7 +4349,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -5033,7 +5051,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -5654,7 +5675,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -6195,15 +6219,37 @@ QLineEdit:focus {
                      <enum>QFrame::Raised</enum>
                     </property>
                     <layout class="QHBoxLayout" name="horizontalLayout_45">
-                     <property name="topMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>0</number>
-                     </property>
+                     <item>
+                      <widget class="QPushButton" name="enc_cs_auto_btn">
+                       <property name="minimumSize">
+                        <size>
+                         <width>130</width>
+                         <height>45</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>200</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Сгенерировать</string>
+                       </property>
+                      </widget>
+                     </item>
                      <item>
                       <widget class="QPushButton" name="enc_cs_btn">
                        <property name="minimumSize">
@@ -6231,7 +6277,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -6752,7 +6801,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -7472,15 +7524,37 @@ QTableCornerButton::section {
                      <enum>QFrame::Raised</enum>
                     </property>
                     <layout class="QHBoxLayout" name="horizontalLayout_59">
-                     <property name="topMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>0</number>
-                     </property>
+                     <item>
+                      <widget class="QPushButton" name="enc_acs_auto_btn">
+                       <property name="minimumSize">
+                        <size>
+                         <width>130</width>
+                         <height>45</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>200</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Сгенерировать</string>
+                       </property>
+                      </widget>
+                     </item>
                      <item>
                       <widget class="QPushButton" name="enc_acs_btn">
                        <property name="minimumSize">
@@ -7508,7 +7582,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -8208,7 +8285,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -8894,15 +8974,37 @@ QTableCornerButton::section {
                      <enum>QFrame::Raised</enum>
                     </property>
                     <layout class="QHBoxLayout" name="horizontalLayout_81">
-                     <property name="topMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>0</number>
-                     </property>
+                     <item>
+                      <widget class="QPushButton" name="enc_kcs_auto_btn">
+                       <property name="minimumSize">
+                        <size>
+                         <width>130</width>
+                         <height>45</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>200</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Сгенерировать</string>
+                       </property>
+                      </widget>
+                     </item>
                      <item>
                       <widget class="QPushButton" name="enc_kcs_btn">
                        <property name="minimumSize">
@@ -8930,7 +9032,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -9596,7 +9701,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -10268,15 +10376,37 @@ QTextEdit:focus {
                      <enum>QFrame::Raised</enum>
                     </property>
                     <layout class="QHBoxLayout" name="horizontalLayout_100">
-                     <property name="topMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>0</number>
-                     </property>
+                     <item>
+                      <widget class="QPushButton" name="enc_ts_auto_btn">
+                       <property name="minimumSize">
+                        <size>
+                         <width>130</width>
+                         <height>45</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>200</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Сгенерировать</string>
+                       </property>
+                      </widget>
+                     </item>
                      <item>
                       <widget class="QPushButton" name="enc_ts_btn">
                        <property name="minimumSize">
@@ -10304,7 +10434,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -10956,7 +11089,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -11610,15 +11746,37 @@ QTableCornerButton::section {
                      <enum>QFrame::Raised</enum>
                     </property>
                     <layout class="QHBoxLayout" name="horizontalLayout_120">
-                     <property name="topMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>0</number>
-                     </property>
+                     <item>
+                      <widget class="QPushButton" name="enc_vs_auto_btn">
+                       <property name="minimumSize">
+                        <size>
+                         <width>130</width>
+                         <height>45</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>200</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Сгенерировать</string>
+                       </property>
+                      </widget>
+                     </item>
                      <item>
                       <widget class="QPushButton" name="enc_vs_btn">
                        <property name="minimumSize">
@@ -11646,7 +11804,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -12280,7 +12441,7 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
                        </property>
                       </widget>
                      </item>
@@ -12952,15 +13113,37 @@ QTextEdit:focus {
                      <enum>QFrame::Raised</enum>
                     </property>
                     <layout class="QHBoxLayout" name="horizontalLayout_138">
-                     <property name="topMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>0</number>
-                     </property>
+                     <item>
+                      <widget class="QPushButton" name="enc_ps_auto_btn">
+                       <property name="minimumSize">
+                        <size>
+                         <width>130</width>
+                         <height>45</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>200</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Сгенерировать</string>
+                       </property>
+                      </widget>
+                     </item>
                      <item>
                       <widget class="QPushButton" name="enc_ps_btn">
                        <property name="minimumSize">
@@ -12988,7 +13171,7 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
                        </property>
                       </widget>
                      </item>
@@ -13640,7 +13823,7 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
                        </property>
                       </widget>
                      </item>
@@ -14435,15 +14618,37 @@ QTableCornerButton::section {
                      <enum>QFrame::Raised</enum>
                     </property>
                     <layout class="QHBoxLayout" name="horizontalLayout_180">
-                     <property name="topMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>0</number>
-                     </property>
+                     <item>
+                      <widget class="QPushButton" name="enc_dp_auto_btn">
+                       <property name="minimumSize">
+                        <size>
+                         <width>130</width>
+                         <height>45</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>200</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(48, 47, 47);
+	color: rgb(240, 243, 249);
+}
+
+QPushButton:hover {
+	background-color: rgb(77, 77, 77);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Сгенерировать</string>
+                       </property>
+                      </widget>
+                     </item>
                      <item>
                       <widget class="QPushButton" name="enc_dp_btn">
                        <property name="minimumSize">
@@ -14471,7 +14676,7 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
                        </property>
                       </widget>
                      </item>
@@ -15246,7 +15451,10 @@ QPushButton:hover {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Выполнить (Enter)</string>
+                        <string>Выполнить</string>
+                       </property>
+                       <property name="shortcut">
+                        <string>Return</string>
                        </property>
                       </widget>
                      </item>
@@ -15453,6 +15661,9 @@ QComboBox::drop-down:button {
    <property name="text">
     <string>Справка</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
   </action>
   <action name="action_smp">
    <property name="text">
@@ -15521,10 +15732,16 @@ QComboBox::drop-down:button {
    <property name="text">
     <string>Завершение работы</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
   </action>
   <action name="action_restart">
    <property name="text">
     <string>Перезагрузка</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
    </property>
   </action>
   <action name="action_new_win">

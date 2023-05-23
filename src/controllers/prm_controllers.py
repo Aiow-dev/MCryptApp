@@ -18,8 +18,6 @@ def init_simple_permutation(parent, ui):
     event_components.positive_number_text_changed(ui.enc_smp_clm_txt)
     event_components.positive_number_text_changed(ui.dec_smp_row_txt)
     event_components.positive_number_text_changed(ui.dec_smp_clm_txt)
-    event_components.shortcut_return(ui.enc_smp_btn)
-    event_components.shortcut_return(ui.dec_smp_btn)
 
 
 def init_key_permutation(parent, ui):
@@ -40,8 +38,6 @@ def init_key_permutation(parent, ui):
     event_components.positive_number_text_changed(ui.enc_kpm_clm_txt)
     event_components.positive_number_text_changed(ui.dec_kpm_row_txt)
     event_components.positive_number_text_changed(ui.dec_kpm_clm_txt)
-    event_components.shortcut_return(ui.enc_kpm_btn)
-    event_components.shortcut_return(ui.dec_kpm_btn)
 
 
 def init_double_permutation(parent, ui):
@@ -66,5 +62,3 @@ def init_double_permutation(parent, ui):
     event_components.positive_number_text_changed(ui.enc_dpm_clm_txt)
     event_components.positive_number_text_changed(ui.dec_dpm_row_txt)
     event_components.positive_number_text_changed(ui.dec_dpm_clm_txt)
-    event_components.shortcut_return(ui.enc_dpm_btn)
-    event_components.shortcut_return(ui.dec_dpm_btn)

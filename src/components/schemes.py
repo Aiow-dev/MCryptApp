@@ -94,6 +94,7 @@ def cs_light_sys_scheme(ui):
     labels_light(labels)
     visual.push_btn_sys(ui.enc_cs_btn)
     visual.push_btn_sys(ui.dec_cs_btn)
+    visual.push_btn_sys(ui.enc_cs_auto_btn)
 
 
 def acs_light_sys_scheme(ui):
@@ -111,6 +112,7 @@ def acs_light_sys_scheme(ui):
     labels_light(labels)
     visual.push_btn_sys(ui.enc_acs_btn)
     visual.push_btn_sys(ui.dec_acs_btn)
+    visual.push_btn_sys(ui.enc_acs_auto_btn)
 
 
 def kcs_light_sys_scheme(ui):
@@ -128,6 +130,7 @@ def kcs_light_sys_scheme(ui):
     labels_light(labels)
     visual.push_btn_sys(ui.enc_kcs_btn)
     visual.push_btn_sys(ui.dec_kcs_btn)
+    visual.push_btn_sys(ui.enc_kcs_auto_btn)
 
 
 def ts_light_sys_scheme(ui):
@@ -145,6 +148,7 @@ def ts_light_sys_scheme(ui):
     labels_light(labels)
     visual.push_btn_sys(ui.enc_ts_btn)
     visual.push_btn_sys(ui.dec_ts_btn)
+    visual.push_btn_sys(ui.enc_ts_auto_btn)
 
 
 def vs_light_sys_scheme(ui):
@@ -160,6 +164,7 @@ def vs_light_sys_scheme(ui):
     labels_light(labels)
     visual.push_btn_sys(ui.enc_vs_btn)
     visual.push_btn_sys(ui.dec_vs_btn)
+    visual.push_btn_sys(ui.enc_vs_auto_btn)
 
 
 def ps_light_sys_scheme(ui):
@@ -177,6 +182,7 @@ def ps_light_sys_scheme(ui):
     labels_light(labels)
     visual.push_btn_sys(ui.enc_ps_btn)
     visual.push_btn_sys(ui.dec_ps_btn)
+    visual.push_btn_sys(ui.enc_ps_auto_btn)
 
 
 def dp_light_sys_scheme(ui):
@@ -196,6 +202,7 @@ def dp_light_sys_scheme(ui):
     labels_light(labels)
     visual.push_btn_sys(ui.enc_dp_btn)
     visual.push_btn_sys(ui.dec_dp_btn)
+    visual.push_btn_sys(ui.enc_dp_auto_btn)
 
 
 def light_scheme():
@@ -230,7 +237,9 @@ def dark_sys_scheme(ui):
                 ui.enc_kcs_btn, ui.dec_kcs_btn, ui.enc_ts_btn, ui.dec_ts_btn,
                 ui.enc_vs_btn, ui.dec_vs_btn, ui.enc_ps_btn, ui.dec_ps_btn,
                 ui.enc_dp_btn, ui.dec_dp_btn, ui.enc_smp_auto_btn, ui.enc_kpm_auto_btn,
-                ui.enc_dpm_auto_btn, ui.enc_ms_auto_btn]
+                ui.enc_dpm_auto_btn, ui.enc_ms_auto_btn, ui.enc_cs_auto_btn, ui.enc_acs_auto_btn,
+                ui.enc_kcs_auto_btn, ui.enc_ts_auto_btn, ui.enc_vs_auto_btn, ui.enc_ps_auto_btn,
+                ui.enc_dp_auto_btn]
     for btn in btn_list:
         visual.push_btn_sys(btn)
 

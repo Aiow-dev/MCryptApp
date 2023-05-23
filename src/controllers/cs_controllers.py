@@ -3,19 +3,18 @@ from src.events import event_components
 from src.components import chars
 
 
-def init_classic_caesar(ui):
+def init_classic_caesar(parent, ui):
     enc_form_data = {'msg_input': ui.enc_cs_msg_txt, 'key_input': ui.enc_cs_key_txt,
                      'enc_msg_input': ui.enc_cs_oc_txt, 'enc_tbl_input': ui.enc_cs_ot_txt}
     dec_form_data = {'msg_input': ui.dec_cs_msg_txt, 'key_input': ui.dec_cs_key_txt,
                      'enc_msg_input': ui.dec_cs_oc_txt, 'enc_tbl_input': ui.dec_cs_ot_txt}
     ui.enc_cs_btn.clicked.connect(lambda: cs_handlers.enc_proc_classic_cs(enc_form_data))
     ui.dec_cs_btn.clicked.connect(lambda: cs_handlers.dec_proc_classic_cs(dec_form_data))
+    ui.enc_cs_auto_btn.clicked.connect(lambda: cs_handlers.auto_classic_cs(parent, enc_form_data))
     event_components.empty_text_changed(ui.enc_cs_msg_txt)
     event_components.empty_text_changed(ui.dec_cs_msg_txt)
     event_components.positive_number_text_changed(ui.enc_cs_key_txt)
     event_components.positive_number_text_changed(ui.dec_cs_key_txt)
-    event_components.shortcut_return(ui.enc_cs_btn)
-    event_components.shortcut_return(ui.dec_cs_btn)
 
 
 def init_affine_caesar(ui):
@@ -33,8 +32,6 @@ def init_affine_caesar(ui):
     event_components.positive_number_text_changed(ui.dec_acs_key_a_txt)
     event_components.digit_text_changed(ui.enc_acs_key_b_txt)
     event_components.digit_text_changed(ui.dec_acs_key_b_txt)
-    event_components.shortcut_return(ui.enc_acs_btn)
-    event_components.shortcut_return(ui.dec_acs_btn)
 
 
 def init_key_caesar(ui):
@@ -53,5 +50,3 @@ def init_key_caesar(ui):
     event_components.digit_text_changed(ui.dec_kcs_key_k_txt)
     event_components.time_chars_ign_text_changed(ui.enc_kcs_key_txt, chars.RU_ALPHABET, input_delay)
     event_components.time_chars_ign_text_changed(ui.dec_kcs_key_txt, chars.RU_ALPHABET, input_delay)
-    event_components.shortcut_return(ui.enc_kcs_btn)
-    event_components.shortcut_return(ui.dec_kcs_btn)

@@ -38,5 +38,3 @@ def init_double_playfair(ui):
     event_components.tbl_char_unique_item_changed(ui.enc_dp_rt_table, color_default, color_err)
     event_components.tbl_char_unique_item_changed(ui.dec_dp_lt_table, color_default, color_err)
     event_components.tbl_char_unique_item_changed(ui.dec_dp_rt_table, color_default, color_err)
-    event_components.shortcut_return(ui.enc_dp_btn)
-    event_components.shortcut_return(ui.dec_dp_btn)

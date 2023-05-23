@@ -16,4 +16,6 @@ def win_accent_color():
     color = winreg.QueryValueEx(key, 'ColorizationColor')
     if key:
         winreg.CloseKey(key)
-    return f'#{hex(color[0])[4:]}'
+    hex_color = hex(color[0])
+    color_index = 2 if len(hex_color) == 8 else 4
+    return f'#{hex_color[color_index:]}'

@@ -19,8 +19,6 @@ def init_playfair(ui):
     event_components.positive_number_text_changed(ui.enc_ps_clm_txt)
     event_components.positive_number_text_changed(ui.dec_ps_row_txt)
     event_components.positive_number_text_changed(ui.dec_ps_clm_txt)
-    event_components.shortcut_return(ui.enc_ps_btn)
-    event_components.shortcut_return(ui.dec_ps_btn)
 
 
 def init_trisemus(ui):
@@ -40,8 +38,6 @@ def init_trisemus(ui):
     event_components.positive_number_text_changed(ui.enc_ts_clm_txt)
     event_components.positive_number_text_changed(ui.dec_ts_row_txt)
     event_components.positive_number_text_changed(ui.dec_ts_clm_txt)
-    event_components.shortcut_return(ui.enc_ts_btn)
-    event_components.shortcut_return(ui.dec_ts_btn)
 
 
 def init_vigenere(ui):
@@ -57,5 +53,3 @@ def init_vigenere(ui):
     event_components.empty_text_changed(ui.dec_vs_msg_txt)
     event_components.empty_text_changed(ui.enc_vs_key_txt)
     event_components.empty_text_changed(ui.dec_vs_key_txt)
-    event_components.shortcut_return(ui.enc_vs_btn)
-    event_components.shortcut_return(ui.dec_vs_btn)

@@ -134,7 +134,7 @@ def init_pages(parent, ui_window):
     prm_controllers.init_simple_permutation(parent, ui_window)
     prm_controllers.init_key_permutation(parent, ui_window)
     prm_controllers.init_double_permutation(parent, ui_window)
-    cs_controllers.init_classic_caesar(ui_window)
+    cs_controllers.init_classic_caesar(parent, ui_window)
     cs_controllers.init_affine_caesar(ui_window)
     cs_controllers.init_key_caesar(ui_window)
     ms_controllers.init_magic_square(parent, ui_window)

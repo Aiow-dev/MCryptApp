@@ -15,10 +15,6 @@ def positive_number_text_changed(text_obj):
                                            colors.Palette.light_red.value.to_rgb_str()))
 
 
-def shortcut_return(ui_obj):
-    action.set_shortcut(ui_obj, 'Return')
-
-
 def digit_text_changed(text_obj):
     text_obj.textChanged.connect(
         lambda: text.check_digit(text_obj, colors.Palette.dark_charcoal.value.to_rgb_str(),

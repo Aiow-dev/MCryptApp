@@ -1,6 +1,9 @@
+import random
+
 from src.components import enc_tables, dialogs, chars
 from src.helpers import tables
 from src.scripts.encryption import cs
+from . import messages
 
 
 def proc_classic_cs(form_data, encryption):
@@ -28,6 +31,22 @@ def enc_proc_classic_cs(form_data):
 
 def dec_proc_classic_cs(form_data):
     proc_classic_cs(form_data, cs.dec_classic_cs)
+
+
+def auto_classic_cs(parent, form_data):
+    try:
+        msg = form_data['msg_input'].text().replace(' ', '')
+        if form_data['key_input'].text():
+            result = dialogs.question_msg(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
+            if not result:
+                return
+        if msg:
+            key = random.randint(1, len(chars.RU_ALPHABET) + 1)
+            form_data['key_input'].setText(str(key))
+        else:
+            dialogs.show_err_msg('Сообщение не заполнено!', 'Ошибка')
+    except AttributeError as attribute_error:
+        dialogs.show_err_msg('Не удалось сгенерировать параметры!', 'Ошибка')
 
 
 def proc_affine_cs(form_data, encryption):
