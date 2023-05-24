@@ -102,7 +102,7 @@ def caesar_key_table_text(replace_values, alphabet):
         replace_values[22:33]
     )
 
-    return column_values, table_text(column_values, columns_headers=column_headers)
+    return column_values, table_text(column_values, columns_headers=column_headers, len_tbl_section=4)
 
 
 def caesar_key_table(column_values, table_obj):

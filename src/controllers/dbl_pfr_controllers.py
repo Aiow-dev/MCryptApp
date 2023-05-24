@@ -4,20 +4,20 @@ from src.components import scheme_colors, chars
 
 
 def init_double_playfair(ui):
-    enc_form_data = {'msg_input': ui.enc_dp_msg_txt, 'rows_input': ui.enc_dp_row_txt,
-                     'columns_input': ui.enc_dp_clm_txt, 'left_tbl_widget': ui.enc_dp_lt_table,
-                     'right_tbl_widget': ui.enc_dp_rt_table, 'enc_msg_input': ui.enc_dp_oc_txt,
-                     'enc_tbl_input': ui.enc_smp_ot_txt}
-    dec_form_data = {'msg_input': ui.dec_dp_msg_txt, 'rows_input': ui.dec_dp_row_txt,
-                     'columns_input': ui.dec_dp_clm_txt, 'left_tbl_widget': ui.dec_dp_lt_table,
-                     'right_tbl_widget': ui.dec_dp_rt_table, 'enc_msg_input': ui.dec_dp_oc_txt,
-                     'enc_tbl_input': ui.dec_smp_ot_txt}
+    enc_form = {'msg_input': ui.enc_dp_msg_txt, 'rows_input': ui.enc_dp_row_txt,
+                'columns_input': ui.enc_dp_clm_txt, 'left_tbl_widget': ui.enc_dp_lt_table,
+                'right_tbl_widget': ui.enc_dp_rt_table, 'enc_msg_input': ui.enc_dp_oc_txt,
+                'enc_tbl_input': ui.enc_smp_ot_txt}
+    dec_form = {'msg_input': ui.dec_dp_msg_txt, 'rows_input': ui.dec_dp_row_txt,
+                'columns_input': ui.dec_dp_clm_txt, 'left_tbl_widget': ui.dec_dp_lt_table,
+                'right_tbl_widget': ui.dec_dp_rt_table, 'enc_msg_input': ui.dec_dp_oc_txt,
+                'enc_tbl_input': ui.dec_smp_ot_txt}
     enc_tbl_widgets = [ui.enc_dp_lt_table, ui.enc_dp_rt_table]
     dec_tbl_widgets = [ui.dec_dp_lt_table, ui.dec_dp_rt_table]
     max_tbl_size = 1000
     alphabet = chars.EXT_RU_ALPHABET
-    ui.enc_dp_btn.clicked.connect(lambda: dbl_pfr_handlers.enc_proc_double_playfair(enc_form_data))
-    ui.dec_dp_btn.clicked.connect(lambda: dbl_pfr_handlers.dec_proc_double_playfair(dec_form_data))
+    ui.enc_dp_btn.clicked.connect(lambda: dbl_pfr_handlers.enc_proc_double_playfair(enc_form))
+    ui.dec_dp_btn.clicked.connect(lambda: dbl_pfr_handlers.dec_proc_double_playfair(dec_form))
     event_components.empty_text_changed(ui.enc_dp_msg_txt)
     event_components.empty_text_changed(ui.dec_dp_msg_txt)
     event_components.positive_number_text_changed(ui.enc_dp_row_txt)
