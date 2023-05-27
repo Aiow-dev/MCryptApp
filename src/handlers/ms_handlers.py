@@ -41,7 +41,7 @@ def auto_ms(parent, form):
     try:
         msg = form['msg_input'].text().replace(' ', '')
         if not items.is_empty_table(form['key_tbl_widget']):
-            result = dialogs.question_msg(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
+            result = dialogs.question_msg_result(messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
             if not result:
                 return
         len_msg = len(msg)

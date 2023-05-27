@@ -1185,3 +1185,91 @@ def frame_bottom_color_sys(frame_obj):
     }}
     '''
     frame_obj.setStyleSheet(frame_stylesheet)
+
+
+def msg_box_light():
+    return f'''
+    QMessageBox {{
+        background-color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    QMessageBox QLabel {{
+        color: {colors.Palette.dark_charcoal.value.to_rgb_str()};
+    }}
+    QMessageBox QPushButton {{
+        border: none;
+        border-radius: 3px;
+        width: 105px;
+        height: 30px;
+        background-color: {colors.Palette.dark_purple.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    QMessageBox QPushButton:hover {{
+        background-color: {colors.Palette.light_purple.value.to_rgb_str()};
+    }}
+    '''
+
+
+def msg_box_light_sys():
+    return f'''
+    QMessageBox {{
+        background-color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    QMessageBox QLabel {{
+        color: {colors.Palette.dark_charcoal.value.to_rgb_str()};
+    }}
+    QMessageBox QPushButton {{
+        border: none;
+        border-radius: 3px;
+        width: 105px;
+        height: 30px;
+        background-color: {win_palette.accent_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    QMessageBox QPushButton:hover {{
+        background-color: {win_palette.complementary_color};
+    }}
+    '''
+
+
+def msg_box_dark():
+    return f'''
+    QMessageBox {{
+        background-color: {colors.Palette.eerie_black.value.to_rgb_str()};
+    }}
+    QMessageBox QLabel {{
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    QMessageBox QPushButton {{
+        border: 1px solid {colors.Palette.dark_liver.value.to_rgb_str()};
+        border-radius: 3px;
+        width: 105px;
+        height: 30px;
+        background-color: {colors.Palette.dark_charcoal.value.to_rgb_str()};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    QMessageBox QPushButton:hover {{
+        background-color: {colors.Palette.dark_liver.value.to_rgb_str()};
+    }}
+    '''
+
+
+def msg_box_dark_sys():
+    return f'''
+    QMessageBox {{
+        background-color: {colors.Palette.eerie_black.value.to_rgb_str()};
+    }}
+    QMessageBox QLabel {{
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    QMessageBox QPushButton {{
+        border: none;
+        border-radius: 3px;
+        width: 105px;
+        height: 30px;
+        background-color: {win_palette.accent_color};
+        color: {colors.Palette.gray.value.to_rgb_str()};
+    }}
+    QMessageBox QPushButton:hover {{
+        background-color: {win_palette.complementary_color};
+    }}
+    '''

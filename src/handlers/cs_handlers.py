@@ -37,7 +37,7 @@ def auto_classic_cs(parent, form):
     try:
         msg = form['msg_input'].text().replace(' ', '')
         if form['key_input'].text():
-            result = dialogs.question_msg(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
+            result = dialogs.question_msg_result(messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
             if not result:
                 return
         if msg:
@@ -85,7 +85,7 @@ def auto_affine_cs(parent, form):
         key_a_text = form['key_a_input'].text().replace(' ', '')
         key_b_text = form['key_b_input'].text().replace(' ', '')
         if key_a_text or key_b_text:
-            result = dialogs.question_msg(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
+            result = dialogs.question_msg_result(messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
             if not result:
                 return
         if msg:
@@ -135,7 +135,7 @@ def auto_key_cs(parent, form):
         key_text = form['key_input'].text().replace(' ', '')
         key_k_text = form['key_k_input'].text().replace(' ', '')
         if key_text or key_k_text:
-            result = dialogs.question_msg(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
+            result = dialogs.question_msg_result(messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
             if not result:
                 return
         if msg:

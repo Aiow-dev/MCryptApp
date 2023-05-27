@@ -50,7 +50,7 @@ def auto_playfair_trisemus(parent, form):
         columns_text = form['columns_input'].text().replace(' ', '')
         key_text = form['key_input'].text().replace(' ', '')
         if any([rows_text, columns_text, key_text]):
-            result = dialogs.question_msg(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
+            result = dialogs.question_msg_result(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
             if not result:
                 return
         if msg:
@@ -102,7 +102,7 @@ def auto_vigenere(parent, form):
     try:
         msg = form['msg_input'].text().replace(' ', '')
         if form['key_input'].text().replace(' ', ''):
-            result = dialogs.question_msg(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
+            result = dialogs.question_msg_result(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
             if not result:
                 return
         if msg:

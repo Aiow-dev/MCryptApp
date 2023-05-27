@@ -1,7 +1,7 @@
 import random
 
 from src.components import enc_tables, dialogs, dictionary
-from src.helpers import items, tables, text
+from src.helpers import items, tables
 from src.scripts.encryption import prm
 from src.handlers import messages
 
@@ -39,7 +39,7 @@ def auto_simple_prm(parent, form):
         rows_text = form['rows_input'].text().replace(' ', '')
         columns_text = form['columns_input'].text().replace(' ', '')
         if rows_text or columns_text:
-            result = dialogs.question_msg(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
+            result = dialogs.question_msg_result(messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
             if not result:
                 return
         len_msg = len(msg)
@@ -91,7 +91,7 @@ def auto_key_prm(parent, form):
         columns_text = form['columns_input'].text().replace(' ', '')
         key_text = form['key_input'].text().replace(' ', '')
         if any([rows_text, columns_text, key_text]):
-            result = dialogs.question_msg(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
+            result = dialogs.question_msg_result(messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
             if not result:
                 return
         len_msg = len(msg)
@@ -158,7 +158,7 @@ def auto_double_prm(parent, form):
         key_row_text = form['key_row_input'].text().replace(' ', '')
         key_column_text = form['key_column_input'].text().replace(' ', '')
         if any([rows_text, columns_text, key_row_text, key_column_text]):
-            result = dialogs.question_msg(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
+            result = dialogs.question_msg_result(messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
             if not result:
                 return
         len_msg = len(msg)

@@ -1,4 +1,4 @@
-from src.components import visual, colors, scheme_colors, win_palette
+from src.components import visual, colors, scheme_colors
 
 
 def line_edits_light(line_edits):
@@ -373,10 +373,6 @@ def dark_sys_tab_corn_rad_scheme(ui):
 
 
 def system_scheme(ui, is_light):
-    accent = win_palette.win_accent_converted()
-    complementary = win_palette.win_complementary_converted(accent)
-    win_palette.accent_color = accent.to_rgb_str()
-    win_palette.complementary_color = complementary.to_rgb_str()
     if is_light:
         light_sys_scheme(ui)
     else:

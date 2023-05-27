@@ -39,7 +39,7 @@ def auto_double_playfair(parent, form):
     try:
         msg = form['msg_input'].text().replace(' ', '')
         if not items.is_empty_table(form['left_tbl_widget']):
-            result = dialogs.question_msg(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
+            result = dialogs.question_msg_result(messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
             if not result:
                 return
         if msg:

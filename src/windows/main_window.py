@@ -27,7 +27,7 @@ class MainWindowApp(QtWidgets.QMainWindow):
 
     def closeEvent(self, event):
         if setting.get_parameter('confirm-quit'):
-            result = dialogs.question_msg(self, messages.CONFIRM_QUIT, 'Подтверждение выхода...')
+            result = dialogs.question_msg_result(messages.CONFIRM_QUIT, 'Подтверждение выхода...')
             event.ignore()
             if result:
                 event.accept()

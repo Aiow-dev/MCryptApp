@@ -5,9 +5,7 @@ from src.controllers import messages
 def menu_line_check(parent, check_obj):
     if check_obj.isChecked():
         setting.set_parameter('show-menu', True)
-    elif dialogs.question_msg(
-        parent, messages.DISABLE_MENU_LINE, 'Изменение настройки'
-    ):
+    elif dialogs.question_msg_result(messages.DISABLE_MENU_LINE, 'Изменение настройки'):
         setting.set_parameter('show-menu', False)
     else:
         check_obj.setCheckState(2)
