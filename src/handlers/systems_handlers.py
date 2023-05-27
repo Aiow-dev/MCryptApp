@@ -1,6 +1,9 @@
+import random
+
 from src.helpers import tables
-from src.components import enc_tables, dialogs, chars
+from src.components import enc_tables, dialogs, chars, dictionary
 from src.scripts.encryption import systems
+from . import messages
 
 
 def proc_playfair_trisemus(form, encryption):
@@ -40,6 +43,34 @@ def dec_proc_trisemus(form):
     proc_playfair_trisemus(form, systems.dec_trisemus)
 
 
+def auto_playfair_trisemus(parent, form):
+    try:
+        msg = form['msg_input'].text().replace(' ', '')
+        rows_text = form['rows_input'].text().replace(' ', '')
+        columns_text = form['columns_input'].text().replace(' ', '')
+        key_text = form['key_input'].text().replace(' ', '')
+        if any([rows_text, columns_text, key_text]):
+            result = dialogs.question_msg(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
+            if not result:
+                return
+        len_msg = len(msg)
+        if len_msg > 0:
+            random_size = random.choice([(4, 8), (8, 4)])
+            rows, columns = random_size[0], random_size[1]
+            key_index = random.randint(2, len(dictionary.animals))
+            if key_words := dictionary.animals.get(key_index):
+                key = random.choice(key_words)
+                form['rows_input'].setText(str(rows))
+                form['columns_input'].setText(str(columns))
+                form['key_input'].setText(key)
+            else:
+                dialogs.show_err_msg('Не удалось сгенерировать параметры!', 'Ошибка')
+        else:
+            dialogs.show_err_msg('Сообщение не заполнено!', 'Ошибка')
+    except AttributeError as attribute_error:
+        dialogs.show_err_msg('Не удалось сгенерировать параметры!', 'Ошибка')
+
+
 def proc_vigenere(form, encryption):
     try:
         msg = form['msg_input'].text()
@@ -66,3 +97,24 @@ def enc_proc_vigenere(form):
 
 def dec_proc_vigenere(form):
     proc_vigenere(form, systems.dec_vigenere)
+
+
+def auto_vigenere(parent, form):
+    try:
+        msg = form['msg_input'].text().replace(' ', '')
+        if form['key_input'].text().replace(' ', ''):
+            result = dialogs.question_msg(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
+            if not result:
+                return
+        len_msg = len(msg)
+        if len_msg > 0:
+            key_index = random.randint(2, len(dictionary.animals))
+            if key_words := dictionary.animals.get(key_index):
+                key = random.choice(key_words)
+                form['key_input'].setText(key)
+            else:
+                dialogs.show_err_msg('Не удалось сгенерировать параметры!', 'Ошибка')
+        else:
+            dialogs.show_err_msg('Сообщение не заполнено!', 'Ошибка')
+    except AttributeError as attribute_error:
+        dialogs.show_err_msg('Не удалось сгенерировать параметры!', 'Ошибка')

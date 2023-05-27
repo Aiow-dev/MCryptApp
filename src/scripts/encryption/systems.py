@@ -6,6 +6,10 @@ from src.scripts import script_helpers
 
 
 def enc_playfair(msg, key, alphabet, size_a=4, size_b=8):
+    if len(alphabet) != size_a * size_b or size_a <= 0 or size_b <= 0:
+        return {'err_msg': messages.TABLE_CHARS_ERR}
+    if not key.replace(' ', ''):
+        return {'err_msg': messages.EMPTY_KEY_ERR}
     msg = msg.replace(' ', '').lower()
     key = key.lower()
     if len(msg) % 2 == 1:
@@ -31,6 +35,10 @@ def enc_playfair(msg, key, alphabet, size_a=4, size_b=8):
 
 
 def dec_playfair(enc_msg, key, alphabet, size_a=4, size_b=8):
+    if len(alphabet) != size_a * size_b or size_a <= 0 or size_b <= 0:
+        return {'err_msg': messages.TABLE_CHARS_ERR}
+    if not key.replace(' ', ''):
+        return {'err_msg': messages.EMPTY_KEY_ERR}
     enc_msg = enc_msg.replace(' ', '').lower()
     key = key.lower()
     if len(enc_msg) % 2 == 1:
@@ -51,6 +59,10 @@ def dec_playfair(enc_msg, key, alphabet, size_a=4, size_b=8):
 
 
 def enc_trisemus(msg, key, alphabet, size_a=4, size_b=8):
+    if len(alphabet) != size_a * size_b or size_a <= 0 or size_b <= 0:
+        return {'err_msg': messages.TABLE_CHARS_ERR}
+    if not key.replace(' ', ''):
+        return {'err_msg': messages.EMPTY_KEY_ERR}
     msg = msg.lower()
     key = key.lower()
     enc_tbl = script_helpers.sum_unique(key, '')
@@ -70,6 +82,10 @@ def enc_trisemus(msg, key, alphabet, size_a=4, size_b=8):
 
 
 def dec_trisemus(enc_msg, key, alphabet, size_a=4, size_b=8):
+    if len(alphabet) != size_a * size_b or size_a <= 0 or size_b <= 0:
+        return {'err_msg': messages.TABLE_CHARS_ERR}
+    if not key.replace(' ', ''):
+        return {'err_msg': messages.EMPTY_KEY_ERR}
     enc_msg = enc_msg.lower()
     key = key.lower()
     enc_tbl = script_helpers.sum_unique(key, '')
@@ -89,12 +105,12 @@ def dec_trisemus(enc_msg, key, alphabet, size_a=4, size_b=8):
 
 
 def enc_vigenere(msg, key, alphabet):
+    if not key.replace(' ', ''):
+        return {'err_msg': messages.EMPTY_KEY_ERR}
     msg = msg.lower()
     key = key.lower()
     tbl = alphabet
     big_tbl = []
-    if not key:
-        return {'err_msg': messages.EMPTY_KEY_ERR}
     enc_tbl = key * math.ceil(len(msg) // len(key)) + key
     for _ in range(33):
         big_tbl.append(tbl)
@@ -111,6 +127,8 @@ def enc_vigenere(msg, key, alphabet):
 
 
 def dec_vigenere(enc_msg, key, alphabet):
+    if not key.replace(' ', ''):
+        return {'err_msg': messages.EMPTY_KEY_ERR}
     enc_msg = enc_msg.lower()
     key = key.lower()
     tbl = alphabet

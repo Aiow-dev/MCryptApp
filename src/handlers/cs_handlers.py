@@ -139,7 +139,7 @@ def auto_key_cs(parent, form):
             if not result:
                 return
         if msg:
-            key_index = random.randint(1, len(dictionary.animals))
+            key_index = random.randint(2, len(dictionary.animals))
             key = random.choice(dictionary.animals[key_index])
             key_k = random.randint(1, 32)
             form['key_input'].setText(str(key))
