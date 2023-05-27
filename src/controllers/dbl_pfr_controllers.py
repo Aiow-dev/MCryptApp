@@ -3,7 +3,7 @@ from src.events import event_components
 from src.components import scheme_colors, chars
 
 
-def init_double_playfair(ui):
+def init_double_playfair(parent, ui):
     enc_form = {'msg_input': ui.enc_dp_msg_txt, 'rows_input': ui.enc_dp_row_txt,
                 'columns_input': ui.enc_dp_clm_txt, 'left_tbl_widget': ui.enc_dp_lt_table,
                 'right_tbl_widget': ui.enc_dp_rt_table, 'enc_msg_input': ui.enc_dp_oc_txt,
@@ -18,6 +18,7 @@ def init_double_playfair(ui):
     alphabet = chars.EXT_RU_ALPHABET
     ui.enc_dp_btn.clicked.connect(lambda: dbl_pfr_handlers.enc_proc_double_playfair(enc_form))
     ui.dec_dp_btn.clicked.connect(lambda: dbl_pfr_handlers.dec_proc_double_playfair(dec_form))
+    ui.enc_dp_auto_btn.clicked.connect(lambda: dbl_pfr_handlers.auto_double_playfair(parent, enc_form))
     event_components.empty_text_changed(ui.enc_dp_msg_txt)
     event_components.empty_text_changed(ui.dec_dp_msg_txt)
     event_components.positive_number_text_changed(ui.enc_dp_row_txt)

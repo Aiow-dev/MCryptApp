@@ -53,9 +53,8 @@ def auto_playfair_trisemus(parent, form):
             result = dialogs.question_msg(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
             if not result:
                 return
-        len_msg = len(msg)
-        if len_msg > 0:
-            random_size = random.choice([(4, 8), (8, 4)])
+        if msg:
+            random_size = random.choice([(16, 2), (2, 16), (4, 8), (8, 4)])
             rows, columns = random_size[0], random_size[1]
             key_index = random.randint(2, len(dictionary.animals))
             if key_words := dictionary.animals.get(key_index):
@@ -106,8 +105,7 @@ def auto_vigenere(parent, form):
             result = dialogs.question_msg(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
             if not result:
                 return
-        len_msg = len(msg)
-        if len_msg > 0:
+        if msg:
             key_index = random.randint(2, len(dictionary.animals))
             if key_words := dictionary.animals.get(key_index):
                 key = random.choice(key_words)
