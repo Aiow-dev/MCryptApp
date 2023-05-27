@@ -1,36 +1,31 @@
 from src.events import event_helpers, action, text, table
-from src.components import colors
+from src.components import visual_colors
 from src.helpers import time
 
 
 def empty_text_changed(text_obj):
     text_obj.textChanged.connect(
-        lambda: text.check_empty(text_obj, colors.Palette.dark_charcoal.value.to_rgb_str(),
-                                 colors.Palette.light_red.value.to_rgb_str()))
+        lambda: text.check_empty(text_obj, visual_colors.dark_charcoal, visual_colors.light_red))
 
 
 def positive_number_text_changed(text_obj):
     text_obj.textChanged.connect(
-        lambda: text.check_positive_number(text_obj, colors.Palette.dark_charcoal.value.to_rgb_str(),
-                                           colors.Palette.light_red.value.to_rgb_str()))
+        lambda: text.check_positive_number(text_obj, visual_colors.dark_charcoal, visual_colors.light_red))
 
 
 def number_text_changed(text_obj):
     text_obj.textChanged.connect(
-        lambda: text.check_number(text_obj, colors.Palette.dark_charcoal.value.to_rgb_str(),
-                                  colors.Palette.light_red.value.to_rgb_str()))
+        lambda: text.check_number(text_obj, visual_colors.dark_charcoal, visual_colors.light_red))
 
 
 def digit_text_changed(text_obj):
     text_obj.textChanged.connect(
-        lambda: text.check_digit(text_obj, colors.Palette.dark_charcoal.value.to_rgb_str(),
-                                 colors.Palette.light_red.value.to_rgb_str()))
+        lambda: text.check_digit(text_obj, visual_colors.dark_charcoal, visual_colors.light_red))
 
 
 def time_chars_ign_text_changed(text_obj, charset, delay):
-    timer = time.TimerDelay(delay, lambda: text.check_chars_ign(text_obj, charset,
-                                                                colors.Palette.dark_charcoal.value.to_rgb_str(),
-                                                                colors.Palette.light_red.value.to_rgb_str()))
+    timer = time.TimerDelay(delay, lambda: text.check_chars_ign(text_obj, charset, visual_colors.dark_charcoal,
+                                                                visual_colors.light_red))
     text_obj.textChanged.connect(lambda: timer.update())
 
 

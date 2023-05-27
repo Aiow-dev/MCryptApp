@@ -1,1 +1,1 @@
-pyinstaller --specpath ../Builds/WindowsOneFile/Spec --distpath ../Builds/WindowsOneFile/DistFiles --workpath ../Builds/WindowsOneFile/Build --noconsole ../src/main.py --onefile
+pyinstaller --specpath ../Builds/WindowsOneFile/Spec --distpath ../Builds/WindowsOneFile/DistFiles/bin --workpath ../Builds/WindowsOneFile/Build --noconsole ../src/main.py --onefile

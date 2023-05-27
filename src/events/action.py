@@ -37,10 +37,9 @@ def set_tbl_clm(tbl_obj, text_obj, max_limit):
 
 
 def set_rand_tbl(tbl_obj, check_obj, charset):
+    tbl_obj.clear()
     if check_obj.isChecked():
         enc_tables.table_rand(tbl_obj, charset)
-    else:
-        tbl_obj.clear()
 
 
 def tbl_size_charset(check_obj, tbl_rows, tbl_columns, charset):

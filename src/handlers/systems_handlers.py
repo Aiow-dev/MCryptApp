@@ -43,14 +43,14 @@ def dec_proc_trisemus(form):
     proc_playfair_trisemus(form, systems.dec_trisemus)
 
 
-def auto_playfair_trisemus(parent, form):
+def auto_playfair_trisemus(form):
     try:
         msg = form['msg_input'].text().replace(' ', '')
         rows_text = form['rows_input'].text().replace(' ', '')
         columns_text = form['columns_input'].text().replace(' ', '')
         key_text = form['key_input'].text().replace(' ', '')
         if any([rows_text, columns_text, key_text]):
-            result = dialogs.question_msg_result(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
+            result = dialogs.question_msg_result(messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
             if not result:
                 return
         if msg:
@@ -98,11 +98,11 @@ def dec_proc_vigenere(form):
     proc_vigenere(form, systems.dec_vigenere)
 
 
-def auto_vigenere(parent, form):
+def auto_vigenere(form):
     try:
         msg = form['msg_input'].text().replace(' ', '')
         if form['key_input'].text().replace(' ', ''):
-            result = dialogs.question_msg_result(parent, messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
+            result = dialogs.question_msg_result(messages.OVERWRITE_PARAMETERS, 'Сгенерировать параметры')
             if not result:
                 return
         if msg:

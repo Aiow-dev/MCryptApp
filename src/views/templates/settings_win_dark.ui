@@ -310,7 +310,7 @@ QPushButton:hover {
 }</string>
        </property>
        <property name="text">
-        <string>Версия: MCrypt 1.9.1 Preview</string>
+        <string>Версия: MCrypt 1.2.1 Preview</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>

@@ -49,3 +49,8 @@ def question_msg_result(txt, title):
     msg_box.setStyleSheet(dialogs_styles.msg_box_style)
     msg_box.exec_()
     return msg_box.clickedButton().text() == '&Да'
+
+
+def show_program_info():
+    txt = 'MCrypt 1.2.1 Preview\nMCryptTeam, 2023, все права защищены'
+    show_info_msg(txt, 'Информация о программе')

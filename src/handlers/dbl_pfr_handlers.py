@@ -35,7 +35,7 @@ def dec_proc_double_playfair(form):
     proc_double_playfair(form, double_playfair.dec_double_playfair)
 
 
-def auto_double_playfair(parent, form):
+def auto_double_playfair(form):
     try:
         msg = form['msg_input'].text().replace(' ', '')
         if not items.is_empty_table(form['left_tbl_widget']):

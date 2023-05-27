@@ -33,7 +33,7 @@ def dec_proc_simple_prm(form):
     proc_simple_prm(form, prm.dec_simple_prm)
 
 
-def auto_simple_prm(parent, form):
+def auto_simple_prm(form):
     try:
         msg = form['msg_input'].text().replace(' ', '')
         rows_text = form['rows_input'].text().replace(' ', '')
@@ -84,7 +84,7 @@ def dec_proc_key_prm(form):
     proc_key_prm(form, prm.dec_key_prm)
 
 
-def auto_key_prm(parent, form):
+def auto_key_prm(form):
     try:
         msg = form['msg_input'].text().replace(' ', '')
         rows_text = form['rows_input'].text().replace(' ', '')
@@ -150,7 +150,7 @@ def dec_proc_double_prm(form):
     proc_double_prm(form, prm.dec_double_prm)
 
 
-def auto_double_prm(parent, form):
+def auto_double_prm(form):
     try:
         msg = form['msg_input'].text().replace(' ', '')
         rows_text = form['rows_input'].text().replace(' ', '')

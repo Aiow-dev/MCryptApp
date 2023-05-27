@@ -1,5 +1,5 @@
 from src.controllers import messages, page
-from src.components import dialogs, windows, app
+from src.components import dialogs, app
 from src.windows import settings, main_window_add
 from src.helpers import func
 
@@ -14,7 +14,7 @@ def init_menu_pages(ui):
 
 def init_menu(window, ui):
     func_single = func.FuncSingleCall()
-    ui.action_program_info.triggered.connect(windows.show_program_info)
+    ui.action_program_info.triggered.connect(dialogs.show_program_info)
     ui.action_settings_win.triggered.connect(lambda: settings.show_settings_window(func_single, window))
     ui.action_new_win.triggered.connect(lambda: main_window_add.show_addition_window(window))
     ui.action_exit.triggered.connect(lambda: app.quit_confirm(window))

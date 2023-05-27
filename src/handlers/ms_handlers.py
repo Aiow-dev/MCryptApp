@@ -37,7 +37,7 @@ def dec_proc_ms(form):
     proc_ms(form, ms.dec_magic_square)
 
 
-def auto_ms(parent, form):
+def auto_ms(form):
     try:
         msg = form['msg_input'].text().replace(' ', '')
         if not items.is_empty_table(form['key_tbl_widget']):

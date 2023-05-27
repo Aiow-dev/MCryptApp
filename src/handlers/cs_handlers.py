@@ -33,7 +33,7 @@ def dec_proc_classic_cs(form):
     proc_classic_cs(form, cs.dec_classic_cs)
 
 
-def auto_classic_cs(parent, form):
+def auto_classic_cs(form):
     try:
         msg = form['msg_input'].text().replace(' ', '')
         if form['key_input'].text():
@@ -79,7 +79,7 @@ def dec_proc_affine_cs(form):
     proc_affine_cs(form, cs.dec_affine_cs)
 
 
-def auto_affine_cs(parent, form):
+def auto_affine_cs(form):
     try:
         msg = form['msg_input'].text().replace(' ', '')
         key_a_text = form['key_a_input'].text().replace(' ', '')
@@ -129,7 +129,7 @@ def dec_proc_key_cs(form):
     proc_key_cs(form, cs.dec_key_cs)
 
 
-def auto_key_cs(parent, form):
+def auto_key_cs(form):
     try:
         msg = form['msg_input'].text().replace(' ', '')
         key_text = form['key_input'].text().replace(' ', '')

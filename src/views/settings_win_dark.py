@@ -1199,7 +1199,7 @@ class Ui_settings_form(object):
         self.btn_help_set.setText(_translate("settings_form", "Справка"))
         self.btn_tab.setText(_translate("settings_form", "Вкладки"))
         self.btn_line_menu.setText(_translate("settings_form", "Строка меню"))
-        self.version_lbl.setText(_translate("settings_form", "Версия: MCrypt 1.9.1 Preview"))
+        self.version_lbl.setText(_translate("settings_form", "Версия: MCrypt 1.2.1 Preview"))
         self.label_3.setText(_translate("settings_form", "©MCryptTeam, 2023, все права защищены"))
         self.plainTextEdit_2.setPlainText(_translate("settings_form", "MCrypt - программное обеспечение, позволяющее выполнять шифрование, дешифрование, хеширование и множество других преобразований быстро и эффективно. При этом, MCrypt позволяет просмотреть каждый шаг выполнения данных преобразований, а также содержит справочник по различным алгоритмам шифрования, применяемых в данном программном обеспечении, что позволяет более подробно рассмотреть различные процессы преобразования данных. Также MCrypt содержит множество различных алгоритмов шифрования, включая более сложные алгоритмы шифрования, предоставляя возможность автоматического заполнения параметров шифрования, что позволяет существенно сократить время на шифрование данных"))
         self.ext_info_btn.setText(_translate("settings_form", "Открыть расширенную информацию"))
