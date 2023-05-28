@@ -27,7 +27,7 @@ class MainWindowApp(QtWidgets.QMainWindow):
 
     def closeEvent(self, event):
         if setting.get_parameter('confirm-quit'):
-            result = dialogs.question_msg_result(messages.CONFIRM_QUIT, 'Подтверждение выхода...')
+            result = dialogs.question_msg_result(messages.CONFIRM_QUIT, 'Подтверждение выхода')
             event.ignore()
             if result:
                 event.accept()
@@ -179,3 +179,8 @@ def init_window(window):
     init_pages(ui)
     page.init_page(ui)
     menu.init_menu(window, ui)
+
+
+def show_main_window(window):
+    init_window(window)
+    window.show()

@@ -6,7 +6,7 @@ from src.windows import main_window
 
 def init_window(window):
     ui = main_window.enable_visual_styles(window)
-    main_window.init_pages(window, ui)
+    main_window.init_pages(ui)
     page.init_page(ui)
     menu.init_menu_add(ui)
 
