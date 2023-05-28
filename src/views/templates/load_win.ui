@@ -107,7 +107,7 @@ QPushButton:hover {
         <string/>
        </property>
        <property name="scaledContents">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
       </widget>
       <widget class="QPushButton" name="btn_skip_load">
@@ -728,7 +728,7 @@ QPushButton:hover {
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="QPushButton" name="light_btn_2">
+      <widget class="QPushButton" name="btn_next_style">
        <property name="geometry">
         <rect>
          <x>166</x>
@@ -975,12 +975,106 @@ QPushButton:hover {
       <zorder>frame_14</zorder>
       <zorder>label</zorder>
       <zorder>label_2</zorder>
-      <zorder>light_btn_2</zorder>
+      <zorder>btn_next_style</zorder>
       <zorder>btn_back_style</zorder>
       <zorder>light_style_lbl</zorder>
       <zorder>dark_style_lbl</zorder>
       <zorder>system_style_lbl</zorder>
       <zorder>time_style_lbl</zorder>
+     </widget>
+     <widget class="QWidget" name="page_3">
+      <widget class="QLabel" name="rocket_lbl">
+       <property name="geometry">
+        <rect>
+         <x>-50</x>
+         <y>130</y>
+         <width>498</width>
+         <height>373</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_complete_load">
+       <property name="geometry">
+        <rect>
+         <x>750</x>
+         <y>360</y>
+         <width>201</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border-radius: 3px;
+	background-color: rgb(244, 202, 22);
+	color: rgb(48, 47, 47);
+}
+
+QPushButton:hover {
+	background-color: rgb(247, 211, 70);
+}</string>
+       </property>
+       <property name="text">
+        <string>Завершить</string>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="plainTextEdit_4">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>220</y>
+         <width>441</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPlainTextEdit {
+	border: none;
+	color: rgb(48, 47, 47);
+}</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="plainText">
+        <string>Поздравляем, настройка приложения завершена! Теперь мы готовы к запуску данного приложения! Также вы можете дополнительно настроить приложение в настройках :)</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_back_end_load">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>360</y>
+         <width>201</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid rgb(247, 211, 70);
+	border-radius: 3px;
+	background-color: rgb(252, 254, 252);
+	color: rgb(48, 47, 47);
+}
+
+QPushButton:hover {
+	background-color: rgb(247, 211, 70);
+}</string>
+       </property>
+       <property name="text">
+        <string>Назад</string>
+       </property>
+      </widget>
      </widget>
     </widget>
    </item>

@@ -56,7 +56,7 @@ class Ui_load_form(object):
         self.lock_lbl = QtWidgets.QLabel(self.page)
         self.lock_lbl.setGeometry(QtCore.QRect(-100, 90, 498, 373))
         self.lock_lbl.setText("")
-        self.lock_lbl.setScaledContents(True)
+        self.lock_lbl.setScaledContents(False)
         self.lock_lbl.setObjectName("lock_lbl")
         self.btn_skip_load = QtWidgets.QPushButton(self.page)
         self.btn_skip_load.setGeometry(QtCore.QRect(545, 330, 201, 51))
@@ -324,11 +324,11 @@ class Ui_load_form(object):
         self.label_2.setText("")
         self.label_2.setScaledContents(False)
         self.label_2.setObjectName("label_2")
-        self.light_btn_2 = QtWidgets.QPushButton(self.page_2)
-        self.light_btn_2.setGeometry(QtCore.QRect(166, 510, 130, 45))
-        self.light_btn_2.setMinimumSize(QtCore.QSize(130, 45))
-        self.light_btn_2.setMaximumSize(QtCore.QSize(200, 16777215))
-        self.light_btn_2.setStyleSheet("QPushButton {\n"
+        self.btn_next_style = QtWidgets.QPushButton(self.page_2)
+        self.btn_next_style.setGeometry(QtCore.QRect(166, 510, 130, 45))
+        self.btn_next_style.setMinimumSize(QtCore.QSize(130, 45))
+        self.btn_next_style.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.btn_next_style.setStyleSheet("QPushButton {\n"
 "    border-radius: 3px;\n"
 "    background-color: rgb(244, 202, 22);\n"
 "    color: rgb(48, 47, 47);\n"
@@ -337,7 +337,7 @@ class Ui_load_form(object):
 "QPushButton:hover {\n"
 "    background-color: rgb(247, 211, 70);\n"
 "}")
-        self.light_btn_2.setObjectName("light_btn_2")
+        self.btn_next_style.setObjectName("btn_next_style")
         self.btn_back_style = QtWidgets.QPushButton(self.page_2)
         self.btn_back_style.setGeometry(QtCore.QRect(25, 510, 130, 45))
         self.btn_back_style.setMinimumSize(QtCore.QSize(130, 45))
@@ -423,13 +423,57 @@ class Ui_load_form(object):
         self.frame_14.raise_()
         self.label.raise_()
         self.label_2.raise_()
-        self.light_btn_2.raise_()
+        self.btn_next_style.raise_()
         self.btn_back_style.raise_()
         self.light_style_lbl.raise_()
         self.dark_style_lbl.raise_()
         self.system_style_lbl.raise_()
         self.time_style_lbl.raise_()
         self.load_wgt.addWidget(self.page_2)
+        self.page_3 = QtWidgets.QWidget()
+        self.page_3.setObjectName("page_3")
+        self.rocket_lbl = QtWidgets.QLabel(self.page_3)
+        self.rocket_lbl.setGeometry(QtCore.QRect(-50, 130, 498, 373))
+        self.rocket_lbl.setText("")
+        self.rocket_lbl.setScaledContents(False)
+        self.rocket_lbl.setObjectName("rocket_lbl")
+        self.btn_complete_load = QtWidgets.QPushButton(self.page_3)
+        self.btn_complete_load.setGeometry(QtCore.QRect(750, 360, 201, 51))
+        self.btn_complete_load.setStyleSheet("QPushButton {\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(244, 202, 22);\n"
+"    color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(247, 211, 70);\n"
+"}")
+        self.btn_complete_load.setObjectName("btn_complete_load")
+        self.plainTextEdit_4 = QtWidgets.QPlainTextEdit(self.page_3)
+        self.plainTextEdit_4.setGeometry(QtCore.QRect(530, 220, 441, 121))
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        self.plainTextEdit_4.setFont(font)
+        self.plainTextEdit_4.setStyleSheet("QPlainTextEdit {\n"
+"    border: none;\n"
+"    color: rgb(48, 47, 47);\n"
+"}")
+        self.plainTextEdit_4.setReadOnly(True)
+        self.plainTextEdit_4.setObjectName("plainTextEdit_4")
+        self.btn_back_end_load = QtWidgets.QPushButton(self.page_3)
+        self.btn_back_end_load.setGeometry(QtCore.QRect(540, 360, 201, 51))
+        self.btn_back_end_load.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(247, 211, 70);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(252, 254, 252);\n"
+"    color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(247, 211, 70);\n"
+"}")
+        self.btn_back_end_load.setObjectName("btn_back_end_load")
+        self.load_wgt.addWidget(self.page_3)
         self.horizontalLayout.addWidget(self.load_wgt)
 
         self.retranslateUi(load_form)
@@ -449,7 +493,7 @@ class Ui_load_form(object):
         self.label_10.setText(_translate("load_form", "☀"))
         self.label_12.setText(_translate("load_form", "🌙"))
         self.label.setText(_translate("load_form", "Выберите цветовую схему приложения (наведите на область для получения информации)"))
-        self.light_btn_2.setText(_translate("load_form", "Далее"))
+        self.btn_next_style.setText(_translate("load_form", "Далее"))
         self.btn_back_style.setText(_translate("load_form", "Назад"))
         self.light_style_lbl.setText(_translate("load_form", "Светлая (Выбрано)"))
         self.light_style_btn.setToolTip(_translate("load_form", "<FONT>Стандартное светлое цветовое оформление</FONT>"))
@@ -459,6 +503,9 @@ class Ui_load_form(object):
         self.time_style_btn.setToolTip(_translate("load_form", "<FONT>Временное оформление позволяет автоматически сменять цветовое оформление (стандратное светлое и темное) в зависимости от текущего времени суток</FONT>"))
         self.system_style_lbl.setText(_translate("load_form", "Системная"))
         self.time_style_lbl.setText(_translate("load_form", "Временная"))
+        self.btn_complete_load.setText(_translate("load_form", "Завершить"))
+        self.plainTextEdit_4.setPlainText(_translate("load_form", "Поздравляем, настройка приложения завершена! Теперь мы готовы к запуску данного приложения! Также вы можете дополнительно настроить приложение в настройках :)"))
+        self.btn_back_end_load.setText(_translate("load_form", "Назад"))
 
 
 if __name__ == "__main__":
