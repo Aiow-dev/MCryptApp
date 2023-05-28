@@ -39,6 +39,9 @@
    </property>
    <item>
     <widget class="QStackedWidget" name="load_wgt">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
      <widget class="QWidget" name="page">
       <widget class="QPushButton" name="btn_start_load">
        <property name="geometry">
@@ -133,7 +136,852 @@ QPushButton:hover {
        </property>
       </widget>
      </widget>
-     <widget class="QWidget" name="page_2"/>
+     <widget class="QWidget" name="page_2">
+      <widget class="QFrame" name="frame">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>90</y>
+         <width>321</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+	border-radius: 5px;
+	border: 1px solid rgb(98, 79, 130);
+	background-color: rgb(240, 243, 249);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QFrame" name="frame_2">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>160</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+	border-radius: 3px;
+	background-color: rgb(98, 79, 130);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_3">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>120</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+	border-radius: 3px;
+	border: none;
+	background-color: rgb(159, 115, 171);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	border: none;
+	color: rgb(48, 47, 47);
+}</string>
+        </property>
+        <property name="text">
+         <string>☀</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_11">
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>90</y>
+         <width>321</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+	border-radius: 5px;
+	background-color: rgb(30, 30, 30);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QFrame" name="frame_12">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>160</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+	border-radius: 3px;
+	border: none;
+	background-color: rgb(48, 47, 47);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_13">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>120</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+	border-radius: 3px;
+	border: none;
+	background-color: rgb(77, 77, 77);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	border: none;
+}</string>
+        </property>
+        <property name="text">
+         <string>🌙</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_4">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>380</y>
+         <width>321</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+	border-radius: 5px;
+	border: 1px solid rgb(98, 79, 130);
+	background-color: rgb(240, 243, 249);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QFrame" name="accent_light_win_color">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>160</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+	border-radius: 3px;
+	border: none;
+	background-color: rgb(98, 79, 130);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QFrame" name="compl_light_win_color">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>120</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+	border-radius: 3px;
+	border: none;
+	background-color: rgb(159, 115, 171);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	border: none;
+	color: rgb(48, 47, 47);
+}</string>
+        </property>
+        <property name="text">
+         <string>☀</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_17">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>0</y>
+          <width>161</width>
+          <height>201</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+	border-top-left-radius: 0;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 0;
+	border: none;
+	background-color: rgb(30, 30, 30);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_11">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>31</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+	border: none;
+}</string>
+         </property>
+         <property name="text">
+          <string>🌙</string>
+         </property>
+        </widget>
+        <widget class="QFrame" name="compl_dark_win_color">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>120</y>
+           <width>120</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+	border-radius: 3px;
+	border: none;
+	background-color: rgb(77, 77, 77);
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QFrame" name="accent_dark_win_color">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>160</y>
+           <width>120</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+	border-radius: 3px;
+	border: none;
+	background-color: rgb(48, 47, 47);
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_14">
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>380</y>
+         <width>321</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+	border-radius: 5px;
+	border: 1px solid rgb(98, 79, 130);
+	background-color: rgb(240, 243, 249);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QFrame" name="frame_15">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>160</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+	border-radius: 3px;
+	border: none;
+	background-color: rgb(98, 79, 130);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_16">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>120</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+	border-radius: 3px;
+	border: none;
+	background-color: rgb(159, 115, 171);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_10">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	border: none;
+	color: rgb(48, 47, 47);
+}</string>
+        </property>
+        <property name="text">
+         <string>☀</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_20">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>0</y>
+          <width>161</width>
+          <height>201</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+	border-top-left-radius: 0;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 0;
+	border: none;
+	background-color: rgb(30, 30, 30);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_12">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>31</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+	border: none;
+}</string>
+         </property>
+         <property name="text">
+          <string>🌙</string>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame_21">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>120</y>
+           <width>120</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+	border-radius: 3px;
+	border: none;
+	background-color: rgb(77, 77, 77);
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame_22">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>160</y>
+           <width>120</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+	border-radius: 3px;
+	border: none;
+	background-color: rgb(48, 47, 47);
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>30</y>
+         <width>701</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Выберите цветовую схему приложения (наведите на область для получения информации)</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>-150</x>
+         <y>120</y>
+         <width>441</width>
+         <height>373</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="light_btn_2">
+       <property name="geometry">
+        <rect>
+         <x>166</x>
+         <y>510</y>
+         <width>130</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>130</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border-radius: 3px;
+	background-color: rgb(244, 202, 22);
+	color: rgb(48, 47, 47);
+}
+
+QPushButton:hover {
+	background-color: rgb(247, 211, 70);
+}</string>
+       </property>
+       <property name="text">
+        <string>Далее</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_back_style">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>510</y>
+         <width>130</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>130</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid rgb(247, 211, 70);
+	border-radius: 3px;
+	background-color: rgb(252, 254, 252);
+	color: rgb(48, 47, 47);
+}
+
+QPushButton:hover {
+	background-color: rgb(247, 211, 70);
+}</string>
+       </property>
+       <property name="text">
+        <string>Назад</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="light_style_lbl">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>315</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Светлая (Выбрано)</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="light_style_btn">
+       <property name="geometry">
+        <rect>
+         <x>305</x>
+         <y>76</y>
+         <width>350</width>
+         <height>230</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>&lt;FONT&gt;Стандартное светлое цветовое оформление&lt;/FONT&gt;</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgba(247, 211, 70, 50);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="dark_style_lbl">
+       <property name="geometry">
+        <rect>
+         <x>790</x>
+         <y>315</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Темная</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dark_style_btn">
+       <property name="geometry">
+        <rect>
+         <x>685</x>
+         <y>76</y>
+         <width>350</width>
+         <height>230</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>&lt;FONT&gt;Стандартное темное цветовое оформление&lt;/FONT&gt;</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgba(247, 211, 70, 50);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="system_style_btn">
+       <property name="geometry">
+        <rect>
+         <x>305</x>
+         <y>365</y>
+         <width>350</width>
+         <height>230</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>&lt;FONT&gt;Системное оформление позволяет отображать цвета элементов в зависимости от выбранных в персонализации Windows цветов&lt;/FONT&gt;</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgba(247, 211, 70, 50);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="time_style_btn">
+       <property name="geometry">
+        <rect>
+         <x>685</x>
+         <y>365</y>
+         <width>350</width>
+         <height>230</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>&lt;FONT&gt;Временное оформление позволяет автоматически сменять цветовое оформление (стандратное светлое и темное) в зависимости от текущего времени суток&lt;/FONT&gt;</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgba(247, 211, 70, 50);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="system_style_lbl">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>605</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Системная</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="time_style_lbl">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>605</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Временная</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <zorder>time_style_btn</zorder>
+      <zorder>system_style_btn</zorder>
+      <zorder>dark_style_btn</zorder>
+      <zorder>light_style_btn</zorder>
+      <zorder>frame</zorder>
+      <zorder>frame_11</zorder>
+      <zorder>frame_4</zorder>
+      <zorder>frame_14</zorder>
+      <zorder>label</zorder>
+      <zorder>label_2</zorder>
+      <zorder>light_btn_2</zorder>
+      <zorder>btn_back_style</zorder>
+      <zorder>light_style_lbl</zorder>
+      <zorder>dark_style_lbl</zorder>
+      <zorder>system_style_lbl</zorder>
+      <zorder>time_style_lbl</zorder>
+     </widget>
     </widget>
    </item>
   </layout>

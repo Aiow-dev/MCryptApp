@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets, QtGui
 
-from src.components import dialogs
+from src.components import dialogs, setting, visual
 from . import messages, main_window
 from src.views import load_win
 
@@ -29,19 +29,67 @@ def complete_load(form, main_form):
     main_window.show_main_window(main_form)
 
 
-def to_load_page(form_ui, page_index):
-    form_ui.load_wgt.setCurrentIndex(page_index)
+def start_load_page(form_ui):
+    form_ui.load_wgt.setCurrentIndex(0)
+
+
+def color_styles_page(form_ui):
+    form_ui.load_wgt.setCurrentIndex(1)
+
+
+def set_light_style(form_ui):
+    form_ui.light_style_lbl.setText('Светлая (Выбрано)')
+    form_ui.dark_style_lbl.setText('Темная')
+    form_ui.system_style_lbl.setText('Системная')
+    form_ui.time_style_lbl.setText('Временная')
+    setting.set_parameter('theme', 'light')
+
+
+def set_dark_style(form_ui):
+    form_ui.light_style_lbl.setText('Светлая')
+    form_ui.dark_style_lbl.setText('Темная (Выбрано)')
+    form_ui.system_style_lbl.setText('Системная')
+    form_ui.time_style_lbl.setText('Временная')
+    setting.set_parameter('theme', 'dark')
+
+
+def set_system_style(form_ui):
+    form_ui.light_style_lbl.setText('Светлая')
+    form_ui.dark_style_lbl.setText('Темная')
+    form_ui.system_style_lbl.setText('Системная (Выбрано)')
+    form_ui.time_style_lbl.setText('Временная')
+    setting.set_parameter('theme', 'system')
+
+
+def set_time_style(form_ui):
+    form_ui.light_style_lbl.setText('Светлая')
+    form_ui.dark_style_lbl.setText('Темная')
+    form_ui.system_style_lbl.setText('Системная')
+    form_ui.time_style_lbl.setText('Временная (Выбрано)')
+    setting.set_parameter('theme', 'time')
 
 
 def enable_visual_styles(form_ui):
-    movie = QtGui.QMovie('../resources/images/lock.gif')
-    form_ui.lock_lbl.setMovie(movie)
-    movie.start()
+    lock_movie = QtGui.QMovie('../resources/images/lock.gif')
+    form_ui.lock_lbl.setMovie(lock_movie)
+    lock_movie.start()
+    roller_brush_movie = QtGui.QMovie('../resources/images/roller_brush.gif')
+    form_ui.label_2.setMovie(roller_brush_movie)
+    roller_brush_movie.start()
+    visual.frame_compl_color_style_sys(form_ui.compl_light_win_color)
+    visual.frame_compl_color_style_sys(form_ui.compl_dark_win_color)
+    visual.frame_color_style_sys(form_ui.accent_light_win_color)
+    visual.frame_color_style_sys(form_ui.accent_dark_win_color)
 
 
 def init_load_pages(form, form_ui, main_form):
     form_ui.btn_skip_load.clicked.connect(lambda: complete_load(form, main_form))
-    form_ui.btn_start_load.clicked.connect(lambda: to_load_page(form_ui, 1))
+    form_ui.btn_back_style.clicked.connect(lambda: start_load_page(form_ui))
+    form_ui.btn_start_load.clicked.connect(lambda: color_styles_page(form_ui))
+    form_ui.light_style_btn.clicked.connect(lambda: set_light_style(form_ui))
+    form_ui.dark_style_btn.clicked.connect(lambda: set_dark_style(form_ui))
+    form_ui.system_style_btn.clicked.connect(lambda: set_system_style(form_ui))
+    form_ui.time_style_btn.clicked.connect(lambda: set_time_style(form_ui))
 
 
 def show_load_window(main_form):
