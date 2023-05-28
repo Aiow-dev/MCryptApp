@@ -31,7 +31,7 @@ class Ui_load_form(object):
         self.page = QtWidgets.QWidget()
         self.page.setObjectName("page")
         self.btn_start_load = QtWidgets.QPushButton(self.page)
-        self.btn_start_load.setGeometry(QtCore.QRect(755, 330, 201, 51))
+        self.btn_start_load.setGeometry(QtCore.QRect(755, 330, 171, 45))
         self.btn_start_load.setStyleSheet("QPushButton {\n"
 "    border-radius: 3px;\n"
 "    background-color: rgb(244, 202, 22);\n"
@@ -59,7 +59,7 @@ class Ui_load_form(object):
         self.lock_lbl.setScaledContents(False)
         self.lock_lbl.setObjectName("lock_lbl")
         self.btn_skip_load = QtWidgets.QPushButton(self.page)
-        self.btn_skip_load.setGeometry(QtCore.QRect(545, 330, 201, 51))
+        self.btn_skip_load.setGeometry(QtCore.QRect(575, 330, 171, 45))
         self.btn_skip_load.setStyleSheet("QPushButton {\n"
 "    border: 1px solid rgb(247, 211, 70);\n"
 "    border-radius: 3px;\n"
@@ -430,6 +430,193 @@ class Ui_load_form(object):
         self.system_style_lbl.raise_()
         self.time_style_lbl.raise_()
         self.load_wgt.addWidget(self.page_2)
+        self.page_4 = QtWidgets.QWidget()
+        self.page_4.setObjectName("page_4")
+        self.profile_lbl = QtWidgets.QLabel(self.page_4)
+        self.profile_lbl.setGeometry(QtCore.QRect(-105, 120, 441, 373))
+        self.profile_lbl.setText("")
+        self.profile_lbl.setScaledContents(False)
+        self.profile_lbl.setObjectName("profile_lbl")
+        self.btn_back_account = QtWidgets.QPushButton(self.page_4)
+        self.btn_back_account.setGeometry(QtCore.QRect(25, 510, 130, 45))
+        self.btn_back_account.setMinimumSize(QtCore.QSize(130, 45))
+        self.btn_back_account.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.btn_back_account.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(247, 211, 70);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(252, 254, 252);\n"
+"    color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(247, 211, 70);\n"
+"}")
+        self.btn_back_account.setObjectName("btn_back_account")
+        self.btn_next_account = QtWidgets.QPushButton(self.page_4)
+        self.btn_next_account.setGeometry(QtCore.QRect(166, 510, 130, 45))
+        self.btn_next_account.setMinimumSize(QtCore.QSize(130, 45))
+        self.btn_next_account.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.btn_next_account.setStyleSheet("QPushButton {\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(244, 202, 22);\n"
+"    color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(247, 211, 70);\n"
+"}")
+        self.btn_next_account.setObjectName("btn_next_account")
+        self.account_wgt = QtWidgets.QStackedWidget(self.page_4)
+        self.account_wgt.setGeometry(QtCore.QRect(350, 119, 611, 461))
+        self.account_wgt.setObjectName("account_wgt")
+        self.page_5 = QtWidgets.QWidget()
+        self.page_5.setObjectName("page_5")
+        self.label_3 = QtWidgets.QLabel(self.page_5)
+        self.label_3.setGeometry(QtCore.QRect(150, 40, 311, 21))
+        self.label_3.setStyleSheet("")
+        self.label_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_3.setObjectName("label_3")
+        self.registration_username_txt = QtWidgets.QLineEdit(self.page_5)
+        self.registration_username_txt.setGeometry(QtCore.QRect(100, 110, 391, 45))
+        self.registration_username_txt.setMinimumSize(QtCore.QSize(0, 45))
+        self.registration_username_txt.setStyleSheet("QLineEdit {\n"
+"    border: 1px solid rgb(48, 47, 47);\n"
+"    border-radius: 3px;\n"
+"    margin: 0 0 0 18px;\n"
+"    padding: 0 3px;\n"
+"    color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 1px solid rgb(244, 202, 22);\n"
+"    background-color: rgb(244, 202, 22);\n"
+"}")
+        self.registration_username_txt.setClearButtonEnabled(True)
+        self.registration_username_txt.setObjectName("registration_username_txt")
+        self.registration_password_txt = QtWidgets.QLineEdit(self.page_5)
+        self.registration_password_txt.setGeometry(QtCore.QRect(100, 180, 391, 45))
+        self.registration_password_txt.setMinimumSize(QtCore.QSize(0, 45))
+        self.registration_password_txt.setStyleSheet("QLineEdit {\n"
+"    border: 1px solid rgb(48, 47, 47);\n"
+"    border-radius: 3px;\n"
+"    margin: 0 0 0 18px;\n"
+"    padding: 0 3px;\n"
+"    color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 1px solid rgb(244, 202, 22);\n"
+"    background-color: rgb(244, 202, 22);\n"
+"}")
+        self.registration_password_txt.setClearButtonEnabled(True)
+        self.registration_password_txt.setObjectName("registration_password_txt")
+        self.registration_confirm_password_txt = QtWidgets.QLineEdit(self.page_5)
+        self.registration_confirm_password_txt.setGeometry(QtCore.QRect(100, 250, 391, 45))
+        self.registration_confirm_password_txt.setMinimumSize(QtCore.QSize(0, 45))
+        self.registration_confirm_password_txt.setStyleSheet("QLineEdit {\n"
+"    border: 1px solid rgb(48, 47, 47);\n"
+"    border-radius: 3px;\n"
+"    margin: 0 0 0 18px;\n"
+"    padding: 0 3px;\n"
+"    color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 1px solid rgb(244, 202, 22);\n"
+"    background-color: rgb(244, 202, 22);\n"
+"}")
+        self.registration_confirm_password_txt.setClearButtonEnabled(True)
+        self.registration_confirm_password_txt.setObjectName("registration_confirm_password_txt")
+        self.btn_registration = QtWidgets.QPushButton(self.page_5)
+        self.btn_registration.setGeometry(QtCore.QRect(225, 330, 161, 45))
+        self.btn_registration.setStyleSheet("QPushButton {\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(244, 202, 22);\n"
+"    color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(247, 211, 70);\n"
+"}")
+        self.btn_registration.setObjectName("btn_registration")
+        self.btn_login_page = QtWidgets.QPushButton(self.page_5)
+        self.btn_login_page.setGeometry(QtCore.QRect(120, 400, 371, 31))
+        self.btn_login_page.setStyleSheet("QPushButton {\n"
+"    border: none;\n"
+"    border-radius: 3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(247, 211, 70, 50);\n"
+"}")
+        self.btn_login_page.setObjectName("btn_login_page")
+        self.account_wgt.addWidget(self.page_5)
+        self.page_6 = QtWidgets.QWidget()
+        self.page_6.setObjectName("page_6")
+        self.label_4 = QtWidgets.QLabel(self.page_6)
+        self.label_4.setGeometry(QtCore.QRect(150, 70, 311, 21))
+        self.label_4.setStyleSheet("")
+        self.label_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_4.setObjectName("label_4")
+        self.btn_login = QtWidgets.QPushButton(self.page_6)
+        self.btn_login.setGeometry(QtCore.QRect(225, 290, 161, 45))
+        self.btn_login.setStyleSheet("QPushButton {\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(244, 202, 22);\n"
+"    color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(247, 211, 70);\n"
+"}")
+        self.btn_login.setObjectName("btn_login")
+        self.btn_registration_page = QtWidgets.QPushButton(self.page_6)
+        self.btn_registration_page.setGeometry(QtCore.QRect(120, 360, 371, 31))
+        self.btn_registration_page.setStyleSheet("QPushButton {\n"
+"    border: none;\n"
+"    border-radius: 3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(247, 211, 70, 50);\n"
+"}")
+        self.btn_registration_page.setObjectName("btn_registration_page")
+        self.login_username_txt = QtWidgets.QLineEdit(self.page_6)
+        self.login_username_txt.setGeometry(QtCore.QRect(100, 140, 391, 45))
+        self.login_username_txt.setMinimumSize(QtCore.QSize(0, 45))
+        self.login_username_txt.setStyleSheet("QLineEdit {\n"
+"    border: 1px solid rgb(48, 47, 47);\n"
+"    border-radius: 3px;\n"
+"    margin: 0 0 0 18px;\n"
+"    padding: 0 3px;\n"
+"    color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 1px solid rgb(244, 202, 22);\n"
+"    background-color: rgb(244, 202, 22);\n"
+"}")
+        self.login_username_txt.setClearButtonEnabled(True)
+        self.login_username_txt.setObjectName("login_username_txt")
+        self.login_password_txt = QtWidgets.QLineEdit(self.page_6)
+        self.login_password_txt.setGeometry(QtCore.QRect(100, 210, 391, 45))
+        self.login_password_txt.setMinimumSize(QtCore.QSize(0, 45))
+        self.login_password_txt.setStyleSheet("QLineEdit {\n"
+"    border: 1px solid rgb(48, 47, 47);\n"
+"    border-radius: 3px;\n"
+"    margin: 0 0 0 18px;\n"
+"    padding: 0 3px;\n"
+"    color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 1px solid rgb(244, 202, 22);\n"
+"    background-color: rgb(244, 202, 22);\n"
+"}")
+        self.login_password_txt.setClearButtonEnabled(True)
+        self.login_password_txt.setObjectName("login_password_txt")
+        self.account_wgt.addWidget(self.page_6)
+        self.load_wgt.addWidget(self.page_4)
         self.page_3 = QtWidgets.QWidget()
         self.page_3.setObjectName("page_3")
         self.rocket_lbl = QtWidgets.QLabel(self.page_3)
@@ -438,7 +625,7 @@ class Ui_load_form(object):
         self.rocket_lbl.setScaledContents(False)
         self.rocket_lbl.setObjectName("rocket_lbl")
         self.btn_complete_load = QtWidgets.QPushButton(self.page_3)
-        self.btn_complete_load.setGeometry(QtCore.QRect(750, 360, 201, 51))
+        self.btn_complete_load.setGeometry(QtCore.QRect(748, 360, 171, 45))
         self.btn_complete_load.setStyleSheet("QPushButton {\n"
 "    border-radius: 3px;\n"
 "    background-color: rgb(244, 202, 22);\n"
@@ -461,7 +648,7 @@ class Ui_load_form(object):
         self.plainTextEdit_4.setReadOnly(True)
         self.plainTextEdit_4.setObjectName("plainTextEdit_4")
         self.btn_back_end_load = QtWidgets.QPushButton(self.page_3)
-        self.btn_back_end_load.setGeometry(QtCore.QRect(540, 360, 201, 51))
+        self.btn_back_end_load.setGeometry(QtCore.QRect(568, 360, 171, 45))
         self.btn_back_end_load.setStyleSheet("QPushButton {\n"
 "    border: 1px solid rgb(247, 211, 70);\n"
 "    border-radius: 3px;\n"
@@ -478,11 +665,12 @@ class Ui_load_form(object):
 
         self.retranslateUi(load_form)
         self.load_wgt.setCurrentIndex(0)
+        self.account_wgt.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(load_form)
 
     def retranslateUi(self, load_form):
         _translate = QtCore.QCoreApplication.translate
-        load_form.setWindowTitle(_translate("load_form", "Настройка MCrypt"))
+        load_form.setWindowTitle(_translate("load_form", "MCrypt"))
         self.btn_start_load.setText(_translate("load_form", "Начать"))
         self.plainTextEdit_3.setPlainText(_translate("load_form", "Добро пожаловать в MCrypt! Давайте настроим это приложение для вас! Это займет не более 5 минут :)"))
         self.btn_skip_load.setText(_translate("load_form", "Пропустить настройку"))
@@ -495,7 +683,7 @@ class Ui_load_form(object):
         self.label.setText(_translate("load_form", "Выберите цветовую схему приложения (наведите на область для получения информации)"))
         self.btn_next_style.setText(_translate("load_form", "Далее"))
         self.btn_back_style.setText(_translate("load_form", "Назад"))
-        self.light_style_lbl.setText(_translate("load_form", "Светлая (Выбрано)"))
+        self.light_style_lbl.setText(_translate("load_form", "Светлая"))
         self.light_style_btn.setToolTip(_translate("load_form", "<FONT>Стандартное светлое цветовое оформление</FONT>"))
         self.dark_style_lbl.setText(_translate("load_form", "Темная"))
         self.dark_style_btn.setToolTip(_translate("load_form", "<FONT>Стандартное темное цветовое оформление</FONT>"))
@@ -503,6 +691,19 @@ class Ui_load_form(object):
         self.time_style_btn.setToolTip(_translate("load_form", "<FONT>Временное оформление позволяет автоматически сменять цветовое оформление (стандратное светлое и темное) в зависимости от текущего времени суток</FONT>"))
         self.system_style_lbl.setText(_translate("load_form", "Системная"))
         self.time_style_lbl.setText(_translate("load_form", "Временная"))
+        self.btn_back_account.setText(_translate("load_form", "Назад"))
+        self.btn_next_account.setText(_translate("load_form", "Далее"))
+        self.label_3.setText(_translate("load_form", "Создайте новую учетную запись MCrypt!"))
+        self.registration_username_txt.setPlaceholderText(_translate("load_form", "Имя пользователя"))
+        self.registration_password_txt.setPlaceholderText(_translate("load_form", "Пароль"))
+        self.registration_confirm_password_txt.setPlaceholderText(_translate("load_form", "Подтвердите пароль"))
+        self.btn_registration.setText(_translate("load_form", "Создать"))
+        self.btn_login_page.setText(_translate("load_form", "Уже есть учетная запись MCrypt? Войдите в нее!"))
+        self.label_4.setText(_translate("load_form", "Войдите в учетную запись MCrypt!"))
+        self.btn_login.setText(_translate("load_form", "Войти"))
+        self.btn_registration_page.setText(_translate("load_form", "Еще нет учетной записи MCrypt? Создайте ее!"))
+        self.login_username_txt.setPlaceholderText(_translate("load_form", "Имя пользователя"))
+        self.login_password_txt.setPlaceholderText(_translate("load_form", "Пароль"))
         self.btn_complete_load.setText(_translate("load_form", "Завершить"))
         self.plainTextEdit_4.setPlainText(_translate("load_form", "Поздравляем, настройка приложения завершена! Теперь мы готовы к запуску данного приложения! Также вы можете дополнительно настроить приложение в настройках :)"))
         self.btn_back_end_load.setText(_translate("load_form", "Назад"))
