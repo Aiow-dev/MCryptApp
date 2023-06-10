@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets, QtGui
 
 from src.components import dialogs, setting, visual
-from . import messages, main_window
+from . import messages, main_window, profile
 from src.views import load_win
 from src.controllers import user
 from src.services import shortcut_service
@@ -63,14 +63,6 @@ def end_load_page(form_ui):
     form_ui.load_wgt.setCurrentIndex(4)
 
 
-def registration_account_page(form_ui):
-    form_ui.account_wgt.setCurrentIndex(0)
-
-
-def login_account_page(form_ui):
-    form_ui.account_wgt.setCurrentIndex(1)
-
-
 def set_light_style(form_ui):
     form_ui.light_style_lbl.setText('Светлая (Выбрано)')
     form_ui.dark_style_lbl.setText('Темная')
@@ -103,13 +95,6 @@ def set_time_style(form_ui):
     setting.set_parameter('theme', 'time')
 
 
-def init_elements(form_ui):
-    pass_fields = [form_ui.registration_password_txt, form_ui.registration_confirm_password_txt,
-                   form_ui.login_password_txt]
-    for field in pass_fields:
-        field.setEchoMode(QtWidgets.QLineEdit.Password)
-
-
 def enable_visual_styles(form_ui):
     lock_movie = QtGui.QMovie('../resources/images/lock.gif')
     form_ui.lock_lbl.setMovie(lock_movie)
@@ -132,7 +117,7 @@ def enable_visual_styles(form_ui):
     visual.frame_color_style_sys(form_ui.accent_light_win_color)
     visual.frame_color_style_sys(form_ui.accent_dark_win_color)
 
-    init_elements(form_ui)
+    profile.init_elements(form_ui)
 
 
 def init_load_pages(form, form_ui, main_form):
@@ -148,8 +133,8 @@ def init_load_pages(form, form_ui, main_form):
 
     form_ui.btn_back_account.clicked.connect(lambda: color_styles_page(form_ui))
     form_ui.btn_next_account.clicked.connect(lambda: link_page(form_ui))
-    form_ui.btn_registration_page.clicked.connect(lambda: registration_account_page(form_ui))
-    form_ui.btn_login_page.clicked.connect(lambda: login_account_page(form_ui))
+    form_ui.btn_registration_page.clicked.connect(lambda: profile.registration_account_page(form_ui))
+    form_ui.btn_login_page.clicked.connect(lambda: profile.login_account_page(form_ui))
     user.init_user(form_ui)
 
     form_ui.btn_back_link.clicked.connect(lambda: account_page(form_ui))

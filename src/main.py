@@ -2,7 +2,7 @@ import sys
 
 from PyQt5 import QtWidgets, QtCore
 
-from src.windows import main_window, load
+from src.windows import main_window, load, account
 from src.components import app, setting
 from src.services import user_service
 
@@ -16,8 +16,11 @@ if __name__ == '__main__':
 
     if setting.get_parameter('show-load'):
         load.show_load_window(MainWindow)
-    else:
+
+    if user_service.is_authenticated():
         main_window.show_main_window(MainWindow)
+    else:
+        window = account.show_account_window(MainWindow)
 
     qt_translator = QtCore.QTranslator()
     if qt_translator.load('../resources/qtbase_ru'):

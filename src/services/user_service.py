@@ -7,6 +7,25 @@ def init_userdata():
     file.create_dir('../user')
 
 
+def is_authenticated():
+    try:
+        with open('../user/authentication.txt', 'r') as f:
+            status = f.read()
+            ph = argon2.PasswordHasher()
+            return ph.verify(status, 'Authenticated')
+    except FileNotFoundError as file_error:
+        return False
+    except argon2.exceptions.VerifyMismatchError as verify_error:
+        return False
+
+
+def set_authenticated(status):
+    with open('../user/authentication.txt', 'w+') as f:
+        ph = argon2.PasswordHasher()
+        status_hash = ph.hash(status)
+        f.write(status_hash)
+
+
 def create_user(username, password, confirm_password):
     name = username.strip()
     if not name:

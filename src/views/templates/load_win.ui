@@ -40,7 +40,7 @@
    <item>
     <widget class="QStackedWidget" name="load_wgt">
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="page">
       <widget class="QPushButton" name="btn_start_load">
@@ -1121,7 +1121,7 @@ QPushButton:hover {
          </property>
          <property name="styleSheet">
           <string notr="true">QLineEdit {
-	border: 1px solid rgb(48, 47, 47);
+	border: 1px solid rgb(98, 79, 130);
 	border-radius: 3px;
 	margin: 0 0 0 18px;
 	padding: 0 3px;
