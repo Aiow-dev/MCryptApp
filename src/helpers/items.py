@@ -12,7 +12,7 @@ def range_to_str(range_obj):
     return ''.join(str(index) for index in range_obj)
 
 
-def all_equal(items):
+def is_all_equal(items):
     len_items = len(items)
     return all(items[index] == items[index - 1] for index in range(len_items))
 

@@ -148,7 +148,7 @@ def init_settings_panel(ui):
 
 def init_settings_pages(parent, ui):
     color_style_controllers.init_color_styles(ui)
-    set_app_controllers.init_confirm_quit(parent, ui)
+    set_app_controllers.init_confirm_quit(ui)
     quick_panel_controllers.init_quick_panel(ui)
     menu_line_controllers.init_menu_line(parent, ui)
     program_info_controllers.init_program_info(parent, ui)

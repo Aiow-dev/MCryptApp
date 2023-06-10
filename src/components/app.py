@@ -18,7 +18,7 @@ def restart():
     status = QtCore.QProcess.startDetached(sys.executable, sys.argv)
 
 
-def quit_confirm(parent):
+def quit_confirm():
     if setting.get_parameter('confirm-quit'):
         if dialogs.question_msg_result(
                 'Вы уверены, что хотите выйти? Все несохраненные изменения будут утеряны!',
@@ -29,7 +29,7 @@ def quit_confirm(parent):
         QtWidgets.qApp.quit()
 
 
-def restart_confirm(parent):
+def restart_confirm():
     if setting.get_parameter('confirm-quit'):
         if dialogs.question_msg_result(
                 'Вы уверены, что хотите выйти? Все несохраненные изменения будут утеряны!',

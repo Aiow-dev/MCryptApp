@@ -6,8 +6,8 @@ from src.views import ext_info_win_dark
 
 class ExtendedInfoWindow(QtWidgets.QWidget):
     def __init__(self, func_single, parent, flags):
-        self.__func_single = func_single
         super().__init__(parent, flags)
+        self.__func_single = func_single
 
     def show(self):
         if self.__func_single.is_call():

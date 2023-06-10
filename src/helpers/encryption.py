@@ -1,7 +1,7 @@
 from src.helpers import items
 
 
-def check_magic_square(magic_square):
+def is_magic_square(magic_square):
     row_len = len(magic_square)
     clm_len = len(magic_square[0])
     if row_len != clm_len:
@@ -26,6 +26,6 @@ def check_magic_square(magic_square):
                 sum_right_diagonal += magic_square[row_index][clm_index]
         sums_row.append(sum_row)
         sums_clm.append(sum_clm)
-    if not items.all_equal(sums_row) and not items.all_equal(sums_clm):
+    if not items.is_all_equal(sums_row) and not items.is_all_equal(sums_clm):
         return False
     return sum_left_diagonal == sum_right_diagonal and items.is_serial(sorted(elements))

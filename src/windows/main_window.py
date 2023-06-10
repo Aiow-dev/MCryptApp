@@ -20,9 +20,9 @@ class MainWindowApp(QtWidgets.QMainWindow):
         super().__init__()
 
         self.__func_single = func.FuncSingleCall()
-        self.shortcut_settings = QtWidgets.QShortcut(QtGui.QKeySequence('Ctrl+S'), self)
-        self.shortcut_settings.activated.connect(self.open_settings)
-        self.shortcut_settings.setEnabled(False)
+        self.__shortcut_settings = QtWidgets.QShortcut(QtGui.QKeySequence('Ctrl+S'), self)
+        self.__shortcut_settings.activated.connect(self.open_settings)
+        self.__shortcut_settings.setEnabled(False)
         self.check_menu_line()
 
     def closeEvent(self, event):
@@ -39,7 +39,7 @@ class MainWindowApp(QtWidgets.QMainWindow):
 
     def check_menu_line(self):
         if not setting.get_parameter('show-menu'):
-            self.shortcut_settings.setEnabled(True)
+            self.__shortcut_settings.setEnabled(True)
 
 
 def init_elements(ui_window):

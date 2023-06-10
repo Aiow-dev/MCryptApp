@@ -31,8 +31,8 @@ def init_double_playfair(ui):
     event_components.tables_clm_text_changed(dec_tbl_widgets, ui.dec_dp_clm_txt, max_tbl_size)
     event_components.tables_rand_state_changed(enc_tbl_widgets, ui.enc_dp_chk, alphabet)
     event_components.tables_rand_state_changed(dec_tbl_widgets, ui.dec_dp_chk, alphabet)
-    event_components.table_size_charset_state_changed(ui.enc_dp_lt_table, ui.enc_dp_chk, alphabet)
-    event_components.table_size_charset_state_changed(ui.dec_dp_lt_table, ui.dec_dp_chk, alphabet)
+    event_components.tbl_size_charset_state_changed(ui.enc_dp_lt_table, ui.enc_dp_chk, alphabet)
+    event_components.tbl_size_charset_state_changed(ui.dec_dp_lt_table, ui.dec_dp_chk, alphabet)
     color_default = scheme_colors.tbl_item_bg_default
     color_err = scheme_colors.tbl_item_bg_err
     event_components.tbl_char_unique_item_changed(ui.enc_dp_lt_table, color_default, color_err)

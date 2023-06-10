@@ -12,9 +12,9 @@ def confirm_quit_check(check_obj):
             check_obj.setCheckState(2)
 
 
-def init_confirm_quit(parent, ui):
+def init_confirm_quit(ui):
     current_status = setting.get_parameter('confirm-quit')
     ui.confirm_quit_chk.setChecked(current_status)
     ui.confirm_quit_chk.stateChanged.connect(lambda: confirm_quit_check(ui.confirm_quit_chk))
-    ui.btn_restart.clicked.connect(lambda: app.restart_confirm(parent))
-    ui.btn_quit.clicked.connect(lambda: app.quit_confirm(parent))
+    ui.btn_restart.clicked.connect(app.restart_confirm)
+    ui.btn_quit.clicked.connect(app.quit_confirm)

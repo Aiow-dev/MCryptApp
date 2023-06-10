@@ -1,10 +1,4 @@
-from PyQt5 import QtGui
-
 from src.components import enc_tables, dialogs
-
-
-def set_shortcut(ui_obj, shortcut):
-    ui_obj.setShortcut(QtGui.QKeySequence(shortcut))
 
 
 def set_tbl_rank(tbl_obj, text_obj, max_limit):

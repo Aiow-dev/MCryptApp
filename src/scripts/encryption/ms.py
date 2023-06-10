@@ -3,7 +3,7 @@ from src.helpers import encryption
 
 
 def enc_magic_square(msg, key_tbl):
-    if not encryption.check_magic_square(key_tbl):
+    if not encryption.is_magic_square(key_tbl):
         return {'err_msg': messages.TABLE_MS_ERR}
     tbl = []
     enc_msg = ''
@@ -17,7 +17,7 @@ def enc_magic_square(msg, key_tbl):
 
 
 def dec_magic_square(enc_msg, key_tbl):
-    if not encryption.check_magic_square(key_tbl):
+    if not encryption.is_magic_square(key_tbl):
         return {'err_msg': messages.TABLE_MS_ERR}
     tbl_rank = len(key_tbl)
     tbl = []

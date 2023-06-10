@@ -15912,7 +15912,7 @@ QComboBox::drop-down:button {
     </widget>
     <widget class="QMenu" name="enc_cs_menu">
      <property name="title">
-      <string>Система Цезаря</string>
+      <string>Системы Цезаря</string>
      </property>
      <addaction name="action_cs"/>
      <addaction name="action_acs"/>

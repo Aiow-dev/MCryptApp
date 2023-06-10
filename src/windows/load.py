@@ -3,6 +3,7 @@ from PyQt5 import QtWidgets, QtGui
 from src.components import dialogs, setting, visual
 from . import messages, main_window
 from src.views import load_win
+from src.controllers import user
 
 
 class LoadWindow(QtWidgets.QWidget):
@@ -31,8 +32,7 @@ def complete_load(form, main_form):
 
 
 def skip_load(form, main_form):
-    result = dialogs.question_msg_result(messages.CONFIRM_SKIP_LOAD, 'Пропустить настройку')
-    if result:
+    if dialogs.question_msg_result(messages.CONFIRM_SKIP_LOAD, 'Пропустить настройку'):
         complete_load(form, main_form)
 
 
@@ -136,6 +136,7 @@ def init_load_pages(form, form_ui, main_form):
     form_ui.btn_next_account.clicked.connect(lambda: end_load_page(form_ui))
     form_ui.btn_registration_page.clicked.connect(lambda: registration_account_page(form_ui))
     form_ui.btn_login_page.clicked.connect(lambda: login_account_page(form_ui))
+    user.init_user(form_ui)
 
     form_ui.btn_back_end_load.clicked.connect(lambda: account_page(form_ui))
     form_ui.btn_complete_load.clicked.connect(lambda: complete_load(form, main_form))

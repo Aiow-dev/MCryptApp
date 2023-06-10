@@ -17,8 +17,8 @@ def init_menu(window, ui):
     ui.action_program_info.triggered.connect(dialogs.show_program_info)
     ui.action_settings_win.triggered.connect(lambda: settings.show_settings_window(func_single, window))
     ui.action_new_win.triggered.connect(lambda: main_window_add.show_addition_window(window))
-    ui.action_exit.triggered.connect(lambda: app.quit_confirm(window))
-    ui.action_restart.triggered.connect(lambda: app.restart_confirm(window))
+    ui.action_exit.triggered.connect(app.quit_confirm)
+    ui.action_restart.triggered.connect(app.restart_confirm)
     init_menu_pages(ui)
 
 

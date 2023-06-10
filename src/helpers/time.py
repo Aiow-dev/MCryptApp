@@ -9,9 +9,9 @@ def get_current_hour():
 
 
 class TimerDelay:
-    def __init__(self, time, timeout_function):
+    def __init__(self, time, timeout_func):
         self.__time = time
-        self.__timeout_func = timeout_function
+        self.__timeout_func = timeout_func
         self.__executor_timer = QtCore.QTimer()
         self.__executor_timer.setSingleShot(True)
         self.__executor_timer.timeout.connect(lambda: self._timeout_execute())

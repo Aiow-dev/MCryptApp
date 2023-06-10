@@ -7698,7 +7698,7 @@ class Ui_main_window(object):
         self.file_menu.setTitle(_translate("main_window", "Файл"))
         self.enc_menu.setTitle(_translate("main_window", "Шифрование"))
         self.enc_tpm_menu.setTitle(_translate("main_window", "Таблицы перестановок"))
-        self.enc_cs_menu.setTitle(_translate("main_window", "Система Цезаря"))
+        self.enc_cs_menu.setTitle(_translate("main_window", "Системы Цезаря"))
         self.action_program_info.setText(_translate("main_window", "О программе"))
         self.action_program_info.setShortcut(_translate("main_window", "Ctrl+I"))
         self.action_help.setText(_translate("main_window", "Справка"))

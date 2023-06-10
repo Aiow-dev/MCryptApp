@@ -18,7 +18,7 @@ def get_index(txt, symbols):
     txt_index = []
 
     for letter in txt:
-        letter_index: int = symbols.find(letter)
+        letter_index = symbols.find(letter)
 
         if letter_index != -1:
             txt_index.append(str(letter_index))
@@ -28,9 +28,5 @@ def get_index(txt, symbols):
     return txt_index
 
 
-def get_number_letter(txt):
+def get_chars_numbers(txt):
     return [str(index + 1) for index in range(len(txt))]
-
-
-def get_words_len(words, len_word):
-    return list(filter(lambda word: len(word) == len_word, words))

@@ -50,7 +50,7 @@ def tables_rand_state_changed(tables, check_obj, charset):
     check_obj.stateChanged.connect(lambda: event_helpers.set_tables_rand_state_changed(tables, check_obj, charset))
 
 
-def table_size_charset_state_changed(tbl_obj, check_obj, charset):
+def tbl_size_charset_state_changed(tbl_obj, check_obj, charset):
     check_obj.stateChanged.connect(
         lambda: action.tbl_size_charset(check_obj, tbl_obj.rowCount(), tbl_obj.columnCount(), charset))
 

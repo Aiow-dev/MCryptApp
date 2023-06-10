@@ -44,7 +44,7 @@ def table_text(columns_values, tbl_header=None, columns_headers=None, placeholde
 def key_permutation_table_text(key_tbl):
     key = '\t'.join(key[0] for key in key_tbl).upper()
     one_letter_keys = ''.join(key[0] for key in key_tbl)
-    key_indexes = '\t'.join(text.get_number_letter(one_letter_keys))
+    key_indexes = '\t'.join(text.get_chars_numbers(one_letter_keys))
     part_tbl = tables.table_to_str(tables.transpose_table(list(key_tbl.values())))
     return f'{key}\n{key_indexes}\n{part_tbl}'
 
@@ -61,18 +61,18 @@ def double_permutation_table_text(msg_tbl, key_row, key_clm):
     return f'{h_header_row}\n{result_tbl}'
 
 
-def affine_table_num_text(key_a_text, key_b_text):
+def affine_table_num_text(key_a, key_b):
     column_values = (
-        [str(i) for i in range(11)], tables.affine_num_column(key_a_text, key_b_text, 0, 11),
-        [str(i) for i in range(11, 22)], tables.affine_num_column(key_a_text, key_b_text, 11, 22),
-        [str(i) for i in range(22, 33)], tables.affine_num_column(key_a_text, key_b_text, 22, 33)
+        [str(i) for i in range(11)], tables.affine_num_column(key_a, key_b, 0, 11),
+        [str(i) for i in range(11, 22)], tables.affine_num_column(key_a, key_b, 11, 22),
+        [str(i) for i in range(22, 33)], tables.affine_num_column(key_a, key_b, 22, 33)
     )
     return column_values, table_text(column_values, columns_headers=tables.affine_column_headers(
-        key_a_text, key_b_text
+        key_a, key_b
     ))
 
 
-def affine_table_letter_text(key_a_text, key_b_text, num_column_values, alphabet):
+def affine_table_letter_text(key_a, key_b, num_column_values, alphabet):
     column_values = (
         tables.affine_letter_column(num_column_values[0], alphabet),
         tables.affine_letter_column(num_column_values[1], alphabet),
@@ -82,12 +82,12 @@ def affine_table_letter_text(key_a_text, key_b_text, num_column_values, alphabet
         tables.affine_letter_column(num_column_values[5], alphabet)
     )
     return column_values, table_text(column_values, columns_headers=tables.affine_column_headers(
-        key_a_text, key_b_text
+        key_a, key_b
     ))
 
 
-def affine_table(key_a_text, key_b_text, column_values, tbl_obj):
-    h_headers = tables.affine_column_headers(key_a_text, key_b_text)
+def affine_table(key_a, key_b, column_values, tbl_obj):
+    h_headers = tables.affine_column_headers(key_a, key_b)
     tables.table(column_values, table_column, tbl_obj, h_headers=h_headers)
 
 
@@ -105,9 +105,9 @@ def caesar_key_table_text(replace_values, alphabet):
     return column_values, table_text(column_values, columns_headers=column_headers, len_tbl_section=4)
 
 
-def caesar_key_table(column_values, table_obj):
+def caesar_key_table(column_values, tbl_obj):
     h_headers = ('№', '->', '№', '->', '№', '->')
-    tables.table(column_values, table_column, table_obj, h_headers=h_headers)
+    tables.table(column_values, table_column, tbl_obj, h_headers=h_headers)
 
 
 def vigenere_table_text(msg_txt, key_text, enc_msg_txt, alphabet):
@@ -120,10 +120,10 @@ def vigenere_table_text(msg_txt, key_text, enc_msg_txt, alphabet):
     return tables.table_to_str_size(enc_msg_table, 3, 2)
 
 
-def vigenere_table(row_values, table_obj, alphabet):
+def vigenere_table(row_values, tbl_obj, alphabet):
     h_headers = list(alphabet)
     v_headers = [str(row) for row in range(32)]
-    tables.table(row_values, table_row, table_obj, h_headers, v_headers)
+    tables.table(row_values, table_row, tbl_obj, h_headers, v_headers)
 
 
 def table_row(num_row, row_value, tbl_obj):
