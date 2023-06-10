@@ -29,7 +29,7 @@ def create_user(username, password, confirm_password):
     if password != confirm_password:
         return {'status': False, 'msg': 'Пароли не совпадают!'}
 
-    hash_m = hashlib.sha256()
+    hash_m = hashlib.sha3_256()
     hash_m.update(bytes(password, 'utf-8'))
     password_hash = hash_m.hexdigest()
     set_username(username)
@@ -52,7 +52,7 @@ def login_user(username, password):
 
         with open('../user/password.txt', 'r') as f:
             file_password = f.read()
-            hash_m = hashlib.sha256()
+            hash_m = hashlib.sha3_256()
             hash_m.update(bytes(password, 'utf-8'))
             password_hash = hash_m.hexdigest()
             if file_password != password_hash:
