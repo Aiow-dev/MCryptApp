@@ -1,20 +1,10 @@
-import hashlib
+import argon2
 
 from src.helpers import file
 
 
 def init_userdata():
     file.create_dir('../user')
-
-
-def set_username(username):
-    with open('../user/username.txt', 'w+') as f:
-        f.write(username)
-
-
-def set_password(password):
-    with open('../user/password.txt', 'w+') as f:
-        f.write(password)
 
 
 def create_user(username, password, confirm_password):
@@ -29,11 +19,16 @@ def create_user(username, password, confirm_password):
     if password != confirm_password:
         return {'status': False, 'msg': 'Пароли не совпадают!'}
 
-    hash_m = hashlib.sha3_256()
-    hash_m.update(bytes(password, 'utf-8'))
-    password_hash = hash_m.hexdigest()
-    set_username(username)
-    set_password(password_hash)
+    ph = argon2.PasswordHasher()
+    username_hash = ph.hash(username)
+    password_hash = ph.hash(password)
+
+    with open('../user/username.txt', 'w+') as f:
+        f.write(username_hash)
+
+    with open('../user/password.txt', 'w+') as f:
+        f.write(password_hash)
+
     return {'status': True, 'msg': 'Регистрация успешна!'}
 
 
@@ -45,18 +40,24 @@ def login_user(username, password):
         return {'status': False, 'msg': 'Поле пароля не заполнено!'}
 
     try:
+        ph = argon2.PasswordHasher()
+
         with open('../user/username.txt', 'r') as f:
             file_username = f.read()
-            if file_username != name:
+            if not ph.verify(file_username, username):
                 return {'status': False, 'msg': 'Имя пользователя или пароль не совпадают!'}
 
         with open('../user/password.txt', 'r') as f:
             file_password = f.read()
-            hash_m = hashlib.sha3_256()
-            hash_m.update(bytes(password, 'utf-8'))
-            password_hash = hash_m.hexdigest()
-            if file_password != password_hash:
-                return {'status': False, 'msg': 'Имя пользователя или пароль не совпадают!'}
-            return {'status': True, 'msg': 'Вход успешен!'}
+            return (
+                {'status': True, 'msg': 'Вход успешен!'}
+                if ph.verify(file_password, password)
+                else {
+                    'status': False,
+                    'msg': 'Имя пользователя или пароль не совпадают!',
+                }
+            )
     except FileNotFoundError as file_error:
         return {'status': False, 'msg': 'Учетной записи не существует!'}
+    except argon2.exceptions.VerifyMismatchError as verify_error:
+        return {'status': False, 'msg': 'Имя пользователя или пароль не совпадают!'}
