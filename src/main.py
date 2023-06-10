@@ -4,11 +4,12 @@ from PyQt5 import QtWidgets, QtCore
 
 from src.windows import main_window, load
 from src.components import app, setting
-from src.services import user_service
+from src.services import user_service, shortcut_service
 
 
 if __name__ == '__main__':
     user_service.init_userdata()
+    # shortcut_service.run_shortcut()
 
     app_obj = QtWidgets.QApplication(sys.argv)
     app.enable_visual_styles()

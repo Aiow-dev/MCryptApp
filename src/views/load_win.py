@@ -617,6 +617,63 @@ class Ui_load_form(object):
         self.login_password_txt.setObjectName("login_password_txt")
         self.account_wgt.addWidget(self.page_6)
         self.load_wgt.addWidget(self.page_4)
+        self.page_7 = QtWidgets.QWidget()
+        self.page_7.setObjectName("page_7")
+        self.btn_next_link = QtWidgets.QPushButton(self.page_7)
+        self.btn_next_link.setGeometry(QtCore.QRect(166, 510, 130, 45))
+        self.btn_next_link.setMinimumSize(QtCore.QSize(130, 45))
+        self.btn_next_link.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.btn_next_link.setStyleSheet("QPushButton {\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(244, 202, 22);\n"
+"    color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(247, 211, 70);\n"
+"}")
+        self.btn_next_link.setObjectName("btn_next_link")
+        self.link_lbl = QtWidgets.QLabel(self.page_7)
+        self.link_lbl.setGeometry(QtCore.QRect(-80, 70, 501, 421))
+        self.link_lbl.setText("")
+        self.link_lbl.setScaledContents(False)
+        self.link_lbl.setObjectName("link_lbl")
+        self.btn_back_link = QtWidgets.QPushButton(self.page_7)
+        self.btn_back_link.setGeometry(QtCore.QRect(25, 510, 130, 45))
+        self.btn_back_link.setMinimumSize(QtCore.QSize(130, 45))
+        self.btn_back_link.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.btn_back_link.setStyleSheet("QPushButton {\n"
+"    border: 1px solid rgb(247, 211, 70);\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(252, 254, 252);\n"
+"    color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(247, 211, 70);\n"
+"}")
+        self.btn_back_link.setObjectName("btn_back_link")
+        self.link_chk = QtWidgets.QCheckBox(self.page_7)
+        self.link_chk.setGeometry(QtCore.QRect(490, 290, 501, 45))
+        self.link_chk.setMinimumSize(QtCore.QSize(0, 45))
+        self.link_chk.setStyleSheet("QCheckBox {\n"
+"    color: rgb(48, 47, 47);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked {\n"
+"    border: 1px solid rgb(247, 211, 70);\n"
+"    border-radius: 2px;\n"
+"    background-color: rgb(252, 254, 252);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"    border: 1px solid rgb(247, 211, 70);\n"
+"    border-radius: 2px;\n"
+"    background-color: rgb(247, 211, 70);\n"
+"}")
+        self.link_chk.setChecked(True)
+        self.link_chk.setObjectName("link_chk")
+        self.load_wgt.addWidget(self.page_7)
         self.page_3 = QtWidgets.QWidget()
         self.page_3.setObjectName("page_3")
         self.rocket_lbl = QtWidgets.QLabel(self.page_3)
@@ -704,6 +761,9 @@ class Ui_load_form(object):
         self.btn_registration_page.setText(_translate("load_form", "Еще нет учетной записи MCrypt? Создайте ее!"))
         self.login_username_txt.setPlaceholderText(_translate("load_form", "Имя пользователя"))
         self.login_password_txt.setPlaceholderText(_translate("load_form", "Пароль"))
+        self.btn_next_link.setText(_translate("load_form", "Далее"))
+        self.btn_back_link.setText(_translate("load_form", "Назад"))
+        self.link_chk.setText(_translate("load_form", "Создать ярлык приложения на рабочем столе"))
         self.btn_complete_load.setText(_translate("load_form", "Завершить"))
         self.plainTextEdit_4.setPlainText(_translate("load_form", "Поздравляем, настройка приложения завершена! Теперь мы готовы к запуску данного приложения! Также вы можете дополнительно настроить приложение в настройках :)"))
         self.btn_back_end_load.setText(_translate("load_form", "Назад"))

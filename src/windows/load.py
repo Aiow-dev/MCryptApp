@@ -4,6 +4,7 @@ from src.components import dialogs, setting, visual
 from . import messages, main_window
 from src.views import load_win
 from src.controllers import user
+from src.services import shortcut_service
 
 
 class LoadWindow(QtWidgets.QWidget):
@@ -24,7 +25,7 @@ class LoadWindow(QtWidgets.QWidget):
             event.accept()
 
 
-def complete_load(form, main_form):
+def end_load(form, main_form):
     setting.set_parameter('show-load', False)
     form.set_is_complete(True)
     form.close()
@@ -33,7 +34,13 @@ def complete_load(form, main_form):
 
 def skip_load(form, main_form):
     if dialogs.question_msg_result(messages.CONFIRM_SKIP_LOAD, 'Пропустить настройку'):
-        complete_load(form, main_form)
+        end_load(form, main_form)
+
+
+def complete_load(form, form_ui, main_form):
+    if form_ui.link_chk.isChecked():
+        shortcut_service.run_shortcut()
+    end_load(form, main_form)
 
 
 def start_load_page(form_ui):
@@ -48,8 +55,12 @@ def account_page(form_ui):
     form_ui.load_wgt.setCurrentIndex(2)
 
 
-def end_load_page(form_ui):
+def link_page(form_ui):
     form_ui.load_wgt.setCurrentIndex(3)
+
+
+def end_load_page(form_ui):
+    form_ui.load_wgt.setCurrentIndex(4)
 
 
 def registration_account_page(form_ui):
@@ -112,6 +123,9 @@ def enable_visual_styles(form_ui):
     profile_movie = QtGui.QMovie('../resources/images/profile.gif')
     form_ui.profile_lbl.setMovie(profile_movie)
     profile_movie.start()
+    robot_movie = QtGui.QMovie('../resources/images/robot.gif')
+    form_ui.link_lbl.setMovie(robot_movie)
+    robot_movie.start()
 
     visual.frame_compl_color_style_sys(form_ui.compl_light_win_color)
     visual.frame_compl_color_style_sys(form_ui.compl_dark_win_color)
@@ -133,13 +147,16 @@ def init_load_pages(form, form_ui, main_form):
     form_ui.time_style_btn.clicked.connect(lambda: set_time_style(form_ui))
 
     form_ui.btn_back_account.clicked.connect(lambda: color_styles_page(form_ui))
-    form_ui.btn_next_account.clicked.connect(lambda: end_load_page(form_ui))
+    form_ui.btn_next_account.clicked.connect(lambda: link_page(form_ui))
     form_ui.btn_registration_page.clicked.connect(lambda: registration_account_page(form_ui))
     form_ui.btn_login_page.clicked.connect(lambda: login_account_page(form_ui))
     user.init_user(form_ui)
 
-    form_ui.btn_back_end_load.clicked.connect(lambda: account_page(form_ui))
-    form_ui.btn_complete_load.clicked.connect(lambda: complete_load(form, main_form))
+    form_ui.btn_back_link.clicked.connect(lambda: account_page(form_ui))
+    form_ui.btn_next_link.clicked.connect(lambda: end_load_page(form_ui))
+
+    form_ui.btn_back_end_load.clicked.connect(lambda: link_page(form_ui))
+    form_ui.btn_complete_load.clicked.connect(lambda: complete_load(form, form_ui, main_form))
 
 
 def active_load_color_style(form_ui):

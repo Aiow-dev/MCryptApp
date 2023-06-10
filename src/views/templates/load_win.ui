@@ -1402,6 +1402,136 @@ QLineEdit:focus {
        </widget>
       </widget>
      </widget>
+     <widget class="QWidget" name="page_7">
+      <widget class="QPushButton" name="btn_next_link">
+       <property name="geometry">
+        <rect>
+         <x>166</x>
+         <y>510</y>
+         <width>130</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>130</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border-radius: 3px;
+	background-color: rgb(244, 202, 22);
+	color: rgb(48, 47, 47);
+}
+
+QPushButton:hover {
+	background-color: rgb(247, 211, 70);
+}</string>
+       </property>
+       <property name="text">
+        <string>Далее</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="link_lbl">
+       <property name="geometry">
+        <rect>
+         <x>-80</x>
+         <y>70</y>
+         <width>501</width>
+         <height>421</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_back_link">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>510</y>
+         <width>130</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>130</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid rgb(247, 211, 70);
+	border-radius: 3px;
+	background-color: rgb(252, 254, 252);
+	color: rgb(48, 47, 47);
+}
+
+QPushButton:hover {
+	background-color: rgb(247, 211, 70);
+}</string>
+       </property>
+       <property name="text">
+        <string>Назад</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="link_chk">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>290</y>
+         <width>501</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QCheckBox {
+	color: rgb(48, 47, 47);
+}
+
+QCheckBox::indicator:unchecked {
+	border: 1px solid rgb(247, 211, 70);
+	border-radius: 2px;
+	background-color: rgb(252, 254, 252);
+}
+
+QCheckBox::indicator:checked {
+	border: 1px solid rgb(247, 211, 70);
+	border-radius: 2px;
+	background-color: rgb(247, 211, 70);
+}</string>
+       </property>
+       <property name="text">
+        <string>Создать ярлык приложения на рабочем столе</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
      <widget class="QWidget" name="page_3">
       <widget class="QLabel" name="rocket_lbl">
        <property name="geometry">
