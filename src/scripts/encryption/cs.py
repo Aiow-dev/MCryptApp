@@ -5,6 +5,8 @@ from src.scripts import script_helpers
 
 
 def enc_classic_cs(msg, key, alphabet):
+    if not msg:
+        return {'err_msg': messages.MSG_EMPTY_ERR}
     if key <= 0:
         return {'err_msg': messages.NOT_POS_KEY_ERR}
     if key > len(alphabet):
@@ -17,6 +19,8 @@ def enc_classic_cs(msg, key, alphabet):
 
 
 def dec_classic_cs(enc_msg, key, alphabet):
+    if not enc_msg:
+        return {'err_msg': messages.MSG_EMPTY_ERR}
     if key <= 0:
         return {'err_msg': messages.NOT_POS_KEY_ERR}
     if key > len(alphabet):
@@ -29,6 +33,8 @@ def dec_classic_cs(enc_msg, key, alphabet):
 
 
 def enc_affine_cs(msg, key_a, key_b, alphabet):
+    if not msg:
+        return {'err_msg': messages.MSG_EMPTY_ERR}
     if key_a <= 0:
         return {'err_msg': messages.NOT_POS_KEY_ERR}
     if math.gcd(key_a, len(alphabet)) != 1:
@@ -41,6 +47,8 @@ def enc_affine_cs(msg, key_a, key_b, alphabet):
 
 
 def dec_affine_cs(enc_msg, key_a, key_b, alphabet):
+    if not enc_msg:
+        return {'err_msg': messages.MSG_EMPTY_ERR}
     if key_a <= 0:
         return {'err_msg': messages.NOT_POS_KEY_ERR}
     if math.gcd(key_a, len(alphabet)) != 1:
@@ -56,6 +64,8 @@ def dec_affine_cs(enc_msg, key_a, key_b, alphabet):
 
 
 def enc_key_cs(msg, key_num, key_word, alphabet):
+    if not msg:
+        return {'err_msg': messages.MSG_EMPTY_ERR}
     if key_num <= 0:
         return {'err_msg': messages.NOT_POS_KEY_K_ERR}
     if key_num >= len(alphabet):
@@ -71,6 +81,8 @@ def enc_key_cs(msg, key_num, key_word, alphabet):
 
 
 def dec_key_cs(enc_msg, key_num, key_word, alphabet):
+    if not enc_msg:
+        return {'err_msg': messages.MSG_EMPTY_ERR}
     if key_num <= 0:
         return {'err_msg': messages.NOT_POS_KEY_K_ERR}
     if key_num >= len(alphabet):

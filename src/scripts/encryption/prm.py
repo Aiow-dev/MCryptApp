@@ -3,6 +3,8 @@ from . import messages
 
 def enc_simple_prm(msg, row, clm):  # Шифруемая фраза "Прилетаю седьмого в полдень"
     msg = msg.replace(' ', '').upper()  # Строки - 4, Столбцы - 6 Результат - "ПЕСМВДРТЕОПЕИАДГОНЛЬЮОЛЬ"
+    if not msg:
+        return {'err_msg': messages.MSG_EMPTY_ERR}
     if len(msg) != row * clm or row <= 0 or clm <= 0:
         return {'err_msg': messages.TABLE_PERM_ERR}
     mas = [[] for _ in range(row)]
@@ -20,6 +22,8 @@ def enc_simple_prm(msg, row, clm):  # Шифруемая фраза "Приле�
 
 def dec_simple_prm(enc_msg, row, clm):  # Строка - "ПЕСМВДРТЕОПЕИАДГОНЛЮЬОЛЬ"
     enc_msg = enc_msg.replace(' ', '').upper()  # Строки - 4, Столбцы - 6 Результат - "ПРИЛЕТАЮСЕДЬМОГОВПОЛДЕНЬ"
+    if not enc_msg:
+        return {'err_msg': messages.MSG_EMPTY_ERR}
     if len(enc_msg) != row * clm or row <= 0 or clm <= 0:
         return {'err_msg': messages.TABLE_PERM_ERR}
     mas = [[] for _ in range(row)]
@@ -37,6 +41,8 @@ def dec_simple_prm(enc_msg, row, clm):  # Строка - "ПЕСМВДРТЕОП
 
 def enc_key_prm(msg, row, clm, key):
     clear_msg = ''.join(msg.split(' ')).upper()
+    if not clear_msg:
+        return {'err_msg': messages.MSG_EMPTY_ERR}
     k = row
     if len(clear_msg) != k * clm or k <= 0 or clm <= 0:
         return {'err_msg': messages.TABLE_PERM_ERR}
@@ -58,6 +64,8 @@ def enc_key_prm(msg, row, clm, key):
 
 def dec_key_prm(enc_msg, row, clm, key):
     clear_enc_msg = ''.join(enc_msg.split(' ')).upper()
+    if not clear_enc_msg:
+        return {'err_msg': messages.MSG_EMPTY_ERR}
     if len(clear_enc_msg) != row * clm:
         return {'err_msg': messages.TABLE_PERM_ERR}
     if len(key) != clm:
@@ -83,6 +91,8 @@ def dec_key_prm(enc_msg, row, clm, key):
 
 def enc_double_prm(msg, row, clm, key_row, key_clm):
     msg = msg.replace(' ', '').upper()
+    if not msg:
+        return {'err_msg': messages.MSG_EMPTY_ERR}
     clm_tbl = {}
     if len(msg) != row * clm or row <= 0 or clm <= 0:
         return {'err_msg': messages.TABLE_PERM_ERR}
@@ -104,6 +114,8 @@ def enc_double_prm(msg, row, clm, key_row, key_clm):
 
 def dec_double_prm(enc_msg, row, clm, key_row, key_clm):
     enc_msg = enc_msg.replace(' ', '').upper()
+    if not enc_msg:
+        return {'err_msg': messages.MSG_EMPTY_ERR}
     clm_tbl = {}
     if len(enc_msg) != row * clm or row <= 0 or clm <= 0:
         return {'err_msg': messages.TABLE_PERM_ERR}

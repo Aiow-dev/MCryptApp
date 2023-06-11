@@ -3,6 +3,8 @@ from src.scripts import script_helpers
 
 
 def enc_double_playfair(msg, left_tbl, right_tbl, charset):
+    if not msg:
+        return {'err_msg': messages.MSG_EMPTY_ERR}
     left_size = len(left_tbl), len(left_tbl[0])
     right_size = len(right_tbl), len(right_tbl[0])
     if left_size[0] != right_size[0] and left_size[1] != right_size[1]:
@@ -29,6 +31,8 @@ def enc_double_playfair(msg, left_tbl, right_tbl, charset):
 
 
 def dec_double_playfair(enc_msg, left_tbl, right_tbl, charset):
+    if not enc_msg:
+        return {'err_msg': messages.MSG_EMPTY_ERR}
     left_size = len(left_tbl), len(left_tbl[0])
     right_size = len(right_tbl), len(right_tbl[0])
     if left_size[0] != right_size[0] and left_size[1] != right_size[1]:
@@ -71,8 +75,9 @@ if __name__ == '__main__':
                    ['Э', 'К', 'С', 'Ш', 'Д'],
                    ['Б', 'Ф', 'У', 'Ы', ' ']]
 
-    encryption_message = enc_double_playfair('ПРИЛЕТАЮ ШЕСТОГО', left_table, right_table)
+    chars = 'абвгдежзиклмнопрстуфхцчшщъыьэюя .:,'
+    encryption_message = enc_double_playfair('ПРИЛЕТАЮ ШЕСТОГО', left_table, right_table, chars)
     print(f'{encryption_message=}')
 
-    message = dec_double_playfair(encryption_message.get('msg'), left_table, right_table)
+    message = dec_double_playfair(encryption_message.get('msg'), left_table, right_table, chars)
     print(f'{message}')

@@ -12,11 +12,7 @@ def proc_double_playfair(form, encryption):
         left_tbl = tables.table_up_items(form['left_tbl_widget'])
         right_tbl = tables.table_up_items(form['right_tbl_widget'])
         enc_data = encryption(msg, left_tbl, right_tbl, chars.EXT_RU_ALPHABET)
-        enc_msg = enc_data.get('msg')
-        if enc_msg == '':
-            dialogs.show_err_msg('Сообщение не заполнено!', 'Ошибка!')
-            return
-        if enc_msg:
+        if enc_msg := enc_data.get('msg'):
             form['enc_msg_input'].setText(enc_msg)
             return
         err_msg = enc_data.get('err_msg')

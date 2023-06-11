@@ -105,6 +105,8 @@ def dec_trisemus(enc_msg, key, alphabet, size_a=4, size_b=8):
 
 
 def enc_vigenere(msg, key, alphabet):
+    if not msg:
+        return {'err_msg': messages.MSG_EMPTY_ERR}
     if not key.replace(' ', ''):
         return {'err_msg': messages.EMPTY_KEY_ERR}
     msg = msg.lower()
@@ -127,14 +129,14 @@ def enc_vigenere(msg, key, alphabet):
 
 
 def dec_vigenere(enc_msg, key, alphabet):
+    if not enc_msg:
+        return {'err_msg': messages.MSG_EMPTY_ERR}
     if not key.replace(' ', ''):
         return {'err_msg': messages.EMPTY_KEY_ERR}
     enc_msg = enc_msg.lower()
     key = key.lower()
     tbl = alphabet
     big_tbl = []
-    if not key:
-        return {'err_msg': messages.EMPTY_KEY_ERR}
     enc_table = key * math.ceil(len(enc_msg) // len(key)) + key
     for _ in range(33):
         big_tbl.append(tbl)
