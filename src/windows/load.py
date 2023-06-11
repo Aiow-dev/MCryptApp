@@ -1,10 +1,10 @@
 from PyQt5 import QtWidgets, QtGui
 
 from src.components import dialogs, setting, visual
-from . import messages, main_window, profile
+from . import messages, main_window, profile, account
 from src.views import load_win
 from src.controllers import user
-from src.services import shortcut_service
+from src.services import shortcut_service, user_service
 
 
 class LoadWindow(QtWidgets.QWidget):
@@ -29,7 +29,10 @@ def end_load(form, main_form):
     setting.set_parameter('show-load', False)
     form.set_is_complete(True)
     form.close()
-    main_window.show_main_window(main_form)
+    if user_service.is_authenticated():
+        main_window.show_main_window(main_form)
+    else:
+        account.show_account_window(main_form)
 
 
 def skip_load(form, main_form):

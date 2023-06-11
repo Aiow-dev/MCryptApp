@@ -16,8 +16,7 @@ if __name__ == '__main__':
 
     if setting.get_parameter('show-load'):
         load.show_load_window(MainWindow)
-
-    if user_service.is_authenticated():
+    elif user_service.is_authenticated():
         main_window.show_main_window(MainWindow)
     else:
         window = account.show_account_window(MainWindow)
