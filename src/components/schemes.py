@@ -140,7 +140,9 @@ def ts_light_sys_scheme(ui):
                   ui.dec_ts_oc_txt]
     line_edits_light(line_edits)
     visual.text_edit_light_sys(ui.enc_ts_ot_txt)
+    visual.text_edit_light_sys(ui.enc_ts_op_txt)
     visual.text_edit_light_sys(ui.dec_ts_ot_txt)
+    visual.text_edit_light_sys(ui.dec_ts_op_txt)
     labels = [ui.enc_ts_msg_lbl, ui.enc_ts_row_lbl, ui.enc_ts_clm_lbl,
               ui.enc_ts_key_lbl, ui.enc_ts_oc_lbl, ui.enc_ts_ot_lbl,
               ui.dec_ts_msg_lbl, ui.dec_ts_row_lbl, ui.dec_ts_clm_lbl,
@@ -174,7 +176,9 @@ def ps_light_sys_scheme(ui):
                   ui.dec_ps_oc_txt]
     line_edits_light(line_edits)
     visual.text_edit_light_sys(ui.enc_ps_ot_txt)
+    visual.text_edit_light_sys(ui.enc_ps_op_txt)
     visual.text_edit_light_sys(ui.dec_ps_ot_txt)
+    visual.text_edit_light_sys(ui.dec_ps_op_txt)
     labels = [ui.enc_ps_msg_lbl, ui.enc_ps_row_lbl, ui.enc_ps_clm_lbl,
               ui.enc_ps_key_lbl, ui.enc_ps_oc_lbl, ui.enc_ps_ot_lbl,
               ui.dec_ps_msg_lbl, ui.dec_ps_row_lbl, ui.dec_ps_clm_lbl,

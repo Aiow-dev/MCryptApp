@@ -41,7 +41,7 @@ def auto_classic_cs(form):
             if not result:
                 return
         if msg:
-            key = random.randint(1, len(chars.RU_ALPHABET) + 1)
+            key = random.randint(1, len(chars.RU_ALPHABET))
             form['key_input'].setText(str(key))
         else:
             dialogs.show_err_msg('Сообщение не заполнено!', 'Ошибка')

@@ -30,3 +30,19 @@ def get_index(txt, symbols):
 
 def get_chars_numbers(txt):
     return [str(index + 1) for index in range(len(txt))]
+
+
+def get_text_parts(txt):
+    len_txt = len(txt)
+    if len_txt % 2 == 1:
+        txt += 'ъ'
+
+    parts = []
+
+    for i in range(0, len_txt, 2):
+        if txt[i] == txt[i + 1]:
+            parts.extend((f'{txt[i]}ъ', f'{txt[i]}ъ'))
+        else:
+            parts.append(txt[i: i + 2])
+
+    return parts

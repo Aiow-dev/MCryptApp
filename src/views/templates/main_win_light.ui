@@ -10192,7 +10192,7 @@ QLineEdit:focus {
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_110">
+                          <layout class="QHBoxLayout" name="horizontalLayout_99">
                            <property name="topMargin">
                             <number>0</number>
                            </property>
@@ -10490,7 +10490,7 @@ QLineEdit:focus {
                        <property name="frameShadow">
                         <enum>QFrame::Raised</enum>
                        </property>
-                       <layout class="QHBoxLayout" name="horizontalLayout_99">
+                       <layout class="QHBoxLayout" name="horizontalLayout_110">
                         <item>
                          <widget class="QLabel" name="enc_ts_ot_lbl">
                           <property name="minimumSize">
@@ -10530,6 +10530,51 @@ QTextEdit:focus {
                           </property>
                           <property name="placeholderText">
                            <string>Текст шифрующей таблицы</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="enc_ts_op_lbl">
+                          <property name="minimumSize">
+                           <size>
+                            <width>80</width>
+                            <height>45</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLabel {
+	color: rgb(48, 47, 47);
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Заменяющие символы</string>
+                          </property>
+                          <property name="margin">
+                           <number>9</number>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QTextEdit" name="enc_ts_op_txt">
+                          <property name="styleSheet">
+                           <string notr="true">QTextEdit {
+	border: 1px solid rgb(98, 79, 130);
+	border-radius: 3px;
+	padding: 0 3px;
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
+}
+
+QTextEdit:focus {
+	border: 1px solid rgb(159, 115, 171);
+}</string>
+                          </property>
+                          <property name="readOnly">
+                           <bool>true</bool>
+                          </property>
+                          <property name="placeholderText">
+                           <string>Текст заменяющих символов</string>
                           </property>
                          </widget>
                         </item>
@@ -11221,6 +11266,51 @@ QTextEdit:focus {
                           </property>
                           <property name="placeholderText">
                            <string>Текст шифрующей таблицы</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="dec_ts_op_lbl">
+                          <property name="minimumSize">
+                           <size>
+                            <width>80</width>
+                            <height>45</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLabel {
+	color: rgb(48, 47, 47);
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Заменяющие символы</string>
+                          </property>
+                          <property name="margin">
+                           <number>9</number>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QTextEdit" name="dec_ts_op_txt">
+                          <property name="styleSheet">
+                           <string notr="true">QTextEdit {
+	border: 1px solid rgb(98, 79, 130);
+	border-radius: 3px;
+	padding: 0 3px;
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
+}
+
+QTextEdit:focus {
+	border: 1px solid rgb(159, 115, 171);
+}</string>
+                          </property>
+                          <property name="readOnly">
+                           <bool>true</bool>
+                          </property>
+                          <property name="placeholderText">
+                           <string>Текст заменяющих символов</string>
                           </property>
                          </widget>
                         </item>
@@ -13321,6 +13411,51 @@ QTextEdit:focus {
                           </property>
                          </widget>
                         </item>
+                        <item>
+                         <widget class="QLabel" name="enc_ps_op_lbl">
+                          <property name="minimumSize">
+                           <size>
+                            <width>80</width>
+                            <height>45</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLabel {
+	color: rgb(48, 47, 47);
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Шифр-биграммы</string>
+                          </property>
+                          <property name="margin">
+                           <number>9</number>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QTextEdit" name="enc_ps_op_txt">
+                          <property name="styleSheet">
+                           <string notr="true">QTextEdit {
+	border: 1px solid rgb(98, 79, 130);
+	border-radius: 3px;
+	padding: 0 3px;
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
+}
+
+QTextEdit:focus {
+	border: 1px solid rgb(159, 115, 171);
+}</string>
+                          </property>
+                          <property name="readOnly">
+                           <bool>true</bool>
+                          </property>
+                          <property name="placeholderText">
+                           <string>Текст биграмм шифрования</string>
+                          </property>
+                         </widget>
+                        </item>
                        </layout>
                       </widget>
                      </item>
@@ -14009,6 +14144,51 @@ QTextEdit:focus {
                           </property>
                           <property name="placeholderText">
                            <string>Текст шифрующей таблицы</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="dec_ps_op_lbl">
+                          <property name="minimumSize">
+                           <size>
+                            <width>80</width>
+                            <height>45</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLabel {
+	color: rgb(48, 47, 47);
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Шифр-биграммы</string>
+                          </property>
+                          <property name="margin">
+                           <number>9</number>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QTextEdit" name="dec_ps_op_txt">
+                          <property name="styleSheet">
+                           <string notr="true">QTextEdit {
+	border: 1px solid rgb(98, 79, 130);
+	border-radius: 3px;
+	padding: 0 3px;
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
+}
+
+QTextEdit:focus {
+	border: 1px solid rgb(159, 115, 171);
+}</string>
+                          </property>
+                          <property name="readOnly">
+                           <bool>true</bool>
+                          </property>
+                          <property name="placeholderText">
+                           <string>Текст биграмм шифрования</string>
                           </property>
                          </widget>
                         </item>

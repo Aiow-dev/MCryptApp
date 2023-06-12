@@ -126,6 +126,16 @@ def vigenere_table(row_values, tbl_obj, alphabet):
     tables.table(row_values, table_row, tbl_obj, h_headers, v_headers)
 
 
+def playfair_parts_text(msg, parts):
+    msg = msg.replace(' ', '').lower()
+    msg_parts = text.get_text_parts(msg)
+    parts_dict = {
+        f'{i + 1}. {msg_parts[i]}': parts[i]
+        for i in range(len(msg_parts))
+    }
+    return ''.join(msg_parts), tables.table_dict_to_str(parts_dict)
+
+
 def table_row(num_row, row_value, tbl_obj):
     color = scheme_colors.tbl_item_fg_default
     for num_column, value in enumerate(row_value):

@@ -8,6 +8,10 @@ def remove_item(item_value, lst):
         lst.remove(item_value)
 
 
+def remove_all_items(item_value, lst):
+    return [i for i in lst if i != item_value]
+
+
 def range_to_str(range_obj):
     return ''.join(str(index) for index in range_obj)
 

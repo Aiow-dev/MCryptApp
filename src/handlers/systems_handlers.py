@@ -1,24 +1,32 @@
 import random
 
-from src.helpers import tables
+from src.helpers import tables, items
 from src.components import enc_tables, dialogs, chars, dictionary
 from src.scripts.encryption import systems
 from . import messages
 
 
-def proc_playfair_trisemus(form, encryption):
+def proc_playfair(form, encryption):
     try:
-        msg = form['msg_input'].text()
+        msg = form['msg_input'].text().replace(' ', '').lower()
+        if len(msg) % 2 == 1:
+            msg += 'ъ'
+
         rows = int(form['rows_input'].text())
         columns = int(form['columns_input'].text())
-        key = form['key_input'].text()
+        key = form['key_input'].text().replace(' ', '').lower()
         alphabet = chars.CUT_RU_ALPHABET
         enc_data = encryption(msg, key, alphabet, rows, columns)
+
         if enc_msg := enc_data.get('msg'):
+            joined_msg, msg_parts_text = enc_tables.playfair_parts_text(msg, enc_data.get('parts'))
+            form['msg_input'].setText(joined_msg)
             enc_tbl = tables.table_to_str(enc_data.get('enc_table'))
             form['enc_msg_input'].setText(enc_msg)
             form['enc_tbl_input'].setText(enc_tbl)
+            form['parts_input'].setText(msg_parts_text)
             return
+
         err_msg = enc_data.get('err_msg')
         dialogs.show_err_msg(err_msg, 'Ошибка')
     except ValueError as value_error:
@@ -28,19 +36,47 @@ def proc_playfair_trisemus(form, encryption):
 
 
 def enc_proc_playfair(form):
-    proc_playfair_trisemus(form, systems.enc_playfair)
+    proc_playfair(form, systems.enc_playfair)
 
 
 def dec_proc_playfair(form):
-    proc_playfair_trisemus(form, systems.dec_playfair)
+    proc_playfair(form, systems.dec_playfair)
+
+
+def proc_trisemus(form, encryption):
+    try:
+        msg = form['msg_input'].text().lower()
+        rows = int(form['rows_input'].text())
+        columns = int(form['columns_input'].text())
+        key = form['key_input'].text().replace(' ', '').lower()
+        alphabet = chars.CUT_RU_ALPHABET
+        enc_data = encryption(msg, key, alphabet, rows, columns)
+
+        if enc_msg := enc_data.get('msg'):
+            msg_list = items.remove_all_items(' ', list(msg))
+            parts = items.remove_all_items(' ', enc_data.get('parts'))
+            msg_parts_text = tables.tables_to_str(msg_list, parts)
+            form['msg_input'].setText(msg)
+            enc_tbl = tables.table_to_str(enc_data.get('enc_table'))
+            form['enc_msg_input'].setText(enc_msg)
+            form['enc_tbl_input'].setText(enc_tbl)
+            form['parts_input'].setText(msg_parts_text)
+            return
+
+        err_msg = enc_data.get('err_msg')
+        dialogs.show_err_msg(err_msg, 'Ошибка')
+    except ValueError as value_error:
+        dialogs.show_err_msg('Параметры шифрования не соответствуют требуемым!', 'Ошибка')
+    except AttributeError as attribute_error:
+        dialogs.show_err_msg('Не удалось выполнить шифрование!', 'Ошибка')
 
 
 def enc_proc_trisemus(form):
-    proc_playfair_trisemus(form, systems.enc_trisemus)
+    proc_trisemus(form, systems.enc_trisemus)
 
 
 def dec_proc_trisemus(form):
-    proc_playfair_trisemus(form, systems.dec_trisemus)
+    proc_trisemus(form, systems.dec_trisemus)
 
 
 def auto_playfair_trisemus(form):
