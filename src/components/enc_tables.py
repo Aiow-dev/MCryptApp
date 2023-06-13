@@ -127,7 +127,6 @@ def vigenere_table(row_values, tbl_obj, alphabet):
 
 
 def playfair_parts_text(msg, parts):
-    msg = msg.replace(' ', '').lower()
     msg_parts = text.get_text_parts(msg)
     parts_dict = {
         f'{i + 1}. {msg_parts[i]}': parts[i]

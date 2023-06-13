@@ -8,11 +8,12 @@ from . import messages
 
 def proc_classic_cs(form, encryption):
     try:
-        msg = form['msg_input'].text()
+        msg = form['msg_input'].text().lower()
         key = int(form['key_input'].text())
         alphabet = chars.RU_ALPHABET
         enc_data = encryption(msg, key, alphabet)
         if enc_msg := enc_data.get('msg'):
+            form['msg_input'].setText(msg)
             enc_tbl = tables.tables_to_str(enc_data.get('table'), enc_data.get('enc_table'))
             form['enc_msg_input'].setText(enc_msg)
             form['enc_tbl_input'].setText(enc_tbl)
@@ -51,12 +52,13 @@ def auto_classic_cs(form):
 
 def proc_affine_cs(form, encryption):
     try:
-        msg = form['msg_input'].text()
+        msg = form['msg_input'].text().lower()
         key_a = int(form['key_a_input'].text())
         key_b = int(form['key_b_input'].text())
         alphabet = chars.RU_ALPHABET
         enc_data = encryption(msg, key_a, key_b, alphabet)
         if enc_msg := enc_data.get('msg'):
+            form['msg_input'].setText(msg)
             nums_column, num_tbl = enc_tables.affine_table_num_text(key_a, key_b)
             letters_column, letters_tbl = enc_tables.affine_table_letter_text(key_a, key_b, nums_column, alphabet)
             form['enc_msg_input'].setText(enc_msg)
@@ -102,12 +104,13 @@ def auto_affine_cs(form):
 
 def proc_key_cs(form, encryption):
     try:
-        msg = form['msg_input'].text()
+        msg = form['msg_input'].text().lower()
         key = form['key_input'].text()
         key_k = int(form['key_k_input'].text())
         alphabet = chars.RU_ALPHABET
         enc_data = encryption(msg, key_k, key, alphabet)
         if enc_msg := enc_data.get('msg'):
+            form['msg_input'].setText(msg)
             letters_column, enc_tbl = enc_tables.caesar_key_table_text(enc_data.get('enc_table'), alphabet)
             form['enc_msg_input'].setText(enc_msg)
             form['enc_tbl_input'].setText(enc_tbl)

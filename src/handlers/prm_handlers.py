@@ -8,11 +8,12 @@ from src.handlers import messages
 
 def proc_simple_prm(form, encryption):
     try:
-        msg = form['msg_input'].text()
+        msg = form['msg_input'].text().replace(' ', '').upper()
         rows = int(form['rows_input'].text())
         columns = int(form['columns_input'].text())
         enc_data = encryption(msg, rows, columns)
         if enc_msg := enc_data.get('msg'):
+            form['msg_input'].setText(msg)
             enc_tbl = tables.table_to_str(enc_data.get('enc_table'))
             form['enc_msg_input'].setText(enc_msg)
             form['enc_tbl_input'].setText(enc_tbl)
@@ -58,12 +59,13 @@ def auto_simple_prm(form):
 
 def proc_key_prm(form, encryption):
     try:
-        msg = form['msg_input'].text()
+        msg = form['msg_input'].text().replace(' ', '').upper()
         rows = int(form['rows_input'].text())
         columns = int(form['columns_input'].text())
         key = form['key_input'].text()
         enc_data = encryption(msg, rows, columns, key)
         if enc_msg := enc_data.get('msg'):
+            form['msg_input'].setText(msg)
             enc_tbl = enc_tables.key_permutation_table_text(enc_data.get('enc_table'))
             form['enc_msg_input'].setText(enc_msg)
             form['enc_tbl_input'].setText(enc_tbl)
@@ -115,7 +117,7 @@ def auto_key_prm(form):
 
 def proc_double_prm(form, encryption):
     try:
-        msg = form['msg_input'].text()
+        msg = form['msg_input'].text().replace(' ', '').upper()
         rows = int(form['rows_input'].text())
         columns = int(form['columns_input'].text())
         key_row = form['key_row_input'].text()
@@ -130,6 +132,7 @@ def proc_double_prm(form, encryption):
             return
         enc_data = encryption(msg, rows, columns, key_row, key_column)
         if enc_msg := enc_data.get('msg'):
+            form['msg_input'].setText(msg)
             enc_tbl = enc_tables.double_permutation_table_text(enc_data.get('enc_table'), key_row, key_column)
             form['enc_msg_input'].setText(enc_msg)
             form['enc_tbl_input'].setText(enc_tbl)

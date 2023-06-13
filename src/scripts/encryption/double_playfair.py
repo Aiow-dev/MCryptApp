@@ -11,10 +11,7 @@ def enc_double_playfair(msg, left_tbl, right_tbl, charset):
         return {'err_msg': messages.TABLES_RANKS_ERR}
     if left_size[0] * left_size[1] > len(charset):
         return {'err_msg': messages.OVER_TABLES_SIZE_ERR}
-    msg = msg.upper()
     len_msg = len(msg)
-    if len_msg % 2 == 1:
-        msg += 'Ъ'
     enc_msg = ''
     for i in range(0, len_msg, 2):
         first = script_helpers.find(left_tbl, msg[i], left_size[0], left_size[1])
@@ -39,10 +36,7 @@ def dec_double_playfair(enc_msg, left_tbl, right_tbl, charset):
         return {'err_msg': messages.TABLES_RANKS_ERR}
     if left_size[0] * left_size[1] > len(charset):
         return {'err_msg': messages.OVER_TABLES_SIZE_ERR}
-    enc_msg = enc_msg.upper()
     len_msg = len(enc_msg)
-    if len_msg % 2 == 1:
-        enc_msg += 'Ъ'
     msg = ''
     for i in range(0, len_msg, 2):
         first = script_helpers.find(right_tbl, enc_msg[i], left_size[0], left_size[1])

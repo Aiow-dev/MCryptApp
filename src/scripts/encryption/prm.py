@@ -2,7 +2,7 @@ from . import messages
 
 
 def enc_simple_prm(msg, row, clm):  # Шифруемая фраза "Прилетаю седьмого в полдень"
-    msg = msg.replace(' ', '').upper()  # Строки - 4, Столбцы - 6 Результат - "ПЕСМВДРТЕОПЕИАДГОНЛЬЮОЛЬ"
+    # Строки - 4, Столбцы - 6 Результат - "ПЕСМВДРТЕОПЕИАДГОНЛЬЮОЛЬ"
     if not msg:
         return {'err_msg': messages.MSG_EMPTY_ERR}
     if len(msg) != row * clm or row <= 0 or clm <= 0:
@@ -21,7 +21,7 @@ def enc_simple_prm(msg, row, clm):  # Шифруемая фраза "Приле�
 
 
 def dec_simple_prm(enc_msg, row, clm):  # Строка - "ПЕСМВДРТЕОПЕИАДГОНЛЮЬОЛЬ"
-    enc_msg = enc_msg.replace(' ', '').upper()  # Строки - 4, Столбцы - 6 Результат - "ПРИЛЕТАЮСЕДЬМОГОВПОЛДЕНЬ"
+    # Строки - 4, Столбцы - 6 Результат - "ПРИЛЕТАЮСЕДЬМОГОВПОЛДЕНЬ"
     if not enc_msg:
         return {'err_msg': messages.MSG_EMPTY_ERR}
     if len(enc_msg) != row * clm or row <= 0 or clm <= 0:
@@ -40,11 +40,10 @@ def dec_simple_prm(enc_msg, row, clm):  # Строка - "ПЕСМВДРТЕОП
 
 
 def enc_key_prm(msg, row, clm, key):
-    clear_msg = ''.join(msg.split(' ')).upper()
-    if not clear_msg:
+    if not msg:
         return {'err_msg': messages.MSG_EMPTY_ERR}
     k = row
-    if len(clear_msg) != k * clm or k <= 0 or clm <= 0:
+    if len(msg) != k * clm or k <= 0 or clm <= 0:
         return {'err_msg': messages.TABLE_PERM_ERR}
     if len(key) != clm:
         return {'err_msg': messages.KEY_COLUMN_ERR}
@@ -52,10 +51,10 @@ def enc_key_prm(msg, row, clm, key):
     index_ch = 0
     for index, ch in enumerate(key.lower()):
         if ch in cipher:
-            cipher[ch + str(index_ch)] = clear_msg[index * k:index * k + k]
+            cipher[ch + str(index_ch)] = msg[index * k:index * k + k]
             index_ch += 1
         else:
-            cipher[ch] = clear_msg[index * k:index * k + k]
+            cipher[ch] = msg[index * k:index * k + k]
     sorted_cipher = sorted(cipher)
     enc_msg = ''.join(''.join([cipher[key][index] for key in sorted_cipher]) for index in range(k))
     table = {key: cipher[key] for key in sorted_cipher}
@@ -63,17 +62,16 @@ def enc_key_prm(msg, row, clm, key):
 
 
 def dec_key_prm(enc_msg, row, clm, key):
-    clear_enc_msg = ''.join(enc_msg.split(' ')).upper()
-    if not clear_enc_msg:
+    if not enc_msg:
         return {'err_msg': messages.MSG_EMPTY_ERR}
-    if len(clear_enc_msg) != row * clm:
+    if len(enc_msg) != row * clm:
         return {'err_msg': messages.TABLE_PERM_ERR}
     if len(key) != clm:
         return {'err_msg': messages.KEY_COLUMN_ERR}
     mas = [[] for _ in range(clm)]
     for i in range(clm):
         for k in range(row):
-            mas[i].insert(k, clear_enc_msg[i + clm * k])
+            mas[i].insert(k, enc_msg[i + clm * k])
     cipher = {}
     for index_ch, ch in enumerate(key.lower()):
         if ch in cipher:
@@ -90,12 +88,11 @@ def dec_key_prm(enc_msg, row, clm, key):
 
 
 def enc_double_prm(msg, row, clm, key_row, key_clm):
-    msg = msg.replace(' ', '').upper()
     if not msg:
         return {'err_msg': messages.MSG_EMPTY_ERR}
-    clm_tbl = {}
     if len(msg) != row * clm or row <= 0 or clm <= 0:
         return {'err_msg': messages.TABLE_PERM_ERR}
+    clm_tbl = {}
     for index_clm, num_clm in enumerate(key_clm):
         part_clm_tbl = []
         for index_row in range(row):
@@ -113,12 +110,11 @@ def enc_double_prm(msg, row, clm, key_row, key_clm):
 
 
 def dec_double_prm(enc_msg, row, clm, key_row, key_clm):
-    enc_msg = enc_msg.replace(' ', '').upper()
     if not enc_msg:
         return {'err_msg': messages.MSG_EMPTY_ERR}
-    clm_tbl = {}
     if len(enc_msg) != row * clm or row <= 0 or clm <= 0:
         return {'err_msg': messages.TABLE_PERM_ERR}
+    clm_tbl = {}
     for index_clm, num_clm in enumerate(key_clm):
         part_clm_tbl = []
         for index_row in range(row):

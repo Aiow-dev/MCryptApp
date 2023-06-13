@@ -108,11 +108,12 @@ def auto_playfair_trisemus(form):
 
 def proc_vigenere(form, encryption):
     try:
-        msg = form['msg_input'].text()
-        key = form['key_input'].text()
+        msg = form['msg_input'].text().lower()
+        key = form['key_input'].text().replace(' ', '').lower()
         alphabet = chars.RU_ALPHABET
         enc_data = encryption(msg, key, alphabet)
         if enc_msg := enc_data.get('msg'):
+            form['msg_input'].setText(msg)
             enc_tbl = enc_tables.vigenere_table_text(enc_data.get('enc_table'), key, enc_msg, alphabet)
             form['enc_msg_input'].setText(enc_msg)
             form['enc_tbl_input'].setText(enc_tbl)
