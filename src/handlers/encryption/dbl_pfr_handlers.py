@@ -3,7 +3,7 @@ import random
 from src.components import dialogs, chars, enc_tables
 from src.helpers import tables, items
 from src.scripts.encryption import double_playfair
-from . import messages
+from src.handlers import messages
 
 
 def proc_double_playfair(form, encryption):

@@ -1,4 +1,4 @@
-from src.handlers import systems_handlers
+from src.handlers.encryption import systems_handlers
 from src.events import event_components
 
 

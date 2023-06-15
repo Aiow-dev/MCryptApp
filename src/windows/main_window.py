@@ -2,13 +2,11 @@ from PyQt5 import QtWidgets, QtGui
 
 from src.controllers import (
     page,
-    menu,
-    cs_controllers,
-    prm_controllers,
-    ms_controllers,
-    systems_controllers,
-    dbl_pfr_controllers
+    menu
 )
+from src.controllers.encryption import systems_controllers, dbl_pfr_controllers, ms_controllers, prm_controllers, \
+    cs_controllers
+from src.controllers import handbook
 from src.components import dialogs, setting, schemes, visual
 from src.helpers import time, func, win
 from src.windows import settings, messages
@@ -125,6 +123,10 @@ def init_sys_menu_line_styles(is_light, menu_style, ui):
         visual.menu_bar_dark_sys(ui.menu_bar)
 
 
+def init_handbook_pages(ui_window):
+    handbook.init_handbook_smp(ui_window)
+
+
 def init_pages(ui_window):
     prm_controllers.init_simple_permutation(ui_window)
     prm_controllers.init_key_permutation(ui_window)
@@ -137,6 +139,8 @@ def init_pages(ui_window):
     systems_controllers.init_playfair(ui_window)
     systems_controllers.init_trisemus(ui_window)
     systems_controllers.init_vigenere(ui_window)
+
+    init_handbook_pages(ui_window)
 
 
 def enable_visual_styles(window):

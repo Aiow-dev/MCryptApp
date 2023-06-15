@@ -80,6 +80,16 @@ def is_empty_table(tbl_wgt):
     return True
 
 
+def is_empty_table_text(tbl_wgt):
+    size = tables.table_size(tbl_wgt)
+    for row in range(size[0]):
+        for column in range(size[1]):
+            item = tbl_wgt.item(row, column)
+            if item is not None and item.text() != '':
+                return False
+    return True
+
+
 if __name__ == '__main__':
     multipliers_couple = get_multipliers(20)
     print(couple_multipliers(multipliers_couple))

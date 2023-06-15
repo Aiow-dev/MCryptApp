@@ -1,4 +1,4 @@
-from src.handlers import dbl_pfr_handlers
+from src.handlers.encryption import dbl_pfr_handlers
 from src.events import event_components
 from src.components import scheme_colors, chars
 

@@ -3,7 +3,7 @@ import random
 from src.components import enc_tables, dialogs, chars, dictionary
 from src.helpers import tables
 from src.scripts.encryption import cs
-from . import messages
+from src.handlers import messages
 
 
 def proc_classic_cs(form, encryption):

@@ -33,6 +33,14 @@ def tbl_rank_text_changed(text_obj, tbl_obj, max_limit):
     text_obj.textChanged.connect(lambda: action.set_tbl_rank(tbl_obj, text_obj, max_limit))
 
 
+def tbl_row_text_changed(text_obj, tbl_obj, max_limit):
+    text_obj.textChanged.connect(lambda: action.set_tbl_row(tbl_obj, text_obj, max_limit))
+
+
+def tbl_column_text_changed(text_obj, tbl_obj, max_limit):
+    text_obj.textChanged.connect(lambda: action.set_tbl_clm(tbl_obj, text_obj, max_limit))
+
+
 def tbl_pos_num_item_changed(tbl_obj, color_default, color_err):
     tbl_obj.itemChanged.connect(
         lambda item: table.check_tbl_pos_num(item, color_default, color_err))

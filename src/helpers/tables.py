@@ -57,6 +57,21 @@ def table_size(tbl_wgt):
     return tbl_wgt.rowCount(), tbl_wgt.columnCount()
 
 
+def clear_table_text(tbl_wgt):
+    max_row, max_column = table_size(tbl_wgt)
+    for row in range(max_row):
+        for column in range(max_column):
+            item = tbl_wgt.item(row, column)
+            item.setText('')
+
+
+def set_table_empty_items(tbl_wgt):
+    max_row, max_column = table_size(tbl_wgt)
+    for row in range(max_row):
+        for column in range(max_column):
+            tbl_wgt.setItem(row, column, QTableWidgetItem())
+
+
 def table_up_items(tbl_wgt):
     size = table_size(tbl_wgt)
     items = []

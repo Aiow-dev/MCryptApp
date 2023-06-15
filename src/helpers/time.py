@@ -8,6 +8,11 @@ def get_current_hour():
     return current_datetime.hour
 
 
+def block_element_time(ui_obj, time):
+    ui_obj.setEnabled(False)
+    QtCore.QTimer.singleShot(time, lambda: ui_obj.setDisabled(False))
+
+
 class TimerDelay:
     def __init__(self, time, timeout_func):
         self.__time = time

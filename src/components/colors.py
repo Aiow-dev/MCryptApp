@@ -47,5 +47,6 @@ class Palette(enum.Enum):
     eerie_black = ConvertedColor(30, 30, 30)
     dark_purple = ConvertedColor(98, 79, 130)
     light_purple = ConvertedColor(159, 115, 171)
+    select_purple = ConvertedColor(182, 174, 204)
     gray = ConvertedColor(240, 243, 249)
     logan = ConvertedColor(182, 174, 204)

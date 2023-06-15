@@ -46,3 +46,16 @@ def get_text_parts(txt):
             parts.append(txt[i: i + 2])
 
     return parts
+
+
+def get_text_blocks(txt, block_size, num_blocks):
+    if len(txt) != num_blocks * block_size:
+        return []
+    blocks = []
+    for i in range(num_blocks):
+        block = []
+        for j in range(block_size):
+            index = i * block_size + j
+            block.append(txt[index])
+        blocks.append(block)
+    return blocks

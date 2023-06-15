@@ -1,4 +1,4 @@
-from src.handlers import prm_handlers
+from src.handlers.encryption import prm_handlers
 from src.events import event_components
 
 

@@ -1,4 +1,4 @@
-from src.handlers import ms_handlers
+from src.handlers.encryption import ms_handlers
 from src.events import event_components
 from src.components import scheme_colors
 
