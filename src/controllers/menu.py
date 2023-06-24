@@ -10,6 +10,7 @@ def init_menu_pages(ui):
                ui.action_vs, ui.action_ps, ui.action_dp, ]
     for index, action in enumerate(actions):
         action.triggered.connect(page.to_page_combo_box(ui, index))
+    init_menu_handbook_pages(ui)
 
 
 def init_menu_handbook_pages(ui):
@@ -24,7 +25,6 @@ def init_menu(window, ui):
     ui.action_exit.triggered.connect(app.quit_confirm)
     ui.action_restart.triggered.connect(app.restart_confirm)
     init_menu_pages(ui)
-    init_menu_handbook_pages(ui)
 
 
 def settings_menu():

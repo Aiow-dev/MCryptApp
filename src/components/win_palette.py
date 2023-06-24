@@ -14,4 +14,6 @@ def win_complementary_converted(accent):
 
 
 accent_color = 'rgb(0, 120, 212)'
+accent_transparent_color = 'rgba(0, 120, 212, 50)'
 complementary_color = 'rgb(0, 147, 255)'
+complementary_q_color = colors.ConvertedColor(0, 147, 255).to_rgb_q()

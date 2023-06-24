@@ -1037,15 +1037,6 @@ def combo_box_dark_sys(combo_box_obj):
     combo_box_obj.setStyleSheet(combo_box_stylesheet)
 
 
-def label_light_sys(label_obj):
-    label_stylesheet = f'''
-    QLabel {{
-        color: {visual_colors.dark_charcoal};
-    }}
-    '''
-    label_obj.setStyleSheet(label_stylesheet)
-
-
 def push_btn_sys(push_btn_obj):
     push_btn_stylesheet = f'''
     QPushButton {{
@@ -1058,6 +1049,81 @@ def push_btn_sys(push_btn_obj):
     QPushButton:hover {{
         border: 1px solid {win_palette.complementary_color};
         background-color: {win_palette.complementary_color};
+    }}
+    '''
+    push_btn_obj.setStyleSheet(push_btn_stylesheet)
+
+
+def push_btn_disable_light_sys(push_btn_obj):
+    push_btn_stylesheet = f'''
+    QPushButton {{
+        border: 1px solid {win_palette.accent_color};
+        border-radius: 3px;
+        background-color: {win_palette.accent_color};
+        color: {visual_colors.gray};
+    }}
+
+    QPushButton:hover {{
+        border: 1px solid {win_palette.complementary_color};
+        background-color: {win_palette.complementary_color};
+    }}
+
+    QPushButton:disabled {{
+        border: 1px solid {visual_colors.alto};
+        background-color: {visual_colors.alto};
+        color: {visual_colors.dark_charcoal};
+    }}
+    '''
+    push_btn_obj.setStyleSheet(push_btn_stylesheet)
+
+
+def push_btn_disable_dark_sys(push_btn_obj):
+    push_btn_stylesheet = f'''
+    QPushButton {{
+        border: 1px solid {win_palette.accent_color};
+        border-radius: 3px;
+        background-color: {win_palette.accent_color};
+        color: {visual_colors.gray};
+    }}
+
+    QPushButton:hover {{
+        border: 1px solid {win_palette.complementary_color};
+        background-color: {win_palette.complementary_color};
+    }}
+
+    QPushButton:disabled {{
+        border: 1px solid {visual_colors.disabled_gray};
+        background-color: {visual_colors.disabled_gray};
+        color: {visual_colors.dark_charcoal};
+    }}
+    '''
+    push_btn_obj.setStyleSheet(push_btn_stylesheet)
+
+
+def bg_btn_light_sys(push_btn_obj):
+    push_btn_stylesheet = f'''
+    QPushButton {{
+        border: none;
+        border-radius: 3px;
+    }}
+
+    QPushButton:hover {{
+        background-color: {win_palette.accent_transparent_color};
+    }}
+    '''
+    push_btn_obj.setStyleSheet(push_btn_stylesheet)
+
+
+def bg_btn_dark_sys(push_btn_obj):
+    push_btn_stylesheet = f'''
+    QPushButton {{
+        border: none;
+        border-radius: 3px;
+        color: {visual_colors.gray};
+    }}
+
+    QPushButton:hover {{
+        background-color: {win_palette.accent_transparent_color};
     }}
     '''
     push_btn_obj.setStyleSheet(push_btn_stylesheet)
@@ -1097,6 +1163,7 @@ def panel_push_btn_dark_sys(push_btn_obj):
 def tbl_wgt_light_sys(tbl_wgt_obj):
     table_stylesheet = f'''
     QTableWidget {{
+        border: none;
         color: {visual_colors.dark_charcoal};
         gridline-color: {win_palette.complementary_color};
         selection-background-color: {win_palette.complementary_color};

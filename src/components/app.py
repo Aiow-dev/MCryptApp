@@ -9,7 +9,9 @@ def enable_visual_styles():
     accent = win_palette.win_accent_converted()
     complementary = win_palette.win_complementary_converted(accent)
     win_palette.accent_color = accent.to_rgb_str()
+    win_palette.accent_transparent_color = accent.to_transparent_str(50)
     win_palette.complementary_color = complementary.to_rgb_str()
+    win_palette.complementary_q_color = complementary.to_rgb_q()
     dialogs.init_visual_dialogs()
 
 

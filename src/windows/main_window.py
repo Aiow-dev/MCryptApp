@@ -124,6 +124,12 @@ def init_sys_menu_line_styles(is_light, menu_style, ui):
 
 
 def init_handbook_pages(ui_window):
+    btn_next_list = [ui_window.btn_hdk_next]
+    btn_prev_list = [ui_window.btn_hdk_prev]
+    for btn in btn_next_list:
+        btn.clicked.connect(lambda: page.to_next_page(ui_window))
+    for btn in btn_prev_list:
+        btn.clicked.connect(lambda: page.to_prev_page(ui_window))
     handbook.init_handbook_smp(ui_window)
 
 

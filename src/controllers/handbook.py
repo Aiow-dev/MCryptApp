@@ -1,18 +1,30 @@
 from src.handlers.handbook import handbook_prm
-from src.events import animation
-
-
-def write_table(ui):
-    timer = animation.TableAnimation(ui.hdk_enc_row_smp_tbl, 500)
-    timer.write_column_symbols(ui.hdk_enc_row_smp_msg_txt)
+from src.events import event_components
 
 
 def init_handbook_smp(ui):
-    row_form = {'msg_input': ui.hdk_enc_row_smp_msg_txt, 'rows_input': ui.hdk_enc_row_tr_smp_txt,
-                'columns_input': ui.hdk_enc_row_tc_smp_txt, 'tbl_row_wgt': ui.hdk_enc_row_smp_tbl,
-                'tbl_clm_wgt': ui.hdk_enc_clm_smp_tbl, 'btn_row_input': ui.hdk_enc_row_smp_btn,
-                'btn_clm_input': ui.hdk_enc_clm_smp_btn}
-    clm_form = {'msg_input': ui.hdk_enc_clm_smp_msg_txt, 'tbl_wgt': ui.hdk_enc_clm_smp_tbl,
-                'btn_clm_input': ui.hdk_enc_clm_smp_btn, 'btn_row_input': ui.hdk_enc_row_smp_btn}
-    ui.hdk_enc_row_smp_btn.clicked.connect(lambda: handbook_prm.proc_handbook_row_smp(row_form))
-    ui.hdk_enc_clm_smp_btn.clicked.connect(lambda: handbook_prm.proc_handbook_clm_smp(clm_form))
+    write_enc_form = {'in_input': ui.hdk_enc_smp_in_txt, 'rows_input': ui.hdk_enc_smp_row_txt,
+                      'columns_input': ui.hdk_enc_smp_clm_txt, 'tbl_write_wgt': ui.hdk_enc_smp_tbl,
+                      'tbl_read_wgt': ui.hdk_enc_smp_tbl_2, 'btn_write': ui.hdk_enc_smp_btn,
+                      'btn_read': ui.hdk_enc_smp_btn_2}
+    read_enc_form = {'out_input': ui.hdk_enc_smp_out_txt, 'tbl_write_wgt': ui.hdk_enc_smp_tbl,
+                     'tbl_read_wgt': ui.hdk_enc_smp_tbl_2, 'btn_write': ui.hdk_enc_smp_btn,
+                     'btn_read': ui.hdk_enc_smp_btn_2, 'dec_in_input': ui.hdk_dec_smp_in_txt,
+                     'rows_input': ui.hdk_enc_smp_row_txt, 'columns_input': ui.hdk_enc_smp_clm_txt,
+                     'dec_rows_input': ui.hdk_dec_smp_row_txt, 'dec_columns_input': ui.hdk_dec_smp_clm_txt}
+    write_dec_form = {'in_input': ui.hdk_dec_smp_in_txt, 'rows_input': ui.hdk_dec_smp_row_txt,
+                      'columns_input': ui.hdk_dec_smp_clm_txt, 'tbl_write_wgt': ui.hdk_dec_smp_tbl,
+                      'tbl_read_wgt': ui.hdk_dec_smp_tbl_2, 'btn_write': ui.hdk_dec_smp_btn,
+                      'btn_read': ui.hdk_dec_smp_btn_2}
+    read_dec_form = {'out_input': ui.hdk_dec_smp_out_txt, 'tbl_read_wgt': ui.hdk_dec_smp_tbl_2,
+                     'btn_write': ui.hdk_dec_smp_btn, 'btn_read': ui.hdk_dec_smp_btn_2}
+    ui.hdk_enc_smp_btn.clicked.connect(lambda: handbook_prm.proc_handbook_enc_write_smp(write_enc_form))
+    ui.hdk_enc_smp_btn_2.clicked.connect(lambda: handbook_prm.proc_handbook_enc_read_smp(read_enc_form))
+    ui.hdk_dec_smp_btn.clicked.connect(lambda: handbook_prm.proc_handbook_dec_write_smp(write_dec_form))
+    ui.hdk_dec_smp_btn_2.clicked.connect(lambda: handbook_prm.proc_handbook_dec_read_smp(read_dec_form))
+    event_components.empty_text_changed(ui.hdk_enc_smp_in_txt)
+    event_components.empty_text_changed(ui.hdk_dec_smp_in_txt)
+    event_components.positive_number_text_changed(ui.hdk_enc_smp_row_txt)
+    event_components.positive_number_text_changed(ui.hdk_enc_smp_clm_txt)
+    event_components.positive_number_text_changed(ui.hdk_dec_smp_row_txt)
+    event_components.positive_number_text_changed(ui.hdk_dec_smp_clm_txt)

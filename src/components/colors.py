@@ -36,6 +36,9 @@ class ConvertedColor:
     def to_rgb_q(self):
         return QColor(self.get_r(), self.get_g(), self.get_b())
 
+    def to_transparent_str(self, a):
+        return f'rgba({self.get_r()}, {self.get_g()}, {self.get_b()}, {a})'
+
 
 class Palette(enum.Enum):
     dark_charcoal = ConvertedColor(48, 47, 47)

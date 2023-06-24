@@ -15926,7 +15926,7 @@ QPushButton:hover {
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="handbook_smp_page">
+         <widget class="QWidget" name="hdk_smp_page">
           <layout class="QHBoxLayout" name="horizontalLayout_217">
            <item>
             <widget class="QFrame" name="frame">
@@ -15937,14 +15937,20 @@ QPushButton:hover {
               <enum>QFrame::Raised</enum>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_93">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
               <item>
                <widget class="QFrame" name="frame_2">
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>50</height>
-                 </size>
-                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -15971,6 +15977,38 @@ QPushButton:hover {
                    </property>
                   </widget>
                  </item>
+                 <item>
+                  <widget class="QPushButton" name="btn_hdk_next">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>35</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+	border: none;
+	border-radius: 3px;
+}
+
+QPushButton:hover {
+	background-color: rgba(98, 79, 130, 50);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>→</string>
+                   </property>
+                   <property name="shortcut">
+                    <string>Right</string>
+                   </property>
+                  </widget>
+                 </item>
                 </layout>
                </widget>
               </item>
@@ -15983,15 +16021,6 @@ QPushButton:hover {
                  <enum>QFrame::Raised</enum>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_219">
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
                  <property name="bottomMargin">
                   <number>0</number>
                  </property>
@@ -16021,7 +16050,7 @@ QPushButton:hover {
                       <property name="maximumSize">
                        <size>
                         <width>16777215</width>
-                        <height>120</height>
+                        <height>180</height>
                        </size>
                       </property>
                       <property name="styleSheet">
@@ -16035,12 +16064,16 @@ QPushButton:hover {
                       </property>
                       <property name="plainText">
                        <string>1. Сообщение записывается в таблицу по столбцам. Пробелы при этом могут игнорироваться
-Размер таблицы является ключом шифрования. Ключ подбирается таким образом, чтобы произведение количества строк и столбцов совпадало с числом символов сообщения</string>
+Размер таблицы является ключом шифрования. Ключ подбирается таким образом, чтобы произведение количества строк и столбцов совпадало с числом символов сообщения
+Например:
+Исходное сообщение - Прилетаю десятого в полдень, тогда:
+Количество символов (без учета пробелов) - 24
+Ключ - 4 строки, 6 столбцов (4 х 6 = 24)</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="hdk_enc_row_smp_msg_txt">
+                     <widget class="QLineEdit" name="hdk_enc_smp_in_txt">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
@@ -16093,7 +16126,7 @@ QLineEdit:focus {
                        <item>
                         <widget class="QLabel" name="label_2">
                          <property name="text">
-                          <string>Ключ (подбирается автоматически):</string>
+                          <string>Ключ:</string>
                          </property>
                         </widget>
                        </item>
@@ -16126,7 +16159,7 @@ QLineEdit:focus {
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLineEdit" name="hdk_enc_row_tr_smp_txt">
+                           <widget class="QLineEdit" name="hdk_enc_smp_row_txt">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
@@ -16147,8 +16180,11 @@ QLineEdit:focus {
 	border: 1px solid rgb(159, 115, 171);
 }</string>
                             </property>
+                            <property name="text">
+                             <string>4</string>
+                            </property>
                             <property name="readOnly">
-                             <bool>true</bool>
+                             <bool>false</bool>
                             </property>
                             <property name="placeholderText">
                              <string>Количество строк</string>
@@ -16166,7 +16202,7 @@ QLineEdit:focus {
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLineEdit" name="hdk_enc_row_tc_smp_txt">
+                           <widget class="QLineEdit" name="hdk_enc_smp_clm_txt">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
@@ -16187,8 +16223,11 @@ QLineEdit:focus {
 	border: 1px solid rgb(159, 115, 171);
 }</string>
                             </property>
+                            <property name="text">
+                             <string>6</string>
+                            </property>
                             <property name="readOnly">
-                             <bool>true</bool>
+                             <bool>false</bool>
                             </property>
                             <property name="placeholderText">
                              <string>Количество столбцов</string>
@@ -16205,9 +16244,27 @@ QLineEdit:focus {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QTableWidget" name="hdk_enc_row_smp_tbl">
-                      <property name="styleSheet">
-                       <string notr="true">QTableWidget {
+                     <widget class="QFrame" name="frame_19">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_229">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>6</number>
+                       </property>
+                       <item>
+                        <widget class="QTableWidget" name="hdk_enc_smp_tbl">
+                         <property name="styleSheet">
+                          <string notr="true">QTableWidget {
 	border: none;
 	color: rgb(48, 47, 47);
 	gridline-color: rgb(159, 115, 171);
@@ -16223,152 +16280,155 @@ QHeaderView::section {
 QTableCornerButton::section {
 	background-color: rgb(98, 79, 130);
 }</string>
-                      </property>
-                      <property name="autoScroll">
-                       <bool>true</bool>
-                      </property>
-                      <property name="editTriggers">
-                       <set>QAbstractItemView::NoEditTriggers</set>
-                      </property>
-                      <property name="rowCount">
-                       <number>4</number>
-                      </property>
-                      <property name="columnCount">
-                       <number>6</number>
-                      </property>
-                      <attribute name="horizontalHeaderDefaultSectionSize">
-                       <number>80</number>
-                      </attribute>
-                      <row/>
-                      <row/>
-                      <row/>
-                      <row/>
-                      <column/>
-                      <column/>
-                      <column/>
-                      <column/>
-                      <column/>
-                      <column/>
-                      <item row="0" column="0">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="0" column="1">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="0" column="2">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="0" column="3">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="0" column="4">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="0" column="5">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="1" column="0">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="1" column="1">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="1" column="2">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="1" column="3">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="1" column="4">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="1" column="5">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="2" column="0">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="2" column="1">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="2" column="2">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="2" column="3">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="2" column="4">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="2" column="5">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="3" column="0">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="3" column="1">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="3" column="2">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="3" column="3">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="3" column="4">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="3" column="5">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
+                         </property>
+                         <property name="autoScroll">
+                          <bool>true</bool>
+                         </property>
+                         <property name="editTriggers">
+                          <set>QAbstractItemView::NoEditTriggers</set>
+                         </property>
+                         <property name="rowCount">
+                          <number>4</number>
+                         </property>
+                         <property name="columnCount">
+                          <number>6</number>
+                         </property>
+                         <attribute name="horizontalHeaderDefaultSectionSize">
+                          <number>90</number>
+                         </attribute>
+                         <row/>
+                         <row/>
+                         <row/>
+                         <row/>
+                         <column/>
+                         <column/>
+                         <column/>
+                         <column/>
+                         <column/>
+                         <column/>
+                         <item row="0" column="0">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="1">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="2">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="3">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="4">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="5">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="0">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="1">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="2">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="3">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="4">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="5">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="0">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="1">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="2">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="3">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="4">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="5">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="0">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="1">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="2">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="3">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="4">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="5">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
                      </widget>
                     </item>
                     <item>
@@ -16380,8 +16440,14 @@ QTableCornerButton::section {
                        <enum>QFrame::Raised</enum>
                       </property>
                       <layout class="QHBoxLayout" name="horizontalLayout_221">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
                        <item>
-                        <widget class="QPushButton" name="hdk_enc_row_smp_btn">
+                        <widget class="QPushButton" name="hdk_enc_smp_btn">
                          <property name="minimumSize">
                           <size>
                            <width>130</width>
@@ -16405,10 +16471,16 @@ QTableCornerButton::section {
 QPushButton:hover {
 	border: 1px solid rgb(159, 115, 171);
 	background-color: rgb(159, 115, 171);
+}
+
+QPushButton:disabled {
+	border: 1px solid rgb(221, 221, 221);
+	background-color: rgb(221, 221, 221);
+	color: rgb(48, 47, 47);
 }</string>
                          </property>
                          <property name="text">
-                          <string>Воспроизвести анимацию</string>
+                          <string>Воспроизвести</string>
                          </property>
                         </widget>
                        </item>
@@ -16441,10 +16513,16 @@ QPushButton:hover {
                     </property>
                     <item>
                      <widget class="QPlainTextEdit" name="plainTextEdit_3">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>277</height>
+                       </size>
+                      </property>
                       <property name="maximumSize">
                        <size>
                         <width>16777215</width>
-                        <height>217</height>
+                        <height>277</height>
                        </size>
                       </property>
                       <property name="styleSheet">
@@ -16462,7 +16540,7 @@ QPushButton:hover {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="hdk_enc_clm_smp_msg_txt">
+                     <widget class="QLineEdit" name="hdk_enc_smp_out_txt">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
@@ -16487,7 +16565,7 @@ QLineEdit:focus {
                        <bool>true</bool>
                       </property>
                       <property name="placeholderText">
-                       <string>Текст зашифрованного сообщения (автоматически)</string>
+                       <string>Текст зашифрованного сообщения (заполняется автоматически)</string>
                       </property>
                       <property name="clearButtonEnabled">
                        <bool>true</bool>
@@ -16495,9 +16573,27 @@ QLineEdit:focus {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QTableWidget" name="hdk_enc_clm_smp_tbl">
-                      <property name="styleSheet">
-                       <string notr="true">QTableWidget {
+                     <widget class="QFrame" name="frame_20">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_230">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QTableWidget" name="hdk_enc_smp_tbl_2">
+                         <property name="styleSheet">
+                          <string notr="true">QTableWidget {
 	border: none;
 	color: rgb(48, 47, 47);
 	gridline-color: rgb(159, 115, 171);
@@ -16513,152 +16609,155 @@ QHeaderView::section {
 QTableCornerButton::section {
 	background-color: rgb(98, 79, 130);
 }</string>
-                      </property>
-                      <property name="autoScroll">
-                       <bool>true</bool>
-                      </property>
-                      <property name="editTriggers">
-                       <set>QAbstractItemView::NoEditTriggers</set>
-                      </property>
-                      <property name="rowCount">
-                       <number>4</number>
-                      </property>
-                      <property name="columnCount">
-                       <number>6</number>
-                      </property>
-                      <attribute name="horizontalHeaderDefaultSectionSize">
-                       <number>80</number>
-                      </attribute>
-                      <row/>
-                      <row/>
-                      <row/>
-                      <row/>
-                      <column/>
-                      <column/>
-                      <column/>
-                      <column/>
-                      <column/>
-                      <column/>
-                      <item row="0" column="0">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="0" column="1">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="0" column="2">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="0" column="3">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="0" column="4">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="0" column="5">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="1" column="0">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="1" column="1">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="1" column="2">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="1" column="3">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="1" column="4">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="1" column="5">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="2" column="0">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="2" column="1">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="2" column="2">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="2" column="3">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="2" column="4">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="2" column="5">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="3" column="0">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="3" column="1">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="3" column="2">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="3" column="3">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="3" column="4">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item row="3" column="5">
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
+                         </property>
+                         <property name="autoScroll">
+                          <bool>true</bool>
+                         </property>
+                         <property name="editTriggers">
+                          <set>QAbstractItemView::NoEditTriggers</set>
+                         </property>
+                         <property name="rowCount">
+                          <number>4</number>
+                         </property>
+                         <property name="columnCount">
+                          <number>6</number>
+                         </property>
+                         <attribute name="horizontalHeaderDefaultSectionSize">
+                          <number>89</number>
+                         </attribute>
+                         <row/>
+                         <row/>
+                         <row/>
+                         <row/>
+                         <column/>
+                         <column/>
+                         <column/>
+                         <column/>
+                         <column/>
+                         <column/>
+                         <item row="0" column="0">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="1">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="2">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="3">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="4">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="5">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="0">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="1">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="2">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="3">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="4">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="5">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="0">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="1">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="2">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="3">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="4">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="5">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="0">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="1">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="2">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="3">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="4">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="5">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
                      </widget>
                     </item>
                     <item>
@@ -16670,8 +16769,14 @@ QTableCornerButton::section {
                        <enum>QFrame::Raised</enum>
                       </property>
                       <layout class="QHBoxLayout" name="horizontalLayout_222">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
                        <item>
-                        <widget class="QPushButton" name="hdk_enc_clm_smp_btn">
+                        <widget class="QPushButton" name="hdk_enc_smp_btn_2">
                          <property name="minimumSize">
                           <size>
                            <width>130</width>
@@ -16695,10 +16800,905 @@ QTableCornerButton::section {
 QPushButton:hover {
 	border: 1px solid rgb(159, 115, 171);
 	background-color: rgb(159, 115, 171);
+}
+
+QPushButton:disabled {
+	border: 1px solid rgb(221, 221, 221);
+	background-color: rgb(221, 221, 221);
+	color: rgb(48, 47, 47);
 }</string>
                          </property>
                          <property name="text">
-                          <string>Воспроизвести анимацию</string>
+                          <string>Воспроизвести</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="hdk_smp_page_2">
+          <layout class="QHBoxLayout" name="horizontalLayout_228">
+           <item>
+            <widget class="QFrame" name="frame_10">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_97">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="frame_11">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_223">
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_5">
+                   <property name="text">
+                    <string>Простая перестановка (расшифрование)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btn_hdk_prev">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>35</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+	border: none;
+	border-radius: 3px;
+}
+
+QPushButton:hover {
+	background-color: rgba(98, 79, 130, 50);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>←</string>
+                   </property>
+                   <property name="shortcut">
+                    <string>Left</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_12">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_224">
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="frame_13">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_98">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QPlainTextEdit" name="plainTextEdit_4">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>140</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPlainTextEdit {
+	border: none;
+	color: rgb(48, 47, 47);
+}</string>
+                      </property>
+                      <property name="readOnly">
+                       <bool>true</bool>
+                      </property>
+                      <property name="plainText">
+                       <string>1. При расшифровании действия выполняют в обратном порядке
+Зашифрованное сообщение записывается в таблицу по строкам. Пробелы при этом могут игнорироваться
+Размер таблицы является ключом шифрования. Для расшифрования сообщения применяется ключ, используемый при шифровании данного сообщения</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="hdk_dec_smp_in_txt">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>45</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLineEdit {
+	border: 1px solid rgb(98, 79, 130);
+	border-radius: 3px;
+	padding: 0 3px;
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
+}
+
+QLineEdit:focus {
+	border: 1px solid rgb(159, 115, 171);
+}</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="placeholderText">
+                       <string>Введите зашифрованное сообщение</string>
+                      </property>
+                      <property name="clearButtonEnabled">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_14">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_99">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_6">
+                         <property name="text">
+                          <string>Ключ:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_15">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_225">
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <widget class="QLabel" name="label_7">
+                            <property name="text">
+                             <string>Строки:</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLineEdit" name="hdk_dec_smp_row_txt">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>45</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QLineEdit {
+	border: 1px solid rgb(98, 79, 130);
+	border-radius: 3px;
+	padding: 0 3px;
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
+}
+
+QLineEdit:focus {
+	border: 1px solid rgb(159, 115, 171);
+}</string>
+                            </property>
+                            <property name="readOnly">
+                             <bool>false</bool>
+                            </property>
+                            <property name="placeholderText">
+                             <string>Количество строк</string>
+                            </property>
+                            <property name="clearButtonEnabled">
+                             <bool>true</bool>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_8">
+                            <property name="text">
+                             <string>Столбцы:</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLineEdit" name="hdk_dec_smp_clm_txt">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>45</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QLineEdit {
+	border: 1px solid rgb(98, 79, 130);
+	border-radius: 3px;
+	padding: 0 3px;
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
+}
+
+QLineEdit:focus {
+	border: 1px solid rgb(159, 115, 171);
+}</string>
+                            </property>
+                            <property name="readOnly">
+                             <bool>false</bool>
+                            </property>
+                            <property name="placeholderText">
+                             <string>Количество столбцов</string>
+                            </property>
+                            <property name="clearButtonEnabled">
+                             <bool>true</bool>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_21">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_231">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QTableWidget" name="hdk_dec_smp_tbl">
+                         <property name="styleSheet">
+                          <string notr="true">QTableWidget {
+	border: none;
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
+}
+
+QHeaderView::section {
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
+}
+
+QTableCornerButton::section {
+	background-color: rgb(98, 79, 130);
+}</string>
+                         </property>
+                         <property name="autoScroll">
+                          <bool>true</bool>
+                         </property>
+                         <property name="editTriggers">
+                          <set>QAbstractItemView::NoEditTriggers</set>
+                         </property>
+                         <property name="rowCount">
+                          <number>4</number>
+                         </property>
+                         <property name="columnCount">
+                          <number>6</number>
+                         </property>
+                         <attribute name="horizontalHeaderDefaultSectionSize">
+                          <number>91</number>
+                         </attribute>
+                         <row/>
+                         <row/>
+                         <row/>
+                         <row/>
+                         <column/>
+                         <column/>
+                         <column/>
+                         <column/>
+                         <column/>
+                         <column/>
+                         <item row="0" column="0">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="1">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="2">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="3">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="4">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="5">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="0">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="1">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="2">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="3">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="4">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="5">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="0">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="1">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="2">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="3">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="4">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="5">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="0">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="1">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="2">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="3">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="4">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="5">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_16">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_226">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QPushButton" name="hdk_dec_smp_btn">
+                         <property name="minimumSize">
+                          <size>
+                           <width>130</width>
+                           <height>45</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>200</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QPushButton {
+	border: 1px solid rgb(98, 79, 130);
+	border-radius: 3px;
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
+}
+
+QPushButton:hover {
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
+}
+
+QPushButton:disabled {
+	border: 1px solid rgb(221, 221, 221);
+	background-color: rgb(221, 221, 221);
+	color: rgb(48, 47, 47);
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Воспроизвести</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_17">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_100">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QPlainTextEdit" name="plainTextEdit_5">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>237</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPlainTextEdit {
+	border: none;
+	color: rgb(48, 47, 47);
+}</string>
+                      </property>
+                      <property name="readOnly">
+                       <bool>true</bool>
+                      </property>
+                      <property name="plainText">
+                       <string>2. Для получения исходного сообщения содержимое таблицы (полученной на шаге 1) считывают по столбцам</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="hdk_dec_smp_out_txt">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>45</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLineEdit {
+	border: 1px solid rgb(98, 79, 130);
+	border-radius: 3px;
+	padding: 0 3px;
+	color: rgb(48, 47, 47);
+	selection-color: rgb(240, 243, 249);
+	selection-background-color: rgb(159, 115, 171);
+}
+
+QLineEdit:focus {
+	border: 1px solid rgb(159, 115, 171);
+}</string>
+                      </property>
+                      <property name="readOnly">
+                       <bool>true</bool>
+                      </property>
+                      <property name="placeholderText">
+                       <string>Текст исходного сообщения (заполняется автоматически)</string>
+                      </property>
+                      <property name="clearButtonEnabled">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_22">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_232">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QTableWidget" name="hdk_dec_smp_tbl_2">
+                         <property name="styleSheet">
+                          <string notr="true">QTableWidget {
+	border: none;
+	color: rgb(48, 47, 47);
+	gridline-color: rgb(159, 115, 171);
+	selection-background-color: rgb(182, 174, 204);
+	selection-color: rgb(240, 243, 249);
+}
+
+QHeaderView::section {
+	color: rgb(240, 243, 249);
+	background-color: rgb(98, 79, 130);
+}
+
+QTableCornerButton::section {
+	background-color: rgb(98, 79, 130);
+}</string>
+                         </property>
+                         <property name="autoScroll">
+                          <bool>true</bool>
+                         </property>
+                         <property name="editTriggers">
+                          <set>QAbstractItemView::NoEditTriggers</set>
+                         </property>
+                         <property name="rowCount">
+                          <number>4</number>
+                         </property>
+                         <property name="columnCount">
+                          <number>6</number>
+                         </property>
+                         <attribute name="horizontalHeaderDefaultSectionSize">
+                          <number>91</number>
+                         </attribute>
+                         <row/>
+                         <row/>
+                         <row/>
+                         <row/>
+                         <column/>
+                         <column/>
+                         <column/>
+                         <column/>
+                         <column/>
+                         <column/>
+                         <item row="0" column="0">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="1">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="2">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="3">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="4">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="0" column="5">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="0">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="1">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="2">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="3">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="4">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="1" column="5">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="0">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="1">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="2">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="3">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="4">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="2" column="5">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="0">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="1">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="2">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="3">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="4">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="3" column="5">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_18">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_227">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QPushButton" name="hdk_dec_smp_btn_2">
+                         <property name="minimumSize">
+                          <size>
+                           <width>130</width>
+                           <height>45</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>200</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QPushButton {
+	border: 1px solid rgb(98, 79, 130);
+	border-radius: 3px;
+	background-color: rgb(98, 79, 130);
+	color: rgb(240, 243, 249);
+}
+
+QPushButton:hover {
+	border: 1px solid rgb(159, 115, 171);
+	background-color: rgb(159, 115, 171);
+}
+
+QPushButton:disabled {
+	border: 1px solid rgb(221, 221, 221);
+	background-color: rgb(221, 221, 221);
+	color: rgb(48, 47, 47);
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Воспроизвести</string>
                          </property>
                         </widget>
                        </item>

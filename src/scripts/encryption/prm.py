@@ -1,12 +1,18 @@
 from . import messages
 
 
-def enc_simple_prm(msg, row, clm):  # Шифруемая фраза "Прилетаю седьмого в полдень"
-    # Строки - 4, Столбцы - 6 Результат - "ПЕСМВДРТЕОПЕИАДГОНЛЬЮОЛЬ"
+def check_simple_prm(msg, row, clm):
     if not msg:
         return {'err_msg': messages.MSG_EMPTY_ERR}
     if len(msg) != row * clm or row <= 0 or clm <= 0:
         return {'err_msg': messages.TABLE_PERM_ERR}
+    return {'err_msg': ''}
+
+
+def enc_simple_prm(msg, row, clm):  # Шифруемая фраза "Прилетаю седьмого в полдень"
+    if err_msg := check_simple_prm(msg, row, clm).get('err_msg'):
+        return err_msg
+
     mas = [[] for _ in range(row)]
     index = -1
     for j in range(clm):
@@ -22,10 +28,9 @@ def enc_simple_prm(msg, row, clm):  # Шифруемая фраза "Приле�
 
 def dec_simple_prm(enc_msg, row, clm):  # Строка - "ПЕСМВДРТЕОПЕИАДГОНЛЮЬОЛЬ"
     # Строки - 4, Столбцы - 6 Результат - "ПРИЛЕТАЮСЕДЬМОГОВПОЛДЕНЬ"
-    if not enc_msg:
-        return {'err_msg': messages.MSG_EMPTY_ERR}
-    if len(enc_msg) != row * clm or row <= 0 or clm <= 0:
-        return {'err_msg': messages.TABLE_PERM_ERR}
+    if err_msg := check_simple_prm(enc_msg, row, clm):
+        return err_msg
+
     mas = [[] for _ in range(row)]
     index = -1
     for j in range(row):
